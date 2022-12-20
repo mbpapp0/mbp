@@ -4,9 +4,7 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
-    "start": "node backend/server.js",
-    "server": "cd backend && nodemon server",
-    "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "build": "cd frontend && npm install && npm run build",
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   }
 }
