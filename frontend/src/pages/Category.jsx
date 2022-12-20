@@ -10,7 +10,7 @@ export default function Category() {
     function(w){return w[0].toUpperCase() + w.slice(1).toLowerCase();});
 
     const getListingbyCategory = async () => {
-        const response = await fetch(`/api/listings/bycategory/${name}`);
+        const response = await fetch(`https://sawwan.onrender.com/api/listings/bycategory/${name}`);
         const json = await response.json();
         setListings(json);
     }

@@ -28,12 +28,12 @@ export default function Home() {
             return;
         }
         
-        window.location.assign(`/search/${searchTerm}`);
+        window.location.assign(`https://sawwan.onrender.com/search/${searchTerm}`);
         setSearchTerm('');
     }
 
     const getListings = async () => {
-        const response = await fetch('/api/listings');
+        const response = await fetch('https://sawwan.onrender.com/api/listings');
         const json = await response.json();
         setListings(json.splice(0, 8));
     }

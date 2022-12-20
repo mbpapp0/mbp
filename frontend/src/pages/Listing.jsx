@@ -6,7 +6,7 @@ export default function Listing () {
     const [listing, setListing] = useState({});
 
     const getSingleListing = async () => {
-        const response = await fetch(`/api/listings/${id}`);
+        const response = await fetch(`https://sawwan.onrender.com/api/listings/${id}`);
         const json = await response.json();
         setListing(json);
     }

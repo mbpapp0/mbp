@@ -7,14 +7,14 @@ export default function UserListings() {
     const [listings, setListings] = useState([]);
 
     const getUserListings = async() => {
-        const response = await fetch(`/api/listings/byuser/${id}`);
+        const response = await fetch(`https://sawwan.onrender.com/api/listings/byuser/${id}`);
         const json = await response.json();
 
         setListings(json);
     }
 
     const deleteListing = async (id) => {
-        const response = await fetch(`/api/listings/${id}`,
+        const response = await fetch(`https://sawwan.onrender.com/api/listings/${id}`,
             {method: 'DELETE'}
         );
         

@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors')
 const port = process.env.PORT || 4000;
 const db = process.env.DB;
 const app = express();
@@ -16,6 +17,7 @@ mongoose.connect(db).then(() => {
 
 app.use(express.json({ limit: '50mb'}));
 app.use(express.urlencoded({ limit: '50mb', extended: true}));
+app.use(cors());
 
 app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/listings', require('./routes/listingRoutes'));

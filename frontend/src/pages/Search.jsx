@@ -9,7 +9,7 @@ export default function Search() {
     const [noResults, setNoResults] = useState(false);
 
     const getListings = async () => {
-        const response = await fetch('/api/listings');
+        const response = await fetch('https://sawwan.onrender.com/api/listings');
         const json = await response.json();
         setListings(json);
     }
