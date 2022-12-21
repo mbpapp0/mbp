@@ -2,7 +2,7 @@ const { cloudinary } = require('../utils/cloudinary');
 const Listing = require('../models/listingModel');
 
 const getListings = async (req, res) => {
-    const listings = await Listing.find();
+    const listings = await Listing.find().sort({ createdAt: -1});
 
     res.status(200).json(listings);
 }
@@ -14,13 +14,13 @@ const getSingleListing = async (req, res) => {
 }
 
 const getListingsByCategory = async (req, res) => {
-    const listings = await Listing.find({ category: req.params.id });
+    const listings = await Listing.find({ category: req.params.id }).sort({ createdAt: -1});
 
     res.status(200).json(listings);
 }
 
 const getListingsByUser = async (req, res) => {
-    const listings = await Listing.find({ id: req.params.id });
+    const listings = await Listing.find({ id: req.params.id }).sort({ createdAt: -1});
 
     res.status(200).json(listings);
 }

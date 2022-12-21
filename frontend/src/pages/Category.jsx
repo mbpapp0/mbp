@@ -52,15 +52,14 @@ export default function Category() {
         }
     ]);
     const [categoryList, setCategoryList] = useState([]);
-    const [tag, setTag] = useState(categoryList[0])
-    const [filteredList, setFilterdList] = useState([]);
+    const [tag, setTag] = useState(categoryList[1])
 
     const getCategory = (cat) => {
 
         const list = subCategoryOptions.filter((subCategory) => subCategory.name == cat);
 
-        setCategoryList(list[0].sub)
-
+        setCategoryList(list[0].sub);
+        setTag(list[0].sub[0]);
     }
 
 
@@ -79,9 +78,8 @@ export default function Category() {
 
     useEffect(() => {
         getListingbyCategory();
-        getCategory(name);
-        console.log(listings)
-    }, [tag]);
+        getCategory(name); 
+    }, []);
 
     return(
         <>
