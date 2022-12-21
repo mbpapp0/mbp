@@ -38,9 +38,9 @@ export default function App() {
         <Route path='/about' element={<AboutPage />} />
         <Route path='/privacy' element={<PrivacyPage />} />
         <Route path='/terms' element={<TermsPage />} />
-        <Route path='/billing' element={<BillingPage />} />
-        <Route path='/faqs' element={<Faqs />} />
-        <Route path='/safety' element={<Safety />} />
+        <Route path='/billing' element={<TermsPage />} />
+        <Route path='/faqs' element={<TermsPage />} />
+        <Route path='/safety' element={<TermsPage />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/createlisting' element={user ? <Upload /> : <Navigate to='/login' />} />
         <Route path='*' element={<Error />} />

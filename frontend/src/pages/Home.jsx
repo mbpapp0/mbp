@@ -14,6 +14,7 @@ import Furniture from '../assets/furniture.png';
 import Agriculture from '../assets/agriculture.png';
 import Equipment from '../assets/tools.png';
 import Services from '../assets/services.png';
+import Search from '../assets/search_bar.png'
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 
 
@@ -22,13 +23,13 @@ export default function Home() {
     const [searchTerm, setSearchTerm] = useState('');
     const [listings, setListings] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSearch = (e) => {
         e.preventDefault();
         if(!searchTerm) {
             return;
         }
         
-        window.location.assign(`https://sawwan.onrender.com/search/${searchTerm}`);
+        // window.location.assign(`search/${searchTerm}`);
         setSearchTerm('');
     }
 
@@ -47,11 +48,12 @@ export default function Home() {
         <main>
             <div className="search_block">
                 <img src={FirstGuy} alt='man' className='first_photo hide_for_mobile'/>
-                <form className='search_form'onSubmit={handleSubmit}>
-                    <input type='text' placeholder='Find what you’re looking for....' className='search' value={searchTerm} 
+                <div className='search'>
+                    <input type='text' placeholder='Search....' className='' value={searchTerm} 
                     onChange={(e) => setSearchTerm(e.target.value)}
                     />
-                </form>
+                    <Link to={`${searchTerm ? `search/${searchTerm}` : '/'}`}><img src={Search} alt='search'/></Link>
+                </div>
                 <img src={SecondGuy} alt='man' className='second_photo hide_for_mobile'/>
             </div>
             <section className='category'>

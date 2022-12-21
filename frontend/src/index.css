@@ -17,7 +17,9 @@
 
 } */
 
-
+html {
+  overflow-x: hidden;
+}
 
 * { 
   margin: 0;
@@ -87,11 +89,20 @@ textarea:focus {
   border: 2px solid #F1707F;
   box-shadow: inset 2px 2px 4px #F1707F;
   font-size: 1rem;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.search:focus {
-  border: 2px solid #F1707F;
-  box-shadow: inset 2px 2px 4px #F1707F;
+.search input {
+  border: none;
+  width: 70%;
+}
+
+.search input:focus {
+  border: none;
+  box-shadow: none;
 }
 
 .first_photo {
@@ -234,6 +245,19 @@ button {
   margin-bottom: 0.7rem;
 }
 
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 1.5rem;
+}
+
+.filter_select {
+  width: 15rem;
+  padding: 0.5rem 1rem;
+  height: 3rem;
+}
+
 .error {
   background-color: rgb(255, 71, 71);
   color: white;
@@ -245,6 +269,17 @@ button {
   text-align: center;
 }
 
+.success {
+  background-color: rgb(15, 88, 0);
+  color: white;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.success p {
+  text-align: center;
+}
+
 .category_block {
   height: 17.3125rem;
   background: rgba(240, 189, 201, 1);
@@ -253,8 +288,13 @@ button {
   align-items: center;
 }
 
+.category_block {
+  text-align: center;
+}
+
 .align_self_corrections {
   align-self: center !important;
+  text-align: center;
 }
 
 .listings {
@@ -328,6 +368,7 @@ padding: 0.5rem;
 
 .no_listings h2 {
   display: block;
+  text-align: center;
 }
 
 .no_listings h3 {
@@ -480,6 +521,14 @@ padding: 0.5rem;
 
 
 @media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  button:visited {
+    color: black;
+  }
+
   .header {
     padding: 0  2.4375rem;
   }
@@ -552,6 +601,15 @@ padding: 0.5rem;
 
   .signup_form {
     width: 70%;
+  }
+
+  .search {
+    padding-inline: 1rem;
+  }
+
+  .no_listings h2 {
+    font-size: 0.85rem;
+    text-align: center
   }
 
   .category_buttons {

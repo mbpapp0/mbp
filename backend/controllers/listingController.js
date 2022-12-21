@@ -27,7 +27,7 @@ const getListingsByUser = async (req, res) => {
  
 const createListing = async (req, res) => {
     try {
-        const { id, title, description, price, category, fileStr } = req.body;
+        const { id, title, description, price, category, tag, fileStr } = req.body;
 
         const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
             upload_preset: 'ml_default'
@@ -35,7 +35,7 @@ const createListing = async (req, res) => {
 
         const image = uploadedResponse.url;
 
-        const newListing = await Listing.create({id, title, description, price, category, image});
+        const newListing = await Listing.create({id, title, description, price, category, tag, image});
 
         res.status(200).json(newListing);
 

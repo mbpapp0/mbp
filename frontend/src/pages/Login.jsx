@@ -25,7 +25,7 @@ export default function Login() {
                 <input type='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
                 <label>Password:</label>
                 <input type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>  
-                <input type='submit' value='Submit' className='button'/>       
+                <button className='button button_padding'>Login</button>      
             </form>
             <div className='login_block'></div>
         </main>
