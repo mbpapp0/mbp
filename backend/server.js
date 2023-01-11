@@ -21,3 +21,5 @@ app.use(cors());
 
 app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/listings', require('./routes/listingRoutes'));
+app.use('/api/conversations', require('./routes/conversationRoutes'));
+app.use('/api/messages', require('./routes/messageRoutes'));

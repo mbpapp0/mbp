@@ -27,17 +27,18 @@ const getListingsByUser = async (req, res) => {
  
 const createListing = async (req, res) => {
     try {
-        const { id, title, description, price, category, tag, fileStr } = req.body;
+        // const { id, title, description, price, category, tag, fileStr } = req.body;
 
-        const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
-            upload_preset: 'ml_default'
-        })
+        // const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
+        //     upload_preset: 'ml_default'
+        // })
 
-        const image = uploadedResponse.url;
+        // const image = uploadedResponse.url;
 
-        const newListing = await Listing.create({id, title, description, price, category, tag, image});
+        const newListing = await Listing.create(req.body);
 
         res.status(200).json(newListing);
+
 
     } catch (error) {
         res.status(400).json({ error: error.message});

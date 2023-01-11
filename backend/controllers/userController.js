@@ -7,19 +7,29 @@ const createToken = (_id) => {
     return token;
 }
 
+const getUser = async(req, res) => {
+    try {
+        const user = await User.findById(req.params.id);
+        res.status(200).json(user)
+    } catch (error) {
+        res.status(400).json({ error: error.message})
+    }
+}
+
 
 const signupUser = async(req, res) => {
-    const { first_name, last_name, email, password } = req.body;
+    const { first_name, last_name, email, password, image } = req.body;
 
     try {
-        const user = await User.signup(first_name, last_name, email, password);
+        const user = await User.signup(first_name, last_name, email, password, image);
     const token = createToken(user._id);
         res.status(200).json({
             id: user._id,
             first_name,
             last_name,
             email,
-            token
+            token,
+            image
         });
     } catch (error) {
         res.status(401).json({ error: error.message });
@@ -46,4 +56,5 @@ const loginUser = async (req, res) => {
 module.exports = {
     loginUser,
     signupUser,
+    getUser
 }

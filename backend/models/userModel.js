@@ -3,6 +3,9 @@ const bcrypt = require('bcrypt');
 const validator = require('validator');
 
 const userModel = new mongoose.Schema({
+    image: {
+        type: String
+    },
     first_name: {
         type: String,
         required: true
@@ -23,7 +26,7 @@ const userModel = new mongoose.Schema({
 }, {timestamps: true});
 
 
-userModel.statics.signup = async function(first_name, last_name, email, password){
+userModel.statics.signup = async function(first_name, last_name, email, password, image){
     if(!first_name || !last_name|| !email || !password){
         throw Error('Please fill in all fields')
     }
@@ -46,7 +49,7 @@ userModel.statics.signup = async function(first_name, last_name, email, password
     const hash = await bcrypt.hash(password, salt);
     password = hash;
 
-    const user = await this.create({first_name, last_name, email, password});
+    const user = await this.create({first_name, last_name, email, password, image});
     return user;
 }
 
