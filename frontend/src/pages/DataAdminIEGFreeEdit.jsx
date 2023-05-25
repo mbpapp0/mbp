@@ -3,6 +3,12 @@ import { useParams } from 'react-router-dom';
 import Back from '../components/Back';
 import Error from './Error';
 
+    const user = JSON.parse(localStorage.getItem('user'));
+    if(user.role != 'Data Admin'){
+        return <Error />
+    }
+
+
 export default function DataAdminIEGFreeEdit() {
     const user = JSON.parse(localStorage.getItem('user'));
     const [data, setData] = useState({});
@@ -19,9 +25,6 @@ export default function DataAdminIEGFreeEdit() {
     const [AdditionalHousehold, setAdditionalHousehold] = useState('');
 
 
-    if(user.role != 'Data Admin'){
-        return <Error />
-    }
 
     const getData = async () => {
         const response = await fetch(`https://mbp-server.onrender.com/api/freemeals/${id}`);
