@@ -15,7 +15,7 @@ export default function SysAdmin() {
     const user = JSON.parse(localStorage.getItem('user'));
 
     if(user.role != 'System Admin'){
-        return <Error />
+        return <h2>Error</h2>
     }
 
 
