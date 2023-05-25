@@ -3,10 +3,8 @@ import { useParams } from 'react-router-dom';
 import Back from '../components/Back';
 import Error from './Error';
 
-    const user = JSON.parse(localStorage.getItem('user'));
-    if(user.role != 'Data Admin'){
-        return <Error />
-    }
+
+    
 
 
 export default function DataAdminIEGFreeEdit() {
@@ -97,6 +95,10 @@ export default function DataAdminIEGFreeEdit() {
     
 
     }, []);
+    
+    if(user.role != 'Data Admin'){
+        return <Error />
+    }
 
     return (
         <>
