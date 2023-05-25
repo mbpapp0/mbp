@@ -5,6 +5,12 @@ import { useParams } from 'react-router-dom';
 import InfoCard from '../components/InfoCard';
 import Map from '../components/Map';
 
+ const user = JSON.parse(localStorage.getItem('user'));
+
+    if(user.role !== 'System Admin'){
+        return <Error />
+    }
+
 export default function SysAdminCreateBranch() {
     const { id } = useParams();
     
@@ -20,11 +26,6 @@ export default function SysAdminCreateBranch() {
     const [success, setSuccess] = useState('New User Created');
     const [set, setSet] = useState(false);
    
-    const user = JSON.parse(localStorage.getItem('user'));
-
-    if(user.role !== 'System Admin'){
-        return <Error />
-    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
