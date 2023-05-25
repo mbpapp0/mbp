@@ -5,11 +5,7 @@ import { useParams } from 'react-router-dom';
 import InfoCard from '../components/InfoCard';
 import Map from '../components/Map';
 
- const user = JSON.parse(localStorage.getItem('user'));
 
-    if(user.role !== 'System Admin'){
-        return <Error />
-    }
 
 export default function SysAdminCreateBranch() {
     const { id } = useParams();
@@ -113,7 +109,9 @@ export default function SysAdminCreateBranch() {
         getBranches();
     }, []);
 
-
+if(user.role !== 'System Admin'){
+        return <Error />
+    }
 
     
 
