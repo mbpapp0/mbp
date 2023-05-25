@@ -19,9 +19,7 @@ export default function DataAdminIEGFreeEdit() {
     const [AdditionalHousehold, setAdditionalHousehold] = useState(null);
 
 
-    if(user.role != 'Data Admin'){
-        return <Error />
-    }
+
 
 
     const getData = async () => {
@@ -106,6 +104,10 @@ export default function DataAdminIEGFreeEdit() {
     useEffect(() => {
         getData();    
     
+        if(user.role != 'Data Admin'){
+        return <Error />
+    }
+        
 
     }, []);
 
