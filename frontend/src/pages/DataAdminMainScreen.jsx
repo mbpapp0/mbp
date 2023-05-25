@@ -5,6 +5,9 @@ import Error from './Error';
 import Map from '../components/Map';
 import InfoCard from '../components/InfoCard';
 
+if(user.role != 'Data Admin'){
+        return <Error />
+    }
 
 export default function DataAdminMainScrreen() {
     const [branches, setBranches] = useState([]);
@@ -12,10 +15,6 @@ export default function DataAdminMainScrreen() {
     const user = JSON.parse(localStorage.getItem('user'));
     const [id, setId] = useState(null);
 
-
-    if(user.role != 'Data Admin'){
-        return <Error />
-    }
 
     const getBranches = async () => {
         const response = await fetch('https://mbp-server.onrender.com/api/branches');
