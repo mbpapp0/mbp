@@ -16,7 +16,7 @@ export default function BranchUser() {
         return <Error />
     }
 
-    const [branchName, setBranchName] = useState('');
+    const [branchName, setBranchName] = useState(false);
     const [click, setClick] = useState(false);
 
     const getBranchName = async () => {
