@@ -4,15 +4,17 @@ import Back from '../components/Back';
 import Map from '../components/Map';
 import InfoCard from '../components/InfoCard';
 import Error from './Error'
+    const user = JSON.parse(localStorage.getItem('user'));
+if(!user.role || user.role == 'System Admin'){
+        return <Error />
+    }
 
 export default function DataAdminIEGReducedPrice() {
     const user = JSON.parse(localStorage.getItem('user'));
     const [data, setData] = useState({});
     const { id } = useParams();
 
-    if(!user.role || user.role == 'System Admin'){
-        return <Error />
-    }
+    
 
     const getData = async () => {
         const response = await fetch(`https://mbp-server.onrender.com/api/reducedmeals/${id}`);
