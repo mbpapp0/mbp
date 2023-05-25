@@ -3,7 +3,7 @@ import backButton from '../icons/back.png';
 export default function Back() {
 
     const back = () => {
-        history.back();
+      //  history.back();
     }
 
 
