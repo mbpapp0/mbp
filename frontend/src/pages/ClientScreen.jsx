@@ -4,7 +4,7 @@ export default function ClientScreen() {
     const user = JSON.parse(localStorage.getItem('user'));
 
     if(user.role != 'Branch User'){
-        return <Error />
+        return <h2>Error</h2>
     }
 
     return(
