@@ -5,9 +5,7 @@ import Error from './Error'
 import Map from '../components/Map';
 import InfoCard from '../components/InfoCard';
 
-    if(!user.role || user.role == 'System Admin'){
-        return <Error />
-    }
+    
 
 export default function DataAdminIEGFree() {
     const user = JSON.parse(localStorage.getItem('user'));
@@ -29,6 +27,10 @@ export default function DataAdminIEGFree() {
 
     if(!data){
         window.location.assign(`/datafreeeditpost/${id}`)
+    }
+    
+    if(!user.role || user.role == 'System Admin'){
+        return <Error />
     }
 
     return (
