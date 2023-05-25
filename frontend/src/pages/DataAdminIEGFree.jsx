@@ -5,16 +5,14 @@ import Error from './Error'
 import Map from '../components/Map';
 import InfoCard from '../components/InfoCard';
 
-export default function DataAdminIEGFree() {
-    const user = JSON.parse(localStorage.getItem('user'));
-    const [data, setData] = useState({});
-    const { id } = useParams();
-
-
     if(!user.role || user.role == 'System Admin'){
         return <Error />
     }
 
+export default function DataAdminIEGFree() {
+    const user = JSON.parse(localStorage.getItem('user'));
+    const [data, setData] = useState({});
+    const { id } = useParams();
 
 
     const getData = async () => {  
