@@ -16,8 +16,8 @@ export default function BranchUser() {
         return <Error />
     }
 
-    const [branchName, setBranchName] = useState(false);
-    const [click, setClick] = useState(false);
+    const [branchName, setBranchName] = useState(null);
+    const [click, setClick] = useState(null);
 
     const getBranchName = async () => {
         const response = await fetch(`https://mbp-server.onrender.com/api/branches/${user.branch}`);
