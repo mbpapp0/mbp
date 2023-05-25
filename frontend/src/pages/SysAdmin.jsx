@@ -6,6 +6,9 @@ import Trash from '../icons/trash.png';
 import InfoCard from '../components/InfoCard';
 import Map from '../components/Map';
 
+    if(user.role != 'System Admin'){
+        return <h2>Error</h2>
+    }
 
 export default function SysAdmin() {
     const [branches, setBranches] = useState([]);
@@ -13,10 +16,6 @@ export default function SysAdmin() {
     const [clicked, setClicked] = useState(false);
     const [id, setId] = useState('');
     const user = JSON.parse(localStorage.getItem('user'));
-
-    if(user.role != 'System Admin'){
-        return <h2>Error</h2>
-    }
 
 
 
