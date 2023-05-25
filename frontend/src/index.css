@@ -1,0 +1,969 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Inter;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+button:hover {
+    background-color: rgb(62, 64, 79);
+}
+
+p {
+    font-size: 0.7rem;
+}
+
+.no_sign {
+    
+}
+
+label {
+    font-size: 0.7rem;
+}
+
+.padding { 
+    padding: 1rem;
+}
+
+.block {
+    margin-block: 1rem;
+}
+
+.red {
+    color: red;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.button {
+    color: white;
+    background: #6B6B6B;
+    padding: 1rem 1rem;
+}
+.right {
+    margin-right: 1rem;
+}
+
+.half_right {
+    margin-right: 0.5rem;
+}
+
+.bottom {
+    margin-bottom: 1rem;
+}
+
+.space_between {
+    justify-content: space-between;
+}
+
+.radius {
+    border-radius: 8px;
+}
+
+.header { 
+    background: #EAEAEA;
+    border: 1px solid;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+.flex {
+    display: flex;
+    padding-inline: 1rem;
+}
+
+.align {
+    align-items: center;
+}
+
+.no_form {
+    margin-block: 3rem;
+}
+
+.container {
+    width: 80%;
+    max-width: 850px;
+    margin: auto;
+}
+
+.heading {
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 2rem 0;
+}
+
+.labels {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.blocks {
+    width: 20rem;
+}
+
+.label {
+    font-size: 0.7rem;
+    max-width: 14rem;
+}
+
+.first_label {
+    margin-right: 1rem;
+}
+
+.flex:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.flex label {
+    font-size: 7px;
+}
+
+.first_field {
+    margin-right: 1rem;
+}
+
+.last_field {
+    margin-right: 2rem;
+}
+
+.checkboxes {
+    display: flex;
+}
+
+.checkboxes label {
+    font-size: 0.75rem;
+    margin-right: 0.5rem
+}
+
+.check {
+    display: flex;
+    align-items: center;
+}
+
+.check:not(:last-child) {
+    margin-right: 0.5rem;
+}   
+
+.part_a {
+    font-size: 0.7rem;
+}
+
+
+.part_a_title {
+    margin-bottom: 1rem;
+}
+
+.part_a label {
+    margin-right: 1rem;
+}
+
+.part_a input {
+    margin-right: 1rem;
+}
+
+.part_b_title {
+    margin-block: 1rem;
+}
+
+.form_list {
+    margin-bottom: 1rem;
+}
+
+.part_b_main_field {
+    width: 7rem;
+    margin-right: 1rem;
+}
+
+.part_b_field_1 {
+    width: 3.5rem;
+    margin-right: 0.5rem;
+}
+
+.part_b_field_2 {
+    width: 2.5rem;
+    margin-right: 1rem;
+}
+
+.part_c {
+    display: flex;
+    margin-block: 1rem;
+}
+
+.part_c p {
+    margin-right: 1rem;
+}
+
+.social {
+    width: 23.75rem;
+}
+
+.input_width {
+    width: 3rem;    
+}
+
+.certify {
+    margin-block: 1rem;
+}
+
+.info label {
+    margin-right: 0.5rem;
+}
+
+.info input {
+    width: 12.5rem;
+}
+
+.disclaimer {
+    font-size: 0.7rem;
+    margin-block: 1rem;
+}
+
+.ethnicity label {
+    font-size: 0.7rem;
+}
+
+.ethnicity_title p{
+    margin-bottom: 1rem;
+}
+
+.ethnicity_title:first-child {
+    margin-right: 8rem;
+}
+
+
+.login_header {
+    text-align: center;
+    margin: 8rem 0 5rem 0;
+}
+
+.login_wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login_form label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.login_form input {
+    margin-bottom: 1rem;
+    height: 4rem;
+    width: 24rem;
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 2px solid #8A7878 ;
+}
+
+.login_form button {
+    height: 4rem;
+    width: 24rem;
+    color: white;
+    background: #6B6B6B;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+}
+
+.error_indicator {
+    display: grid;
+    place-items: center;
+    margin: 1rem 0;
+    width: 24rem;
+    height: 3rem;
+    background-color: rgb(255, 73, 73);
+    color: white;
+    padding: 1rem;  
+}
+    
+
+.error_indicator p { 
+    text-align: center;
+    font-size: 1rem;
+}
+
+.branch_title {
+    padding-block: 1rem;
+    display: flex;
+}
+
+.branch_subhead {
+    margin-block: 2rem;
+}
+
+.branch_name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.submitted_forms {
+    border-collapse: collapse;
+    margin: auto;
+    width: 100%;
+}
+
+.table_block {
+    margin-block: 2rem;
+}
+
+.submitted_forms th, td {
+    padding: 0.5rem 3rem;
+    margin: auto;
+}
+
+.submitted_forms tr:nth-child(even) {
+    background-color: #D9D9D9;
+}
+
+.ieg_free {
+    margin-block: 2rem;
+}
+
+
+.view_branch {
+    display: flex;
+    margin-block: 1rem;
+}
+
+.view_button {
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 3rem;
+}
+
+.view_branch_name {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.view_branch {
+    padding-left: 1rem;
+}
+
+/* .view_branch:nth-child(even) {
+    background-color: #D9D9D9;
+} */
+
+.block1x {
+    margin-block: 1.5rem;
+}
+
+.view_branches {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 1.5rem;
+}
+
+.view_branches p {
+    font-weight: 500;
+}
+
+.view_branches_btn_container {
+    display: flex;
+}
+
+.view_branches button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 10rem;
+}
+
+.view_branches button:first-child{
+    margin-right: 1rem;
+}
+
+.view_branches p {
+    font-size: 1rem;
+}
+
+.new_branch {
+    margin: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.new_branch input {
+    height:  3rem;
+    width: 20rem;
+    padding-inline: 1rem; 
+}
+
+.new_branch button {
+    height: 3rem;
+    width: 20rem;
+}
+
+.view_img {
+    height: 15px;
+}
+
+.new_branch_button img {
+    margin-right: 1rem;
+}
+
+.special_pad {
+    padding-inline: 1.5rem;
+}
+
+.new_branch form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sysadmin a {
+    text-decoration: none; 
+}
+
+select {
+    height: 3rem;
+}
+
+.role {
+    margin-bottom: 1rem;
+}
+
+select {
+    padding-inline: 1rem;
+}
+
+input[type=number]{
+    appearance: textfield;
+}
+
+.form_time {
+    height: 2.3rem;
+    width: 4rem;
+    margin-right: 0.5rem;
+}
+
+.form_time:first-child{
+    margin-left: 0.5rem;
+}
+
+.often {
+    width: 4.9rem;
+    height: 2rem;
+}
+
+.form_time {
+    height: 2rem;
+}
+
+.form_line {
+    margin-bottom: 1rem;
+}
+
+.days input[type=checkbox] {
+    margin-right: 1rem;
+}
+
+.user_list_header {
+    margin-top: 3rem; 
+    margin-bottom: 1.5rem;
+}
+
+.user_list_name {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.user_list_container {
+    justify-content: space-between;
+}
+
+
+.user_list_button{
+    padding-inline: 2rem;
+}
+
+.user_list_button:first-child{
+    margin-right: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.user_info {
+    margin-block: 3rem;
+}
+
+.user_info p{
+    font-size: 1rem;
+}
+
+.logs table {
+    border-collapse: collapse;
+}
+
+.logs_table th, td {
+    padding: 0.5rem 3rem;
+    margin: auto;
+}
+
+.sign_pad {
+    display: flex;
+    align-items: center;
+}
+
+.sign_preview {
+    border: 1px dashed grey;
+    padding: 0.4rem;
+}
+
+.roster_table {
+    border-collapse: collapse;
+}
+
+.age_input {
+    width: 4rem;
+    margin-right: 1rem;
+}
+
+
+.roster_table td, th{
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+
+.roster_table tr:nth-child(even){
+    background: #d9d9d9;
+}
+
+.flex_button a:first-child {
+    margin-right: 1rem;
+}
+
+
+.roster_month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 0.5rem;
+}
+
+.sign_pad canvas {
+    margin-right: 2rem;
+}
+
+.sign_buttons {
+    display: flex;
+    margin-block: 1rem;
+}
+
+.sign_buttons button {
+    padding: 0.75rem;
+    font-size: 0.65rem;
+    border-radius: 3px;
+}
+
+.sign_buttons button:first-child {
+    margin-right: 0.5rem; 
+}
+
+.logs_table tr:nth-child(even) {
+    background-color: #D9D9D9;
+}
+
+.logs_title {
+    margin-bottom: 1rem;
+}
+
+.success {
+    background: rgb(4, 36, 4);
+    padding: 1rem;
+    color: white;
+    width: 20rem;
+}
+
+.success p {
+    font-size: 0.8rem;
+}
+
+.error_user {
+    padding: 1rem;
+    background: rgb(255, 73, 73);
+    color: white;
+}
+
+.success_user {
+    padding: 1rem;
+    background: green;
+    color: white;
+}
+
+.error_page {
+    margin: 14rem;
+    display: flex;
+    justify-content: center;
+}
+
+.confirm {
+    width: 30rem;
+    height: 20rem;
+    padding: 2rem 3rem;
+    border: 1px solid #000000;
+    position: absolute;
+    background-color: white;
+    box-shadow: 15px 11px 4px rgba(0, 0, 0, 0.36);
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.confirm_buttons {
+    display: flex;
+    flex-direction: column;
+    margin-block: 3rem;
+    align-items: center;
+}
+
+.confirm_buttons button {
+    padding: 1rem 4rem;
+}
+
+.confirm_buttons button:first-child {
+    background-color:#6B6B6B;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.confirm_buttons button:first-child:hover {
+    background-color:rgb(62, 64, 79);
+}
+
+.confirm_buttons button:last-child {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.confirm_buttons button:last-child:hover {
+    background-color:rgb(62, 64, 79);
+    color: white;
+}
+
+.guide_confirm {
+    width: 30rem;
+    height: 20rem;
+    padding: 2rem 3rem;
+    border: 1px solid #000000;
+    position: absolute;
+    background-color: white;
+    box-shadow: 15px 11px 4px rgba(0, 0, 0, 0.36);
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.guide_confirm_title {
+    text-align: center;
+}
+
+.guide_confirm_buttons {
+    display: flex;
+    flex-direction: column;
+    margin-block: 3rem;
+    align-items: center;
+}
+
+.guide_confirm_buttons button {
+    padding: 1.5rem 4rem;
+    width: 17rem;
+    background-color:#6B6B6B;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.guide_confirm_buttons button:hover {
+    background-color: rgb(62, 64, 79);
+}
+
+.guide_confirm a{
+    margin-top: .3rem;
+}
+
+.guide_confirm a:hover {
+    cursor: pointer;
+}
+
+.edited_forms th, td {
+    padding: 0.5rem 2rem;
+    margin: auto;
+}
+
+.edited_forms input {
+    width: 5rem;
+    padding-inline: 1rem;
+
+}
+
+.edited_forms tr:nth-child(even) {
+    background-color: #D9D9D9;
+}
+
+i {
+    font-size: 13px;
+    margin-bottom: 1rem;
+}
+
+.branch_list_buttons {
+    display: flex;
+    align-items: center;
+}
+
+.branch_list_buttons a {
+    margin-right: 1rem;
+}
+
+.created_forms {
+    width: 3rem;
+}
+
+.no_users {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    margin-block: 6rem;
+}
+
+.no_users h3{
+    margin-bottom: 2rem;
+}
+
+.no_logs {
+    margin-block: 2rem;
+}
+
+.contact_admin {
+    display: flex;
+    margin-block: 7rem;
+    justify-content: center;
+}
+
+.form_error {
+
+}
+
+.form_error p {
+    
+}
+
+.submitted_forms td {
+   text-align: center;
+}
+
+.client_info {
+    margin-block: 2rem;
+}
+
+.client_info h2{
+    margin-block: 0.5rem;
+}
+
+.client_info h3{
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.client_info h4 {
+    font-weight: initial;
+}
+
+.info{ 
+    position: relative;
+}
+
+.info_image:hover {
+    cursor: pointer;
+}
+
+
+.info_card {
+    background:#6B6B6B;
+    color: white;
+    padding: 1rem;
+    border-radius: 11px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    position: absolute;
+    z-index: 999;
+    width: 10rem;
+}
+
+.hide_info_card {
+    display: none;
+}
+
+.info_hover {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.info_hover div:first-child {
+    margin-right: 0.25rem;
+}
+
+.info_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.edit_info {
+    margin-block: 3rem;
+}
+
+.edit_info input{
+    display: block;
+    padding: 0.5rem 0.25rem;
+}
+
+.edit_info select {
+    height: 30px; 
+    display: block;
+    width: 300px;
+}
+
+.child_income {
+    display: inline;
+}
+
+.income_select {
+    height: 1rem;
+    padding: 0.5rem;
+}
+
+.guideline_container {
+    width: auto;
+    max-width: 1404px;
+    margin: auto;
+}
+
+@media(max-width: 1024px){
+
+    .guideline_container {
+        width: 95%;
+    }
+
+    .submitted_forms th {
+        font-size: 0.75rem;
+        padding: 0;
+    }
+
+    .submitted_forms td {
+        padding: -100rem;
+        text-align: left;
+    }
+
+    .edited_forms th, td {
+        padding: 0.5rem 1rem;
+    }
+
+    .first_field {
+        width: 7rem;
+    }
+
+    .age_input {
+        width: 7rem;
+    }
+
+    .last_field {
+        width: 15rem;
+        margin-top: 0.3rem;
+    }
+
+    .info input {
+        width: 8.5rem;
+    }
+
+    .info label:last-child {
+        margin-left: 3rem;
+    }
+
+    .input_field {
+        width: 16rem;
+    }
+
+}
+
+@media(max-width: 834px) {
+    .view_branch_name {
+        font-size: 0.85rem;
+        margin-right: 0.5rem;
+    }
+
+    button {
+        font-size: 0.75rem;
+    }
+
+    .first_field {
+        width: 4.5rem;
+        margin-right: 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    .input_field {
+        width: 10rem;
+        margin-right: 1rem;
+    }
+
+    .age_input { 
+        width: 4.5rem;
+        margin-right: 0rem;
+        font-size: 0.7rem;
+        padding-left: 0.5rem;
+    }
+
+    .last_field {
+        width: 9.5rem;
+        font-size: 0.7rem;
+    }
+
+    .flex {
+        padding-inline: 0;
+    }
+
+    .part_a input {
+        width: 7rem;
+    }
+}
