@@ -6,15 +6,15 @@ import Map from '../components/Map';
 import Back from '../components/Back';
 import InfoCard from '../components/InfoCard';
 
+if(user.role != 'Branch User'){
+        return <Error />
+    }
+
 export default function BranchUser() {
     const user = JSON.parse(localStorage.getItem('user'));
     const [free, setFree] = useState(null);
     const [reduced, setReduced] = useState(null);
     const [data, setData] = useState([]);
-
-    if(user.role != 'Branch User'){
-        return <Error />
-    }
 
     const [branchName, setBranchName] = useState(null);
     const [click, setClick] = useState(null);
