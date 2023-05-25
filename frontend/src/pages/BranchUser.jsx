@@ -6,10 +6,6 @@ import Map from '../components/Map';
 import Back from '../components/Back';
 import InfoCard from '../components/InfoCard';
 
-if(user.role != 'Branch User'){
-        return <Error />
-    }
-
 export default function BranchUser() {
     const user = JSON.parse(localStorage.getItem('user'));
     const [free, setFree] = useState(null);
@@ -55,6 +51,9 @@ export default function BranchUser() {
         getClients();
     }, []);
 
+        if(user.role != 'Branch User'){
+        return <Error />
+    }
 
     if(!free || !reduced){
         return (
