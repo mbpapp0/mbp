@@ -5,9 +5,7 @@ import Error from './Error';
 import Map from '../components/Map';
 import InfoCard from '../components/InfoCard';
 
-if(user.role != 'Data Admin'){
-        return <Error />
-    }
+
 
 export default function DataAdminMainScrreen() {
     const [branches, setBranches] = useState([]);
@@ -26,6 +24,10 @@ export default function DataAdminMainScrreen() {
     useEffect(() => {
         getBranches()
     }, [])
+        
+        if(user.role != 'Data Admin'){
+        return <Error />
+    }
     
     return(
         <>
