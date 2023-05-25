@@ -666,7 +666,6 @@ export default function ClientForm() {
                 setImage(false);
                 setAddress(' ')
                 setPrintName('');
-                setDate('');
                 setCity('');
                 setAddress('');
                 setZipCode('');
