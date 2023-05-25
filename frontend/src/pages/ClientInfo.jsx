@@ -7,9 +7,7 @@ export default function ClientInfo() {
     const { id } = useParams();
     const [data, setData] = useState({})
 
-    if(user.role != 'Branch User'){
-        return <h2>Error</h2>
-    }
+    
 
     const getClient = async () => {
         const response = await fetch(`https://mbp-server.onrender.com/api/clients/client/${id}`);
@@ -28,6 +26,10 @@ export default function ClientInfo() {
     useEffect(() => {
         getClient();
     }, [])
+    
+    if(user.role != 'Branch User'){
+        return <h2>Error</h2>
+    }
 
     return(
         <div className="container">
