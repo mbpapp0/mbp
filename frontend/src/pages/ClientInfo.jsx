@@ -8,7 +8,7 @@ export default function ClientInfo() {
     const [data, setData] = useState({})
 
     if(user.role != 'Branch User'){
-        return <Error />
+        return <h2>Error</h2>
     }
 
     const getClient = async () => {
