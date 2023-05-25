@@ -9,6 +9,7 @@ import Map from '../components/Map';
 
 export default function SysAdminCreateBranch() {
     const { id } = useParams();
+    const user = JSON.parse(localStorage.getItem('user'));
     
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
