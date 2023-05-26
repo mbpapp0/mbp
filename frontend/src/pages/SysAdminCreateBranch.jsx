@@ -7,6 +7,7 @@ import Map from '../components/Map';
 export default function SysAdminCreateBranch() {
     const [name, setName] = useState('');
     const [message, setMessage] = useState('');
+    const [error, setError] = useState('');
     const user = JSON.parse(localStorage.getItem('user'));
 
     if(user.role != 'System Admin'){
@@ -59,7 +60,7 @@ export default function SysAdminCreateBranch() {
         const json = await response.json();
 
         if(!response.ok){
-            setMessage(json.error);
+            setError(json.error);
             
             setTimeout(() => {
                 setMessage('');
@@ -94,6 +95,12 @@ export default function SysAdminCreateBranch() {
                             <p>{ message }</p>
                         </div>
                     }
+                      {error && 
+                        <div  className='error_user'>
+                            <p>{ error }</p>
+                        </div>
+                    }
+
                     <form onSubmit={handleSubmit}>
                         <input className="block" type='text' placeholder="Branch Name" value={ name } onChange={(e) => setName(e.target.value)}/>
                         <button className="block button radius new_branch_button" >Create Branch</button>
