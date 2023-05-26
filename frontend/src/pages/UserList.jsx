@@ -80,7 +80,7 @@ export default function UserList(){
                     </div>
                 </div>
             <h3 className='user_list_header'>{branchName} Branch</h3>
-            <input type='text' placeholder={branchName} />
+           { editing && <input type='text' placeholder={branchName} /> }
             {user.role == 'System Admin' && 
             <div className='flex'>
             <Link to={`/createuser/${id}`}><button className='button radius'>
