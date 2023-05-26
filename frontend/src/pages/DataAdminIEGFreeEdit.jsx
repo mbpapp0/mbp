@@ -21,7 +21,7 @@ export default function DataAdminIEGFreeEdit() {
     const [houseHoldSeven, setHouseHoldSeven] = useState('');
     const [houseHoldEight, setHouseHoldEight] = useState('');
     const [AdditionalHousehold, setAdditionalHousehold] = useState('');
-
+    const [success, setSuccess] = useState(false);
 
 
     const getData = async () => {
@@ -80,7 +80,11 @@ export default function DataAdminIEGFreeEdit() {
         const json = await response.json();
 
         if(response.ok){
+            setSuccess('Edit Successful');
+            setTimeout(() => {
             window.location.assign(`/datafree/${id}`);
+            }
+            , 1200)
         }
 
         
@@ -108,7 +112,10 @@ export default function DataAdminIEGFreeEdit() {
             <h4 className="ieg_free">Free Meals</h4>
             <form onSubmit={editData}>
                 <button className="button radius">Apply Changes</button>
-
+                { success && 
+                  <div className='success'>
+                    <p>{ success }</p>
+                  </div> }
                 <table className="edited_forms">
                     <thead>
                         <tr>                        
