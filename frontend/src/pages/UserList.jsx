@@ -85,17 +85,21 @@ export default function UserList(){
                {!editing && <h3 className='user_list_header'>{branchName} Branch</h3>}
            { editing && 
            <div className='flex'>
-               <input type='text' placeholder={branchName} /> 
-               <button className='button radius' onClick={() => changeBranchName()}>Change Namr</button>
+               <input type='text' placeholder={branchName} style={{padding: '0.5rem'}} value={newBranchName} onChange={(e) => setNewBranchName(e.target.value) }/> 
+               <button className='button radius' onClick={() => changeBranchName()}>Change Name</button>
             </div>
            }
             {user.role == 'System Admin' && 
             <div className='flex'>
-            <Link to={`/createuser/${id}`}><button className='button radius'>
-            Create New User
-           </button></Link>
+            { !editing &&
+            <>
+               <Link to={`/createuser/${id}`}><button className='button radius'>
+                 Create New User
+                  </button></Link>
                     <button style={{marginLeft: '1rem'}} onClick={() => setEditing(true)} className='button radius'>Edit Branch Name</button> 
-                    </div>}
+                    </div>
+            </>}
+            }
             <div className='user_list'>
                 {data.map((user) => {
                     return(
