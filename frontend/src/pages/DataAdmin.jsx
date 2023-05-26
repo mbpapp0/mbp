@@ -8,7 +8,7 @@ import Map from '../components/Map';
 
     
 
-export default function SysAdmin() {
+export default function DataAdmin() {
     const [branches, setBranches] = useState([]);
     const [branchName, setBranchName] = useState('');
     const [clicked, setClicked] = useState(false);
