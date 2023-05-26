@@ -48,17 +48,18 @@ export default function UserInfo() {
 
     return(
         
-        <div>
+      <div>
 
             <div className='container'>
-                { clicked && <div className='confirm'>
-                    <h5>Are You Sure You Want to Delete this User?</h5>
-                    <div className='confirm_buttons'>    
-                        <button onClick={() => {} >Confirm</button>
+               { clicked && 
+                  <div className='confirm'>
+                      <h5>Are You Sure You Want to Delete this User?</h5>
+                      <div className='confirm_buttons'>    
+                        <button onClick={() => {}}>Confirm</button>
                         <button onClick={() => setClicked(false)}>Cancel</button>
-                    </div>
-                </div>
-                }
+                       </div>
+                    </div> }
+  
             <div className='info_buttons'>
                 <Back />
                 <div className='info_hover'> 
@@ -70,7 +71,7 @@ export default function UserInfo() {
              <Link to={`/edituser/${id}`}>
                  <button className="button radius">Edit User</button>
              </Link>
-             <button className="button radius" onClick={() => setClicked(true}>Delete User</button>
+             <button className="button radius" onClick={() => setClicked(true)}>Delete User</button>
              </>
              }
                 <div className='user_info'>
