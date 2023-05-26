@@ -74,6 +74,7 @@ export default function UserList(){
     }
 
     return(
+    <>
         <div>
 
             <div className='container'>
@@ -93,7 +94,7 @@ export default function UserList(){
             <div className='flex'>
             <Link to={`/createuser/${id}`}><button className='button radius'>
             Create New User
-        </button></Link>
+           </button></Link>
                     <button style={{marginLeft: '1rem'}} onClick={() => setEditing(true)} className='button radius'>Edit Branch Name</button> 
                     </div>}
             <div className='user_list'>
@@ -111,5 +112,6 @@ export default function UserList(){
             </div>
             </div>
         </div>
+     </>
     )
 } 
