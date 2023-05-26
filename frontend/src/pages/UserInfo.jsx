@@ -32,7 +32,7 @@ export default function UserInfo() {
 
         if(response.ok){
             setClicked(false);
-            window.location.assign(`/users/${user.branch}`)
+            window.location.assign(`/branch/${user.branch}`)
         }
     }
 
