@@ -56,7 +56,14 @@ export default function UserInfo() {
                     <Map location='User Info Screen'/>
                 </div>
             </div>
-            { role == 'System Admin' && <Link to={`/edituser/${id}`}><button className="button radius">Edit User</button></Link> }
+            { role == 'System Admin' && 
+             <>
+             <Link to={`/edituser/${id}`}>
+                 <button className="button radius">Edit User</button>
+             </Link>
+             <button className="button radius">Delete User</button>
+             </>
+             }
                 <div className='user_info'>
                     <p>Name: { user.name }</p>
                     <p>Email: { user.email }</p>
