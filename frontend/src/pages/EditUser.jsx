@@ -27,8 +27,28 @@ export default function EditUser(){
     //     setEmail(json.email);
     //     setRole(json.role);
     // } 
+    
+    function isValidEmail(email) {
+        var pattern = /^[\w.-]+@[\w.-]+\.\w+$/;
+        return pattern.test(email);
+    }
+    
+    function isValidName(name) {
+        const invalidCharacters = /[.,\\\/#!$%\^&\*;:{}=\-_`~()0-9]/;
+        if(name[0] === " "){
+            return false; 
+        }
+        return !invalidCharacters.test(name);
+    }
+ 
 
     const editData = async() => {
+        
+        const isEmail = isValidEmail(email);
+        const isName = isValidName(name)
+        if(!isEmail){
+          setError('Please enter a valid email');
+        }
 
         if(!name || !email){
             setError('Please fill in all fields');
