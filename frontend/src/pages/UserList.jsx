@@ -38,6 +38,10 @@ export default function UserList(){
     //     const json = await response.json();
     //     setBranchName(json.name);
     // }
+    
+    const changeBranchName = async () => {
+        setEditing(false)
+    }
 
     useEffect(() => {
         getUsers();
@@ -80,7 +84,11 @@ export default function UserList(){
                     </div>
                 </div>
             {!editing && <h3 className='user_list_header'>{branchName} Branch</h3>}
-           { editing && <input type='text' placeholder={branchName} /> }
+           { editing && 
+           <div className='flex'>
+               <input type='text' placeholder={branchName} /> 
+               <button className='button radius' onClick={() => changeBranchName()}>Change Namr</button>
+           }
             {user.role == 'System Admin' && 
             <div className='flex'>
             <Link to={`/createuser/${id}`}><button className='button radius'>
