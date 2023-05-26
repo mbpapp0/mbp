@@ -70,20 +70,8 @@ export default function DataAdmin() {
                         <div className="view_branches" key={branch._id}>
                             <p>{ branch.name }</p>
                             <div className="view_branches_btn_container">
-                            <Link to={`/branch/${branch._id}`}>
-                                <button className="button radius special_pad">
-                                    <img className='view_img' src={View} />
-                                    View Users
-                                </button>
-                            </Link>
-                        <button className="button radius" onClick={() => {
-                            setId(branch._id)
-                            setClicked(true)
-                            setBranchName(branch.name)
-                        }} disabled={clicked}>
-                            <img className='view_img' src={Trash}/>
-                            Delete Branch
-                        </button> 
+                              <Link to={`/datafree/${branch._id}`}><button className='button radius'>Free Meals</button></Link>
+                              <Link to={`/datared/${branch._id}`}><button className='buttom radius'>Reduced Meals</button></Link>
                     </div>
                 </div>)
                 })}
