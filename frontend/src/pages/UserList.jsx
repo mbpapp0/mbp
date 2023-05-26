@@ -10,7 +10,8 @@ export default function UserList(){
     const { id } = useParams();
     const [data, setData] = useState([]);
     const [branchName, setBranchName] = useState('');
-    const [newBranchName, setNewBranchName] = useState('')
+    const [newBranchName, setNewBranchName] = useState('');
+    const [editing, setEditing] = useState(false);
     const user = JSON.parse(localStorage.getItem('user'));
 
 
@@ -81,10 +82,12 @@ export default function UserList(){
             <h3 className='user_list_header'>{branchName} Branch</h3>
             <input type='text' placeholder={branchName} />
             {user.role == 'System Admin' && 
+            <div className='flex'>
             <Link to={`/createuser/${id}`}><button className='button radius'>
             Create New User
-        </button></Link>}
-                    <button className='button radius'>Edit Branch Name</button>
+        </button></Link>
+                    <button className='button radius'>Edit Branch Name</button> 
+                    </div>}
             <div className='user_list'>
                 {data.map((user) => {
                     return(
