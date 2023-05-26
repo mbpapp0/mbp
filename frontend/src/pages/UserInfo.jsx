@@ -10,6 +10,7 @@ export default function UserInfo() {
     const { id } = useParams();
     const [user, setUser] = useState([]);
     const [logs, setLogs] = useState([]);
+    const [clicked, setClicked] = useState(false)
 
     const role = JSON.parse(localStorage.getItem('user')).role;
 
@@ -50,6 +51,14 @@ export default function UserInfo() {
         <div>
 
             <div className='container'>
+                { clicked && <div className='confirm'>
+                    <h5>Are You Sure You Want to Delete {branchName} Branch?</h5>
+                    <div className='confirm_buttons'>    
+                        <button onClick={() => deleteBranch(id)} >Confirm</button>
+                        <button onClick={() => setClicked(false)}>Cancel</button>
+                    </div>
+                </div>
+                }
             <div className='info_buttons'>
                 <Back />
                 <div className='info_hover'> 
