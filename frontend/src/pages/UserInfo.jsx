@@ -22,7 +22,7 @@ export default function UserInfo() {
     } 
     
     const deleteUser = async (id) => {
-        const response = await fetch(`https://mbp-server.onrender.com/api/user/${id}`, {
+        const response = await fetch(`https://mbp-server.onrender.com/api/users/delete/${id}`, {
             method: 'DELETE'
         });
 
