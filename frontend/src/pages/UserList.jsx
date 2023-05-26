@@ -10,6 +10,7 @@ export default function UserList(){
     const { id } = useParams();
     const [data, setData] = useState([]);
     const [branchName, setBranchName] = useState('');
+    const [newBranchName, setNewBranchName] = useState('')
     const user = JSON.parse(localStorage.getItem('user'));
 
 
