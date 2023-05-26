@@ -20,6 +20,21 @@ export default function UserInfo() {
         setUser(json);
 
     } 
+    
+    const deleteUser = async (id) => {
+        const response = await fetch(`https://mbp-server.onrender.com/api/user/${id}`, {
+            method: 'DELETE'
+        });
+
+        // const response = await fetch(`http://localhost:3001/api/branches/${id}`, {
+        //     method: 'DELETE'
+        // });
+
+        if(response.ok){
+            setClicked(false);
+            window.location.assign('/users')
+        }
+    }
 
     // const getData = async () => {
     //     const response = await fetch(`http://localhost:3001/api/users/singleuser/${id}`);
@@ -55,7 +70,7 @@ export default function UserInfo() {
                   <div className='confirm'>
                       <h5>Are You Sure You Want to Delete this User?</h5>
                       <div className='confirm_buttons'>    
-                        <button onClick={() => {}}>Confirm</button>
+                        <button onClick={() => deleteUser(id)}>Confirm</button>
                         <button onClick={() => setClicked(false)}>Cancel</button>
                        </div>
                     </div> }
