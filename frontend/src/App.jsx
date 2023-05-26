@@ -74,7 +74,6 @@ export default function App() {
           <Route path='/masterroster' element={<MasterRoster />} />
           <Route path='/rosterbymonth/:str' element={<RosterMonth />} />
           <Route path='/excel' element={<Excel />} />
-          <Route path='/data' element={<DataAdmin  />} /> 
         </Routes>
     </>
   )
