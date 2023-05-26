@@ -28,9 +28,22 @@ export default function SysAdminCreateBranch() {
         e.preventDefault();
         createUser();
     }
+    
+    const containsValidCharacters => (name) {
+        const invalidCharacters = /[ .,\\\/#!$%\^&\*;:{}=\-_`~()0-9]/;
+
+        return !invalidCharacters.test(name);
+    }
+
 
     const createUser = async () => {
-
+        const first = containsValidCharacters(firstName);
+        const last = containsValidCharacters(lastName);
+        
+        if(!first || !last){
+          setError('Please enter a valid character...')
+          return;
+        }
         const name = `${firstName} ${lastName}`;
 
         const user = {
