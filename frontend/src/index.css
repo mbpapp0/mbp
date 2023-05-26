@@ -25,6 +25,9 @@ p {
 .no_sign {
     
 }
+.hide_input {
+    display: none;
+}
 
 label {
     font-size: 0.7rem;
