@@ -12,9 +12,24 @@ export default function SysAdminCreateBranch() {
     if(user.role != 'System Admin'){
         return <Error />
     }
+        
+    const isValidBranchName = (name) => {
+        const invalidCharacters = /[.,\\\/#!$%\^&\*;:{}=\_`~()]/;
+        
+        if(name[0] == ' '){
+            return false;
+         }
+
+        return !invalidCharacters.test(name);
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        const branchNameValid = isValidBranchName(name);
+        if(!branchNameValid){
+          setError('Please enter a valid branch name');
+           return;
+        }
         createBranch();
         setName('');
     }
