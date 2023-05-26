@@ -63,7 +63,7 @@ export default function UserList(){
                         Create New User
                         </button>
                     </Link>
-                    <button>Edit Branch Name</button>
+                    <button className='button radius'>Edit Branch Name</button>
                 </div>
             </>
         )
