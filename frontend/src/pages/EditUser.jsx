@@ -104,7 +104,7 @@ export default function EditUser(){
                 </div>
             </div>
             <div className='edit_info'>
-                { error && <div className='error'><p>{error}</p></div> }
+                { error && <div className='error_user'><p>{error}</p></div> }
                     <label>Name:</label>
                     <input type='text' value={name} onChange={(e) => setName(e.target.value)}/>
                     <label>Email: </label>
