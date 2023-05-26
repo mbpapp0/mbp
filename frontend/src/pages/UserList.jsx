@@ -63,7 +63,6 @@ export default function UserList(){
                         Create New User
                         </button>
                     </Link>
-                    <button className='button radius'>Edit Branch Name</button>
                 </div>
             </>
         )
@@ -85,6 +84,7 @@ export default function UserList(){
             <Link to={`/createuser/${id}`}><button className='button radius'>
             Create New User
         </button></Link>}
+                    <button className='button radius'>Edit Branch Name</button>
             <div className='user_list'>
                 {data.map((user) => {
                     return(
