@@ -27,8 +27,11 @@ export default function SysAdminCreateBranch() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const branchNameValid = isValidBranchName(name);
-        if(!branchNameValid){
+        if(!branchNameValid || !name){
           setError('Please enter a valid branch name');
+          setTimeout(() => {
+                setError('');
+            }, 1200)
            return;
         }
         createBranch();
