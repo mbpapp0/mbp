@@ -62,6 +62,7 @@ export default function UserList(){
                         Create New User
                         </button>
                     </Link>
+                    <button>Edit Branch Name</button>
                 </div>
             </>
         )
