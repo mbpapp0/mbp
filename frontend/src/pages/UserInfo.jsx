@@ -85,7 +85,7 @@ export default function UserInfo() {
              <Link to={`/edituser/${id}`}>
                  <button className="button radius">Edit User</button>
              </Link>
-             <button className="button radius" onClick={() => setClicked(true)}>Delete User</button>
+             <button className="button radius" style={{marginLeft: '1rem'}}onClick={() => setClicked(true)}>Delete User</button>
              </>
              }
                 <div className='user_info'>
