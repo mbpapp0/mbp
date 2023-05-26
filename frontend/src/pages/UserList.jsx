@@ -74,21 +74,20 @@ export default function UserList(){
     }
 
     return(
-    <>
         <div>
-
             <div className='container'>
-            <div className='info_buttons'>
-                <Back />
-                    <div className='info_hover'> 
+              <div className='info_buttons'>
+                 <Back />
+                 <div className='info_hover'> 
                     <Map location='Branch User List Screen'/>
-                    </div>
-                </div>
-            {!editing && <h3 className='user_list_header'>{branchName} Branch</h3>}
+                  </div>
+               </div>
+               {!editing && <h3 className='user_list_header'>{branchName} Branch</h3>}
            { editing && 
            <div className='flex'>
                <input type='text' placeholder={branchName} /> 
                <button className='button radius' onClick={() => changeBranchName()}>Change Namr</button>
+            </div>
            }
             {user.role == 'System Admin' && 
             <div className='flex'>
@@ -112,6 +111,5 @@ export default function UserList(){
             </div>
             </div>
         </div>
-     </>
     )
 } 
