@@ -155,13 +155,13 @@ if(user.role !== 'System Admin'){
                         }
                         <input className="block" type='text' placeholder="First Name" value={ firstName } onChange={(e) => setFirstName(e.target.value)}/>
                         <input className="block" type='text' placeholder="Last Name" value={ lastName } onChange={(e) => setLastName(e.target.value)}/>
-                      {role == 'Branch User' && <select className={role!= 'Branch User' ? `hide_input` : 'role'} onChange={(e) => setRole(e.target.value)}>
+                      {role == 'Branch User' && <select className='role' onChange={(e) => setRole(e.target.value)}>
                             {roleOptions.map((role, index) => {
                                 return <option key={index}>{ role }</option>
                             })}
                         </select>
                        }
-                        <select onChange={(e) => setBranch(e.target.value)} value={branch}>
+                        <select className={role!= 'Branch User' ? `hide_input` : ''} onChange={(e) => setBranch(e.target.value)} value={branch}>
                             {branchOptions.map((branch) => {
                                 return <option 
                                 key={ branch._id } 
