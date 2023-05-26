@@ -46,8 +46,16 @@ export default function EditUser(){
         
         const isEmail = isValidEmail(email);
         const isName = isValidName(name)
+        
+        
         if(!isEmail){
           setError('Please enter a valid email');
+            return;
+        }
+        
+        if(!isName){
+            setError('Please enter a valid Name');
+            return;
         }
 
         if(!name || !email){
