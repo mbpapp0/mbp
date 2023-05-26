@@ -79,7 +79,7 @@ export default function UserList(){
                     <Map location='Branch User List Screen'/>
                     </div>
                 </div>
-            <h3 className='user_list_header'>{branchName} Branch</h3>
+            {!editing && <h3 className='user_list_header'>{branchName} Branch</h3>}
            { editing && <input type='text' placeholder={branchName} /> }
             {user.role == 'System Admin' && 
             <div className='flex'>
