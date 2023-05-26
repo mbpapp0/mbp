@@ -32,7 +32,7 @@ export default function UserInfo() {
 
         if(response.ok){
             setClicked(false);
-            window.location.assign('/users')
+            window.location.assign(`/users/${user.branch}`)
         }
     }
 
@@ -58,7 +58,6 @@ export default function UserInfo() {
     useEffect(() => {
         getData();
         getLogs();
-        console.log(logs);
     }, [])
 
     return(
