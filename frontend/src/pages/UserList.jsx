@@ -86,7 +86,7 @@ export default function UserList(){
            { editing && 
            <div className='flex'>
                <input type='text' placeholder={branchName} style={{padding: '0.5rem'}} value={newBranchName} onChange={(e) => setNewBranchName(e.target.value) }/> 
-               <button className='button radius' onClick={() => changeBranchName()}>Change Name</button>
+               <button style={{marginLeft: '0.5rem'}} className='button radius' onClick={() => changeBranchName()}>Change Name</button>
             </div>
            }
             {user.role == 'System Admin' && 
