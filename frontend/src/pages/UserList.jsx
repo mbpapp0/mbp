@@ -97,8 +97,8 @@ export default function UserList(){
                  Create New User
                   </button></Link>
                     <button style={{marginLeft: '1rem'}} onClick={() => setEditing(true)} className='button radius'>Edit Branch Name</button> 
+                      </>}
                     </div>
-            </>}
             }
             <div className='user_list'>
                 {data.map((user) => {
