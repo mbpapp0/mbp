@@ -29,7 +29,7 @@ export default function SysAdminCreateBranch() {
         createUser();
     }
     
-    const containsValidCharacters => (name) {
+    const containsValidCharacters = (name) => {
         const invalidCharacters = /[ .,\\\/#!$%\^&\*;:{}=\-_`~()0-9]/;
 
         return !invalidCharacters.test(name);
