@@ -45,7 +45,7 @@ export default function DataAdmin() {
         getBranches();
     }, []);
     
-    if(user.role != 'System Admin'){
+    if(user.role != 'Data Admin'){
         return <h2>Error</h2>
     }
 
@@ -53,19 +53,12 @@ export default function DataAdmin() {
         <>
 
             <div className="container sysadmin">
-                { clicked && <div className='confirm'>
-                    <h5>Are You Sure You Want to Delete {branchName} Branch?</h5>
-                    <div className='confirm_buttons'>    
-                        <button onClick={() => deleteBranch(id)} >Confirm</button>
-                        <button onClick={() => setClicked(false)}>Cancel</button>
-                    </div>
-                </div>
-                }
+               
             <div className='info_hover'> 
                 <Map location='System Administration Main Screen'/>
                 <InfoCard description='This is the System Adminstration Screen, You must create a Branch, then you can create users and assign roles to each users, preview, edit and delete users in each branch'/>    
             </div>
-                <h2 className="block1x">System Adminstrator</h2>
+                <h2 className="block1x">Data Administrator</h2>
                 <h4 className="block1x">Branches</h4>
                 <Link to='/sysbranch'>
                     <button className="button radius flex align new_branch_button">
