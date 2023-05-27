@@ -71,8 +71,6 @@ export default function Account() {
         // });
 
         if(response.ok){
-            setName(newName);
-            setEmail(newEmail);
             setEditing(false)
         }
 
@@ -96,9 +94,9 @@ export default function Account() {
          { editing &&
          <div className='edit_info'>
            <label>Name:</label>
-           <input type='text' value={name} onChange={(e) => setNewName(e.target.value)}/>
+           <input type='text' value={name} onChange={(e) => setName(e.target.value)}/>
             <label>Email: </label>
-            <input type='email' value={email} onChange={(e) => setNewEmail(e.target.value)}/>
+            <input type='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
             <button className='button radius block' onClick={editData}>Apply Changes</button>
          </div>
           }
