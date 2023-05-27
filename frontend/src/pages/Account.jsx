@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 export default function Account() {
     const { id } = useParams();
-    const user = JSON.parse(localStorage.getItem('user');
+    const user = JSON.parse(localStorage.getItem('user'));
     const [info, setInfo] = useState(false);
     
     return(
