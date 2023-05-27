@@ -35,7 +35,15 @@ export default function Header() {
     return (
         <div className="header">
              <Link to='/'><h1 className="logo">MBP</h1></Link>
-             { user && <button className='button radius' onClick={logout}>Logout</button> }
-        </div>
+           
+             {
+               user && 
+               <div>
+                 <button className='button radius' onClick={logout}>Logout</button>
+                 <Link to='/account' <button className='button radius'>Profile</button></Link>
+              </div>
+             }
+           
+           </div>
     )
 }
