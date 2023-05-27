@@ -16,6 +16,7 @@ export default function DataAdminIEGFreeEdit() {
     const [houseHoldEight, setHouseHoldEight] = useState('');
     const [AdditionalHousehold, setAdditionalHousehold] = useState('');
     const [error, setError] = useState('');
+    const [sucess. setSuccess] = useState(false);
     
     const createPost = async (e) => {
         const branch = id;
@@ -53,7 +54,11 @@ export default function DataAdminIEGFreeEdit() {
 
 
         if(response.ok){
-            window.location.assign(`/datafree/${id}`)
+            swtSuccess('Guidelines Created Successfully');
+            setTimeout(() => {
+             window.location.assign(`/datafree/${id}`)        
+            }, 1200)
+
         }
         if(!response.ok){
             setError('Please fill in all fields');
@@ -72,6 +77,9 @@ export default function DataAdminIEGFreeEdit() {
             <h4 className="ieg_free">Free Meals</h4>
             { error && <div className='error_indicator'>
                 <p>{ error }</p>
+            </div>}
+            {success && <div className='success'>
+               <p>{success}</p> 
             </div>}
             <form onSubmit={createPost}>
                 <button className="button radius">Create Guidlines</button>
