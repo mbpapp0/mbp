@@ -40,7 +40,7 @@ export default function Header() {
                user && 
                <div>
                  <button className='button radius' onClick={logout}>Logout</button>
-                 <Link to='/account' <button className='button radius'>Profile</button></Link>
+                 <Link to='/account'><button className='button radius'>Profile</button></Link>
               </div>
              }
            
