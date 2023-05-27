@@ -18,7 +18,7 @@ export default function Account() {
     
     return(
         <div className='container'>
-            <div style={{marginTop: '9rem'}}>
+            <div style={{marginTop: '3rem'}}>
                <button className='button radius'>Edit Info</button>
                <h3>Account</h3>
                <p>{info.name}</p>
