@@ -39,17 +39,13 @@ export default function UserList(){
     //     setBranchName(json.name);
     // }
     
-    useEffect(() => {
-        getUsers();
-        getBranchName();
-    }, []);
-    
+   
     const editBranchName = async() => {
         
-        if(!newBranchName && newBranchName[0] == ' ' && newBranchName == ''){
-            setNewBranchName('')
-            return;
-        }
+        // if(!newBranchName && newBranchName[0] == ' ' && newBranchName == ''){
+           // setNewBranchName('')
+            //return;
+        //} 
         
         const response = await fetch(`https://mbp-server.onrender.com/api/branches/${id}`, {
             method: 'PUT',
@@ -65,6 +61,11 @@ export default function UserList(){
         setEditing(false);
     }
 
+    useEffect(() => {
+        getUsers();
+        getBranchName();
+    }, []);
+    
     
 
     if(data.length == 0){
