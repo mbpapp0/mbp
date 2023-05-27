@@ -16,7 +16,7 @@ export default function DataAdminIEGFreeEdit() {
     const [houseHoldEight, setHouseHoldEight] = useState('');
     const [AdditionalHousehold, setAdditionalHousehold] = useState('');
     const [error, setError] = useState('');
-    const [sucess, setSuccess] = useState(false);
+    const [success, setSuccess] = useState(false);
     
     const createPost = async (e) => {
         const branch = id;
