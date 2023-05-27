@@ -21,7 +21,7 @@ export default function Header() {
              const currentTime = new Date().getTime()
              const elapsedTime= (currentTime - parseInt(lastLoginTime)) / (1000 * 60); 
 
-             if (elapsedTime>= 5) {
+             if (elapsedTime>= 500) {
                  localStorage.removeItem('lastLoginTime');
                  logout();
              } 
