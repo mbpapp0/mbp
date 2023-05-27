@@ -42,6 +42,8 @@ export const useLogin = () => {
 
         if(response.ok){
             localStorage.setItem('user', JSON.stringify(json));
+            const currentTime = new Date().getTime(); 
+            localStorage.setItem('lastLoginTime', currentTime.toString());
             dispatch({ type: 'LOGIN', payload: json});
             setLoading(false);
             window.location.assign('/');
