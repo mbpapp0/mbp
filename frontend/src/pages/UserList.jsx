@@ -40,23 +40,9 @@ export default function UserList(){
     // }
     
    
-    const editBranchName = async() => {
-        
-        // if(!newBranchName && newBranchName[0] == ' ' && newBranchName == ''){
-           // setNewBranchName('')
-            //return;
-        //} 
-        
-        const response = await fetch(`https://mbp-server.onrender.com/api/branches/${id}`, {
-            method: 'PUT',
-            body: JSON.stringify(newBranchName),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
+    
         
     const changeBranchName = async () => {
-        editBranchName();
         setBranchName(newBranchName);
         setEditing(false);
     }
