@@ -113,7 +113,7 @@ export default function DataAdminIEGFreeEdit() {
             <form onSubmit={editData}>
                 <button className="button radius">Apply Changes</button>
                 { success && 
-                  <div className='success'>
+                  <div className='success' style={{marginTop: '1rem'}}>
                     <p>{ success }</p>
                   </div> }
                 <table className="edited_forms">
