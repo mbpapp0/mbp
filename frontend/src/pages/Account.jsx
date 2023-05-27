@@ -6,6 +6,8 @@ export default function Account() {
     const [info, setInfo] = useState(false);
     const [editing, setEditing] = useState(false);
     const [error, setError] = useState(false);
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
     
     const getData = async () => {
         const response = await fetch(`https://mbp-server.onrender.com/api/users/singleuser/${id}`);
@@ -89,7 +91,14 @@ export default function Account() {
                <p>Email: {info.email}</p>
             </div>
 
-          
+         <div>
+           <label>Name:</label>
+           <input type='text' value={name} onChange={(e) => setName(e.target.value)}/>
+            <label>Email: </label>
+            <input type='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+            <label>Role:</label>
+         </div>
+                
         </div>
     )
 }
