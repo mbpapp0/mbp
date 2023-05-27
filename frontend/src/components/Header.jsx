@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom';
 import { useEffect } from 'react'
 
 export default function Header() {
-    const user = localStorage.getItem('user');
+    const user = JSON.parse(localStorage.getItem('user'));
 
     const { dispatch } = useAuthContext();
 
@@ -39,7 +39,7 @@ export default function Header() {
              {
                user && 
                <div>
-                   <Link to={`/account/${user.branch}`}><button className='button radius' style={{marginRight: '0.75rem'}}>Profile</button></Link>
+                   <Link to={`/account/${user.id}`}><button className='button radius' style={{marginRight: '0.75rem'}}>Profile</button></Link>
                  <button className='button radius' onClick={logout}>Logout</button>
               </div>
              }
