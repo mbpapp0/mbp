@@ -8,12 +8,14 @@ export default function Account() {
     const [error, setError] = useState(false);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [newName, setNewName] = useState('');
+    const [newEmail, setNewEmail] = useState('');
     
     const getData = async () => {
         const response = await fetch(`https://mbp-server.onrender.com/api/users/singleuser/${id}`);
         const json = await response.json();
-        setInfo(json);
-
+        setName(json.name);
+        setEmail(json.email);
     } 
     
     function isValidEmail(email) {
@@ -46,10 +48,6 @@ export default function Account() {
             return;
         }
 
-        if(!name || !email){
-            setError('Please fill in all fields');
-        }
-
         const data = {
             name,
             email,
@@ -72,6 +70,8 @@ export default function Account() {
         // });
 
         if(response.ok){
+            setName(newName);
+            setEmail(newEmail);
             setEditing(false)
         }
 
@@ -88,16 +88,16 @@ export default function Account() {
             <div style={{marginTop: '3rem'}}>
                <button className='button radius' onClick={() => setEditing(true)} style={{ marginBottom: '0.9rem'}}>Edit Info</button>
                <h3>Account</h3>
-               <p>Name: {info.name}</p>
-               <p>Email: {info.email}</p>
+               <p>Name: {name}</p>
+               <p>Email: {email}</p>
             </div>
          }
          { editing &&
          <div className='edit_info'>
            <label>Name:</label>
-           <input type='text' value={name} onChange={(e) => setName(e.target.value)}/>
+           <input type='text' value={info.name} onChange={(e) => setNewName(e.target.value)}/>
             <label>Email: </label>
-            <input type='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+            <input type='email' value={info.email} onChange={(e) => setNewEmail(e.target.value)}/>
             <button className='button radius block' onClick={editData}>Apply Changes</button>
          </div>
           }
