@@ -40,7 +40,8 @@ export default function UserList(){
     // }
     
     const changeBranchName = async () => {
-        setEditing(false)
+        setBranchName(newBranchName);
+        setEditing(false);
     }
 
     useEffect(() => {
