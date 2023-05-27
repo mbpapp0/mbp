@@ -13,6 +13,19 @@ export default function Header() {
         dispatch({ type: 'LOGOUT'});
         window.location.assign('/')
     }
+    
+    const checkLogoutTime = () => {
+         const lastLoginTime = localStorage.getItem('lastLoginTime'); 
+  
+         if (lastLoginTime) {
+             const currentTime = new Date().getTime()
+             const elapsedTime= (currentTime - parseInt(lastLoginTime)) / (1000 * 60); 
+
+             if (elapsedTime>= 5) {
+                 logout();
+             } 
+           }
+         }
 
     return (
         <div className="header">
