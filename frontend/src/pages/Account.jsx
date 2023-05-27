@@ -4,6 +4,7 @@ export default function Account() {
     const { id } = useParams();
     const user = JSON.parse(localStorage.getItem('user'));
     const [info, setInfo] = useState(false);
+    const [editing, setEditing] = useState(false)
     
     const getData = async () => {
         const response = await fetch(`https://mbp-server.onrender.com/api/users/singleuser/${id}`);
@@ -19,11 +20,13 @@ export default function Account() {
     return(
         <div className='container'>
             <div style={{marginTop: '3rem'}}>
-               <button className='button radius'>Edit Info</button>
+               <button className='button radius' style={{ marginBottom: '0.9rem'}}>Edit Info</button>
                <h3>Account</h3>
-               <p>{info.name}</p>
-               <p>{info.email}</p>
+               <p>Name: {info.name}</p>
+               <p>Email: {info.email}</p>
             </div>
+
+          
         </div>
     )
 }
