@@ -16,7 +16,7 @@ export default function DataAdminIEGFreeEdit() {
     const [houseHoldEight, setHouseHoldEight] = useState('');
     const [AdditionalHousehold, setAdditionalHousehold] = useState('');
     const [error, setError] = useState('');
-    const [sucess. setSuccess] = useState(false);
+    const [sucess, setSuccess] = useState(false);
     
     const createPost = async (e) => {
         const branch = id;
@@ -78,7 +78,7 @@ export default function DataAdminIEGFreeEdit() {
             { error && <div className='error_indicator'>
                 <p>{ error }</p>
             </div>}
-            {success && <div className='success'>
+            {success && <div className='success' style={{marginBlock: '0.5rem'}}>
                <p>{success}</p> 
             </div>}
             <form onSubmit={createPost}>
