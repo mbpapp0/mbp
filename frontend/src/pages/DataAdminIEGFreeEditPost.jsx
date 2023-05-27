@@ -54,7 +54,7 @@ export default function DataAdminIEGFreeEdit() {
 
 
         if(response.ok){
-            swtSuccess('Guidelines Created Successfully');
+            setSuccess('Guidelines Created Successfully');
             setTimeout(() => {
              window.location.assign(`/datafree/${id}`)        
             }, 1200)
