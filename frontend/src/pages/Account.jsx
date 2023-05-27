@@ -5,10 +5,17 @@ export default function Account() {
     const user = JSON.parse(localStorage.getItem('user'));
     const [info, setInfo] = useState(false);
     
+    const getData = async () => {
+        const response = await fetch(`https://mbp-server.onrender.com/api/users/singleuser/${id}`);
+        const json = await response.json();
+        setInfo(json);
+
+    } 
+    
     return(
         <div className='container'>
             <h3>Account</h3>
-             <p>{ user.role} { user.id }</p>
+            <p>{info.name}</p>
         </div>
     )
 }
