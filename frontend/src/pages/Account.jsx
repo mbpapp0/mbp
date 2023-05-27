@@ -72,7 +72,7 @@ export default function Account() {
         // });
 
         if(response.ok){
-            window.history.back();
+            setEditing(false)
         }
 
     }
@@ -84,13 +84,15 @@ export default function Account() {
     
     return(
         <div className='container'>
+        {!editing &&
             <div style={{marginTop: '3rem'}}>
-               <button className='button radius' style={{ marginBottom: '0.9rem'}}>Edit Info</button>
+               <button className='button radius' onClick={() => setEditing(true)} style={{ marginBottom: '0.9rem'}}>Edit Info</button>
                <h3>Account</h3>
                <p>Name: {info.name}</p>
                <p>Email: {info.email}</p>
             </div>
-
+         }
+         { editing &&
          <div className='edit_info'>
            <label>Name:</label>
            <input type='text' value={name} onChange={(e) => setName(e.target.value)}/>
@@ -98,7 +100,7 @@ export default function Account() {
             <input type='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
             <button className='button radius block' onClick={editData}>Apply Changes</button>
          </div>
-                
+          }
         </div>
     )
 }
