@@ -38,8 +38,8 @@ export default function Header() {
            
              {
                user && 
-               <div
-                                  <Link to='/account'><button className='button radius' style={{marginRight: '0.75rem'}}>Profile</button></Link>
+               <div>
+                   <Link to='/account'><button className='button radius' style={{marginRight: '0.75rem'}}>Profile</button></Link>
                  <button className='button radius' onClick={logout}>Logout</button>
               </div>
              }
