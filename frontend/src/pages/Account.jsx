@@ -12,6 +12,10 @@ export default function Account() {
 
     } 
     
+    useEffect(() => {
+       getData()
+    }, [])
+    
     return(
         <div className='container'>
             <h3>Account</h3>
