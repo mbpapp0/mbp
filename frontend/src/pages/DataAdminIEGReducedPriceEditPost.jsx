@@ -15,6 +15,7 @@ export default function DataAdminIEGReducedPriceEditPost() {
     const [houseHoldEight, setHouseHoldEight] = useState('');
     const [AdditionalHousehold, setAdditionalHousehold] = useState('');
     const [error, setError] = useState('');
+    const [success, setSuccess] = useState(false);
     
     const createPost = async (e) => {
         const branch = id;
@@ -51,7 +52,11 @@ export default function DataAdminIEGReducedPriceEditPost() {
         const json = await response.json();
         
         if(response.ok){
-            window.location.assign(`/datared/${id}`);
+            setTimemout(() => {
+                        
+              window.location.assign(`/datared/${id}`);
+            }, 1200)
+
         }
 
         if(!response.ok){
@@ -71,6 +76,9 @@ export default function DataAdminIEGReducedPriceEditPost() {
             <h4 className="ieg_free">Free Meals</h4>
             { error && <div className='error_indicator'>
                 <p>{ error }</p>
+            </div>}
+              {success && <div className='success' style={{marginBlock: '0.5rem'}}>
+               <p>{success}</p> 
             </div>}
             <form onSubmit={createPost}>
                 <button className="button radius">Create Guidlines</button>
