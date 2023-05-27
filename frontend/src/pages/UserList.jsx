@@ -45,7 +45,7 @@ export default function UserList(){
     const changeBranchName = async () => {
         const response = await fetch(`https://mbp-server.onrender.com/api/branches/${id}`, {
              method: 'PUT',
-             body: JSON.stringify(newBranchName),
+             body: JSON.stringify({name: newBranchName}),
              headers: {
                  'Content-Type': 'application/json'
              }
