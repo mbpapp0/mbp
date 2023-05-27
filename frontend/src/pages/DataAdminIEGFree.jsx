@@ -11,19 +11,30 @@ export default function DataAdminIEGFree() {
     const user = JSON.parse(localStorage.getItem('user'));
     const [data, setData] = useState({});
     const { id } = useParams();
+    const [loading, setLoading] = useState(false);
 
 
-    const getData = async () => {  
+    const getData = async () => { 
+        setLoading(true);
         const response = await fetch(`https://mbp-server.onrender.com/api/freemeals/${id}`);
         // const response = await fetch(`http://localhost:3001/api/freemeals/${id}`);
         const json = await response.json();
-        await setData(json[0])
+        await setData(json[0]);
+        setLoading(false)
 
     }
     
     useEffect(() => {
         getData();
-    }, [])
+    }, []);
+    
+    if(loading){
+      return(
+       <div className='container'>
+         <h3>Loading</h3>
+       </div>
+      )
+    }
 
     if(!data){
         window.location.assign(`/datafreeeditpost/${id}`)
