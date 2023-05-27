@@ -18,8 +18,10 @@ export default function Account() {
     
     return(
         <div className='container'>
-            <h3>Account</h3>
-            <p>{info.name}</p>
+            <div style={{marginTop: '9rem'}}>
+               <h3>Account</h3>
+               <p>{info.name}</p>
+            </div>
         </div>
     )
 }
