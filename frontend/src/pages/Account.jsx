@@ -22,6 +22,7 @@ export default function Account() {
                <button className='button radius'>Edit Info</button>
                <h3>Account</h3>
                <p>{info.name}</p>
+               <p>{info.email}</p>
             </div>
         </div>
     )
