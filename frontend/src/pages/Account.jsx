@@ -16,6 +16,7 @@ export default function Account() {
         const json = await response.json();
         setName(json.name);
         setEmail(json.email);
+        
     } 
     
     function isValidEmail(email) {
@@ -95,9 +96,9 @@ export default function Account() {
          { editing &&
          <div className='edit_info'>
            <label>Name:</label>
-           <input type='text' value={info.name} onChange={(e) => setNewName(e.target.value)}/>
+           <input type='text' value={name} onChange={(e) => setNewName(e.target.value)}/>
             <label>Email: </label>
-            <input type='email' value={info.email} onChange={(e) => setNewEmail(e.target.value)}/>
+            <input type='email' value={email} onChange={(e) => setNewEmail(e.target.value)}/>
             <button className='button radius block' onClick={editData}>Apply Changes</button>
          </div>
           }
