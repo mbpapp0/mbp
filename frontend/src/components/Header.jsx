@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useAuthContext } from '../hooks/useAuthContext';
 import { Navigate } from 'react-router-dom';
-
+import { useEffect } from 'react'
 
 export default function Header() {
     const user = localStorage.getItem('user');
@@ -22,10 +22,15 @@ export default function Header() {
              const elapsedTime= (currentTime - parseInt(lastLoginTime)) / (1000 * 60); 
 
              if (elapsedTime>= 5) {
+                 localStorage.removeItem('lastLoginTime');
                  logout();
              } 
            }
          }
+    
+    usEffect(() => {
+
+    }, [])
 
     return (
         <div className="header">
