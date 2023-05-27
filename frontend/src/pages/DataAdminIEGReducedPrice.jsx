@@ -10,13 +10,16 @@ export default function DataAdminIEGReducedPrice() {
     const user = JSON.parse(localStorage.getItem('user'));
     const [data, setData] = useState({});
     const { id } = useParams();
+    const [loading, setLoading] = useState(false);
 
     
 
     const getData = async () => {
+        setLoading(true);
         const response = await fetch(`https://mbp-server.onrender.com/api/reducedmeals/${id}`);
         const json = await response.json();
-        await setData(json[0])
+        await setData(json[0]);
+        setLoading(false)
     }
 
     // const getData = async () => {
@@ -28,7 +31,16 @@ export default function DataAdminIEGReducedPrice() {
   
     useEffect(() => {
         getData();
-    }, [])
+    }, []);
+    
+        
+    if(loading){
+      return(
+       <div className='container flex justify align'>
+         <h3>Loading</h3>
+       </div>
+      )
+    }
     
 
     if(!data){
