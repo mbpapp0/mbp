@@ -30,7 +30,7 @@ export default function DataAdminIEGFree() {
     
     if(loading){
       return(
-       <div className='container flex justify align' style={{marginTop: '20rem'}}>
+       <div className='container flex justify align' style={{height: '100%'}}>
          <h3>Loading</h3>
        </div>
       )
