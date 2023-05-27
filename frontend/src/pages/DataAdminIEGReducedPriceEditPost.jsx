@@ -52,7 +52,7 @@ export default function DataAdminIEGReducedPriceEditPost() {
         const json = await response.json();
         
         if(response.ok){
-            setTimemout(() => {
+            setTimeout(() => {
                         
               window.location.assign(`/datared/${id}`);
             }, 1200)
