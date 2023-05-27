@@ -91,12 +91,12 @@ export default function Account() {
                <p>Email: {info.email}</p>
             </div>
 
-         <div>
+         <div className='edit_info'>
            <label>Name:</label>
            <input type='text' value={name} onChange={(e) => setName(e.target.value)}/>
             <label>Email: </label>
             <input type='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
-            <label>Role:</label>
+            <button className='button radius block' onClick={editData}>Apply Changes</button>
          </div>
                 
         </div>
