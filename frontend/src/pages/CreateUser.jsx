@@ -15,6 +15,7 @@ export default function SysAdminCreateBranch() {
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPass, setConfirmPass] = useState('');
     const [branchOptions, setBranchOptions] = useState([]);
     const [roleOptions, setRoleOptions] = useState(['Branch User', 'Data Admin', 'System Admin']);
     const [role, setRole] = useState(roleOptions[0]);
@@ -44,6 +45,12 @@ export default function SysAdminCreateBranch() {
           setError('Please enter a valid character...')
           return;
         }
+        
+        if(password != confirmPass){
+          setError('Passwords must match'); 
+           return;
+        }
+        
         const name = `${firstName} ${lastName}`;
 
         const user = {
@@ -170,6 +177,7 @@ if(user.role !== 'System Admin'){
                         </select>
                         <input className="block" type='email' placeholder="Email" value={ email } onChange={(e) => setEmail(e.target.value)}/>
                         <input className="block" type='password' placeholder="Password" value={ password } onChange={(e) => setPassword(e.target.value)}/>
+                        <input className="block" type='password' placeholder="Confirm Password" value={ confirmPass } onChange={(e) => setConfirmPass(e.target.value)}/>
                         <button className="block button radius new_branch_button" disabled={!branchOptions ? true : false}>Sign Up</button>
                     </form>
                 </div>
