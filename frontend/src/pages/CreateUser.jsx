@@ -23,6 +23,7 @@ export default function SysAdminCreateBranch() {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('New User Created');
     const [set, setSet] = useState(false);
+    const [loading, setLoading] = useState(false);
    
 
     const handleSubmit = async (e) => {
@@ -38,17 +39,20 @@ export default function SysAdminCreateBranch() {
 
 
     const createUser = async () => {
+        setLoading(true);
         const first = containsValidCharacters(firstName);
         const last = containsValidCharacters(lastName);
         
         if(!first || !last){
-          setError('Please enter a valid character...')
+          setError('Please enter a valid character...');
+          setLoading(false)
           return;
         }
         
         if(password != confirmPass){
           setError('Passwords must match'); 
-           return;
+          setLoading(false)
+          return;
         }
         
         const name = `${firstName} ${lastName}`;
@@ -83,6 +87,7 @@ export default function SysAdminCreateBranch() {
         if(!response.ok){
             
             setError(data.error);
+            setLoading(false);
             setTimeout(() => {
             setError('');
             }, 3000);
@@ -90,6 +95,7 @@ export default function SysAdminCreateBranch() {
         
 
         if(response.ok){
+            setLoading(false);
             setError('')
             setFirstName('');
             setLastName('');
@@ -178,7 +184,7 @@ if(user.role !== 'System Admin'){
                         <input className="block" type='email' placeholder="Email" value={ email } onChange={(e) => setEmail(e.target.value)}/>
                         <input className="block" type='password' placeholder="Password" value={ password } onChange={(e) => setPassword(e.target.value)}/>
                         <input className="block" type='password' placeholder="Confirm Password" value={ confirmPass } onChange={(e) => setConfirmPass(e.target.value)}/>
-                        <button className="block button radius new_branch_button" disabled={!branchOptions ? true : false}>Sign Up</button>
+                        <button className="block button radius new_branch_button" disabled={!branchOptions ? true : false}>{loading ? 'Loading...' : 'Sign Up'}</button>
                     </form>
                 </div>
             </div>
