@@ -28,6 +28,11 @@ export default function SysAdminCreateBranch() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
+        if(!branchOptions){
+          return;
+        }
+        
         createUser();
     }
     
@@ -184,7 +189,7 @@ if(user.role !== 'System Admin'){
                         <input className="block" type='email' placeholder="Email" value={ email } onChange={(e) => setEmail(e.target.value)}/>
                         <input className="block" type='password' placeholder="Password" value={ password } onChange={(e) => setPassword(e.target.value)}/>
                         <input className="block" type='password' placeholder="Confirm Password" value={ confirmPass } onChange={(e) => setConfirmPass(e.target.value)}/>
-                        <button className="block button radius new_branch_button" disabled={!branchOptions ? true : false}>{loading ? 'Loading...' : 'Sign Up'}</button>
+                        <button className="block button radius new_branch_button" disabled={loading}>{loading ? 'Loading...' : 'Sign Up'}</button>
                     </form>
                 </div>
             </div>
