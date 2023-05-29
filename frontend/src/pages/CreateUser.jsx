@@ -29,7 +29,7 @@ export default function SysAdminCreateBranch() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         
-        if(!branchOptions && role != 'Branch User'){
+        if(!branchOptions && role == 'Branch User'){
           return;
         }
         
