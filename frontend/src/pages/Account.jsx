@@ -10,12 +10,14 @@ export default function Account() {
     const [email, setEmail] = useState('');
     const [newName, setNewName] = useState('');
     const [newEmail, setNewEmail] = useState('');
+    const [sameEmail, setSameEmail] = useState('');
     
     const getData = async () => {
         const response = await fetch(`https://mbp-server.onrender.com/api/users/singleuser/${id}`);
         const json = await response.json();
         setName(json.name);
         setEmail(json.email);
+        setNewEmail(json.email);
         
     } 
     
@@ -48,10 +50,17 @@ export default function Account() {
             setError('Please enter a valid Name');
             return;
         }
+        
+        if(email == newEmail){
+         setSameEmail(true)
+        } else {
+         setSameEmail(false)
+        }
 
         const data = {
             name,
             email,
+            sameEmail
         }
 
         const response = await fetch(`https://mbp-server.onrender.com/api/users/edit/${id}`, {
@@ -78,7 +87,7 @@ export default function Account() {
 
     
     useEffect(() => {
-       getData()
+       getData();
     }, [])
     
     return(
