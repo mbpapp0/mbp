@@ -33,8 +33,8 @@ function UserList() {
       <div className='info_buttons>
         <Back />
          <div className='info_hover'> 
-          <Map location='Admin Users Preview Screen'/>
-          <InfoCard description='This is the Admin Users Preview Screen, Where you can see users with System or Data Adminstrator roles'/>    
+           <Map location='Admin Users Preview Screen'/>
+           <InfoCard description='This is the Admin Users Preview Screen, Where you can see users with System or Data Adminstrator roles'/>    
          </div>
        </div>
        <h2 className="block1x">Admin Users Lists</h2>
