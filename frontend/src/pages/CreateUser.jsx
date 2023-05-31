@@ -4,7 +4,7 @@ import Back from '../components/Back';
 import { useParams } from 'react-router-dom';
 import InfoCard from '../components/InfoCard';
 import Map from '../components/Map';
-
+import PasswordRules from '../components/PasswordRules';
 
 
 export default function SysAdminCreateBranch() {
@@ -24,6 +24,7 @@ export default function SysAdminCreateBranch() {
     const [success, setSuccess] = useState('New User Created');
     const [set, setSet] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [invalidPass, setInvalidPass] = useState(false);
    
 
     const handleSubmit = async (e) => {
@@ -41,12 +42,38 @@ export default function SysAdminCreateBranch() {
 
         return !invalidCharacters.test(name);
     }
+    
+    function isStrongPassword(password) {
+  // Check if password is at least 8 characters long
+  if (password.length < 8) {
+    return false;
+  }
+  
+  // Check if password contains at least one special character
+  var specialChars = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+  if (!specialChars.test(password)) {
+    return false;
+  }
+  
+  // Check if password meets any additional strength criteria (e.g., uppercase, lowercase, numeric)
+  var hasUppercase = /[A-Z]/.test(password);
+  var hasLowercase = /[a-z]/.test(password);
+  var hasNumeric = /[0-9]/.test(password);
+  
+  if (!(hasUppercase && hasLowercase && hasNumeric)) {
+    return false;
+  }
+  
+  // Password meets all strength requirements
+  return true;
+}
 
 
     const createUser = async () => {
         setLoading(true);
         const first = containsValidCharacters(firstName);
         const last = containsValidCharacters(lastName);
+        const validPass = isStrongPassword(password);
         
         if(!first || !last){
           setError('Please enter a valid character...');
@@ -59,6 +86,13 @@ export default function SysAdminCreateBranch() {
           setLoading(false)
           return;
         }
+        
+        if(!vaidPass){
+           setInvalidPass(true);
+           setLoading(false);
+            return;
+        }
+        
         
         const name = `${firstName} ${lastName}`;
 
