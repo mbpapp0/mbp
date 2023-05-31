@@ -21,18 +21,19 @@ const ForgotPassword = () => {
   };
 
   return (
-    <div className='container'>
-      {resetSent ? (
-        <p>Password reset link has been sent to your email.</p>
-      ) : (
-        <form onSubmit={handleSubmit} className='login'>
-          <label>
-            Email:
-            <input type="email" value={email} onChange={handleEmailChange} />
-          </label>
-          <button type="submit" disabled={loading}>{loading ? 'Loading...' : 'Reset Password'}</button>
-        </form>
-      )}
+    <div className='login_wrapper'>
+      <div className='login_form>
+        {resetSent ? (
+          <p>Password reset link has been sent to your email.</p>
+        )} 
+          <form onSubmit={handleSubmit} className='login'>
+            <label>
+              Email:
+              <input type="email" value={email} onChange={handleEmailChange} />
+            </label>
+            <button type="submit" disabled={loading}>{loading ? 'Loading...' : 'Reset Password'}</button>
+          </form>
+      </div>
     </div>
   );
 };
