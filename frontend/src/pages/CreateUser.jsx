@@ -205,6 +205,10 @@ if(user.role !== 'System Admin'){
                                 <p>{ success }</p>
                             </div>
                         }
+                        {
+                            inValidPass && <PasswordRules />
+                         }
+
                         <input className="block" type='text' placeholder="First Name" value={ firstName } onChange={(e) => setFirstName(e.target.value)}/>
                         <input className="block" type='text' placeholder="Last Name" value={ lastName } onChange={(e) => setLastName(e.target.value)}/>
                       <select className='role' onChange={(e) => setRole(e.target.value)}>
