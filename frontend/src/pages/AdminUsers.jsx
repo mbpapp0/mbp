@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import Map from '../components/Map';
+import Back from '../components/Back';
+import InfoCard from '../components/InfoCard';
 
 function UserList() {
   const [users, setUsers] = useState([]);
