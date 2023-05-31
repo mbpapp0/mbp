@@ -32,6 +32,10 @@ function UserList() {
     <div className='container'>
       <div className='info_buttons'>
         <Back />
+        <div>
+         <Map />
+         <InfoCard />
+        </div>
       </div>
        
        <h2 className="block1x">Admin Users Lists</h2>
