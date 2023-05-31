@@ -37,14 +37,14 @@ import Account from './pages/Account'
 export default function App() { 
   let user = JSON.parse(localStorage.getItem('user'));
 
-  { /* if(!user){
+  if(!user){
     return(
       <>
       <Header />
       <Login />
       </>
     )
-  } */}
+  }
 
   return(
     <>
