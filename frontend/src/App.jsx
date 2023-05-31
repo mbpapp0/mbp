@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import Header from './components/Header';
 import Login from './pages/Login'
+import AdminUsers from './pages/AdminUsers'
 import ClientScreen from './pages/ClientScreen'
 import CreateUser from './pages/CreateUser'
 import BranchUser from './pages/BranchUser'
@@ -52,6 +53,7 @@ export default function App() {
           <Route path='/' element={user.role == "Branch User" ? <BranchUser /> : user.role == "Data Admin" ? <DataAdminMainScreen/> : user.role === "System Admin" ? <SysAdmin /> : ''}/>
           <Route path='/client/:id' element={<ClientScreen />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/admins' element={<AdminUsers />} />
           <Route path='/branch' element={<BranchUser />} />
           <Route path='/branchiegfree' element={<BranchUserIEGFree />} />
           <Route path='/branchiegred' element={<BranchUserIEGReduced />} />
