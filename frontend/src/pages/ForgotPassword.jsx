@@ -22,7 +22,7 @@ const ForgotPassword = () => {
 
   return (
     <div className='login_wrapper'>
-      <div className='login_form>
+      <div className='login_form'>
         {resetSent && 
           <div className='success'>
             <p>Password reset link has been sent to your email.</p>
