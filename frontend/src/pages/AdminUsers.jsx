@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 function UserList() {
   const [users, setUsers] = useState([]);
+  const user = JSON.parse(localStorage.getItem('user'));
 
   useEffect(() => {
     fetchUsers();
@@ -18,6 +19,10 @@ function UserList() {
       console.error('Error fetching users:', error);
     }
   };
+  
+  if(user.role == 'Branch User'){
+    window.location.assign('/');
+  }
 
   return (
     <div className='container'>
@@ -25,10 +30,10 @@ function UserList() {
         <Map location='Admin Users Preview Screen'/>
         <InfoCard description='This is the Admin Users Preview Screen, Where you can see users with System or Data Adminstrator roles'/>    
        </div>
-       <h2 className="block1x">Data Administrator</h2>
+       <h2 className="block1x">Admin Users Lists</h2>
       <div>
-        {users.map(user => (
-          <div key={user.id} style={{ display: 'flex', justifyContent: 'space-between' }}>
+        {users && users.map(user => (
+          <div key={user._id} style={{ display: 'flex', justifyContent: 'space-between' }}>
             <h4>{user.name}</h4>
             <button className="button radius">View User</button>
           </div>
