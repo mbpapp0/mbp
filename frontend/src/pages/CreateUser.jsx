@@ -24,7 +24,7 @@ export default function SysAdminCreateBranch() {
     const [success, setSuccess] = useState('New User Created');
     const [set, setSet] = useState(false);
     const [loading, setLoading] = useState(false);
-    const [invalidPass, setInvalidPass] = useState(false);
+    const [inValidPass, setInValidPass] = useState(false);
    
 
     const handleSubmit = async (e) => {
@@ -88,7 +88,7 @@ export default function SysAdminCreateBranch() {
         }
         
         if(!validPass){
-           setInvalidPass(true);
+           setInValidPass(true);
            setLoading(false);
             return;
         }
