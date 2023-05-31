@@ -200,7 +200,7 @@ if(user.role !== 'System Admin'){
             </div>
                 <div className="new_branch" style={{ 'margin': '0'}}>
                     <h4 className="block1x ">Create New User</h4>
-                    <form onSubmit={handleSubmit} className='flex' style={{ justifyContent: 'center', flexDirection: 'column'}}>
+                    <form onSubmit={handleSubmit} className='flex create_form' style={{ justifyContent: 'center', flexDirection: 'column'}}>
                         {
                             error && 
                             <div className='error_user'>
