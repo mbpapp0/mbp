@@ -34,7 +34,7 @@ function UserList() {
         <Back />
         <div>
          <Map location='Admin User Preview'/>
-         <InfoCard />
+         <InfoCard description='This is where to preview admin users' />
         </div>
       </div>
        
