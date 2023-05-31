@@ -79,6 +79,7 @@ label {
 
 .create_form input, .create_form button {
     width: 100% !important;
+    min-width: 850px;
 }
 
 .header { 
