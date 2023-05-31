@@ -61,6 +61,7 @@ export default function SysAdmin() {
                     </div>
                 </div>
                 }
+                
             <div className='info_hover'> 
                 <Map location='System Administration Main Screen'/>
                 <InfoCard description='This is the System Adminstration Screen, You must create a Branch, then you can create users and assign roles to each users, preview, edit and delete users in each branch'/>    
@@ -72,6 +73,7 @@ export default function SysAdmin() {
                         <img className='view_img'src={newbranch}/>Create New Branch 
                     </button>
                 </Link>
+                <Link to='/admins'><button className='button radius'>View Admin Users</button></Link>
                 {branches.map((branch) => {
                     return (
                         <div className="view_branches" key={branch._id}>
