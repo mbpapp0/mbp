@@ -68,12 +68,14 @@ export default function SysAdmin() {
             </div>
                 <h2 className="block1x">System Adminstrator</h2>
                 <h4 className="block1x">Branches</h4>
+                <div className='flex'>
                 <Link to='/sysbranch'>
                     <button className="button radius flex align new_branch_button">
                         <img className='view_img'src={newbranch}/>Create New Branch 
                     </button>
                 </Link>
-                <Link to='/admins'><button className='button radius'>View Admin Users</button></Link>
+                <Link to='/admins' style={{marginLeft: '0.5rem'}}><button className='button radius'>View Admin Users</button></Link>
+                </div>
                 {branches.map((branch) => {
                     return (
                         <div className="view_branches" key={branch._id}>
