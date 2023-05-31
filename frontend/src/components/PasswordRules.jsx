@@ -5,7 +5,7 @@ const PasswordRules = () => {
     container: {
       background: 'black',
       color: 'white',
-      padding: '20px',
+      padding: '0.625rem',
     },
   };
 
