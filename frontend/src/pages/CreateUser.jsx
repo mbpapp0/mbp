@@ -87,7 +87,7 @@ export default function SysAdminCreateBranch() {
           return;
         }
         
-        if(!vaidPass){
+        if(!validPass){
            setInvalidPass(true);
            setLoading(false);
             return;
@@ -146,8 +146,15 @@ export default function SysAdminCreateBranch() {
             setTimeout(() => {
                 setSet(false);
             }, 3000);
-
-            window.location.assign(`/branch/${id}`)
+            
+            if(role != 'Branch User'){
+              window.location.assign('/admins');
+            } 
+            
+            if(role == 'Branch User'{
+            window.location.assign(`/branch/${id}`);
+            }
+         
         }
 
     }
