@@ -36,8 +36,8 @@ function UserList() {
        <h2 className="block1x">Admin Users Lists</h2>
       <div>
         {users && users.map(user => (
-          <div key={user._id} style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem'}}>
-            <h4>{user.name}</h4>
+          <div key={user._id} style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem', alignItems: 'center'}}>
+            <p>{user.name}</p>
             <button className="button radius">View User</button>
           </div>
         ))}
