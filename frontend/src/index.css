@@ -77,7 +77,7 @@ label {
     border-radius: 8px;
 }
 
-.create_form input, button {
+.create_form input, .create_form button {
     width: 100% !important;
 }
 
