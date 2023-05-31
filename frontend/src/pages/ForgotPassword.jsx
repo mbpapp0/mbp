@@ -23,9 +23,11 @@ const ForgotPassword = () => {
   return (
     <div className='login_wrapper'>
       <div className='login_form>
-        {resetSent ? (
-          <p>Password reset link has been sent to your email.</p>
-        )} 
+        {resetSent && 
+          <div clasName='success'>
+            <p>Password reset link has been sent to your email.</p>
+          </div>
+        } 
           <form onSubmit={handleSubmit} className='login'>
             <label>
               Email:
