@@ -32,7 +32,7 @@ function UserList() {
     <div className='container'>
       <div className='info_buttons'>
         <Back />
-        <div>
+        <div className='info_hover'>
          <Map location='Admin User Preview'/>
          <InfoCard description='This is where to preview admin users' />
         </div>
