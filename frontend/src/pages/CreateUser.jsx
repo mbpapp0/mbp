@@ -151,7 +151,7 @@ export default function SysAdminCreateBranch() {
               window.location.assign('/admins');
             } 
             
-            if(role == 'Branch User'{
+            if(role == 'Branch User'){
             window.location.assign(`/branch/${id}`);
             }
          
