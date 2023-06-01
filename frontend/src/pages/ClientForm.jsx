@@ -152,8 +152,8 @@ export default function ClientForm() {
     const [memberFiveIncomeFreq, setMemberFiveIncomeFreq] = useState('Weekly');
     const [memberSixIncomeFreq, setMemberSixIncomeFreq] = useState('Weekly');
     
-    const [errorArr, setErrorArr] = useState(false);
-    
+    const [errorArr, setErrorArr] = useState([]);
+    [
     const checkInput = (str, label) => {
       const output = `Please enter a valid character at ${label}` 
       if(str[0] == ' '){
@@ -332,7 +332,7 @@ export default function ClientForm() {
         const branch = user.branch;
         const day = new Date();
         const date = day.toLocaleDateString();
-        setErrorArr(false);
+        setErrorArr([]);
         combineCheckInputs();
         
         if(errorArr.length > 0){
@@ -821,7 +821,7 @@ export default function ClientForm() {
             <p>{ error }</p>
         </div>}
 
-        { errorArr != false && errorArr.map((error, index) => (
+        { errorAr.length > 0 && errorArr.map((error, index) => (
          <div key={index} className='client_form_error'>
             <ul>
               <li>{ error }</li>
