@@ -44,7 +44,7 @@ export default function UserList(){
     
         
     const changeBranchName = async () => {
-        if(!newBranchName || newBranchName[0] = ' '){
+        if(!newBranchName || newBranchName[0] == ' '){
           return;
         }
         
