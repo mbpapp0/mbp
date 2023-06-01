@@ -117,7 +117,14 @@ label {
  color: white;
  font-size: 0.7rem;
  padding: 0.5rem;
+ margin-block: 0.5rem;
 }
+
+.client_form_error li {
+   font-size: 7px;
+   margin: 2px;
+}
+
 
 .no_form {
     margin-block: 3rem;
