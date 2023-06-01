@@ -156,7 +156,7 @@ export default function ClientForm() {
     
     const checkInput = (str, label) => {
       if(str[0] == ' '){
-        setErrorArr[...errorArr, label]
+        setErrorArr([...errorArr, label])
       }
     }
     
