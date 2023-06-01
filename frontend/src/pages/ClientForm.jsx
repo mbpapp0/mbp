@@ -155,6 +155,10 @@ export default function ClientForm() {
     const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     };
+    
+    if(childOneName[0] == ' ') {
+      scrollToTop();
+    }
 
     const handleClear = () => {
         sign.clear();
