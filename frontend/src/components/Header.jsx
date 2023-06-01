@@ -38,7 +38,7 @@ export default function Header() {
       clearTimeout(timeoutId);
     }
 
-    const newTimeoutId = setTimeout(handleIdleTimeout, 1 * 60 * 1000);
+    const newTimeoutId = setTimeout(handleIdleTimeout, 10 * 60 * 1000);
     setTimeoutId(newTimeoutId);
   };
 
@@ -56,7 +56,7 @@ export default function Header() {
       resetTimeout();
         
       return () => {
-       window.removeEventListener('mousemove', handleUserActivity);
+       window.removeEventListener('onload', handleUserActivity);
       // window.removeEventListener('mousemove', handleUserActivity);
        // window.removeEventListener('keydown', handleUserActivity);
        // window.removeEventListener('scroll', handleUserActivity);
