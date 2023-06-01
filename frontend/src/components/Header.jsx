@@ -5,6 +5,7 @@ import { useEffect } from 'react'
 
 export default function Header() {
     const user = JSON.parse(localStorage.getItem('user'));
+    const [timeoutId, setTimeoutId] = useState(null);
 
     const { dispatch } = useAuthContext();
 
@@ -28,8 +29,38 @@ export default function Header() {
            }
          }
     
+  const handleIdleTimeout = () => {
+    logout();
+  };
+
+  const resetTimeout = () => {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+
+    const newTimeoutId = setTimeout(handleIdleTimeout, 10 * 60 * 1000);
+    setTimeoutId(newTimeoutId);
+  };
+
+  const handleUserActivity = () => {
+    resetTimeout();
+  };
+    
     useEffect(() => {
       checkLogoutTime();
+      window.addEventListener('mousemove', handleUserActivity);
+      window.addEventListener('keydown', handleUserActivity);
+      window.addEventListener('scroll', handleUserActivity);
+
+      resetTimeout();
+        
+      return () => {
+        window.removeEventListener('mousemove', handleUserActivity);
+        window.removeEventListener('keydown', handleUserActivity);
+        window.removeEventListener('scroll', handleUserActivity);
+
+        clearTimeout(timeoutId);
+      };
     }, [])
 
     return (
