@@ -151,6 +151,15 @@ export default function ClientForm() {
     const [memberFourIncomeFreq, setMemberFourIncomeFreq] = useState('Weekly');
     const [memberFiveIncomeFreq, setMemberFiveIncomeFreq] = useState('Weekly');
     const [memberSixIncomeFreq, setMemberSixIncomeFreq] = useState('Weekly');
+    
+    const [errorArr, setErrorArr] = useState([]);
+    
+    const checkInput = (str, label) => {
+      if(str[0] == ' '){
+        setErrorArr[...errorArr, label]
+      }
+    }
+    
 
     const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
