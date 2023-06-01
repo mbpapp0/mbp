@@ -47,12 +47,7 @@ export const useLogin = () => {
             dispatch({ type: 'LOGIN', payload: json});
             setLoading(false);
             window.location.assign('/');
-            const logoutTime = 60000 * 10;
-
-            setTimeout(() => {
-              window.location.assign('/');
-            }, logoutTime)
-
+            
 
         }  
     }
