@@ -816,6 +816,13 @@ checkInput(phoneNumber, 'Phone Number')
         <div className='error_indicator'>
             <p>{ error }</p>
         </div>}
+
+        { errorArr.length > 0 && errorArr.map((error, index) => (
+         <div key={index} className='client_form_error'>
+            <ul>
+              <li>{ errror }</li>
+            </ul>
+         </div>))}
         <div className="labels">
             <div className="blocks block"></div>
             <p className='label first_label'>
