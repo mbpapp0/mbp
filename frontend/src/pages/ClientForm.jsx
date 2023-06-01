@@ -160,6 +160,61 @@ export default function ClientForm() {
       }
     }
     
+    const combineCheckInputs = () => {
+      checkInput(childOneName, 'Child One Name')
+      checkInput(childOneID, 'Child One ID')
+      checkInput(childOneAge, 'Child One Age')
+      checkInput(childTwoName, 'Child Two Name')
+      checkInput(childTwoID, 'Child Two ID')
+      checkInput(childTwoAge, 'Child Two Age')
+      checkInput(childThreeName, 'Child Three Name')
+      checkInput(childThreeID, 'Child Three ID')
+      checkInput(childThreeAge, 'Child Three Age')
+      checkInput(childFourName, 'Child Four Name')
+      checkInput(childFourID, 'Child Four ID')
+      checkInput(childFourAge, 'Child Four Age')
+      checkInput(childFiveName, 'Child Five Name')
+      checkInput(childFiveID, 'Child Five ID')
+      checkInput(childFiveAge, 'Child Five Age')
+      checkInput(childSixName, 'Child Six Name')
+      checkInput(childSixID, 'Child Six ID')
+      checkInput(childSixAge, 'Child Six Age')
+      checkInput(childIncome, 'Child Income')
+      checkInput(HouseholdMemberOneName, 'Household Member One Name')
+      checkInput(HouseholdMemberOneWorkEarnings, 'Household Member One Work Earnings')
+      checkInput(HouseholdMemberOneWelfare_Alimony_CS, 'Household Member One Welfare Alimony CS')
+      checkInput(HouseholdMemberOneOther, 'Household Member One Other')
+checkInput(HouseholdMemberTwoName, 'Household Member Two Name')
+checkInput(HouseholdMemberTwoWorkEarnings, 'Household Member Two Work Earnings')
+checkInput(HouseholdMemberTwoWelfare_Alimony_CS, 'Household Member Two Welfare Alimony CS')
+checkInput(HouseholdMemberTwoOther, 'Household Member Two Other')
+checkInput(HouseholdMemberThreeName, 'Household Member Three Name')
+checkInput(HouseholdMemberThreeWorkEarnings, 'Household Member Three Work Earnings')
+checkInput(HouseholdMemberThreeWelfare_Alimony_CS, 'Household Member Three Welfare Alimony CS')
+checkInput(HouseholdMemberThreeOther, 'Household Member Three Other')
+checkInput(HouseholdMemberFourName, 'Household Member Four Name')
+checkInput(HouseholdMemberFourWorkEarnings, 'Household Member Four Work Earnings')
+checkInput(HouseholdMemberFourWelfare_Alimony_CS, 'Household Member Four Welfare Alimony CS')
+checkInput(HouseholdMemberFourOther, 'Household Member Four Other')
+checkInput(HouseholdMemberFiveName, 'Household Member Five Name')
+checkInput(HouseholdMemberFiveWorkEarnings, 'Household Member Five Work Earnings')
+checkInput(HouseholdMemberFiveWelfare_Alimony_CS, 'Household Member Five Welfare Alimony CS')
+checkInput(HouseholdMemberFiveOther, 'Household Member Five Other')
+checkInput(HouseholdMemberSixName, 'Household Member Six Name')
+checkInput(HouseholdMemberSixWorkEarnings, 'Household Member Six Work Earnings')
+checkInput(HouseholdMemberSixWelfare_Alimony_CS, 'Household Member Six Welfare Alimony CS')
+checkInput(HouseholdMemberSixOther, 'Household Member Six Other')
+checkInput(totalHouseHoldMembers, 'Total Household Members')
+checkInput(totalHouseHoldIncome, 'Total Household Income')
+checkInput(ssn, 'SSN')
+checkInput(printName, 'Print Name')
+checkInput(address, 'Address')
+checkInput(city, 'City')
+checkInput(phoneNumber, 'Phone Number')
+      checkInput(zipCode, 'ZIP Code')
+      checkInput(state, 'State')
+    }
+    
 
     const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -274,7 +329,13 @@ export default function ClientForm() {
         const branch = user.branch;
         const day = new Date();
         const date = day.toLocaleDateString();
-
+        
+        combineCheckInputs();
+        
+        if(errorArr.length > 0){
+          return;
+        }
+        
         if(!signature && !offSignature){
             setSignErr(true); 
             setOffSignErr(true);
