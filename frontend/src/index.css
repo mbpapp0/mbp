@@ -112,6 +112,13 @@ label {
   justify-content: center;
 }
 
+.client_form_error {
+ background: black;
+ color: white;
+ font-size: 0.7rem;
+ padding: 0.5rem;
+}
+
 .no_form {
     margin-block: 3rem;
 }
