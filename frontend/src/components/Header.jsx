@@ -30,7 +30,7 @@ export default function Header() {
          }
     
   const handleIdleTimeout = () => {
-    logout();
+    window.location.assign('/');
   };
 
   const resetTimeout = () => {
