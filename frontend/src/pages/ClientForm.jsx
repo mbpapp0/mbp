@@ -157,7 +157,7 @@ export default function ClientForm() {
     const checkInput = (str, label) => {
       const output = `Please enter a valid character at ${label}` 
       if(str[0] == ' '){
-        setErrorArr([...errorArr, output])
+        setErrorArr([output, ...errorArr])
          
       }
     }
