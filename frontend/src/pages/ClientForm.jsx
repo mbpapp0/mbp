@@ -155,8 +155,9 @@ export default function ClientForm() {
     const [errorArr, setErrorArr] = useState([]);
     
     const checkInput = (str, label) => {
+      const output = `Please enter a valid character at ${label}` 
       if(str[0] == ' '){
-        setErrorArr([...errorArr, label])
+        setErrorArr([...errorArr, output])
       }
     }
     
@@ -330,7 +331,7 @@ export default function ClientForm() {
         const branch = user.branch;
         const day = new Date();
         const date = day.toLocaleDateString();
-        
+        setErrorArr([]);
         combineCheckInputs();
         
         if(errorArr.length > 0){
