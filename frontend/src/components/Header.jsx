@@ -48,15 +48,17 @@ export default function Header() {
     
     useEffect(() => {
       checkLogoutTime();
-      //window.addEventListener('mousemove', handleUserActivity);
-      window.addEventListener('keydown', handleUserActivity);
-     // window.addEventListener('scroll', handleUserActivity);
+      window.addEventListener('onload', handleUserActivity);
+    //  window.addEventListener('mousemove', handleUserActivity);
+    //  window.addEventListener('keydown', handleUserActivity);
+    //  window.addEventListener('scroll', handleUserActivity);
 
       resetTimeout();
         
       return () => {
-       // window.removeEventListener('mousemove', handleUserActivity);
-        window.removeEventListener('keydown', handleUserActivity);
+       window.removeEventListener('mousemove', handleUserActivity);
+      // window.removeEventListener('mousemove', handleUserActivity);
+       // window.removeEventListener('keydown', handleUserActivity);
        // window.removeEventListener('scroll', handleUserActivity);
 
         clearTimeout(timeoutId);
