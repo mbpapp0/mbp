@@ -152,7 +152,9 @@ export default function ClientForm() {
     const [memberFiveIncomeFreq, setMemberFiveIncomeFreq] = useState('Weekly');
     const [memberSixIncomeFreq, setMemberSixIncomeFreq] = useState('Weekly');
 
-
+    const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
     const handleClear = () => {
         sign.clear();
