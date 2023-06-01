@@ -153,7 +153,7 @@ export default function ClientForm() {
     const [memberSixIncomeFreq, setMemberSixIncomeFreq] = useState('Weekly');
     
     const [errorArr, setErrorArr] = useState([]);
-    [
+    
     const checkInput = (str, label) => {
       const output = `Please enter a valid character at ${label}` 
       if(str[0] == ' '){
