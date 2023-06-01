@@ -821,7 +821,7 @@ export default function ClientForm() {
             <p>{ error }</p>
         </div>}
 
-        { errorArr && errorArr.map((error, index) => (
+        { errorArr != false && errorArr.map((error, index) => (
          <div key={index} className='client_form_error'>
             <ul>
               <li>{ error }</li>
