@@ -30,7 +30,7 @@ export default function Header() {
          }
     
   const handleIdleTimeout = () => {
-    window.location.assign('/');
+    logout();
   };
 
   const resetTimeout = () => {
@@ -38,7 +38,7 @@ export default function Header() {
       clearTimeout(timeoutId);
     }
 
-    const newTimeoutId = setTimeout(handleIdleTimeout, 10 * 60 * 1000);
+    const newTimeoutId = setTimeout(handleIdleTimeout, 1 * 60 * 1000);
     setTimeoutId(newTimeoutId);
   };
 
@@ -48,16 +48,16 @@ export default function Header() {
     
     useEffect(() => {
       checkLogoutTime();
-      window.addEventListener('mousemove', handleUserActivity);
+      //window.addEventListener('mousemove', handleUserActivity);
       window.addEventListener('keydown', handleUserActivity);
-      window.addEventListener('scroll', handleUserActivity);
+     // window.addEventListener('scroll', handleUserActivity);
 
       resetTimeout();
         
       return () => {
-        window.removeEventListener('mousemove', handleUserActivity);
+       // window.removeEventListener('mousemove', handleUserActivity);
         window.removeEventListener('keydown', handleUserActivity);
-        window.removeEventListener('scroll', handleUserActivity);
+       // window.removeEventListener('scroll', handleUserActivity);
 
         clearTimeout(timeoutId);
       };
