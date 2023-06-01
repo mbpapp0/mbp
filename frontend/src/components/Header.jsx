@@ -38,7 +38,7 @@ export default function Header() {
       clearTimeout(timeoutId);
     }
 
-    const newTimeoutId = setTimeout(handleIdleTimeout, 90 * 60 * 1000);
+    const newTimeoutId = setTimeout(handleIdleTimeout, 10 * 60 * 1000);
     setTimeoutId(newTimeoutId);
   };
 
