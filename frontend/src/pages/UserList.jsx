@@ -28,6 +28,7 @@ export default function UserList(){
     // }
 
     const getBranchName = async () => {
+        
         const response = await fetch(`https://mbp-server.onrender.com/api/branches/${id}`);
         const json = await response.json();
         setBranchName(json.name);
@@ -43,6 +44,10 @@ export default function UserList(){
     
         
     const changeBranchName = async () => {
+        if(!newBranchName || newBranchName[0] = ' '){
+          return;
+        }
+        
         const response = await fetch(`https://mbp-server.onrender.com/api/branches/${id}`, {
              method: 'PUT',
              body: JSON.stringify({name: newBranchName}),
