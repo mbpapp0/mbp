@@ -184,35 +184,36 @@ export default function ClientForm() {
       checkInput(HouseholdMemberOneWorkEarnings, 'Household Member One Work Earnings')
       checkInput(HouseholdMemberOneWelfare_Alimony_CS, 'Household Member One Welfare Alimony CS')
       checkInput(HouseholdMemberOneOther, 'Household Member One Other')
-checkInput(HouseholdMemberTwoName, 'Household Member Two Name')
-checkInput(HouseholdMemberTwoWorkEarnings, 'Household Member Two Work Earnings')
-checkInput(HouseholdMemberTwoWelfare_Alimony_CS, 'Household Member Two Welfare Alimony CS')
-checkInput(HouseholdMemberTwoOther, 'Household Member Two Other')
-checkInput(HouseholdMemberThreeName, 'Household Member Three Name')
-checkInput(HouseholdMemberThreeWorkEarnings, 'Household Member Three Work Earnings')
-checkInput(HouseholdMemberThreeWelfare_Alimony_CS, 'Household Member Three Welfare Alimony CS')
-checkInput(HouseholdMemberThreeOther, 'Household Member Three Other')
-checkInput(HouseholdMemberFourName, 'Household Member Four Name')
-checkInput(HouseholdMemberFourWorkEarnings, 'Household Member Four Work Earnings')
-checkInput(HouseholdMemberFourWelfare_Alimony_CS, 'Household Member Four Welfare Alimony CS')
-checkInput(HouseholdMemberFourOther, 'Household Member Four Other')
-checkInput(HouseholdMemberFiveName, 'Household Member Five Name')
-checkInput(HouseholdMemberFiveWorkEarnings, 'Household Member Five Work Earnings')
-checkInput(HouseholdMemberFiveWelfare_Alimony_CS, 'Household Member Five Welfare Alimony CS')
-checkInput(HouseholdMemberFiveOther, 'Household Member Five Other')
-checkInput(HouseholdMemberSixName, 'Household Member Six Name')
-checkInput(HouseholdMemberSixWorkEarnings, 'Household Member Six Work Earnings')
-checkInput(HouseholdMemberSixWelfare_Alimony_CS, 'Household Member Six Welfare Alimony CS')
-checkInput(HouseholdMemberSixOther, 'Household Member Six Other')
-checkInput(totalHouseHoldMembers, 'Total Household Members')
-checkInput(totalHouseHoldIncome, 'Total Household Income')
-checkInput(ssn, 'SSN')
-checkInput(printName, 'Print Name')
-checkInput(address, 'Address')
-checkInput(city, 'City')
-checkInput(phoneNumber, 'Phone Number')
+      checkInput(HouseholdMemberTwoName, 'Household Member Two Name')
+      checkInput(HouseholdMemberTwoWorkEarnings, 'Household Member Two Work Earnings')
+      checkInput(HouseholdMemberTwoWelfare_Alimony_CS, 'Household Member Two Welfare Alimony CS')
+      checkInput(HouseholdMemberTwoOther, 'Household Member Two Other')
+      checkInput(HouseholdMemberThreeName, 'Household Member Three Name')
+      checkInput(HouseholdMemberThreeWorkEarnings, 'Household Member Three Work Earnings')
+      checkInput(HouseholdMemberThreeWelfare_Alimony_CS, 'Household Member Three Welfare Alimony CS') 
+      checkInput(HouseholdMemberThreeOther, 'Household Member Three Other')
+      checkInput(HouseholdMemberFourName, 'Household Member Four Name')
+      checkInput(HouseholdMemberFourWorkEarnings, 'Household Member Four Work Earnings')
+      checkInput(HouseholdMemberFourWelfare_Alimony_CS, 'Household Member Four Welfare Alimony CS')
+      checkInput(HouseholdMemberFourOther, 'Household Member Four Other')
+      checkInput(HouseholdMemberFiveName, 'Household Member Five Name')
+      checkInput(HouseholdMemberFiveWorkEarnings, 'Household Member Five Work Earnings')
+      checkInput(HouseholdMemberFiveWelfare_Alimony_CS, 'Household Member Five Welfare Alimony CS')
+      checkInput(HouseholdMemberFiveOther, 'Household Member Five Other')
+      checkInput(HouseholdMemberSixName, 'Household Member Six Name')
+      checkInput(HouseholdMemberSixWorkEarnings, 'Household Member Six Work Earnings')
+      checkInput(HouseholdMemberSixWelfare_Alimony_CS, 'Household Member Six Welfare Alimony CS')
+      checkInput(HouseholdMemberSixOther, 'Household Member Six Other')
+      checkInput(totalHouseHoldMembers, 'Total Household Members')
+      checkInput(totalHouseHoldIncome, 'Total Household Income')
+      checkInput(ssn, 'SSN')
+      checkInput(printName, 'Print Name')
+      checkInput(address, 'Address')
+      checkInput(city, 'City')
+      checkInput(phoneNumber, 'Phone Number')
       checkInput(zipCode, 'ZIP Code')
       checkInput(state, 'State')
+       
     }
     
 
@@ -333,6 +334,7 @@ checkInput(phoneNumber, 'Phone Number')
         combineCheckInputs();
         
         if(errorArr.length > 0){
+          scrollToTop()
           return;
         }
         
@@ -820,7 +822,7 @@ checkInput(phoneNumber, 'Phone Number')
         { errorArr.length > 0 && errorArr.map((error, index) => (
          <div key={index} className='client_form_error'>
             <ul>
-              <li>{ errror }</li>
+              <li>{ error }</li>
             </ul>
          </div>))}
         <div className="labels">
