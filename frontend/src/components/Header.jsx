@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useAuthContext } from '../hooks/useAuthContext';
 import { Navigate } from 'react-router-dom';
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Header() {
     const user = JSON.parse(localStorage.getItem('user'));
