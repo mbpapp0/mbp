@@ -11,11 +11,13 @@ export default function BranchUser() {
     const [free, setFree] = useState(null);
     const [reduced, setReduced] = useState(null);
     const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(false);
 
     const [branchName, setBranchName] = useState(null);
     const [click, setClick] = useState(null);
 
     const getBranchName = async () => {
+        setLoading(true);
         const response = await fetch(`https://mbp-server.onrender.com/api/branches/${user.branch}`);
         // const response = await fetch(`http://localhost:3001/api/branches/${user.branch}`);
         const json = await response.json();
@@ -41,6 +43,7 @@ export default function BranchUser() {
         // const response = await fetch(`http://localhost:3001/api/clients/${user.branch}`);
         const json = await response.json();
         setData(json);
+        setLoading(false);
     }
 
     
@@ -50,6 +53,14 @@ export default function BranchUser() {
         getReducedMeal();
         getClients();
     }, []);
+    
+    if(loading) {
+      return(
+        <div style={{textAlign: 'center', display:'flex', height: '20rem', justifyContent: 'center', alignItems: 'center'}}>
+           <h2>Loading</h2>
+        </div>
+      )
+    }
 
         if(user.role != 'Branch User'){
         return <Error />
