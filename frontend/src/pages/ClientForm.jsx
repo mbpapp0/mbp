@@ -1289,7 +1289,7 @@ export default function ClientForm() {
                 </div>
 
              <div style={{marginBlock: '0.5rem'}}>
-      <label htmlFor="noSsnCheckbox" style={{marginInline: '0.5rem', fontSize: '7px'}}>
+      <label htmlFor="noSsnCheckbox" style={{marginInline: '1.5rem', fontSize: '7px'}}>
         <input
           type="checkbox"
           id="noSsnCheckbox"
