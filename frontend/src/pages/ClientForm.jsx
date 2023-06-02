@@ -146,7 +146,7 @@ export default function ClientForm() {
     const [offSign, setOffSign] = useState();
     const [offImage, setOffImage] = useState();
     const [offSignature, setOffSignature] = useState();
-    const [offsignDate, setOffSignDate] = useState('')
+    const [offSignDate, setOffSignDate] = useState('')
 
     const [memberOneIncomeFreq, setMemberOneIncomeFreq] = useState('Weekly');
     const [memberTwoIncomeFreq, setMemberTwoIncomeFreq] = useState('Weekly');
