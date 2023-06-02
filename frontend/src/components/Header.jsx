@@ -98,10 +98,10 @@ export default function Header() {
              
              { show && <div className='guide_confirm'>
                     <h4 className='guide_confirm_title'>Your session will end in 2 minutes due to activity</h4>
-                    <h5>
+                    <p style={{ textAlign: 'center', marginBlock: '0.5rem'}}>
                       As a security precaution, if there is no additional activity, the session will end and you will be brought to the home page.
                       If you are still working on this app, choose OK to continue.
-                    </h5>
+                    </p>
                     <div className='guide_confirm_buttons'>   
                         <button onClick={handleCancelTimer}>Ok</button>
                     </div>
