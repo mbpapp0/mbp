@@ -1446,10 +1446,16 @@ export default function ClientForm() {
                
                          
                  <br />
-                <label>
-                  Date:
-                  <input type="date" value={signDate} onChange={(e) => setSignDate(e.target.value)} />
-                </label>
+    
+                            
+                <div className='flex align>            
+                            
+                  <label>
+                    Date:
+                    <input type="date" value={signDate} onChange={(e) => setSignDate(e.target.value)} />
+                  </label>
+
+                </div>
       
 
                 <p className="disclaimer red bottom">
@@ -1516,10 +1522,12 @@ export default function ClientForm() {
                 </div>  
             <button className='button radius block padding'>Submit</button>
             <br />
-            <label>
-              Date:
-              <input type="date" value={offSignDate} onChange={(e) => setOffSignDate(e.target.value)} />
-           </label>
+            <div className='flex align block1x'>
+              <label>
+                Date:
+                <input type="date" value={offSignDate} onChange={(e) => setOffSignDate(e.target.value)} />
+              </label>
+           </div>
         </form>
         </>
     )
