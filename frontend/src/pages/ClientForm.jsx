@@ -558,7 +558,10 @@ export default function ClientForm() {
         createRoster(childFourName, childFourAge);
         createRoster(childFiveName, childFiveAge);
         createRoster(childSixName, childSixAge);
-
+         
+        if(noSsn){
+         setSsn('')
+        }
 
         const form = {
             branch,
@@ -1282,7 +1285,7 @@ export default function ClientForm() {
                     is listed below, will result in denial of free or reduced eligibility.  </span>
                 </p>
 
-                <div className="flex align block">
+                <div className={ noSsn ? 'hide' : "flex align block"}>
                     <p className="right">Last four Digits of Social Security Number XXX-XX</p>
                     <input type='number' className="input_width" disabled={noSsn} value={ssn} onChange={(e) => setSsn(e.target.value)}/>
                     
