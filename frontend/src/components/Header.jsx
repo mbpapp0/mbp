@@ -18,6 +18,11 @@ export default function Header() {
         window.location.assign('/')
     }
  
+    const handleCancelLogout = () => {
+      setShow(false);
+      clearTimeout(logoutTimeoutRef.current);
+      resetInactivityTimer();
+    };
 
     const inactivityTimeoutRef = useRef(null);
   const logoutTimeoutRef = useRef(null);
@@ -41,11 +46,6 @@ export default function Header() {
       resetInactivityTimer();
     };
 
-    const handleCancelLogout = () => {
-      setShow(false);
-      clearTimeout(logoutTimeoutRef.current);
-      resetInactivityTimer();
-    };
 
 
     startInactivityTimer();
