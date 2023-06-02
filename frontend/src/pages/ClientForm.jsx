@@ -1289,7 +1289,7 @@ export default function ClientForm() {
           type="checkbox"
           id="noSsnCheckbox"
           checked={noSsn}
-          onChange={() => setNoSsn(!noSsn)}
+          onChange={() => {setSsn('') setNoSsn(!noSsn)}}
         />
         I dont have an SSN
       </label>
