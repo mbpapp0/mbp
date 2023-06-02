@@ -12,6 +12,8 @@ export default function Header() {
     
     const showPrompt = () =>  {
         setShow(true);
+
+        setTimeout(() => { logout(); }, 60000)
     }
 
     const logout = () => {
@@ -57,7 +59,7 @@ export default function Header() {
         clearTimeout(timeoutId);
       };
         
-        if (show) {
+        {/*  if (show) {
       const timeoutId = setTimeout(() => {
         logout()
         handleTimerExpired();
@@ -70,8 +72,8 @@ export default function Header() {
 
     return () => {
       clearTimeout(timerId);
-    };
-    }, [show]);
+    }; */}
+    }, []);
     
       const handleCancelTimer = () => {
     setShow(false);
