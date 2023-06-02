@@ -1526,14 +1526,17 @@ export default function ClientForm() {
                         <button className='button' type='button' onClick={handleOffClear}>Clear</button>
                     </div>
                 </div>  
-            <button className='button radius block padding'>Submit</button>
-            <br />
-            <div className='flex align block1x'>
+                     <br />
+           <div className='flex align block1x'>
               <label>
                 Date:
                 <input type="date" value={offSignDate} onChange={(e) => setOffSignDate(e.target.value)} />
               </label>
            </div>
+
+            <button className='button radius block padding'>Submit</button>
+
+           
         </form>
         </>
     )
