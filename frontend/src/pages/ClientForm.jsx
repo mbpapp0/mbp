@@ -1448,15 +1448,15 @@ export default function ClientForm() {
                  <br />
     
                             
-                <div className='flex align>            
+                {/*   <div className='flex align>            
                             
                   <label>
                     Date:
                     <input type="date" value={signDate} onChange={(e) => setSignDate(e.target.value)} />
                   </label>
-
+        
                 </div>
-      
+               */}
 
                 <p className="disclaimer red bottom">
                     *This application is a revision of USDA's newly released meal benefit prototype and meets all 
