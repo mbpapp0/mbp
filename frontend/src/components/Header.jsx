@@ -20,52 +20,40 @@ export default function Header() {
         dispatch({ type: 'LOGOUT'});
         window.location.assign('/')
     }
+   
     
-    const checkLogoutTime = () => {
-         const lastLoginTime = localStorage.getItem('lastLoginTime'); 
-  
-         if (lastLoginTime) {
-             const currentTime = new Date().getTime()
-             const elapsedTime= (currentTime - parseInt(lastLoginTime)) / (1000 * 60); 
-
-             if (elapsedTime>= 10) {
-                 localStorage.removeItem('lastLoginTime');
-                 logout();
-             } 
-           }
-         }
-    
-  const handleIdleTimeout = () => {
+    const handleIdleTimeout = () => {
     showPrompt();
-  };
+    };
 
-  const resetTimeout = () => {
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-    }
+    const resetTimeout = () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+     }
 
-    const newTimeoutId = setTimeout(handleIdleTimeout, 10 * 60 * 1000);
-    setTimeoutId(newTimeoutId);
-  };
+     const newTimeoutId = setTimeout(handleIdleTimeout, 1 * 60 * 1000);
+       setTimeoutId(newTimeoutId);
+    };
 
-  const handleUserActivity = () => {
-    resetTimeout();
-  };
+    const handleUserActivity = () => {
+      resetTimeout();
+    };
     
     
     
     useEffect(() => {
-        
-     window.addEventListener('mousemove', handleUserActivity);
-     window.addEventListener('keydown', handleUserActivity);
-     window.addEventListener('scroll', handleUserActivity);
+     window.addEventListener('onload', handleUserActivity);
+    // window.addEventListener('mousemove', handleUserActivity);
+    // window.addEventListener('keydown', handleUserActivity);
+   //  window.addEventListener('scroll', handleUserActivity);
 
       resetTimeout();
         
       return () => {
-        window.removeEventListener('mousemove', handleUserActivity);
-        window.removeEventListener('keydown', handleUserActivity);
-        window.removeEventListener('scroll', handleUserActivity);
+        window.addEventListener('onload', handleUserActivity);
+        // window.removeEventListener('mousemove', handleUserActivity);
+        // window.removeEventListener('keydown', handleUserAct.ivity);
+        // window.removeEventListener('scroll', handleUserActivity);
 
         clearTimeout(timeoutId);
       };
