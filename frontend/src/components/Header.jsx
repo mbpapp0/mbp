@@ -24,6 +24,7 @@ export default function Header() {
 
   useEffect(() => {
     const startInactivityTimer = () => {
+        if(!user){return;}
       inactivityTimeoutRef.current = setTimeout(() => {
         setShow(true);
         logoutTimeoutRef.current = setTimeout(logout, 120000); // 2 minutes
