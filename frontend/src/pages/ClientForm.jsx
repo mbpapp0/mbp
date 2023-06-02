@@ -140,11 +140,13 @@ export default function ClientForm() {
     const [reduced, setReduced] = useState(null);
 
     const [sign, setSign] = useState();
+    const [signDate, setSignDate] = useState('')
     const [image, setImage] = useState();
     
     const [offSign, setOffSign] = useState();
     const [offImage, setOffImage] = useState();
     const [offSignature, setOffSignature] = useState();
+    const [offsignDate, setOffSignDate] = useState('')
 
     const [memberOneIncomeFreq, setMemberOneIncomeFreq] = useState('Weekly');
     const [memberTwoIncomeFreq, setMemberTwoIncomeFreq] = useState('Weekly');
@@ -154,6 +156,7 @@ export default function ClientForm() {
     const [memberSixIncomeFreq, setMemberSixIncomeFreq] = useState('Weekly');
     
     const [errorArr, setErrorArr] = useState([]);
+    
     
     const ssnFunc = () => {
       setSsn(noSsn ? '' : ssn);
@@ -655,6 +658,8 @@ export default function ClientForm() {
             supper,
             snack,
             signature,
+            signDate,
+            offSignDate,
             offSignature,
             printName,
             address,
@@ -1437,6 +1442,15 @@ export default function ClientForm() {
                         <button className='button' type='button' onClick={handleClear}>Clear</button>
                     </div>
                 </div>
+                         
+               
+                         
+                 <br />
+                <label>
+                  Date:
+                  <input type="date" value={signDate} onChange={(e) => setSignDate(e.target.value)} />
+                </label>
+      
 
                 <p className="disclaimer red bottom">
                     *This application is a revision of USDA's newly released meal benefit prototype and meets all 
@@ -1501,6 +1515,11 @@ export default function ClientForm() {
                     </div>
                 </div>  
             <button className='button radius block padding'>Submit</button>
+            <br />
+            <label>
+              Date:
+              <input type="date" value={offSignDate} onChange={(e) => setOffSignDate(e.target.value)} />
+           </label>
         </form>
         </>
     )
