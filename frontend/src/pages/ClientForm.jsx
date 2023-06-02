@@ -155,6 +155,11 @@ export default function ClientForm() {
     
     const [errorArr, setErrorArr] = useState([]);
     
+    const ssnFunc = () => {
+      setSsn('');
+      setNoSsn(!noSsn)
+    }
+    
     const checkInput = (str, label) => {
       const output = `Please enter a valid character at ${label}` 
       if(str[0] == ' '){
@@ -1289,7 +1294,7 @@ export default function ClientForm() {
           type="checkbox"
           id="noSsnCheckbox"
           checked={noSsn}
-          onChange={() => {setSsn('') setNoSsn(!noSsn)}}
+          onChange={ssnFuncr}
         />
         I dont have an SSN
       </label>
