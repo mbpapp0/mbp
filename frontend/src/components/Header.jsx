@@ -10,6 +10,9 @@ export default function Header() {
    
 
     const logout = () => {
+        if(!user){
+         return;
+        }
         localStorage.removeItem('user');
         dispatch({ type: 'LOGOUT'});
         window.location.assign('/')
