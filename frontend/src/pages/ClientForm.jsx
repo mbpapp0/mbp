@@ -1097,7 +1097,7 @@ export default function ClientForm() {
   
             <div className='part_a'>
                 <p className="part_a_title">
-                    A. Child Income - Sometimes children in the household earn and receive income.
+                    <strong>A.</strong> Child Income - Sometimes children in the household earn and receive income.
                     Please indicate the TOTAL income received by child household members listed in 
                     PART I here.
                 </p>
@@ -1116,7 +1116,7 @@ export default function ClientForm() {
 
             <div className="part_b">
                 <p className="part_b_title">
-                    B.Other Household Members 1. List all household members (including yourself) not 
+                    <strong>B.</strong> Other Household Members 1. List all household members (including yourself) not 
                     listed in Part I even if they do not receive income. For each Household Member 
                     listed, if they do not receive income, report total gross income (before taxes) for each 
                     source in whole dollars (no cents) only. If they do not receive income from any 
