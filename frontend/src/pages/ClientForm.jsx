@@ -1085,7 +1085,7 @@ export default function ClientForm() {
 
 
 
-          <div style={{ padding: '10px', background: 'black' }}>
+          <div style={{ padding: '10px', background: 'black', marginBlock: '0.5rem' }}>
             <h5 style={{ color: 'white' }}>PART II: Report income for ALL Household Members (Skip this step if participant is categorically eligible as documented in Part I.)</h5>
           </div>
   
