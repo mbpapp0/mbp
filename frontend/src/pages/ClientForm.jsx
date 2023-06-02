@@ -827,7 +827,7 @@ export default function ClientForm() {
               <li>{ error }</li>
             </ul>
          </div>))}
-         <div style={{ padding: '10px', background: 'black' }}>
+         <div style={{ padding: '10px', background: 'black', marginBlock:' 0.5rem' }}>
            <h5 style={{ color: 'white' }}>PART I: Child(ren) or Adult enrolled to receive day care</h5>
          </div>  
         <div className="labels">
@@ -1396,7 +1396,7 @@ export default function ClientForm() {
                 <label>Phone Number</label>
                 <input type='number' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}/>
             </div>
-                  <div style={{ padding: '10px', background: 'black' }}>
+                  <div style={{ padding: '10px', background: 'black', marginBlock: '0.75rem' }}>
                     <h5 style={{ color: 'white' }}>PART IV: Signature</h5>
                   </div>
                 <div>
