@@ -9,19 +9,19 @@ export default function Header() {
     const [show, setShow] = useState(false);
 
     const { dispatch } = useAuthContext();
-    
-    const showPrompt = () =>  {
-        setShow(true);
-
-        setTimeout(() => { logout(); }, 60000)
-    }
+   
 
     const logout = () => {
         localStorage.removeItem('user');
         dispatch({ type: 'LOGOUT'});
         window.location.assign('/')
     }
-   
+    
+     const showPrompt = () =>  {
+        setShow(true);
+
+        setTimeout(() => { logout(); }, 60000)
+    }
     
     const handleIdleTimeout = () => {
     showPrompt();
