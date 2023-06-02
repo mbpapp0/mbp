@@ -22,8 +22,7 @@ export default function Header() {
    
     const inactivityTimeoutRef = useRef(null);
   const logoutTimeoutRef = useRef(null);
-
-  useEffect(() => {
+    
     const startInactivityTimer = () => {
         if(!user){return;}
       inactivityTimeoutRef.current = setTimeout(() => {
@@ -42,12 +41,15 @@ export default function Header() {
       resetInactivityTimer();
     };
 
-   var handleCancelLogout = () => {
+   const handleCancelLogout = () => {
       setShow(false);
       clearTimeout(logoutTimeoutRef.current);
       resetInactivityTimer();
     };
 
+
+  useEffect(() => {
+    
     startInactivityTimer();
 
     window.addEventListener('mousemove', handleUserActivity);
