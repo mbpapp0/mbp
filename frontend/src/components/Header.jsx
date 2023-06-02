@@ -96,7 +96,7 @@ export default function Header() {
              }
              
              { show && <div className='guide_confirm'>
-                    <h4 className='guide_confirm_title' style={{marginBlock: '1rem'}}>Your session will end in 2 minutes due to activity</h4>
+                    <h4 className='guide_confirm_title' style={{marginBlock: '2rem'}}>Your session will end in 2 minutes due to activity</h4>
                     <p style={{ textAlign: 'center', marginBlock: '0.5rem'}}>
                       As a security precaution, if there is no additional activity, the session will end and you will be brought to the home page.
                       If you are still working on this app, choose OK to continue.
