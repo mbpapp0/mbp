@@ -1443,9 +1443,15 @@ export default function ClientForm() {
                     </div>
                 </div>
                          
-               
-                         
+              
                  <br />
+                 <div className='flex align block1x'>
+                   <label>
+                     Date:
+                   <input type="date" value={signDate} onChange={(e) => setSignDate(e.target.value)} />
+                   </label>
+                 </div>
+
     
                             
                 {/*   <div className='flex align>            
