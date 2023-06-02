@@ -6,8 +6,13 @@ import { useEffect, useState } from 'react'
 export default function Header() {
     const user = JSON.parse(localStorage.getItem('user'));
     const [timeoutId, setTimeoutId] = useState(null);
+    const [show, setShow] = useState(false);
 
     const { dispatch } = useAuthContext();
+    
+    const showPrompt = () =>  {
+        setShow(true):
+    }
 
     const logout = () => {
         localStorage.removeItem('user');
@@ -30,7 +35,7 @@ export default function Header() {
          }
     
   const handleIdleTimeout = () => {
-    logout();
+    showPrompt();
   };
 
   const resetTimeout = () => {
@@ -38,7 +43,7 @@ export default function Header() {
       clearTimeout(timeoutId);
     }
 
-    const newTimeoutId = setTimeout(handleIdleTimeout, 90 * 60 * 1000);
+    const newTimeoutId = setTimeout(handleIdleTimeout, 10 * 60 * 1000);
     setTimeoutId(newTimeoutId);
   };
 
@@ -48,18 +53,18 @@ export default function Header() {
     
     useEffect(() => {
       checkLogoutTime();
-      window.addEventListener('onload', handleUserActivity);
-    //  window.addEventListener('mousemove', handleUserActivity);
-    //  window.addEventListener('keydown', handleUserActivity);
-    //  window.addEventListener('scroll', handleUserActivity);
+      //window.addEventListener('onload', handleUserActivity);
+     window.addEventListener('mousemove', handleUserActivity);
+     window.addEventListener('keydown', handleUserActivity);
+     window.addEventListener('scroll', handleUserActivity);
 
       resetTimeout();
         
       return () => {
-       window.removeEventListener('onload', handleUserActivity);
-      // window.removeEventListener('mousemove', handleUserActivity);
-       // window.removeEventListener('keydown', handleUserActivity);
-       // window.removeEventListener('scroll', handleUserActivity);
+      // window.removeEventListener('onload', handleUserActivity);
+        window.removeEventListener('mousemove', handleUserActivity);
+        g window.removeEventListener('keydown', handleUserActivity);
+        window.removeEventListener('scroll', handleUserActivity);
 
         clearTimeout(timeoutId);
       };
@@ -76,7 +81,20 @@ export default function Header() {
                  <button className='button radius' onClick={logout}>Logout</button>
               </div>
              }
+             
+             { show && <div className='guide_confirm'>
+                    <h4 className='guide_confirm_title'>Your session will end in 2 minutes due to activity</h4>
+                    <h5>
+                      As a security precaution, if there is no additional activity, the session will end and you will be brought to the home page.
+                      If you are still working on this app, choose OK to continue.
+                    </h5>
+                    <div className='guide_confirm_buttons'>   
+                        <button>Ok</button>
+                        <a onClick={() => setClick(false)}>[Cancel]</a>
+                    </div>
+                </div>}
            
            </div>
-    )
-}
+    )l
+    
+} 
