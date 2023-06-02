@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import { useAuthContext } from '../hooks/useAuthContext';
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 export default function Header() {
     const user = JSON.parse(localStorage.getItem('user'));
-    
+    const [show, setShow] = useState(false);
 
     const { dispatch } = useAuthContext();
    
@@ -82,7 +82,7 @@ export default function Header() {
                       If you are still working on this app, choose OK to continue.
                     </p>
                     <div className='guide_confirm_buttons'>   
-                        <button onClick={handleLogout}>Ok</button>
+                        <button onClick={handleCancelLogout}>Ok</button>
                     </div>
                 </div>)}
            
