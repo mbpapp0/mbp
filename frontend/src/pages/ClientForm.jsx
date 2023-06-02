@@ -827,6 +827,9 @@ export default function ClientForm() {
               <li>{ error }</li>
             </ul>
          </div>))}
+         <div style={{ padding: '10px', background: 'black' }}>
+           <h5 style={{ color: 'white' }}>PART I: Child(ren) or Adult enrolled to receive day care</h5>
+         </div>  
         <div className="labels">
             <div className="blocks block"></div>
             <p className='label first_label'>
@@ -1081,7 +1084,11 @@ export default function ClientForm() {
             </div>
 
 
-          
+
+          <div style={{ padding: '10px', background: 'black' }}>
+            <h5 style={{ color: 'white' }}>PART II: Report income for ALL Household Members (Skip this step if participant is categorically eligible as documented in Part I.)</h5>
+          </div>
+  
             <div className='part_a'>
                 <p className="part_a_title">
                     A. Child Income - Sometimes children in the household earn and receive income.
@@ -1277,7 +1284,10 @@ export default function ClientForm() {
                     <input type='number' className="input_width" value={ssn} onChange={(e) => setSsn(e.target.value)}/>
                 </div>
             </div>
-
+              <div style={{ padding: '10px', background: 'black' }}>
+                <h5 style={{ color: 'white' }}>PART III: Enrollment Information</h5>
+              </div>
+  
             <div className="block">
                 <p>
                     My child is normally in attendance at the facility between the hours of 
@@ -1386,7 +1396,9 @@ export default function ClientForm() {
                 <label>Phone Number</label>
                 <input type='number' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}/>
             </div>
-
+                  <div style={{ padding: '10px', background: 'black' }}>
+                    <h5 style={{ color: 'white' }}>PART IV: Signature</h5>
+                  </div>
                 <div>
                    { signErr && <h6 style={{color: 'red'}}>Please Input Signature</h6> }
                     <label>Signature</label>
@@ -1412,7 +1424,9 @@ export default function ClientForm() {
                     other research.
                 </p>
             </div>
-            
+              <div style={{ padding: '10px', background: 'black' }}>
+                <h5 style={{ color: 'white' }}>PART V: Participant’s Ethnic and Racial Identities (optional)</h5>
+             </div>
             <div className="ethnicity block flex space_between">
                 <div className="ethnicity_title">
                     <p>Check ( ) one ethnic identity:</p>
