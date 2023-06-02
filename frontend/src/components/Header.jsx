@@ -14,60 +14,48 @@ export default function Header() {
         dispatch({ type: 'LOGOUT'});
         window.location.assign('/')
     }
- const [show, setShow] = useState(false);
- const [userActivity, setUserActivity] = useState(true)
+ 
+
+    const inactivityTimeoutRef = useRef(null);
+  const logoutTimeoutRef = useRef(null);
 
   useEffect(() => {
-    let inactivityTimeout;
-   
-    const resetInactivityTimeout = () => {
-      clearTimeout(inactivityTimeout);
-      inactivityTimeout = setTimeout(() => {
+    const startInactivityTimer = () => {
+      inactivityTimeoutRef.current = setTimeout(() => {
         setShow(true);
-      }, 10 * 60 * 1000); // 10 minutes in milliseconds
+        logoutTimeoutRef.current = setTimeout(logout, 120000); // 2 minutes
+      }, 600000); // 10 minutes
+    };
+
+    const resetInactivityTimer = () => {
+      clearTimeout(inactivityTimeoutRef.current);
+      clearTimeout(logoutTimeoutRef.current);
+      startInactivityTimer();
     };
 
     const handleUserActivity = () => {
-      setUserActivity(true);
-      resetInactivityTimeout();
+      resetInactivityTimer();
     };
 
-    const handleLogout = () => {
+    const handleCancelLogout = () => {
       setShow(false);
-      logout();
+      clearTimeout(logoutTimeoutRef.current);
+      resetInactivityTimer();
     };
 
-    resetInactivityTimeout();
+
+    startInactivityTimer();
+
     window.addEventListener('mousemove', handleUserActivity);
     window.addEventListener('keydown', handleUserActivity);
 
     return () => {
-      clearTimeout(inactivityTimeout);
+      clearTimeout(inactivityTimeoutRef.current);
+      clearTimeout(logoutTimeoutRef.current);
       window.removeEventListener('mousemove', handleUserActivity);
       window.removeEventListener('keydown', handleUserActivity);
     };
   }, []);
-
-  useEffect(() => {
-    let logoutTimeout;
-
-    const startLogoutTimeout = () => {
-      clearTimeout(logoutTimeout);
-      logoutTimeout = setTimeout(() => {
-        logout();
-      }, 2 * 60 * 1000); // 2 minutes in milliseconds
-    };
-
-    if (show) {
-      startLogoutTimeout();
-    } else {
-      clearTimeout(logoutTimeout);
-    }
-
-    return () => {
-      clearTimeout(logoutTimeout);
-    };
-  }, [show]);
 
 
     return (
