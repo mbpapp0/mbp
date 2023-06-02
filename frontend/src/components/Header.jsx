@@ -11,7 +11,7 @@ export default function Header() {
     const { dispatch } = useAuthContext();
     
     const showPrompt = () =>  {
-        setShow(true):
+        setShow(true);
     }
 
     const logout = () => {
