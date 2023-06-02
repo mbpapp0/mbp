@@ -90,7 +90,6 @@ export default function Header() {
                     </h5>
                     <div className='guide_confirm_buttons'>   
                         <button>Ok</button>
-                        <a onClick={() => setClick(false)}>[Cancel]</a>
                     </div>
                 </div>}
            
