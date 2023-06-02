@@ -822,12 +822,9 @@ export default function ClientForm() {
             <p>{ error }</p>
         </div>}
 
-        { errorArr.length > 0 && errorArr.map((error, index) => (
-         <div key={index} className='client_form_error'>
-            <ul>
-              <li>{ error }</li>
-            </ul>
-         </div>))}
+        { errorArr.length > 0 && <div className='error_indicator'>
+            <p>Please enter a valid input</p>
+        </div> }
          <div style={{ padding: '10px', background: 'black', marginBlock:' 0.5rem' }}>
            <h5 style={{ color: 'white' }}>PART I: Child(ren) or Adult enrolled to receive day care</h5>
          </div>  
@@ -1287,14 +1284,14 @@ export default function ClientForm() {
                 </div>
 
              <div style={{marginBlock: '0.5rem'}}>
-      <label htmlFor="noSsnCheckbox">
+      <label htmlFor="noSsnCheckbox" style={{marginInline: '0.5rem', fontSize: '7px'}}>
         <input
           type="checkbox"
           id="noSsnCheckbox"
           checked={noSsn}
           onChange={() => setNoSsn(!noSsn)}
         />
-        No SSN
+        I dont have an SSN
       </label>
     </div>
 
