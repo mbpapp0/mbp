@@ -15,11 +15,11 @@ export default function Header() {
         window.location.assign('/')
     }
  const [show, setShow] = useState(false);
-  const [userActivity, setUserActivity] = useState(true);
+ const [userActivity, setUserActivity] = useState(true)
 
   useEffect(() => {
     let inactivityTimeout;
-
+   
     const resetInactivityTimeout = () => {
       clearTimeout(inactivityTimeout);
       inactivityTimeout = setTimeout(() => {
@@ -82,7 +82,7 @@ export default function Header() {
               </div>
              }
              
-             { show && userActivity && (
+             { show && user && (
                 <div className='guide_confirm'>
                     <h4 className='guide_confirm_title' style={{marginBlock: '2rem'}}>Your session will end in 2 minutes due to activity</h4>
                     <p style={{ textAlign: 'center', marginBlock: '0.5rem'}}>
