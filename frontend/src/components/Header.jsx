@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 export default function Header() {
     const user = JSON.parse(localStorage.getItem('user'));
     const [timeoutId, setTimeoutId] = useState(null);
+    const [timerId, setTimerId] = useState(null);
     const [show, setShow] = useState(false);
 
     const { dispatch } = useAuthContext();
