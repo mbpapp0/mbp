@@ -32,6 +32,9 @@ p {
     display: none;
 }
 
+.hide {
+  display: none;
+}
 label {
     font-size: 0.7rem;
 }
