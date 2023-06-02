@@ -96,6 +96,7 @@ export default function ClientForm() {
     const [totalHouseHoldIncome, setTotalHouseHoldIncome] = useState(0);
 
     const [ssn, setSsn] = useState('');
+    const [noSsn, setNoSsn] = useState(false);
 
     const [timeFrom, setTimeFrom] = useState(1);
     const [timeFromHour, setTimeFromHour] = useState('AM')
@@ -1281,8 +1282,22 @@ export default function ClientForm() {
 
                 <div className="flex align block">
                     <p className="right">Last four Digits of Social Security Number XXX-XX</p>
-                    <input type='number' className="input_width" value={ssn} onChange={(e) => setSsn(e.target.value)}/>
+                    <input type='number' className="input_width" disabled={noSsn} value={ssn} onChange={(e) => setSsn(e.target.value)}/>
+                    
                 </div>
+
+             <div style={{marginBlock: '0.5rem'}}>
+      <label htmlFor="noSsnCheckbox">
+        <input
+          type="checkbox"
+          id="noSsnCheckbox"
+          checked={noSsn}
+          onChange={() => setNoSsn(!noSsn);}
+        />
+        No SSN
+      </label>
+    </div>
+
             </div>
               <div style={{ padding: '10px', background: 'black' }}>
                 <h5 style={{ color: 'white' }}>PART III: Enrollment Information</h5>
