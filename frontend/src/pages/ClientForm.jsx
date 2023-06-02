@@ -1292,7 +1292,7 @@ export default function ClientForm() {
           type="checkbox"
           id="noSsnCheckbox"
           checked={noSsn}
-          onChange={() => setNoSsn(!noSsn);}
+          onChange={() => setNoSsn(!noSsn)}
         />
         No SSN
       </label>
