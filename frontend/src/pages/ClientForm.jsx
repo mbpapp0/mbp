@@ -830,7 +830,7 @@ export default function ClientForm() {
             <p>{ error }</p>
         </div>}
 
-        { errorArr.length > 0 && <div className='error_indicator'>
+        { errorArr.length > 0 && <div className='error_indicator' style={{width: '100%'}}>
             <p>Please enter a valid input</p>
         </div> }
          <div style={{ padding: '10px', background: 'black', marginBlock:' 0.5rem' }}>
