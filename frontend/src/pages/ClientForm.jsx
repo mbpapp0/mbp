@@ -156,7 +156,7 @@ export default function ClientForm() {
     const [errorArr, setErrorArr] = useState([]);
     
     const ssnFunc = () => {
-      setSsn('');
+      setSsn(noSsn ? '' : ssn);
       setNoSsn(!noSsn)
     }
     
@@ -1289,7 +1289,7 @@ export default function ClientForm() {
                 </div>
 
              <div style={{marginBlock: '0.5rem'}}>
-      <label htmlFor="noSsnCheckbox" style={{marginInline: '1.5rem', fontSize: '7px'}}>
+      <label htmlFor="noSsnCheckbox" style={{marginRight: '2rem', fontSize: '1rem'}}>
         <input
           type="checkbox"
           id="noSsnCheckbox"
