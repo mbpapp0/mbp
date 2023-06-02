@@ -63,7 +63,7 @@ export default function Header() {
       return () => {
       // window.removeEventListener('onload', handleUserActivity);
         window.removeEventListener('mousemove', handleUserActivity);
-        g window.removeEventListener('keydown', handleUserActivity);
+        window.removeEventListener('keydown', handleUserActivity);
         window.removeEventListener('scroll', handleUserActivity);
 
         clearTimeout(timeoutId);
