@@ -51,9 +51,10 @@ export default function Header() {
     resetTimeout();
   };
     
+    
+    
     useEffect(() => {
-      checkLogoutTime();
-      //window.addEventListener('onload', handleUserActivity);
+        
      window.addEventListener('mousemove', handleUserActivity);
      window.addEventListener('keydown', handleUserActivity);
      window.addEventListener('scroll', handleUserActivity);
@@ -61,14 +62,32 @@ export default function Header() {
       resetTimeout();
         
       return () => {
-      // window.removeEventListener('onload', handleUserActivity);
         window.removeEventListener('mousemove', handleUserActivity);
         window.removeEventListener('keydown', handleUserActivity);
         window.removeEventListener('scroll', handleUserActivity);
 
         clearTimeout(timeoutId);
       };
-    }, [])
+        
+        if (show) {
+      const timeoutId = setTimeout(() => {
+        logout()
+        handleTimerExpired();
+      }, 120000); 
+
+      setTimerId(timeoutId);
+    } else {
+      clearTimeout(timerId);
+    }
+
+    return () => {
+      clearTimeout(timerId);
+    };
+    }, [show]);
+    
+      const handleCancelTimer = () => {
+    setShow(false);
+  };
 
     return (
         <div className="header">
@@ -89,7 +108,7 @@ export default function Header() {
                       If you are still working on this app, choose OK to continue.
                     </h5>
                     <div className='guide_confirm_buttons'>   
-                        <button>Ok</button>
+                        <button onClick={handleCancelTimer}>Ok</button>
                     </div>
                 </div>}
            
