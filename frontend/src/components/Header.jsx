@@ -88,6 +88,12 @@ export default function Header() {
       const handleCancelTimer = () => {
     setShow(false);
   };
+    
+      const handleTimerExpired = () => {
+    
+   logout();
+  };
+
 
     return (
         <div className="header">
