@@ -4,9 +4,7 @@ import { useEffect, useState } from 'react'
 
 export default function Header() {
     const user = JSON.parse(localStorage.getItem('user'));
-    const [timeoutId, setTimeoutId] = useState(null);
-    const [timerId, setTimerId] = useState(null);
-    const [show, setShow] = useState(false);
+    
 
     const { dispatch } = useAuthContext();
    
@@ -16,73 +14,60 @@ export default function Header() {
         dispatch({ type: 'LOGOUT'});
         window.location.assign('/')
     }
-    
-     const showPrompt = () =>  {
+ const [show, setShow] = useState(false);
+  const [userActivity, setUserActivity] = useState(true);
+
+  useEffect(() => {
+    let inactivityTimeout;
+
+    const resetInactivityTimeout = () => {
+      clearTimeout(inactivityTimeout);
+      inactivityTimeout = setTimeout(() => {
         setShow(true);
-
-        setTimeout(() => { logout(); }, 60000)
-    }
-    
-    const handleIdleTimeout = () => {
-    showPrompt();
-    };
-
-    const resetTimeout = () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-     }
-
-     const newTimeoutId = setTimeout(handleIdleTimeout, 1 * 60 * 1000);
-       setTimeoutId(newTimeoutId);
+      }, 10 * 60 * 1000); // 10 minutes in milliseconds
     };
 
     const handleUserActivity = () => {
-      resetTimeout();
+      setUserActivity(true);
+      resetInactivityTimeout();
     };
-    
-    
-    
-    useEffect(() => {
-     window.addEventListener('onload', handleUserActivity);
-    // window.addEventListener('mousemove', handleUserActivity);
-    // window.addEventListener('keydown', handleUserActivity);
-   //  window.addEventListener('scroll', handleUserActivity);
 
-      resetTimeout();
-        
-      return () => {
-        window.addEventListener('onload', handleUserActivity);
-        // window.removeEventListener('mousemove', handleUserActivity);
-        // window.removeEventListener('keydown', handleUserAct.ivity);
-        // window.removeEventListener('scroll', handleUserActivity);
+    const handleLogout = () => {
+      setShow(false);
+      logout();
+    };
 
-        clearTimeout(timeoutId);
-      };
-        
-        {/*  if (show) {
-      const timeoutId = setTimeout(() => {
-        logout()
-        handleTimerExpired();
-      }, 120000); 
+    resetInactivityTimeout();
+    window.addEventListener('mousemove', handleUserActivity);
+    window.addEventListener('keydown', handleUserActivity);
 
-      setTimerId(timeoutId);
+    return () => {
+      clearTimeout(inactivityTimeout);
+      window.removeEventListener('mousemove', handleUserActivity);
+      window.removeEventListener('keydown', handleUserActivity);
+    };
+  }, []);
+
+  useEffect(() => {
+    let logoutTimeout;
+
+    const startLogoutTimeout = () => {
+      clearTimeout(logoutTimeout);
+      logoutTimeout = setTimeout(() => {
+        logout();
+      }, 2 * 60 * 1000); // 2 minutes in milliseconds
+    };
+
+    if (show) {
+      startLogoutTimeout();
     } else {
-      clearTimeout(timerId);
+      clearTimeout(logoutTimeout);
     }
 
     return () => {
-      clearTimeout(timerId);
-    }; */}
-    }, []);
-    
-      const handleCancelTimer = () => {
-    setShow(false);
-  };
-    
-      const handleTimerExpired = () => {
-    
-   logout();
-  };
+      clearTimeout(logoutTimeout);
+    };
+  }, [show]);
 
 
     return (
@@ -97,16 +82,17 @@ export default function Header() {
               </div>
              }
              
-             { show && <div className='guide_confirm'>
+             { show && userActivity && (
+                <div className='guide_confirm'>
                     <h4 className='guide_confirm_title' style={{marginBlock: '2rem'}}>Your session will end in 2 minutes due to activity</h4>
                     <p style={{ textAlign: 'center', marginBlock: '0.5rem'}}>
                       As a security precaution, if there is no additional activity, the session will end and you will be brought to the home page.
                       If you are still working on this app, choose OK to continue.
                     </p>
                     <div className='guide_confirm_buttons'>   
-                        <button onClick={handleCancelTimer}>Ok</button>
+                        <button onClick={handleLogout}>Ok</button>
                     </div>
-                </div>}
+                </div>)}
            
            </div>
     )
