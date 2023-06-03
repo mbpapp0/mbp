@@ -744,13 +744,13 @@ export default function ClientForm() {
             return;
             
 
-            const response = await fetch('https://mbp-server.onrender.com/api/clients', {
+            {/*    const response = await fetch('https://mbp-server.onrender.com/api/clients', {
                method: 'POST',
               body: JSON.stringify(form),
                headers: {
                      'Content-Type': 'application/json'
                 }
-             });
+             }); */}
             
              
             
