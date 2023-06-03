@@ -93,7 +93,7 @@ export default function ClientForm() {
     const [HouseholdMemberSixSSPR, setHouseholdMemberSixSSPR] = useState('');
     const [HouseholdMemberSixOther, setHouseholdMemberSixOther] = useState('');
 
-    const [totalHouseHoldMembers, setTotalHouseHoldMembers] = useState(calculateHouseholdMembers())
+    const [totalHouseHoldMembers, setTotalHouseHoldMembers] = useState(0)
     const [totalHouseHoldIncome, setTotalHouseHoldIncome] = useState(0);
 
     const [ssn, setSSN] = useState('');
@@ -172,46 +172,23 @@ export default function ClientForm() {
 
     
     function calculateHouseholdMembers() {
-  let count = 0;
+  
+  const totalHouseHold =
+      (childOneName ? 1 : 0) +
+      (childTwoName ? 1 : 0) +
+      (childThreeName ? 1 : 0) +
+      (childFourName  ? 1 : 0) +
+      (childFiveName ? 1 : 0) +
+      (childSixName ? 1 : 0) +
+      (HouseholdMemberOneName ? 1 : 0) +
+      (HouseholdMemberTwoName ? 1 : 0) +
+      (HouseholdMemberThreeName ? 1 : 0) +
+      (HouseholdMemberFourName ? 1 : 0) +
+      (HouseholdMemberFiveName ? 1 : 0) +
+      (HouseholdMemberSixName ? 1 : 0) 
 
-  if (childOneName) {
-    count++;
-  }
-  if (childTwoName) {
-    count++;
-  }
-  if (childThreeName) {
-    count++;
-  }
-  if (childFourName) {
-    count++;
-  }
-  if (childFiveName) {
-    count++;
-  }
-  if (childSixName) {
-    count++;
-  }
 
-  if (HouseholdMemberOneName) {
-    count++;
-  }
-  if (HouseholdMemberTwoName) {
-    count++;
-  }
-  if (HouseholdMemberThreeName) {
-    count++;
-  }
-  if (HouseholdMemberFourName) {
-    count++;
-  }
-  if (HouseholdMemberFiveName) {
-    count++;
-  }
-  if (HouseholdMemberSixName) {
-    count++;
-  }
-  return count;
+    setTotalHouseHoldMembers(totalHouseHold);
 }
     
     const checkInput = (str, label) => {
