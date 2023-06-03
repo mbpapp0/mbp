@@ -185,22 +185,22 @@ export default function ClientForm() {
     count++;
   }
 
-  if (HouseHoldMemberOneName) {
+  if (HouseholdMemberOneName) {
     count++;
   }
-  if (HouseHoldMemberTwoName) {
+  if (HouseholdMemberTwoName) {
     count++;
   }
-  if (HouseHoldMemberThreeName) {
+  if (HouseholdMemberThreeName) {
     count++;
   }
-  if (HouseHoldMemberFourName) {
+  if (HouseholdMemberFourName) {
     count++;
   }
-  if (HouseHoldMemberFiveName) {
+  if (HouseholdMemberFiveName) {
     count++;
   }
-  if (HouseHoldMemberSixName) {
+  if (HouseholdMemberSixName) {
     count++;
   }
 
