@@ -89,9 +89,9 @@ export default function ClientInfo() {
                     <h4>Child Days at the Center: { data.dayCenterSunday ? "Sunday" : "" } { data.dayCenterMonday ? "Monday " : "" }{ data.dayCenterTuesday ? "Tuesday " : "" }{ data.dayCenterWednesday ? "Wednesday " : "" }{ data.dayCenterThursday ? "Thursday " : "" }{ data.dayCenterFriday ? "Friday " : "" }{ data.dayCenteraturdday ? "Saturday" : "" }</h4>
                     <h4>Meals Received While at Care: {data.breakFast ? "Breakfast" :""} { data.snackLunch ? "Lunch-Snack" : "" } { data.snackPM ? "PM-Snack" : ""} { data.supper ? "Supper" : ""} {data.snack ? "Snack" : ""}</h4>
                     
-                    <h2>Household Member Information</h2>
+                    <h2>Household Members Information</h2>
 
-                    <h4>Household Size: { data.houseHoldSize || 7}</h4>
+                    <h4>Household Size: { data.totalHouseHoldMembers}</h4>
                     <h3>Member One</h3>
                     <h4>Household Member One Name: { data.HouseholdMemberOneName }</h4>
                     <h4>Household Member One Working Earnings: { data.HouseholdMemberOneWorkEarnings }</h4>
