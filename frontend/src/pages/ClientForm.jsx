@@ -163,6 +163,50 @@ export default function ClientForm() {
       setNoSsn(!noSsn)
     }
     
+    function calculateHouseholdMembers() {
+  let count = 0;
+
+  if (childOneName) {
+    count++;
+  }
+  if (childTwoName) {
+    count++;
+  }
+  if (childThreeName) {
+    count++;
+  }
+  if (childFourName) {
+    count++;
+  }
+  if (childFiveName) {
+    count++;
+  }
+  if (childSixName) {
+    count++;
+  }
+
+  if (HouseHoldMemberOneName) {
+    count++;
+  }
+  if (HouseHoldMemberTwoName) {
+    count++;
+  }
+  if (HouseHoldMemberThreeName) {
+    count++;
+  }
+  if (HouseHoldMemberFourName) {
+    count++;
+  }
+  if (HouseHoldMemberFiveName) {
+    count++;
+  }
+  if (HouseHoldMemberSixName) {
+    count++;
+  }
+
+  return count;
+}
+    
     const checkInput = (str, label) => {
       const output = `Please enter a valid character at ${label}` 
       if(str[0] == ' '){
@@ -1273,8 +1317,9 @@ export default function ClientForm() {
             </div>
 
             <div className="part_c">
-                <p>C. Total Household Members (Adults & Children) listed in Part I and Part II</p>
-                <input type='number' value={totalHouseHoldMembers} required onChange={(e) => setTotalHouseHoldMembers(e.target.value)}/>
+                <p><strong>C.</strong> Total Household Members (Adults & Children) listed in Part I and Part II</p>
+                <span>{calculateHouseholdMembers()}</span>
+               // <input type='number' value={totalHouseHoldMembers} required onChange={(e) => setTotalHouseHoldMembers(e.target.value)}/>
             </div>
             {/* <div className="part_c">
                 <p>Total Household Income (Adults & Children) listed in Part I and Part II</p>
