@@ -10,7 +10,7 @@ export default function ClientForm() {
     const [childOneForsterChild, setChildOneFosterChild] = useState(false);
     const [childOneRunaway, setChildOneRunaway] = useState(false);
     const [childOneHomeless, setChildOneHomeless] = useState(false);
-    const [childOneAge, setChildOneAge] =i useState('');
+    const [childOneAge, setChildOneAge] = useState('');
 
     const [childTwoName, setChildTwoName] = useState('');
     const [childTwoID, setChildTwoID] = useState('');
