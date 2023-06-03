@@ -44,6 +44,7 @@ export default function ClientInfo() {
                         <div>
                             <h4>Signature: </h4>
                             <img src={data.signature} />
+                            <h4>Date: {data.signDate}</h4>
                         </div>
                         <h4>Social Security Number(Last Four): { data.ssn || 'None'}</h4>
                         <h4>Parent Phone Number: { data.phoneNumber }</h4>
@@ -133,7 +134,7 @@ export default function ClientInfo() {
                     <h4>Household Member Five Welfare, Alimony & Child Support: { data.HouseholdMemberFiveWelfare_Alimony_CS ? data.HouseholdMemberFiveWelfare_Alimony_CS : 'N/A   ' }</h4>
                     <h4>Household Member Five, Social Security, pensions, retirement: { data.HouseholdMemberFiveSSPR ? data.HouseholdMemberFiveSSPR : 'N/A'}</h4>
                     <h4>Household Member All other income: { data.HouseholdMemberFiveOther ? data.HouseholdMemberFiveOther : 'N/A'}</h4>
-                    { data.HouseholdMembeFiveName != '' && <h4>Household Member Income Frequency: { data.memberFiveIncomeFreq || 'N/A'}</h4>}
+                    { data.HouseholdMemberFiveName != '' && <h4>Household Member Income Frequency: { data.memberFiveIncomeFreq || 'N/A'}</h4>}
 
                     
                     <h3>Member Six</h3>
@@ -149,6 +150,7 @@ export default function ClientInfo() {
                     <div>
                         <h4>Official's Signature: </h4>
                         <img src={data.offSignature} />
+                        <h4>Date: {data.offSignDate}</h4>
                     </div>
                     </>
                 }
