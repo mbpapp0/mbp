@@ -106,7 +106,7 @@ export default function ClientInfo() {
                     <h4>Household Member Two Welfare, Alimony & Child Support: { data.HouseholdMemberTwoWelfare_Alimony_CS ? data.HouseholdMemberTwoWelfare_Alimony_CS : 'N/A   ' }</h4>
                     <h4>Household Member Two, Social Security, pensions, retirement: { data.HouseholdMemberTwoSSPR ? data.HouseholdMemberTwoSSPR : 'N/A'}</h4>
                     <h4>Household Member All other income: { data.HouseholdMemberTwoOther ? data.HouseholdMemberTwoOther : 'N/A'}</h4>
-                    { data.HouseholdMemberName != '' && <h4>Household Member Income Frequency: { data.memberTwoIncomeFreq  || 'N/A'}</h4>}
+                    { data.HouseholdMemberTwoName != '' && <h4>Household Member Income Frequency: { data.memberTwoIncomeFreq  || 'N/A'}</h4>}
 
                     
                     <h3>Member Three</h3>
@@ -115,7 +115,7 @@ export default function ClientInfo() {
                     <h4>Household Member Three Welfare, Alimony & Child Support: { data.HouseholdMemberThreeWelfare_Alimony_CS ? data.HouseholdMemberThreeWelfare_Alimony_CS : 'N/A   ' }</h4>
                     <h4>Household Member Three, Social Security, pensions, retirement: { data.HouseholdMemberThreeSSPR ? data.HouseholdMemberThreeSSPR : 'N/A'}</h4>
                     <h4>Household Member All other income: { data.HouseholdMemberThreeOther ? data.HouseholdMemberThreeOther : 'N/A'}</h4>
-                    { data.HouseholdMemberName != '' && <h4>Household Member Income Frequency: { data.memberThreeIncomeFreq || 'N/A'}</h4>}
+                    { data.HouseholdMemberThreeName != '' && <h4>Household Member Income Frequency: { data.memberThreeIncomeFreq || 'N/A'}</h4>}
 
                     
                     <h3>Member Four</h3>
@@ -124,7 +124,7 @@ export default function ClientInfo() {
                     <h4>Household Member Four Welfare, Alimony & Child Support: { data.HouseholdMemberFourWelfare_Alimony_CS ? data.HouseholdMemberThreeWelfare_Alimony_CS : 'N/A   ' }</h4>
                     <h4>Household Member Three, Social Security, pensions, retirement: { data.HouseholdMemberFourSSPR ? data.HouseholdMemberFourSSPR : 'N/A'}</h4>
                     <h4>Household Member All other income: { data.HouseholdMemberFourOther ? data.HouseholdMemberFourOther : 'N/A'}</h4>
-                    { data.HouseholdMemberName != '' && <h4>Household Member Income Frequency: { data.memberFourIncomeFreq || 'N/A'}</h4>}
+                    { data.HouseholdMemberFourName != '' && <h4>Household Member Income Frequency: { data.memberFourIncomeFreq || 'N/A'}</h4>}
 
                     
                     <h3>Member Five</h3>
@@ -133,7 +133,7 @@ export default function ClientInfo() {
                     <h4>Household Member Five Welfare, Alimony & Child Support: { data.HouseholdMemberFiveWelfare_Alimony_CS ? data.HouseholdMemberFiveWelfare_Alimony_CS : 'N/A   ' }</h4>
                     <h4>Household Member Five, Social Security, pensions, retirement: { data.HouseholdMemberFiveSSPR ? data.HouseholdMemberFiveSSPR : 'N/A'}</h4>
                     <h4>Household Member All other income: { data.HouseholdMemberFiveOther ? data.HouseholdMemberFiveOther : 'N/A'}</h4>
-                    { data.HouseholdMemberName != '' && <h4>Household Member Income Frequency: { data.memberFiveIncomeFreq || 'N/A'}</h4>}
+                    { data.HouseholdMembeFiverName != '' && <h4>Household Member Income Frequency: { data.memberFiveIncomeFreq || 'N/A'}</h4>}
 
                     
                     <h3>Member Six</h3>
@@ -142,7 +142,7 @@ export default function ClientInfo() {
                     <h4>Household Member Six Welfare, Alimony & Child Support: { data.HouseholdMemberSixWelfare_Alimony_CS ? data.HouseholdMemberSixWelfare_Alimony_CS : 'N/A   ' }</h4>
                     <h4>Household Member Six, Social Security, pensions, retirement: { data.HouseholdMemberSixSSPR ? data.HouseholdMemberSixSSPR : 'N/A'}</h4>
                     <h4>Household Member All other income: { data.HouseholdMemberSixOther ? data.HouseholdMemberSixOther : 'N/A'}</h4>
-                    { data.HouseholdMemberName != '' && <h4>Household Member Income Frequency: { data.memberSixIncomeFreq || 'N/A'}</h4>}
+                    { data.HouseholdSixMemberName != '' && <h4>Household Member Income Frequency: { data.memberSixIncomeFreq || 'N/A'}</h4>}
 
 
                     <h2>Official's information</h2>
