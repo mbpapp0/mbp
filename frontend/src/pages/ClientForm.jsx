@@ -1448,7 +1448,7 @@ export default function ClientForm() {
                  <div className='flex align' style={{margin: '0'}}>
                    <label>
                      Date:
-                   <input type="date" value={signDate} onChange={(e) => setSignDate(e.target.value)} style={{ width: '2.5rem'}} />
+                   <input type="date" value={signDate} onChange={(e) => setSignDate(e.target.value)} style={{ width: '10.5rem'}} />
                    </label>
                  </div>
 
@@ -1530,7 +1530,7 @@ export default function ClientForm() {
            <div className='flex align block1x'>
               <label>
                 Date:
-                <input type="date" value={offSignDate} onChange={(e) => setOffSignDate(e.target.value)} style={{ width: '2.5rem'}}/>
+                <input type="date" value={offSignDate} onChange={(e) => setOffSignDate(e.target.value)} style={{ width: '10.5rem'}}/>
               </label>
            </div>
 
