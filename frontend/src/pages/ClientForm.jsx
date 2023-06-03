@@ -613,8 +613,6 @@ export default function ClientForm() {
          setSsn('')
         }
         
-        let membs = calculateHouseholdMembers()
-        setTotalHouseHoldMembers(membs);
     
 
         const form = {
@@ -689,7 +687,7 @@ export default function ClientForm() {
             HouseholdMemberSixWelfare_Alimony_CS,
             HouseholdMemberSixOther,
             totalHouseHoldMembers,
-            totalHouseHoldIncome: finalTotal,
+            totalHouseHoldIncome,
             ssn,
             timeFrom,
             timeFromHour,
