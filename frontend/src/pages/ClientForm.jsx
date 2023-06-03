@@ -96,8 +96,8 @@ export default function ClientForm() {
     const [totalHouseHoldMembers, setTotalHouseHoldMembers] = useState(calculateHouseholdMembers())
     const [totalHouseHoldIncome, setTotalHouseHoldIncome] = useState(0);
 
-    const [ssn, setSsn] = useState('');
-    const [noSsn, setNoSsn] = useState(false);
+    const [ssn, setSSN] = useState('');
+    const [noSSN, setNoSSN] = useState(false);
 
     const [timeFrom, setTimeFrom] = useState(1);
     const [timeFromHour, setTimeFromHour] = useState('AM')
@@ -159,10 +159,17 @@ export default function ClientForm() {
     const [errorArr, setErrorArr] = useState([]);
     
     
-    const ssnFunc = () => {
-      setSsn(noSsn ? '' : ssn);
-      setNoSsn(!noSsn)
-    }
+      const handleSSNChange = (event) => {
+       setSSN(event.target.value);
+      };
+
+       const handleCheckboxChange = () => {
+        setNoSSN(!noSSN);
+        if (!noSSN) {
+          setSSN('');
+        }
+      };
+
     
     function calculateHouseholdMembers() {
   let count = 0;
@@ -611,9 +618,7 @@ export default function ClientForm() {
         createRoster(childFiveName, childFiveAge);
         createRoster(childSixName, childSixAge);
          
-        if(noSsn){
-         setSsn('')
-        }
+        
         
     
 
@@ -1358,9 +1363,9 @@ export default function ClientForm() {
                     is listed below, will result in denial of free or reduced eligibility.  </span>
                 </p>
 
-                <div className={ noSsn ? 'hide' : "flex align block"}>
+                <div className={ noSSN ? 'flex align block' : "hide"}>
                     <p className="right">Last four Digits of Social Security Number XXX-XX</p>
-                    <input type='number' className="input_width" disabled={noSsn} value={ssn} onChange={(e) => setSsn(e.target.value)}/>
+                    <input type='number' className="input_width" disabled={!noSSN} value={ssn} onChange={handleSSNChange}/>
                     
                 </div>
 
@@ -1369,8 +1374,8 @@ export default function ClientForm() {
         <input
           type="checkbox"
           id="noSsnCheckbox"
-          checked={noSsn}
-          onChange={ssnFunc}
+          checked={noSSN}
+          onChange={handleCheckboxChange}
         />
         I dont have an SSN
       </label>
