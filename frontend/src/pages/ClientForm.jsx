@@ -3,6 +3,7 @@ import SignatureCanvas from 'react-signature-canvas';
 
 export default function ClientForm() {
     const user = JSON.parse(localStorage.getItem('user'));
+    const [loading, setLoading] = useState(false)
     const [error, setError] = useState("");
     const [childOneName, setChildOneName] = useState('');
     const [childOneID, setChildOneID] = useState('');
@@ -381,6 +382,7 @@ export default function ClientForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true)
         const branch = user.branch;
         const day = new Date();
         const date = day.toLocaleDateString();
@@ -585,7 +587,8 @@ export default function ClientForm() {
                     date_ieg_signed: new Date().toLocaleDateString(),
                     eligibility: eligibility
                 } 
-                return;
+                
+                
 
                 const response = await fetch('http://localhost:3001/api/children', {
                     method: 'POST',
@@ -732,7 +735,7 @@ export default function ClientForm() {
         };
 
         try{
-            const response = await fetch('https://mbp-server.onrender.com/api/clients/test', {
+            {/* const response = await fetch('https://mbp-server.onrender.com/api/clients/test', {
                method: 'POST',
               body: JSON.stringify(form),
                headers: {
@@ -741,17 +744,17 @@ export default function ClientForm() {
              });
             
             const json = await response.json();
-            return;
+            return; */}
             
 
-            {/*    const response = await fetch('https://mbp-server.onrender.com/api/clients', {
+                const response = await fetch('https://mbp-server.onrender.com/api/clients', {
                method: 'POST',
               body: JSON.stringify(form),
                headers: {
                      'Content-Type': 'application/json'
                 }
                 const json = await response.json();
-             }); */}
+             }); 
             
              
             
@@ -765,9 +768,10 @@ export default function ClientForm() {
             });
             const json = await response.json(); */}
             
-            window.location.assign('/');
+            
 
             if(response.ok){
+                window.location.assign('/');
                 setSign('');
                 setSignature('');
                 setChildOneName('');
@@ -878,7 +882,7 @@ export default function ClientForm() {
         } catch(error) {
             console.log(error.message)
         }
-
+      setLoading(false)
        
     }
 
@@ -1597,7 +1601,7 @@ export default function ClientForm() {
               </label>
            </div>
 
-            <button className='button radius block padding'>Submit</button>
+            <button disabled={loading} className='button radius block padding'>{loading ? 'Loading...' : 'Submit'}</button>
 
            
         </form>
