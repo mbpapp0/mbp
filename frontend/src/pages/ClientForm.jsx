@@ -10,7 +10,7 @@ export default function ClientForm() {
     const [childOneForsterChild, setChildOneFosterChild] = useState(false);
     const [childOneRunaway, setChildOneRunaway] = useState(false);
     const [childOneHomeless, setChildOneHomeless] = useState(false);
-    const [childOneAge, setChildOneAge] = useState('');
+    const [childOneAge, setChildOneAge] =i useState('');
 
     const [childTwoName, setChildTwoName] = useState('');
     const [childTwoID, setChildTwoID] = useState('');
@@ -1448,7 +1448,7 @@ export default function ClientForm() {
                  <div className='flex align' style={{margin: '0'}}>
                    <label>
                      Date:
-                   <input type="date" value={signDate} onChange={(e) => setSignDate(e.target.value)} />
+                   <input type="date" value={signDate} onChange={(e) => setSignDate(e.target.value)} style={{ width: '2.5rem'}} />
                    </label>
                  </div>
 
@@ -1530,7 +1530,7 @@ export default function ClientForm() {
            <div className='flex align block1x'>
               <label>
                 Date:
-                <input type="date" value={offSignDate} onChange={(e) => setOffSignDate(e.target.value)} />
+                <input type="date" value={offSignDate} onChange={(e) => setOffSignDate(e.target.value)} style={{ width: '2.5rem'}}/>
               </label>
            </div>
 
