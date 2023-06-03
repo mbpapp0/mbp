@@ -583,7 +583,8 @@ export default function ClientForm() {
                     ieg_enrolledment_on_file: 'Y',
                     date_ieg_signed: new Date().toLocaleDateString(),
                     eligibility: eligibility
-                }
+                } 
+                return;
 
                 const response = await fetch('http://localhost:3001/api/children', {
                     method: 'POST',
@@ -732,23 +733,36 @@ export default function ClientForm() {
         };
 
         try{
+            const response = await fetch('https://mbp-server.onrender.com/api/clients/test', {
+               method: 'POST',
+              body: JSON.stringify(form),
+               headers: {
+                     'Content-Type': 'application/json'
+                }
+             });
+            
+            return;
+            
 
-            // const response = await fetch('https://mbp-server.onrender.com/api/clients', {
-            //     method: 'POST',
-            //     body: JSON.stringify(form),
-            //     headers: {
-            //         'Content-Type': 'application/json'
-            //     }
-            // });
+            const response = await fetch('https://mbp-server.onrender.com/api/clients', {
+               method: 'POST',
+              body: JSON.stringify(form),
+               headers: {
+                     'Content-Type': 'application/json'
+                }
+             });
+            
+             
+            
 
-            const response = await fetch('http://localhost:3001/api/clients', {
+            {/*  const response = await fetch('http://localhost:3001/api/clients', {
                 method: 'POST',
                 body: JSON.stringify(form),
                 headers: {
                     'Content-Type': 'application/json'
                 }
             });
-            const json = await response.json();
+            const json = await response.json(); */}
             
             window.location.assign('/');
 
