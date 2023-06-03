@@ -92,7 +92,7 @@ export default function ClientForm() {
     const [HouseholdMemberSixSSPR, setHouseholdMemberSixSSPR] = useState('');
     const [HouseholdMemberSixOther, setHouseholdMemberSixOther] = useState('');
 
-    const [totalHouseHoldMembers, setTotalHouseHoldMembers] = useState('')
+    const [totalHouseHoldMembers, setTotalHouseHoldMembers] = useState(calculateHouseholdMembers())
     const [totalHouseHoldIncome, setTotalHouseHoldIncome] = useState(0);
 
     const [ssn, setSsn] = useState('');
@@ -203,7 +203,6 @@ export default function ClientForm() {
   if (HouseholdMemberSixName) {
     count++;
   }
-  setTotalHouseHoldMembers(count)
   return count;
 }
     
