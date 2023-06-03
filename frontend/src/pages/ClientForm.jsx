@@ -94,7 +94,7 @@ export default function ClientForm() {
     const [HouseholdMemberSixOther, setHouseholdMemberSixOther] = useState('');
 
     const [totalHouseHoldMembers, setTotalHouseHoldMembers] = useState(0)
-    const [totalHouseHoldIncome, setTotalHouseHoldIncome] = useState(0);
+   // const [totalHouseHoldIncome, setTotalHouseHoldIncome] = useState(0);
 
     const [ssn, setSSN] = useState('');
     const [noSSN, setNoSSN] = useState(false);
@@ -547,7 +547,7 @@ export default function ClientForm() {
         }
         determineFreq();
 
-        const finalTotal = oneTotal + twoTotal + threeTotal + fourTotal + fiveTotal + sixTotal;
+        let finalTotal = oneTotal + twoTotal + threeTotal + fourTotal + fiveTotal + sixTotal;
         
 
 
@@ -598,7 +598,7 @@ export default function ClientForm() {
          
         
         
-    
+       let totalHouseHoldIncome = finalTotal;
 
         const form = {
             branch,
@@ -672,7 +672,7 @@ export default function ClientForm() {
             HouseholdMemberSixWelfare_Alimony_CS,
             HouseholdMemberSixOther,
             totalHouseHoldMembers,
-            totalHouseHoldIncome: finalTotal,
+            totalHouseHoldIncome,
             ssn,
             timeFrom,
             timeFromHour,
