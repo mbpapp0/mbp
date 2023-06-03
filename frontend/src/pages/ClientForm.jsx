@@ -243,8 +243,8 @@ export default function ClientForm() {
       checkInput(HouseholdMemberSixWorkEarnings, 'Household Member Six Work Earnings')
       checkInput(HouseholdMemberSixWelfare_Alimony_CS, 'Household Member Six Welfare Alimony CS')
       checkInput(HouseholdMemberSixOther, 'Household Member Six Other')
-      checkInput(totalHouseHoldMembers, 'Total Household Members')
-      checkInput(totalHouseHoldIncome, 'Total Household Income')
+     // checkInput(totalHouseHoldMembers, 'Total Household Members')
+   //   checkInput(totalHouseHoldIncome, 'Total Household Income')
       checkInput(ssn, 'SSN')
       checkInput(printName, 'Print Name')
       checkInput(address, 'Address')
@@ -801,8 +801,8 @@ export default function ClientForm() {
                 setHouseholdMemberSixWelfare_Alimony_CS('');
                 setHouseholdMemberSixSSPR('');
                 setHouseholdMemberSixOther('');
-                setTotalHouseHoldMembers('')
-                setTotalHouseHoldIncome('');
+         //       setTotalHouseHoldMembers('')
+        //        setTotalHouseHoldIncome('');
                 setSSN('');
                 setSignature('');
                 setImage(false);
