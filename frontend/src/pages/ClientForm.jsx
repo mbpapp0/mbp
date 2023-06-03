@@ -912,7 +912,7 @@ export default function ClientForm() {
             
             <div className='flex'>
                 <div className="input_field"> 
-                    <input type='text' placeholder="  Child Name" className="first_field" value={childOneName} onChange={(e) => setChildOneName(e.target.value)} required/>
+                    <input type='text' placeholder="  Child Name" className="first_field" value={childOneName} onBlur={calculateHouseholdMembers} onChange={(e) => setChildOneName(e.target.value)} required/>
                     <input type='text' placeholder='Age' className='age_input' value={childOneAge} onChange={(e) => setChildOneAge(e.target.value)} required/>
                     <input type='text' className="last_field" value={childOneID} onChange={(e) => setChildOneID(e.target.value)} required/>
                 </div>
@@ -951,7 +951,7 @@ export default function ClientForm() {
 
             <div className='flex'>
                 <div className="input_field"> 
-                    <input type='text' className="first_field" placeholder="  Child Name" value={childTwoName} onChange={(e) => setChildTwoName(e.target.value)}/>
+                    <input type='text' className="first_field" placeholder="  Child Name" value={childTwoName} onBlur={calculateHouseholdMembers} onChange={(e) => setChildTwoName(e.target.value)}/>
                     <input type='text' placeholder='Age' className='age_input'  value={childTwoAge} onChange={(e) => setChildTwoAge(e.target.value)}/>
                     <input type='text' className="last_field" value={childTwoID} onChange={(e) => setChildTwoID(e.target.value)}/>
                 </div>
@@ -990,7 +990,7 @@ export default function ClientForm() {
 
             <div className='flex'>
                 <div className="input_field"> 
-                    <input type='text' className="first_field" placeholder="  Child Name" value={childThreeName} onChange={(e) => setChildThreeName(e.target.value)}/>
+                    <input type='text' className="first_field" placeholder="  Child Name" value={childThreeName} onBlur={calculateHouseholdMembers} onChange={(e) => setChildThreeName(e.target.value)}/>
                     <input type='text' placeholder='Age' className='age_input' value={childThreeAge} onChange={(e) => setChildThreeAge(e.target.value)}/>
                     <input type='text' className="last_field" value={childThreeID} onChange={(e) => setChildThreeID(e.target.value)}/>
                 </div>
@@ -1029,7 +1029,7 @@ export default function ClientForm() {
 
             <div className='flex'>
                 <div className="input_field"> 
-                    <input type='text' className="first_field" value={childFourName} placeholder="  Child Name" onChange={(e) => setChildFourName(e.target.value)}/>
+                    <input type='text' className="first_field" value={childFourName} placeholder="  Child Name" onBlur={calculateHouseholdMembers} onChange={(e) => setChildFourName(e.target.value)}/>
                     <input type='text' placeholder='Age' className='age_input' value={childFourAge} onChange={(e) => setChildFourAge(e.target.value)}/>
                     <input type='text' className="last_field" value={childFourID} onChange={(e) => setChildFourID(e.target.value)}/>
                 </div>
@@ -1068,7 +1068,7 @@ export default function ClientForm() {
 
             <div className='flex'>
                 <div className="input_field"> 
-                    <input type='text' className="first_field" placeholder="  Child Name" value={childFiveName} onChange={(e) => setChildFiveName(e.target.value)}/>
+                    <input type='text' className="first_field" placeholder="  Child Name" value={childFiveName} onBlur={calculateHouseholdMembers} onChange={(e) => setChildFiveName(e.target.value)}/>
                     <input type='text' placeholder='Age' className='age_input' value={childFiveAge} onChange={(e) => setChildFiveAge(e.target.value)}/>
                     <input type='text' className="last_field" value={childFiveID} onChange={(e) => setChildFiveID(e.target.value)}/>
                 </div>
@@ -1107,7 +1107,7 @@ export default function ClientForm() {
 
             <div className='flex'>
                 <div className="input_field"> 
-                    <input type='text' className="first_field" placeholder="  Child Name" value={childSixName} onChange={(e) => setChildSixName(e.target.value)}/>
+                    <input type='text' className="first_field" placeholder="  Child Name" value={childSixName} onBlur={calculateHouseholdMembers} onChange={(e) => setChildSixName(e.target.value)}/>
                     <input type='text' placeholder='Age' className='age_input' value={childSixAge} onChange={(e) => setChildSixAge(e.target.value)}/>
                     <input type='text' className="last_field" value={childSixID} onChange={(e) => setChildSixID(e.target.value)}/>
                 </div>
@@ -1187,7 +1187,7 @@ export default function ClientForm() {
 
                         <h4>Member</h4>
                         <label>Name of Other Household Member: </label>
-                        <input type='text' className="part_b_main_field" value={HouseholdMemberOneName} onChange={(e) => setHouseholdMemberOneName(e.target.value)} required/>
+                        <input type='text' className="part_b_main_field" value={HouseholdMemberOneName} onBlur={calculateHouseholdMembers} onChange={(e) => setHouseholdMemberOneName(e.target.value)} required/>
                         <label>Earnings from work before deductions: </label>
                         <input type='number' placeholder="$" className="part_b_field_1" value={HouseholdMemberOneWorkEarnings} onChange={(e) => setHouseholdMemberOneEarnings(e.target.value)}/>
                         <label>Welfare, child support, alimony: </label>
@@ -1210,7 +1210,7 @@ export default function ClientForm() {
                         <h4>Member</h4>
 
                         <label>Name of Other Household Member: </label>
-                        <input type='text' className="part_b_main_field" value={HouseholdMemberTwoName} onChange={(e) => setHouseholdMemberTwoName(e.target.value)}/>
+                        <input type='text' className="part_b_main_field" value={HouseholdMemberTwoName} onBlur={calculateHouseholdMembers} onChange={(e) => setHouseholdMemberTwoName(e.target.value)}/>
                         <label>Earnings from work before deductions: </label>
                         <input type='number' placeholder="$" className="part_b_field_1" value={HouseholdMemberTwoWorkEarnings} onChange={(e) => setHouseholdMemberTwoEarnings(e.target.value)}/>
                         <label>Welfare, child support, alimony: </label>
@@ -1232,7 +1232,7 @@ export default function ClientForm() {
                         <h4>Member</h4>
 
                         <label>Name of Other Household Member: </label>
-                        <input type='text' className="part_b_main_field" value={HouseholdMemberThreeName} onChange={(e) => setHouseholdMemberThreeName(e.target.value)}/>
+                        <input type='text' className="part_b_main_field" value={HouseholdMemberThreeName} onBlur={calculateHouseholdMembers} onChange={(e) => setHouseholdMemberThreeName(e.target.value)}/>
                         <label>Earnings from work before deductions: </label>
                         <input type='number' placeholder="$" className="part_b_field_1" value={HouseholdMemberThreeWorkEarnings} onChange={(e) => setHouseholdMemberThreeEarnings(e.target.value)}/>
                         <label>Welfare, child support, alimony: </label>
@@ -1254,7 +1254,7 @@ export default function ClientForm() {
                         <h4>Member</h4>
 
                         <label>Name of Other Household Member: </label>
-                        <input type='text' className="part_b_main_field" value={HouseholdMemberFourName} onChange={(e) => setHouseholdMemberFourName(e.target.value)}/>
+                        <input type='text' className="part_b_main_field" value={HouseholdMemberFourName} onBlur={calculateHouseholdMembers} onChange={(e) => setHouseholdMemberFourName(e.target.value)}/>
                         <label>Earnings from work before deductions: </label>
                         <input type='number' placeholder="$" className="part_b_field_1" value={HouseholdMemberFourWorkEarnings} onChange={(e) => setHouseholdMemberFourEarnings(e.target.value)}/>
                         <label>Welfare, child support, alimony: </label>
@@ -1276,7 +1276,7 @@ export default function ClientForm() {
                         <h4>Member</h4>
 
                         <label>Name of Other Household Member: </label>
-                        <input type='text' className="part_b_main_field" value={HouseholdMemberFiveName} onChange={(e) => setHouseholdMemberFiveName(e.target.value)}/>
+                        <input type='text' className="part_b_main_field" value={HouseholdMemberFiveName} onBlur={calculateHouseholdMembers} onChange={(e) => setHouseholdMemberFiveName(e.target.value)}/>
                         <label>Earnings from work before deductions: </label>
                         <input type='number' placeholder="$" className="part_b_field_1" value={HouseholdMemberFiveWorkEarnings} onChange={(e) => setHouseholdMemberFiveEarnings(e.target.value)}/>
                         <label>Welfare, child support, alimony: </label>
@@ -1298,7 +1298,7 @@ export default function ClientForm() {
                         <h4>Member</h4>
 
                         <label>Name of Other Household Member: </label>
-                        <input type='text' className="part_b_main_field" value={HouseholdMemberSixName} onChange={(e) => setHouseholdMemberSixName(e.target.value)}/>
+                        <input type='text' className="part_b_main_field" value={HouseholdMemberSixName} onBlur={calculateHouseholdMembers} onChange={(e) => setHouseholdMemberSixName(e.target.value)}/>
                         <label>Earnings from work before deductions: </label>
                         <input type='number' placeholder="$" className="part_b_field_1" value={HouseholdMemberSixWorkEarnings} onChange={(e) => setHouseholdMemberSixWorkEarnings(e.target.value)}/>
                         <label>Welfare, child support, alimony: </label>
