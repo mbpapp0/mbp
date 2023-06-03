@@ -1348,7 +1348,7 @@ export default function ClientForm() {
 
                 <div className={ noSSN ? 'hide' : "flex align block"}>
                     <p className="right">Last four Digits of Social Security Number XXX-XX</p>
-                    <input type='number' className="input_width" disabled={!noSSN} value={ssn} onChange={handleSSNChange}/>
+                    <input type='number' className="input_width" disabled={noSSN} value={ssn} onChange={handleSSNChange}/>
                     
                 </div>
 
