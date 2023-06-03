@@ -548,6 +548,12 @@ export default function ClientForm() {
         determineFreq();
 
         const finalTotal = oneTotal + twoTotal + threeTotal + fourTotal + fiveTotal + sixTotal;
+        
+        const houseIncome = () => {
+          setTotalHouseHoldIncome(finalTotal)
+        }
+        
+        houseIncome();
 
 
         const arg = parseInt(totalHouseHoldMembers);
