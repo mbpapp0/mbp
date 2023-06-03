@@ -549,11 +549,6 @@ export default function ClientForm() {
 
         const finalTotal = oneTotal + twoTotal + threeTotal + fourTotal + fiveTotal + sixTotal;
         
-        const houseIncome = () => {
-          setTotalHouseHoldIncome(finalTotal)
-        }
-        
-        houseIncome();
 
 
         const arg = parseInt(totalHouseHoldMembers);
@@ -677,7 +672,7 @@ export default function ClientForm() {
             HouseholdMemberSixWelfare_Alimony_CS,
             HouseholdMemberSixOther,
             totalHouseHoldMembers,
-            totalHouseHoldIncome,
+            totalHouseHoldIncome: finalTotal,
             ssn,
             timeFrom,
             timeFromHour,
