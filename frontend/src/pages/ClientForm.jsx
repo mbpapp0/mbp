@@ -825,7 +825,7 @@ export default function ClientForm() {
                 setHouseholdMemberSixOther('');
                 setTotalHouseHoldMembers('')
                 setTotalHouseHoldIncome('');
-                setSsn('');
+                setSSN('');
                 setSignature('');
                 setImage(false);
                 setAddress(' ')
