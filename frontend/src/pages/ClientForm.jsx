@@ -1323,7 +1323,7 @@ export default function ClientForm() {
             </div>
 
             <div className="part_c">
-                <p><strong>C.</strong> Total Household Members (Adults & Children) listed in Part I and Part II:  <span><strong>{calculateHouseholdMembers()}</strong></span></p>
+                <p><strong>C.</strong> Total Household Members (Adults & Children) listed in Part I and Part II:  <span><strong>{totalHouseHoldMembers}</strong></span></p>
                 { /*<input type='number' value={totalHouseHoldMembers} required onChange={(e) => setTotalHouseHoldMembers(e.target.value)}/> */}
             </div>
             {/* <div className="part_c">
