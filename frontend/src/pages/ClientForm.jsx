@@ -1174,7 +1174,7 @@ export default function ClientForm() {
                     Please indicate the TOTAL income received by child household members listed in 
                     PART I here.
                 </p>
-                <label>Child Monthly Income</label>
+                <label>Child Income</label>
                 <input type='number' value={childIncome} onChange={(e) => setChildIncome(e.target.value)}/>
                     <label>How Often?</label>
                     <select style={{height: '1.3rem', fontSize: '1rem;'}} onChange={(e) => setChildIncomeFreq(e.target.value)}>
