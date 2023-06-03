@@ -741,6 +741,7 @@ export default function ClientForm() {
                 }
              });
             
+            const json = await response.json();
             return;
             
 
@@ -750,6 +751,7 @@ export default function ClientForm() {
                headers: {
                      'Content-Type': 'application/json'
                 }
+                const json = await response.json();
              }); */}
             
              
