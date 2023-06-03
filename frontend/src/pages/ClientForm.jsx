@@ -92,7 +92,7 @@ export default function ClientForm() {
     const [HouseholdMemberSixSSPR, setHouseholdMemberSixSSPR] = useState('');
     const [HouseholdMemberSixOther, setHouseholdMemberSixOther] = useState('');
 
-    const [totalHouseHoldMembers, setTotalHouseHoldMembers] = useState(calculateHouseholdMembers())
+    const [totalHouseHoldMembers, setTotalHouseHoldMembers] = useState('')
     const [totalHouseHoldIncome, setTotalHouseHoldIncome] = useState(0);
 
     const [ssn, setSsn] = useState('');
@@ -203,7 +203,7 @@ export default function ClientForm() {
   if (HouseholdMemberSixName) {
     count++;
   }
-
+  setTotalHouseHoldMembers(count)
   return count;
 }
     
@@ -313,29 +313,29 @@ export default function ClientForm() {
     }   
 
 
-    // const getFreeMeal = async () => {
-    //     const response = await fetch(`https://mbp-server.onrender.com/api/freemeals/${user.branch}`);
-    //     const json = await response.json();
-    //     setFree(json[0]);
-    // }
+     const getFreeMeal = async () => {
+         const response = await fetch(`https://mbp-server.onrender.com/api/freemeals/${user.branch}`);
+         const json = await response.json();
+           setFree(json[0]);
+     }
 
-    const getFreeMeal = async () => {
+    {/*  const getFreeMeal = async () => {
         const response = await fetch(`http://localhost:3001/api/freemeals/${user.branch}`);
         const json = await response.json();
         setFree(json[0]);
-    }
+    } */}
 
-    // const getReducedMeal = async () => {
-    //     const response = await fetch(`https://mbp-server.onrender.com/api/reducedmeals/${user.branch}`);
-    //     const json = await response.json();
-    //     setReduced(json[0]);
-    // }
+     const getReducedMeal = async () => {
+        const response = await fetch(`https://mbp-server.onrender.com/api/reducedmeals/${user.branch}`);
+        const json = await response.json();
+         setReduced(json[0]);
+     }
 
-    const getReducedMeal = async () => {
+    {/* const getReducedMeal = async () => {
         const response = await fetch(`http://localhost:3001/api/reducedmeals/${user.branch}`);
         const json = await response.json();
         setReduced(json[0]);
-    }
+    } */}
 
     const determineEligibility = (number, income) => {
         
@@ -456,7 +456,7 @@ export default function ClientForm() {
 
         let sixTotal = sixEarnings + sixWelfare + sixSSPR + sixOther;
         
-        setTotalHouseHoldIncome(sixTotal);
+        
 
         const determineFreq = () => {
             // One
@@ -689,7 +689,7 @@ export default function ClientForm() {
             HouseholdMemberSixWelfare_Alimony_CS,
             HouseholdMemberSixOther,
             totalHouseHoldMembers,
-            totalHouseHoldIncome,
+            totalHouseHoldIncome: finalTotal,
             ssn,
             timeFrom,
             timeFromHour,
