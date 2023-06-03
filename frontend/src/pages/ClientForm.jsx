@@ -609,6 +609,10 @@ export default function ClientForm() {
         if(noSsn){
          setSsn('')
         }
+        
+        let membs = calculateHouseholdMembers()
+        setTotalHouseHoldMembers(membs);
+    
 
         const form = {
             branch,
@@ -1319,7 +1323,7 @@ export default function ClientForm() {
             <div className="part_c">
                 <p><strong>C.</strong> Total Household Members (Adults & Children) listed in Part I and Part II</p>
                 <span>{calculateHouseholdMembers()}</span>
-               // <input type='number' value={totalHouseHoldMembers} required onChange={(e) => setTotalHouseHoldMembers(e.target.value)}/>
+                { /*<input type='number' value={totalHouseHoldMembers} required onChange={(e) => setTotalHouseHoldMembers(e.target.value)}/> */}
             </div>
             {/* <div className="part_c">
                 <p>Total Household Income (Adults & Children) listed in Part I and Part II</p>
