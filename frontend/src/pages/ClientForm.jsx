@@ -441,7 +441,7 @@ export default function ClientForm() {
 
         let sixTotal = sixEarnings + sixWelfare + sixSSPR + sixOther;
         
-        
+        let childTotal = sNaN(parseInt(childIncome)) ? 0 : parseInt(childIncome);
 
         const determineFreq = () => {
             // One
@@ -527,7 +527,7 @@ export default function ClientForm() {
                 fiveTotal = fiveTotal * 1
             }
 
-            // Two
+            // Six
 
             if(memberSixIncomeFreq == 'Weekly'){
                 sixTotal = sixTotal * 52
@@ -543,11 +543,27 @@ export default function ClientForm() {
             if(memberSixIncomeFreq == 'Annually'){
                 sixTotal = sixTotal * 1
             }
+            
+            // Child 
+            if(childIncomeFreq == 'Weekly'){
+                childTotal = childTotal * 52
+            }
+
+            if(childIncomeFreq == 'Bi-Weekly'){
+                childTotal = childTotal * 26
+            }
+            if(childIncomeFreq == 'Monthly'){
+                childTotal = childTotal * 12
+            }
+
+            if(childIncomeFreq == 'Annually'){
+                childTotal = childTotal * 1
+            }
 
         }
         determineFreq();
 
-        let finalTotal = oneTotal + twoTotal + threeTotal + fourTotal + fiveTotal + sixTotal;
+        let finalTotal = oneTotal + twoTotal + threeTotal + fourTotal + fiveTotal + sixTotal + childTotal;
         
 
 
