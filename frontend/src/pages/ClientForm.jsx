@@ -441,7 +441,7 @@ export default function ClientForm() {
 
         let sixTotal = sixEarnings + sixWelfare + sixSSPR + sixOther;
         
-        let childTotal = sNaN(parseInt(childIncome)) ? 0 : parseInt(childIncome);
+        let childTotal = isNaN(parseInt(childIncome)) ? 0 : parseInt(childIncome);
 
         const determineFreq = () => {
             // One
