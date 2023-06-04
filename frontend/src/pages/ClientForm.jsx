@@ -1364,12 +1364,13 @@ export default function ClientForm() {
                 </div>
 
              <div style={{marginBlock: '0.5rem'}}>
-      <label htmlFor="noSsnCheckbox" style={{marginRight: '2rem', fontSize: '1rem'}}>
+      <label htmlFor="noSsnCheckbox" style={{fontSize: '0.6rem'}}>
         <input
           type="checkbox"
           id="noSsnCheckbox"
           checked={noSSN}
           onChange={handleCheckboxChange}
+          style={{marginRight: '0.75rem'}}
         />
         I dont have an SSN
       </label>
