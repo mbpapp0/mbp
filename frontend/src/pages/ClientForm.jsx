@@ -1370,7 +1370,7 @@ export default function ClientForm() {
           id="noSsnCheckbox"
           checked={noSSN}
           onChange={handleCheckboxChange}
-          style={{marginRight: '0.75rem'}}
+          style={{marginRight: '0.45rem'}}
         />
         I dont have an SSN
       </label>
