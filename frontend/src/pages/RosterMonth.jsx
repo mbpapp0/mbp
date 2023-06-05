@@ -45,11 +45,18 @@ export default function RosterMonth() {
         setBranchName(json.name); 
     }
 
+    const keysToRemove = ['_id', 'branch', 'month', 'createdAt', 'updatedAt', '__v'];
+
+    const result = data.map(obj => {
+     const newObj = { ...obj };
+     keysToRemove.forEach(key => delete newObj[key]);
+     return newObj;
+    });
     
 
     const submit = () => {
         var wb = XLSX.utils.book_new(),
-        ws = XLSX.utils.json_to_sheet(data);
+        ws = XLSX.utils.json_to_sheet(result);
     
         XLSX.utils.book_append_sheet(wb, ws, 'Roster');
     
