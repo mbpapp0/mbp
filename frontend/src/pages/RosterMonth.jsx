@@ -23,7 +23,7 @@ export default function RosterMonth() {
 
         const result = json.filter((child) => child.month == months[month - 1]);
 
-        const freeMeal = result.filter((child) => child.eligibility == 'Free Meal');
+        const freeMeal = result.filter((child) => child.eligibility == 'Free');
         const reducedMeal = result.filter((child) => child.eligibility == 'Reduced');
         const paidMeal = result.filter((child) => child.eligibility == 'Paid');
 
