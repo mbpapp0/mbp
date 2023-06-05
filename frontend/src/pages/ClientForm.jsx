@@ -324,37 +324,37 @@ export default function ClientForm() {
     const determineEligibility = (number, income) => {
         
         if(number == 1 && income <= free.houseHoldOne){
-            return 'Free Meal'
+            return 'Free'
         } else if(number == 1 && income <= reduced.houseHoldOne){
-            return 'Reduced Meal'
+            return 'Reduced'
         } else if(number == 2 && income <= free.houseHoldTwo){
-            return 'Free Meal'
+            return 'Free'
         } else if(number == 2 && income <= reduced.houseHoldTwo){
-            return 'Reduced Meal'
+            return 'Reduced'
         } else if(number == 3 && income <= free.houseHoldThree){
-            return 'Free Meal'
+            return 'Free'
         } else if(number == 3 && income <= reduced.houseHoldThree){
-            return 'Reduced Meal'
+            return 'Reduced'
         } else if(number == 4 && income <= free.houseHoldFour){
-            return 'Free Meal'
+            return 'Free'
         } else if(number == 4 && income <= reduced.houseHoldFour){
-            return 'Reduced Meal'
+            return 'Reduced'
         } else if(number == 5 && income <= free.houseHoldFive){
-            return 'Free Meal'
+            return 'Free'
         } else if(number == 5 && income <= reduced.houseHoldFive){
-            return 'Reduced Meal'
+            return 'Reduced'
         } else if(number == 6 && income <= free.houseHoldSix){
-            return 'Free Meal'
+            return 'Free'
         } else if(number == 6 && income <= reduced.houseHoldSix){
-            return 'Reduced Meal'
+            return 'Reduced'
         } else if(number == 7 && income <= free.houseHoldSeven){
-            return 'Free Meal'
+            return 'Free'
         } else if(number == 7 && income <= reduced.houseHoldSeven){
-            return 'Reduced Meal'
+            return 'Reduced'
         } else if(number == 8 && income <= free.houseHoldEight){
-            return 'Free Meal'
+            return 'Free'
         } else if(number == 8 && income <= reduced.houseHoldEight){
-            return 'Reduced Meal'
+            return 'Reduced'
         } else {
             return 'Paid'
         }
