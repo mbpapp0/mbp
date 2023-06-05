@@ -8,6 +8,7 @@ export default function ClientForm() {
     const [childOneName, setChildOneName] = useState('');
     const [childOneID, setChildOneID] = useState('');
     const [childOneHeadStart, setChildOneHeadStart] = useState(false);
+    const [childOneMigrant, setChildOneMigrant] = useState(false);
     const [childOneForsterChild, setChildOneFosterChild] = useState(false);
     const [childOneRunaway, setChildOneRunaway] = useState(false);
     const [childOneHomeless, setChildOneHomeless] = useState(false);
@@ -17,6 +18,7 @@ export default function ClientForm() {
     const [childTwoID, setChildTwoID] = useState('');
     const [childTwoHeadStart, setChildTwoHeadStart] = useState(false);
     const [childTwoForsterChild, setChildTwoFosterChild] = useState(false);
+    const [childTwoMigrant, setChildTwoMigrant] = useState(false);
     const [childTwoRunaway, setChildTwoRunaway] = useState(false);
     const [childTwoHomeless, setChildTwoHomeless] = useState(false);
     const [childTwoAge, setChildTwoAge] = useState('');
@@ -25,6 +27,7 @@ export default function ClientForm() {
     const [childThreeID, setChildThreeID] = useState('');
     const [childThreeHeadStart, setChildThreeHeadStart] = useState(false);
     const [childThreeForsterChild, setChildThreeFosterChild] = useState(false);
+    const [childThreeMigrant, setChildThreeMigrant] = useState(false);
     const [childThreeRunaway, setChildThreeRunaway] = useState(false);
     const [childThreeHomeless, setChildThreeHomeless] = useState(false);
     const [childThreeAge, setChildThreeAge] = useState('');
@@ -33,6 +36,7 @@ export default function ClientForm() {
     const [childFourID, setChildFourID] = useState('');
     const [childFourHeadStart, setChildFourHeadStart] = useState(false);
     const [childFourForsterChild, setChildFourFosterChild] = useState(false);
+    const [childFourMigrant, setChildFourMigrant] = useState(false);
     const [childFourRunaway, setChildFourRunaway] = useState(false);
     const [childFourHomeless, setChildFourHomeless] = useState(false);
     const [childFourAge, setChildFourAge] = useState('');
@@ -41,6 +45,7 @@ export default function ClientForm() {
     const [childFiveID, setChildFiveID] = useState('');
     const [childFiveHeadStart, setChildFiveHeadStart] = useState(false);
     const [childFiveForsterChild, setChildFiveFosterChild] = useState(false);
+    const [childFiveMigrant, setChildFiveMigrant] = useState(false);
     const [childFiveRunaway, setChildFiveRunaway] = useState(false);
     const [childFiveHomeless, setChildFiveHomeless] = useState(false);
     const [childFiveAge, setChildFiveAge] = useState('');
@@ -49,6 +54,7 @@ export default function ClientForm() {
     const [childSixID, setChildSixID] = useState('');
     const [childSixHeadStart, setChildSixHeadStart] = useState(false);
     const [childSixForsterChild, setChildSixFosterChild] = useState(false);
+    const [childSixMigrant, setChildSixMigrant] = useState(false);
     const [childSixRunaway, setChildSixRunaway] = useState(false);
     const [childSixHomeless, setChildSixHomeless] = useState(false);
     const [childSixAge, setChildSixAge] = useState('');
