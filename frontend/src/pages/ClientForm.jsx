@@ -576,7 +576,7 @@ export default function ClientForm() {
             const date = new Date();
 
             if(childName != ''){
-                const isEligible = headStart ? ‘Free’ :  eligibility;
+                const isEligible = headStart ? 'Free' :  eligibility;
                 
                 const form = {
                     branch,
