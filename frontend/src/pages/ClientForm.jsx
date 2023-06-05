@@ -570,12 +570,14 @@ export default function ClientForm() {
         const arg = parseInt(totalHouseHoldMembers);
         const eligibility = determineEligibility(arg, finalTotal);
 
-        const createRoster = async (childName, childAge) => {
+        const createRoster = async (childName, childAge, headStart) => {
             const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             
             const date = new Date();
 
             if(childName != ''){
+                const isEligible = headStart ? ‘Free’ :  eligibility;
+                
                 const form = {
                     branch,
                     month: months[date.getMonth()],
@@ -586,7 +588,7 @@ export default function ClientForm() {
                     date_exited: 'N/A',
                     ieg_enrolledment_on_file: 'Y',
                     date_ieg_signed: new Date().toLocaleDateString(),
-                    eligibility: eligibility
+                    eligibility: isEligible
                 } 
                 
                 
@@ -605,12 +607,12 @@ export default function ClientForm() {
             }
         };
 
-        createRoster(childOneName, childOneAge);
-        createRoster(childTwoName, childTwoAge);
-        createRoster(childThreeName, childThreeAge);
-        createRoster(childFourName, childFourAge);
-        createRoster(childFiveName, childFiveAge);
-        createRoster(childSixName, childSixAge);
+        createRoster(childOneName, childOneAge, childOneHeadStart);
+        createRoster(childTwoName, childTwoAge, childTwoHeadStart);
+        createRoster(childThreeName, childThreeAge, childThreeHeadStart);
+        createRoster(childFourName, childFourAge, childFourHeadStart);
+        createRoster(childFiveName, childFiveAge, childFiveHeadStart);
+        createRoster(childSixName, childSixAge, childSixHeadStart);
          
         
         
