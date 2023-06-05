@@ -54,10 +54,9 @@ export default function RosterMonth() {
           keysToRemove.forEach(key => delete newObj[key])
           return newObj
       })
-      setArray(newArray)
-      }
-    }
-
+     setArray(newArray);
+}
+  
     
     
 
