@@ -61,9 +61,8 @@ export default function RosterMonth() {
     
 
     const submit = () => {
-        removeDetails();
         var wb = XLSX.utils.book_new(),
-        ws = XLSX.utils.json_to_sheet(array);
+        ws = XLSX.utils.json_to_sheet(data);
     
         XLSX.utils.book_append_sheet(wb, ws, 'Roster');
     
