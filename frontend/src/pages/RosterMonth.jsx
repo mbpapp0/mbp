@@ -8,6 +8,7 @@ export default function RosterMonth() {
     const [id, month] = str.split('-');
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const [data, setData] = useState('');
+    const [array, setArray] = useState([]);
     const year = new Date().getFullYear();
     const [res, setRes] = useState(0);
     const [freeMeals, setFreeMeals] = useState(0);
@@ -52,16 +53,17 @@ export default function RosterMonth() {
           const newObj = {...obj};
           keysToRemove.forEach(key => delete newObj[key]
      );
-          return newObj
+          setArray(newObj);
       })
     }
 
-    const print = removeDetails();
+    
     
 
     const submit = () => {
+        removeDetails();
         var wb = XLSX.utils.book_new(),
-        ws = XLSX.utils.json_to_sheet(print);
+        ws = XLSX.utils.json_to_sheet(array);
     
         XLSX.utils.book_append_sheet(wb, ws, 'Roster');
     
