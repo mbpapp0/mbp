@@ -46,7 +46,7 @@ export default function RosterMonth() {
         setBranchName(json.name); 
     }
 
-    const keysToRemove = ['_id', 'branch', 'month', 'createdAt', 'updatedAt', '__v'];
+    {/*    const keysToRemove = ['_id', 'branch', 'month', 'createdAt', 'updatedAt', '__v'];
     
     const removeDetails = () => {
   const newArray = data.map(obj => {
@@ -60,13 +60,13 @@ export default function RosterMonth() {
   });
   setArray(newArray);
 }
-  
+  */}
     
     
 
     const submit = () => {
         var wb = XLSX.utils.book_new(),
-        ws = XLSX.utils.json_to_sheet(array);
+        ws = XLSX.utils.json_to_sheet(data);
     
         XLSX.utils.book_append_sheet(wb, ws, 'Roster');
     
@@ -77,7 +77,8 @@ export default function RosterMonth() {
     useEffect(() => {
         getClients();
         getBranchName();
-        removeDetails();
+        
+ 
     }, []);
 
     return(
