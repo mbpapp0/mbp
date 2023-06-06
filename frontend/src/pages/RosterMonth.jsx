@@ -58,16 +58,15 @@ export default function RosterMonth() {
     }
     return newObj;
   });
-  var printout = newArray;
+  setArray(newArray);
 }
   
     
     
 
     const submit = () => {
-        removeDetails();
         var wb = XLSX.utils.book_new(),
-        ws = XLSX.utils.json_to_sheet(printout);
+        ws = XLSX.utils.json_to_sheet(array);
     
         XLSX.utils.book_append_sheet(wb, ws, 'Roster');
     
@@ -78,6 +77,7 @@ export default function RosterMonth() {
     useEffect(() => {
         getClients();
         getBranchName();
+        removeDetails();
     }, []);
 
     return(
