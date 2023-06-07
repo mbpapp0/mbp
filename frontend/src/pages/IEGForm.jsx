@@ -598,19 +598,19 @@ export default IEGForm() {
                     <p>Check ( ) one ethnic identity:</p>
                     <div>
                         <label className="half_right">Asian</label>
-                        <input type='checkbox' className="right" checked={asian}  onChange={() => setAsian(!asian)}
-                        disabled={hawaiian || white || black || indian}/>
+                        <input type='checkbox' className="right" checked={asian}  
+                        />
                         <label className="half_right">White</label>
-                        <input type='checkbox' className="right" checked={white} onChange={() => setWhite(!white)}
-                        disabled={asian || hawaiian || black || indian}/>
+                        <input type='checkbox' className="right" checked={white} 
+                        />
                         <label className="half_right">Black-African</label>
-                        <input type='checkbox' className="right" checked={black} onChange={() => setBlack(!black)}
-                        disabled={asian || white || hawaiian || indian}/>
+                        <input type='checkbox' className="right" checked={black} 
+                        />
                         <label className="half_right">Indian or Alaskan Native</label>
-                        <input type='checkbox' className="right" checked={indian} onChange={() => setIndian(!indian)}
-                        disabled={asian || white || black || hawaiian }/>
+                        <input type='checkbox' className="right" checked={indian} 
+                        />
                         <label className="half_right">Hawaiian or Other Pacific Islander</label>
-                        <input type='checkbox' checked={hawaiian} onChange={() => setHawaiian(!hawaiian)} disabled={asian || white || black || indian}/>
+                        <input type='checkbox' checked={hawaiian} />
                     </div>
                 </div>
 
