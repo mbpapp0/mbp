@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react'
 export default IEGForm() {
+  
+  const handleSubmit = () => {
+    e.preventDefault();
+  }
+  
   return(
     <>
 
