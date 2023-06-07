@@ -567,7 +567,7 @@ export default function IEGForm() {
                 
                     <label>Signature</label>
                     <div style={{border: '2px solid black', width: '12rem', height: '96px'}} className='sign_pad'>                            
-                      <img src={data.sign} alt='signature' />                    
+                      <img src={data.signature} alt='signature' />                    
                     </div>
                     
                 </div>
@@ -644,7 +644,7 @@ export default function IEGForm() {
                         
 
                         
-                            <img src={data.offSign} alt='signature' />
+                            <img src={data.offSignature} alt='signature' />
                         
                     </div>
                     
