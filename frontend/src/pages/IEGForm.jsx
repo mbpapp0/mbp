@@ -13,7 +13,7 @@ export default function IEGForm() {
     }
 
   
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     e.preventDefault();
   }
   
@@ -436,7 +436,7 @@ export default function IEGForm() {
             </div>
 
             <div className="part_c">
-                <p><strong>C.</strong> Total Household Members (Adults & Children) listed in Part I and Part II:  <span><strong>{totalHouseHoldMembers}</strong></span></p>
+                <p><strong>C.</strong> Total Household Members (Adults & Children) listed in Part I and Part II:  <span><strong>{data.totalHouseHoldMembers}</strong></span></p>
                 { /*<input type='number' value={totalHouseHoldMembers} required onChange={(e) => setTotalHouseHoldMembers(e.target.value)}/> */}
             </div>
             {/* <div className="part_c">
@@ -453,9 +453,9 @@ export default function IEGForm() {
                     is listed below, will result in denial of free or reduced eligibility.  </span>
                 </p>
 
-                <div className={ noSSN ? 'hide' : "flex align block"}>
+                <div className={ data.noSSN ? 'hide' : "flex align block"}>
                     <p className="right">Last four Digits of Social Security Number XXX-XX</p>
-                    <input type='number' className="input_width" value={ssn} />
+                    <input type='number' className="input_width" value={data.ssn} />
                     
                 </div>
 
@@ -464,7 +464,7 @@ export default function IEGForm() {
         <input
           type="checkbox"
           id="noSsnCheckbox"
-          checked={noSSN}
+          checked={data.noSSN}
           
         />
         I dont have an SSN
@@ -479,23 +479,23 @@ export default function IEGForm() {
             <div className="block">
                 <p>
                     My child is normally in attendance at the facility between the hours of 
-                    <select className='form_time' value={timeFrom}>
+                    <select className='form_time' value={data.timeFrom}>
                         
                     </select>
                     
-                    <select className='form_time' value={timeFromHour}>
+                    <select className='form_time' value={data.timeFromHour}>
                            
                     </select >to
-                    <select className='form_time' value={timeTo}>
+                    <select className='form_time' value={data.timeTo}>
                         
                     </select>
                     
-                    <select className='form_time' value={timeToHour} >
+                    <select className='form_time' value={data.timeToHour} >
                   
                         
                     </select>
                 </p>
-                <p> <input type='checkbox' checked={beforeAfterCare} /> Check here if only before/after school
+                <p> <input type='checkbox' checked={data.beforeAfterCare} /> Check here if only before/after school
                     care is provided.</p>
             </div>
             <div className="flex">
@@ -605,11 +605,11 @@ export default function IEGForm() {
                     <p>Check ( ) one ethnic identity:</p>
                     <div>
                         <label className="half_right">Hispanic/Latino</label>
-                        <input type='checkbox' className="right" checked={latino}  
+                        <input type='checkbox' className="right" checked={data.latino}  
                         
                         />  
                         <label className="half_right">Hispanic/Non-Latino</label>
-                        <input type='checkbox' checked={nonLatino} 
+                        <input type='checkbox' checked={data.nonLatino} 
                         
                         />
                     </div>
@@ -618,19 +618,19 @@ export default function IEGForm() {
                     <p>Check ( ) one ethnic identity:</p>
                     <div>
                         <label className="half_right">Asian</label>
-                        <input type='checkbox' className="right" checked={asian}  
+                        <input type='checkbox' className="right" checked={data.asian}  
                         />
                         <label className="half_right">White</label>
-                        <input type='checkbox' className="right" checked={white} 
+                        <input type='checkbox' className="right" checked={data.white} 
                         />
                         <label className="half_right">Black-African</label>
-                        <input type='checkbox' className="right" checked={black} 
+                        <input type='checkbox' className="right" checked={data.black} 
                         />
                         <label className="half_right">Indian or Alaskan Native</label>
-                        <input type='checkbox' className="right" checked={indian} 
+                        <input type='checkbox' className="right" checked={data.indian} 
                         />
                         <label className="half_right">Hawaiian or Other Pacific Islander</label>
-                        <input type='checkbox' checked={hawaiian} />
+                        <input type='checkbox' checked={data.hawaiian} />
                     </div>
                 </div>
 
@@ -651,7 +651,7 @@ export default function IEGForm() {
            <div className='flex align block1x'>
               <label>
                 Date:
-                <input type="date" value={offSignDate} onChange={(e) => setOffSignDate(e.target.value)} style={{ width: '10.5rem'}}/>
+                <input type="date" value={data.offSignDate} style={{ width: '10.5rem'}}/>
               </label>
            </div>
 
