@@ -27,6 +27,7 @@ export default function IEGForm() {
   
   return(
     <>
+    <div className='container'>
 
         <h2 className='heading'>CACFP Meal Benefit Income Eligibility Statement</h2>
         
@@ -658,7 +659,7 @@ export default function IEGForm() {
      
            
         </form>
-       
+      </div>
     </>
   )
 }
