@@ -32,7 +32,8 @@ import MasterRoster from './pages/MasterRoster';
 import Roster from './pages/Roster';
 import RosterMonth from './pages/RosterMonth';
 import Excel from './pages/Excel';
-import Account from './pages/Account'
+import Account from './pages/Account';
+import IEGForm from './pages/IEGForm'
 
 export default function App() { 
   let user = JSON.parse(localStorage.getItem('user'));
@@ -79,6 +80,7 @@ export default function App() {
           <Route path='/rosterbymonth/:str' element={<RosterMonth />} />
           <Route path='/excel' element={<Excel />} />
           <Route path='/account/:id' element={<Account />} />
+          <Route path='/print/:id' element={<IEGForm />} />
         </Routes>
     </>
   )
