@@ -113,38 +113,38 @@ export default IEGForm() {
 
             <div className='flex'>
                 <div className="input_field"> 
-                    <input type='text' className="first_field" placeholder="  Child Name" value={childThreeName} onBlur={calculateHouseholdMembers} onChange={(e) => setChildThreeName(e.target.value)}/>
-                    <input type='text' placeholder='Age' className='age_input' value={childThreeAge} onChange={(e) => setChildThreeAge(e.target.value)}/>
-                    <input type='text' className="last_field" value={childThreeID} onChange={(e) => setChildThreeID(e.target.value)}/>
+                    <input type='text' className="first_field" placeholder="  Child Name" value={data.childThreeName} />
+                    <input type='text' placeholder='Age' className='age_input' value={dat.childThreeAge} />
+                    <input type='text' className="last_field" value={data.childThreeID} />
                 </div>
                 
                 <div className="checkboxes">
 
                     <div className="check">
                         <label>Head Start:</label>
-                        <input type='checkbox' checked={childThreeHeadStart}
-                        onChange={() => setChildThreeHeadStart(!childThreeHeadStart)}
+                        <input type='checkbox' checked={data.childThreeHeadStart}
+                        
                         />
                     </div>
 
                     <div className="check">
                         <label>Foster Child:</label>
-                        <input type='checkbox' checked={childThreeForsterChild}
-                        onChange={() => setChildThreeFosterChild(!childThreeForsterChild)}
+                        <input type='checkbox' checked={data.childThreeForsterChild}
+
                         />
                     </div>
 
                     <div className="check">
                         <label>Runaway:</label>
-                        <input type='checkbox' checked={childThreeRunaway}
-                        onChange={() => setChildThreeRunaway(!childThreeRunaway)}
+                        <input type='checkbox' checked={data.childThreeRunaway}
+
                         />
                     </div>
 
                     <div className="check">
                         <label>Homeless:</label>
-                        <input type='checkbox' checked={childThreeHomeless}
-                        onChange={() => setChildThreeHomeless(!childThreeHomeless)}
+                        <input type='checkbox' checked={data.childThreeHomeless}
+
                         />
                     </div>
                 </div>
@@ -152,38 +152,38 @@ export default IEGForm() {
 
             <div className='flex'>
                 <div className="input_field"> 
-                    <input type='text' className="first_field" value={childFourName} placeholder="  Child Name" onBlur={calculateHouseholdMembers} onChange={(e) => setChildFourName(e.target.value)}/>
-                    <input type='text' placeholder='Age' className='age_input' value={childFourAge} onChange={(e) => setChildFourAge(e.target.value)}/>
-                    <input type='text' className="last_field" value={childFourID} onChange={(e) => setChildFourID(e.target.value)}/>
+                    <input type='text' className="first_field" value={data.childFourName} placeholder="  Child Name" />
+                    <input type='text' placeholder='Age' className='age_input' value={data.childFourAge} />
+                    <input type='text' className="last_field" value={data.childFourID} />
                 </div>
                 
                 <div className="checkboxes">
 
                     <div className="check">
                         <label>Head Start:</label>
-                        <input type='checkbox' checked={childFourHeadStart}
-                        onChange={() => setChildFourHeadStart(!childFourHeadStart)}
+                        <input type='checkbox' checked={data.childFourHeadStart}
+                        
                         />
                     </div>
 
                     <div className="check">
                         <label>Foster Child:</label>
-                        <input type='checkbox' checked={childFourForsterChild}
-                        onChange={() => setChildFourFosterChild(!childFourForsterChild)}
+                        <input type='checkbox' checked={data.childFourForsterChild}
+
                         />
                     </div>
 
                     <div className="check">
                         <label>Runaway:</label>
-                        <input type='checkbox' checked={childFourRunaway}
-                        onChange={() => setChildFourRunaway(!childFourRunaway)}
+                        <input type='checkbox' checked={data.childFourRunaway}
+
                         />
                     </div>
 
                     <div className="check">
                         <label>Homeless:</label>
-                        <input type='checkbox' checked={childFourHomeless}
-                        onChange={() => setChildFourHomeless(!childFourHomeless)}
+                        <input type='checkbox' checked={data.childFourHomeless}
+
                         />
                     </div>
                 </div>
