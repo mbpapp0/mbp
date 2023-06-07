@@ -62,6 +62,9 @@ export default function Account() {
             email,
             sameEmail
         }
+        
+        if(name == ''){return;}
+        if(email == ''){return;}
 
         const response = await fetch(`https://mbp-server.onrender.com/api/users/edit/${id}`, {
             method: 'PUT',
