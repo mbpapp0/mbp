@@ -402,7 +402,7 @@ export default function IEGForm() {
                         <label>Earnings from work before deductions: </label>
                         <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberFiveWorkEarnings} />
                         <label>Welfare, child support, alimony: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberFiveWelfare_Alimony_CS} onChange={(e) => setHouseholdMemberFiveWelfare_Alimony_CS(e.target.value)}/>
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberFiveWelfare_Alimony_CS} />
                         <label>Social Security, pensions, retirement: </label>
                         <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberFiveSSPR}/>
                         <label>All other income: </label>
