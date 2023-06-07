@@ -328,9 +328,9 @@ export default function IEGForm() {
 
                         <h4>Member</h4>
                         <label>Name of Other Household Member: </label>
-                        <input type='text' className="part_b_main_field" value={data.HouseholdMemberOneName} />
+                        <input type='text' className="part_b_main_field" value={data.HouseholdMemberOneName || '  '} />
                         <label>Earnings from work before deductions: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberOneWorkEarnings} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberOneWorkEarnings  || 0} />
                         <label>Welfare, child support, alimony: </label>
                         <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberOneWelfare_Alimony_CS} />
                         <label>Social Security, pensions, retirement: </label>
@@ -602,6 +602,7 @@ export default function IEGForm() {
               <div style={{ padding: '10px', background: 'black' }}>
                 <h5 style={{ color: 'white' }}>PART V: Participant’s Ethnic and Racial Identities (optional)</h5>
              </div>
+           <h5>Eligibility: { data.eligibility }</h5>
             <div className="ethnicity block flex space_between">
                 <div className="ethnicity_title">
                     <p>Check ( ) one ethnic identity:</p>
