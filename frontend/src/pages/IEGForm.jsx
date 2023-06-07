@@ -280,14 +280,10 @@ export default IEGForm() {
                     PART I here.
                 </p>
                 <label>Child Income</label>
-                <input type='number' value={childIncome} onChange={(e) => setChildIncome(e.target.value)}/>
+                <input type='number' value={data.childIncome} />
                     <label>How Often?</label>
-                    <select style={{height: '1.3rem', fontSize: '1rem;'}} onChange={(e) => setChildIncomeFreq(e.target.value)}>
-                        <option>Weekly</option>
-                        <option>Bi-Weekly</option>
-                        <option>Monthly</option>
-                        <option>Yearly</option>
-                    </select>
+                    <input type='text' value={data.childIncomeFreq} />
+                   
                 {/* <label>How often?</label>
                 <input type='text' value={childIncomeFreq} onChange={(e) => setChildIncomeFreq(e.target.value)}/> */}
             </div>
@@ -310,22 +306,18 @@ export default IEGForm() {
 
                         <h4>Member</h4>
                         <label>Name of Other Household Member: </label>
-                        <input type='text' className="part_b_main_field" value={HouseholdMemberOneName} onBlur={calculateHouseholdMembers} onChange={(e) => setHouseholdMemberOneName(e.target.value)} required/>
+                        <input type='text' className="part_b_main_field" value={data.HouseholdMemberOneName} />
                         <label>Earnings from work before deductions: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={HouseholdMemberOneWorkEarnings} onChange={(e) => setHouseholdMemberOneEarnings(e.target.value)}/>
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberOneWorkEarnings} />
                         <label>Welfare, child support, alimony: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={HouseholdMemberOneWelfare_Alimony_CS} onChange={(e) => setHouseholdMemberOneWelfare_Alimony_CS(e.target.value)}/>
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberOneWelfare_Alimony_CS} />
                         <label>Social Security, pensions, retirement: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={HouseholdMemberOneSSPR} onChange={(e) => setHouseholdMemberOneSSPR(e.target.value)}/>
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberOneSSPR} />
                         <label>All other income: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={HouseholdMemberOneOther} onChange={(e) => setHouseholdMemberOneOther(e.target.value)}/>
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberOneOther} />
                         <label style={{ marginRight: '0.3rem'}}>Income Frequency:</label>
-                        <select style={{height: '1.3rem', fontSize: '1rem;'}} onChange={(e) => {setMemberOneIncomeFreq(e.target.value)}}>
-                            <option>Weekly</option>
-                            <option>Bi-Weekly</option>
-                            <option>Monthly</option>
-                            <option>Yearly</option>
-                        </select>
+                        <input type='text' value={data.memberOneIncomeFreq} />
+                       
                     </div>
 
                     
@@ -333,37 +325,32 @@ export default IEGForm() {
                         <h4>Member</h4>
 
                         <label>Name of Other Household Member: </label>
-                        <input type='text' className="part_b_main_field" value={HouseholdMemberTwoName} onBlur={calculateHouseholdMembers} onChange={(e) => setHouseholdMemberTwoName(e.target.value)}/>
+                        <input type='text' className="part_b_main_field" value={data.HouseholdMemberTwoName} />
                         <label>Earnings from work before deductions: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={HouseholdMemberTwoWorkEarnings} onChange={(e) => setHouseholdMemberTwoEarnings(e.target.value)}/>
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberTwoWorkEarnings} />
                         <label>Welfare, child support, alimony: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={HouseholdMemberTwoWelfare_Alimony_CS} onChange={(e) => setHouseholdMemberTwoWelfare_Alimony_CS(e.target.value)}/>
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberTwoWelfare_Alimony_CS} />
                         <label>Social Security, pensions, retirement: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={HouseholdMemberTwoSSPR} onChange={(e) => setHouseholdMemberTwoSSPR(e.target.value)}/>
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberTwoSSPR} />
                         <label>All other income: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={HouseholdMemberTwoOther} onChange={(e) => setHouseholdMemberTwoOther(e.target.value)}/>
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberTwoOther} />
                         <label style={{ marginRight: '0.3rem'}}>Income Frequency:</label>
-                        <select style={{height: '1.3rem', fontSize: '1rem;'}} onChange={(e) => {setMemberTwoIncomeFreq(e.target.value)}}>
-                            <option>Weekly</option>
-                            <option>Bi-Weekly</option>
-                            <option>Monthly</option>
-                            <option>Yearly</option>
-                        </select>
+                        <input type='text' value={data.memberTwoIncomeFreq} />
                     </div>
 
                     <div className="form_line">
                         <h4>Member</h4>
 
                         <label>Name of Other Household Member: </label>
-                        <input type='text' className="part_b_main_field" value={HouseholdMemberThreeName} onBlur={calculateHouseholdMembers} onChange={(e) => setHouseholdMemberThreeName(e.target.value)}/>
+                        <input type='text' className="part_b_main_field" value={data.HouseholdMemberThreeName} onBlur={calculateHouseholdMembers} onChange={(e) => setHouseholdMemberThreeName(e.target.value)}/>
                         <label>Earnings from work before deductions: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={HouseholdMemberThreeWorkEarnings} onChange={(e) => setHouseholdMemberThreeEarnings(e.target.value)}/>
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberThreeWorkEarnings} onChange={(e) => setHouseholdMemberThreeEarnings(e.target.value)}/>
                         <label>Welfare, child support, alimony: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={HouseholdMemberThreeWelfare_Alimony_CS} onChange={(e) => setHouseholdMemberThreeWelfare_Alimony_CS(e.target.value)}/>
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberThreeWelfare_Alimony_CS} onChange={(e) => setHouseholdMemberThreeWelfare_Alimony_CS(e.target.value)}/>
                         <label>Social Security, pensions, retirement: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={HouseholdMemberThreeSSPR} onChange={(e) => setHouseholdMemberThreeSSPR(e.target.value)}/>
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberThreeSSPR} onChange={(e) => setHouseholdMemberThreeSSPR(e.target.value)}/>
                         <label>All other income: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={HouseholdMemberThreeOther} onChange={(e) => setHouseholdMemberThreeOther(e.target.value)}/>
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberThreeOther} onChange={(e) => setHouseholdMemberThreeOther(e.target.value)}/>
                         <label style={{ marginRight: '0.3rem'}}>Income Frequency:</label>
                         <select style={{height: '1.3rem', fontSize: '1rem;'}} onChange={(e) => {setMemberThreeIncomeFreq(e.target.value)}}>
                             <option>Weekly</option>
