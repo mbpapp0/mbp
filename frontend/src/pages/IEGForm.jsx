@@ -297,6 +297,7 @@ export default function IEGForm() {
   
             <div className='part_a'>
                 <p className="part_a_title">
+                  <h5 style={{marginBlock: '0.5rem'}}>Eligibility: { data.eligibility }</h5>
                     <strong>A.</strong> Child Income - Sometimes children in the household earn and receive income.
                     Please indicate the TOTAL income received by child household members listed in 
                     PART I here.
@@ -602,7 +603,7 @@ export default function IEGForm() {
               <div style={{ padding: '10px', background: 'black' }}>
                 <h5 style={{ color: 'white' }}>PART V: Participant’s Ethnic and Racial Identities (optional)</h5>
              </div>
-           <h5>Eligibility: { data.eligibility }</h5>
+          
             <div className="ethnicity block flex space_between">
                 <div className="ethnicity_title">
                     <p>Check ( ) one ethnic identity:</p>
