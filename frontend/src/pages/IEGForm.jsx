@@ -10,6 +10,7 @@ export default function IEGForm() {
         const response = await fetch(`https://mbp-server.onrender.com/api/clients/client/${id}`);
         const json = await response.json();
         setData(json[0]);
+        window.print();
     }
 
   
