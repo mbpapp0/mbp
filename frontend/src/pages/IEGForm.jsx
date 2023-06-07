@@ -74,38 +74,38 @@ export default IEGForm() {
 
             <div className='flex'>
                 <div className="input_field"> 
-                    <input type='text' className="first_field" placeholder="  Child Name" value={childTwoName} onBlur={calculateHouseholdMembers} onChange={(e) => setChildTwoName(e.target.value)}/>
-                    <input type='text' placeholder='Age' className='age_input'  value={childTwoAge} onChange={(e) => setChildTwoAge(e.target.value)}/>
-                    <input type='text' className="last_field" value={childTwoID} onChange={(e) => setChildTwoID(e.target.value)}/>
+                    <input type='text' className="first_field" placeholder="  Child Name" value={data.childTwoName} />
+                    <input type='text' placeholder='Age' className='age_input'  value={data.childTwoAge} />
+                    <input type='text' className="last_field" value={data.childTwoID}/>
                 </div>
                 
                 <div className="checkboxes">
 
                     <div className="check">
                         <label>Head Start:</label>
-                        <input type='checkbox' checked={childTwoHeadStart}
-                        onChange={() => setChildTwoHeadStart(!childTwoHeadStart)}
+                        <input type='checkbox' checked={data.childTwoHeadStart}
+                        
                         />
                     </div>
 
                     <div className="check">
                         <label>Foster Child:</label>
-                        <input type='checkbox' checked={childTwoForsterChild}
-                        onChange={() => setChildTwoFosterChild(!childTwoForsterChild)}
+                        <input type='checkbox' checked={data.childTwoForsterChild}
+                        
                         />
                     </div>
 
                     <div className="check">
                         <label>Runaway:</label>
-                        <input type='checkbox' checked={childTwoRunaway}
-                        onChange={() => setChildTwoRunaway(!childTwoRunaway)}
+                        <input type='checkbox' checked={data.childTwoRunaway}
+                       
                         />
                     </div>
 
                     <div className="check">
                         <label>Homeless:</label>
-                        <input type='checkbox' checked={childTwoHomeless}
-                        onChange={() => setChildTwoHomeless(!childTwoHomeless)}
+                        <input type='checkbox' checked={data.childTwoHomeless}
+                        
                         />
                     </div>
                 </div>
