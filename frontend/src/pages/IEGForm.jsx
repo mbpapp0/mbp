@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-export default IEGForm() {
+export default function IEGForm() {
   const user = JSON.parse(localStorage.getItem('user'));
   const { id } = useParams();
   const [data, setData] = useState({});
