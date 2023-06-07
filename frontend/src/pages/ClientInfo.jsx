@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Back from '../components/Back';
 
@@ -39,6 +39,7 @@ export default function ClientInfo() {
                 <>
                 <div>
                     <h2>Applicant</h2>
+                        <Link to={`/print/${id}`}><button>Test</button></Link>
                         <h4>Print Name: { data.printName }</h4>
                         <h4>Eligibility: { data.eligibility }</h4>
                         <div>
