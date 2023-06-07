@@ -495,11 +495,11 @@ export default IEGForm() {
             <div className="flex days">
                 <p>Check ( ) the meals your child will normally receive while in care:</p>
                 <div className="flex align">
-                    <p>Breakfast AM <input type='checkbox' checked={breakFast} /></p>
-                    <p>Snack Lunch <input type='checkbox' checked={snackLunch} /></p>
-                    <p>PM Snack <input type='checkbox' checked={snackPM} /></p>
-                    <p>Supper Evening <input type='checkbox' checked={supper} /></p>
-                    <p>Snack<input type='checkbox' checked={snack} /></p>
+                    <p>Breakfast AM <input type='checkbox' checked={data.breakFast} /></p>
+                    <p>Snack Lunch <input type='checkbox' checked={data.snackLunch} /></p>
+                    <p>PM Snack <input type='checkbox' checked={data.snackPM} /></p>
+                    <p>Supper Evening <input type='checkbox' checked={data.supper} /></p>
+                    <p>Snack<input type='checkbox' checked={data.snack} /></p>
                 </div>
             </div>
 
@@ -517,12 +517,11 @@ export default IEGForm() {
 
             <div className="info">
 
-            <div style={{ maxWidth: '6rem'}}>
+              {/* <div style={{ maxWidth: '6rem'}}>
                 <label>Print Name</label>
                 <input type='text'  className="right bottom" value={printName} onChange={(e) => setPrintName(e.target.value)} required/>
                 
-                {/* <label>Date</label>
-                <input type='date' className="right bottom" value={date} onChange={(e) => setDate(e.target.value)} /> */}
+                
 
                 <label>Address</label>
                 <input type='text' className="right bottom" value={address} onChange={(e) => setAddress(e.target.value)}/>
@@ -538,27 +537,17 @@ export default IEGForm() {
 
                 <label>Phone Number</label>
                 <input type='number' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}/>
-            </div>
+            </div> */}
                   <div style={{ padding: '10px', background: 'black', marginBlock: '0.75rem' }}>
                     <h5 style={{ color: 'white' }}>PART IV: Signature</h5>
                   </div>
                 <div>
-                   { signErr && <h6 style={{color: 'red'}}>Please Input Signature</h6> }
+                
                     <label>Signature</label>
-                    <div style={{border: '2px solid black', width: '12rem', height: '96px'}} className='sign_pad'>    
-                        <SignatureCanvas 
-                            ref={data => setSign(data)}
-                            canvasProps={{width: 287, height: 92, className: 'sigCanvas'}}
-                        />
-
-                        { image && <div className='sign_preview'>
-                            <img src={image} alt='signature' />
-                        </div> }
+                    <div style={{border: '2px solid black', width: '12rem', height: '96px'}} className='sign_pad'>                            
+                      <img src={data.sign} alt='signature' />                    
                     </div>
-                    <div className='sign_buttons'>
-                        <button className='button' type='button' onClick={handleSave}>Save</button>
-                        <button className='button' type='button' onClick={handleClear}>Clear</button>
-                    </div>
+                    
                 </div>
                          
               
@@ -566,7 +555,7 @@ export default IEGForm() {
                  <div className='flex align' style={{margin: '0'}}>
                    <label>
                      Date:
-                   <input type="date" value={signDate} onChange={(e) => setSignDate(e.target.value)} style={{ width: '10.5rem'}} />
+                   <input type="date" value={data.signDate}   />
                    </label>
                  </div>
 
@@ -596,12 +585,12 @@ export default IEGForm() {
                     <p>Check ( ) one ethnic identity:</p>
                     <div>
                         <label className="half_right">Hispanic/Latino</label>
-                        <input type='checkbox' className="right" checked={latino} onChange={() => setLatino(!latino)} 
-                        disabled={nonLatino}
+                        <input type='checkbox' className="right" checked={latino}  
+                        
                         />  
                         <label className="half_right">Hispanic/Non-Latino</label>
-                        <input type='checkbox' checked={nonLatino} onChange={() => setNonLatino(!nonLatino)}
-                        disabled={latino}
+                        <input type='checkbox' checked={nonLatino} 
+                        
                         />
                     </div>
                 </div>
@@ -627,22 +616,16 @@ export default IEGForm() {
 
             </div>
                 <div>
-                    { OffSignErr && <h6 style={{color: 'red'}}>Please Input Signature</h6> }
+                    
                     <label>Official Signature</label>
                     <div style={{border: '2px solid black', width: '12rem', height: '96px'}} className='sign_pad'>    
-                        <SignatureCanvas 
-                            ref={data => setOffSign(data)}
-                            canvasProps={{width: 287, height: 92, className: 'sigCanvas'}}
-                        />
+                        
 
-                        { offImage && <div className='sign_preview'>
-                            <img src={offImage} alt='signature' />
-                        </div> }
+                        
+                            <img src={data.offSign} alt='signature' />
+                        
                     </div>
-                    <div className='sign_buttons'>
-                        <button className='button' type='button' onClick={handleOffSave}>Save</button>
-                        <button className='button' type='button' onClick={handleOffClear}>Clear</button>
-                    </div>
+                    
                 </div>  
                      <br />
            <div className='flex align block1x'>
