@@ -22,7 +22,7 @@ export default IEGForm() {
     }, [])
     
     if(user.role != 'Branch User'){
-        return <h2>Error</h2>
+        window.location.assign('/');
     }
   
   return(
