@@ -435,7 +435,7 @@ export default IEGForm() {
 
                 <div className={ noSSN ? 'hide' : "flex align block"}>
                     <p className="right">Last four Digits of Social Security Number XXX-XX</p>
-                    <input type='number' className="input_width" disabled={noSSN} value={ssn} />
+                    <input type='number' className="input_width" value={ssn} />
                     
                 </div>
 
@@ -481,13 +481,13 @@ export default IEGForm() {
             <div className="flex">
                 <p>Check ( ) the days your child will normally attend the center:</p>
                 <div className="flex align days">
-                    <p>Sunday <input type='checkbox' checked={dayCenterSunday} onChange={() => setDayCenterSunday(!dayCenterSunday)}/></p>
-                    <p>Monday <input type='checkbox' checked={dayCenterMonday} onChange={() => setDayCenterMonday(!dayCenterMonday)}/></p>
-                    <p>Tuesday <input type='checkbox' checked={dayCenterTuesday} onChange={() => setDayCenterTuesday(!dayCenterTuesday)}/></p>
-                    <p>Wednesday <input type='checkbox' checked={dayCenterWednesday} onChange={() => setDayCenterWednesday(!dayCenterWednesday)}/></p>
-                    <p>Thursday <input type='checkbox' checked={dayCenterThursday} onChange={() => setDayCenterThursday(!dayCenterThursday)}/></p>
-                    <p>Friday <input type='checkbox' checked={dayCenterFriday} onChange={() => setDayCenterFriday(!dayCenterFriday)}/></p>
-                    <p>Saturday <input type='checkbox' checked={dayCenterSaturday} onChange={() => setDayCenterSaturday(!dayCenterSaturday)}/></p>
+                    <p>Sunday <input type='checkbox' checked={data.dayCenterSunday} /></p>
+                    <p>Monday <input type='checkbox' checked={data.dayCenterMonday} /></p>
+                    <p>Tuesday <input type='checkbox' checked={data.dayCenterTuesday} /></p>
+                    <p>Wednesday <input type='checkbox' checked={data.dayCenterWednesday} /></p>
+                    <p>Thursday <input type='checkbox' checked={data.dayCenterThursday} /></p>
+                    <p>Friday <input type='checkbox' checked={data.dayCenterFriday} /></p>
+                    <p>Saturday <input type='checkbox' checked={data.dayCenterSaturday} /></p>
                     
                 </div>
             </div>
@@ -495,11 +495,11 @@ export default IEGForm() {
             <div className="flex days">
                 <p>Check ( ) the meals your child will normally receive while in care:</p>
                 <div className="flex align">
-                    <p>Breakfast AM <input type='checkbox' checked={breakFast} onChange={() => setBreakFast(!breakFast)}/></p>
-                    <p>Snack Lunch <input type='checkbox' checked={snackLunch} onChange={() => setSnackLunch(!snackLunch)}/></p>
-                    <p>PM Snack <input type='checkbox' checked={snackPM} onChange={() => setSnackPM(!snackPM)}/></p>
-                    <p>Supper Evening <input type='checkbox' checked={supper} onChange={() => setSupper(!supper)}/></p>
-                    <p>Snack<input type='checkbox' checked={snack} onChange={() => setSnack(!snack)}/></p>
+                    <p>Breakfast AM <input type='checkbox' checked={breakFast} /></p>
+                    <p>Snack Lunch <input type='checkbox' checked={snackLunch} /></p>
+                    <p>PM Snack <input type='checkbox' checked={snackPM} /></p>
+                    <p>Supper Evening <input type='checkbox' checked={supper} /></p>
+                    <p>Snack<input type='checkbox' checked={snack} /></p>
                 </div>
             </div>
 
