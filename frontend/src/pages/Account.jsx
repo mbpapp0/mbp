@@ -28,7 +28,7 @@ export default function Account() {
     
     function isValidName(name) {
         const invalidCharacters = /[.,\\\/#!$%\^&\*;:{}=\-_`~()0-9]/;
-        if(name[0] === " "){
+        if(name[0] === " " && name == ''){
             return false; 
         }
         return !invalidCharacters.test(name);
