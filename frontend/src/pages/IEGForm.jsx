@@ -435,7 +435,7 @@ export default IEGForm() {
 
                 <div className={ noSSN ? 'hide' : "flex align block"}>
                     <p className="right">Last four Digits of Social Security Number XXX-XX</p>
-                    <input type='number' className="input_width" disabled={noSSN} value={ssn} onChange={handleSSNChange}/>
+                    <input type='number' className="input_width" disabled={noSSN} value={ssn} />
                     
                 </div>
 
@@ -445,7 +445,7 @@ export default IEGForm() {
           type="checkbox"
           id="noSsnCheckbox"
           checked={noSSN}
-          onChange={handleCheckboxChange}
+          
         />
         I dont have an SSN
       </label>
@@ -459,48 +459,23 @@ export default IEGForm() {
             <div className="block">
                 <p>
                     My child is normally in attendance at the facility between the hours of 
-                    <select className='form_time' value={timeFrom} onChange={(e) => setTimeFrom(e.target.value)}>
-                        <option value={1}>1</option>
-                        <option value={2}>2</option>
-                        <option value={3}>3</option>
-                        <option value={4}>4</option>
-                        <option value={5}>5</option>
-                        <option value={6}>6</option>
-                        <option value={7}>7</option>
-                        <option value={8}>8</option>
-                        <option value={9}>9</option>
-                        <option value={10}>10</option>
-                        <option value={11}>11</option>
-                        <option value={12}>12</option>
+                    <select className='form_time' value={timeFrom}>
+                        
                     </select>
                     
-                    <select className='form_time' value={timeFromHour} onChange={(e) => setTimeFromHour(e.target.value)}>
-                        <option value='AM'>AM</option>
-                        <option value='PM'>PM</option>    
+                    <select className='form_time' value={timeFromHour}>
+                           
                     </select >to
-                    <select className='form_time' value={timeTo} onChange={(e) => setTimeTo(e.target.value)}>
-                        <option>1</option>
-                        <option value={1}>1</option>
-                        <option value={2}>2</option>
-                        <option value={3}>3</option>
-                        <option value={4}>4</option>
-                        <option value={5}>5</option>
-                        <option value={6}>6</option>
-                        <option value={7}>7</option>
-                        <option value={8}>8</option>
-                        <option value={9}>9</option>
-                        <option value={10}>10</option>
-                        <option value={11}>11</option>
-                        <option value={12}>12</option>
+                    <select className='form_time' value={timeTo}>
+                        
                     </select>
                     
-                    <select className='form_time' value={timeToHour} onChange={(e) => setTimeToHour(e.target.value)}>
-                        <option value='AM'>AM</option>
-                        <option value='PM'>PM</option> 
+                    <select className='form_time' value={timeToHour} >
+                  
                         
                     </select>
                 </p>
-                <p> <input type='checkbox' checked={beforeAfterCare} onChange={() => setBeforeAfterCare(!beforeAfterCare)}/> Check here if only before/after school
+                <p> <input type='checkbox' checked={beforeAfterCare} /> Check here if only before/after school
                     care is provided.</p>
             </div>
             <div className="flex">
