@@ -39,7 +39,7 @@ export default function ClientInfo() {
                 <>
                 <div>
                     <h2>Applicant</h2>
-                        <Link to={`/print/${id}`}><button>Test</button></Link>
+                        <Link to={`/print/${id}`}><button className='button radius block1x'>Print</button></Link>
                         <h4>Print Name: { data.printName }</h4>
                         <h4>Eligibility: { data.eligibility }</h4>
                         <div>
