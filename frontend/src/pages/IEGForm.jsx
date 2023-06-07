@@ -1,9 +1,29 @@
 import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
+
 export default IEGForm() {
+  const user = JSON.parse(localStorage.getItem('user'));
+  const { id } = useParams();
+  const [data, setData] = useState({});
+  
+   const getClient = async () => {
+        const response = await fetch(`https://mbp-server.onrender.com/api/clients/client/${id}`);
+        const json = await response.json();
+        setData(json[0]);
+    }
+
   
   const handleSubmit = () => {
     e.preventDefault();
   }
+  
+      useEffect(() => {
+        getClient();
+    }, [])
+    
+    if(user.role != 'Branch User'){
+        return <h2>Error</h2>
+    }
   
   return(
     <>
