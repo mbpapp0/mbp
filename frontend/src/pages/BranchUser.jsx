@@ -106,7 +106,7 @@ export default function BranchUser() {
 
                 <h3 className='block branch_subhead'>Submitted Client Forms</h3>
                 <div className='flex_button'>                    
-                    <Link to={`/client/${user.branch}`}><button className='button radius bottom'>Add Client</button></Link>
+                    <Link to={`/client/${user.branch}`}><button className='button radius bottom' >Add Client</button></Link>
                     <Link to={`/roster/${user.branch}`}><button className='button radius bottom'>View Roster</button></Link>
                 </div>
 
@@ -129,8 +129,8 @@ export default function BranchUser() {
                                     <td>{ client.eligibility }</td>
                                     <td>{client.date }</td>
                                     
-                                    <td><Link to={`/clients/${client._id}`}><button className='button radius'>View</button></Link></td>
-                                    <td><Link to={`/print/${client._id}`}><button className='button radius'>Print</button></Link></td>
+                                    <td><Link to={`/clients/${client._id}`}><button className='button radius' style={{paddingInline: '1rem'}}>View</button></Link></td>
+                                    <td><Link to={`/print/${client._id}`}><button className='button radius' style={{paddingInline: '1rem'}}>Print</button></Link></td>
                                 </tr>
                             )
                         })}
