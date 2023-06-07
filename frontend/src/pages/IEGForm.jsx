@@ -134,7 +134,7 @@ export default function IEGForm() {
             <div className='flex'>
                 <div className="input_field"> 
                     <input type='text' className="first_field" placeholder="  Child Name" value={data.childThreeName} />
-                    <input type='text' placeholder='Age' className='age_input' value={dat.childThreeAge} />
+                    <input type='text' placeholder='Age' className='age_input' value={data.childThreeAge} />
                     <input type='text' className="last_field" value={data.childThreeID} />
                 </div>
                 
