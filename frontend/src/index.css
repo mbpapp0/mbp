@@ -3,7 +3,8 @@
 
   @media print {
       .hidden_on_print {
-        display: none;
+        display: none !important;
+        visibility: hidden;
       }
     }
 
