@@ -330,13 +330,13 @@ export default function IEGForm() {
                         <label>Name of Other Household Member: </label>
                         <input type='text' className="part_b_main_field" value={data.HouseholdMemberOneName || '  '} />
                         <label>Earnings from work before deductions: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberOneWorkEarnings  || 0} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberOneWorkEarnings || 0} />
                         <label>Welfare, child support, alimony: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberOneWelfare_Alimony_CS} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberOneWelfare_Alimony_CS  || 0} />
                         <label>Social Security, pensions, retirement: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberOneSSPR} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberOneSSPR || 0} />
                         <label>All other income: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberOneOther} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberOneOther || 0} />
                         <label style={{ marginRight: '0.3rem'}}>Income Frequency:</label>
                         <input type='text' value={data.memberOneIncomeFreq} />
                        
@@ -347,15 +347,15 @@ export default function IEGForm() {
                         <h4>Member</h4>
 
                         <label>Name of Other Household Member: </label>
-                        <input type='text' className="part_b_main_field" value={data.HouseholdMemberTwoName} />
+                        <input type='text' className="part_b_main_field" value={data.HouseholdMemberTwoName || '  '} />
                         <label>Earnings from work before deductions: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberTwoWorkEarnings} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberTwoWorkEarnings || 0 } />
                         <label>Welfare, child support, alimony: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberTwoWelfare_Alimony_CS} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberTwoWelfare_Alimony_CS || 0} />
                         <label>Social Security, pensions, retirement: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberTwoSSPR} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberTwoSSPR || 0} />
                         <label>All other income: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberTwoOther} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberTwoOther || 0} />
                         <label style={{ marginRight: '0.3rem'}}>Income Frequency:</label>
                         <input type='text' value={data.memberTwoIncomeFreq} />
                     </div>
@@ -364,15 +364,15 @@ export default function IEGForm() {
                         <h4>Member</h4>
 
                         <label>Name of Other Household Member: </label>
-                        <input type='text' className="part_b_main_field" value={data.HouseholdMemberThreeName}  />
+                        <input type='text' className="part_b_main_field" value={data.HouseholdMemberThreeName || ' '}  />
                         <label>Earnings from work before deductions: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberThreeWorkEarnings} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberThreeWorkEarnings || 0} />
                         <label>Welfare, child support, alimony: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberThreeWelfare_Alimony_CS} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberThreeWelfare_Alimony_CS || 0} />
                         <label>Social Security, pensions, retirement: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberThreeSSPR} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberThreeSSPR || 0} />
                         <label>All other income: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberThreeOther} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberThreeOther || 0} />
                         <label style={{ marginRight: '0.3rem'}}>Income Frequency:</label>
                         <input type='text' value={data.memberTwoIncomeFreq} />
                     
@@ -382,15 +382,15 @@ export default function IEGForm() {
                         <h4>Member</h4>
 
                         <label>Name of Other Household Member: </label>
-                        <input type='text' className="part_b_main_field" value={data.HouseholdMemberFourName} />
+                        <input type='text' className="part_b_main_field" value={data.HouseholdMemberFourName || ' '} />
                         <label>Earnings from work before deductions: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberFourWorkEarnings} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberFourWorkEarnings || 0} />
                         <label>Welfare, child support, alimony: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberFourWelfare_Alimony_CS} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberFourWelfare_Alimony_CS || 0} />
                         <label>Social Security, pensions, retirement: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberFourSSPR} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberFourSSPR || 0} />
                         <label>All other income: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberFourOther} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberFourOther ||  0} />
                         <label style={{ marginRight: '0.3rem'}}>Income Frequency:</label>
                         <input type='text' value={data.memberFourIncomeFreq} />
                        
@@ -400,15 +400,15 @@ export default function IEGForm() {
                         <h4>Member</h4>
 
                         <label>Name of Other Household Member: </label>
-                        <input type='text' className="part_b_main_field" value={data.HouseholdMemberFiveName} />
+                        <input type='text' className="part_b_main_field" value={data.HouseholdMemberFiveName || ' '} />
                         <label>Earnings from work before deductions: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberFiveWorkEarnings} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberFiveWorkEarnings || 0} />
                         <label>Welfare, child support, alimony: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberFiveWelfare_Alimony_CS} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberFiveWelfare_Alimony_CS || 0} />
                         <label>Social Security, pensions, retirement: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberFiveSSPR}/>
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberFiveSSPR || 0}/>
                         <label>All other income: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberFiveOther}/>
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberFiveOther || 0}/>
                         <label style={{ marginRight: '0.3rem'}}>Income Frequency:</label>
                         <input type='text' value={data.memberFiveIncomeFreq} />
                     </div>
@@ -417,15 +417,15 @@ export default function IEGForm() {
                         <h4>Member</h4>
 
                         <label>Name of Other Household Member: </label>
-                        <input type='text' className="part_b_main_field" value={data.HouseholdMemberSixName} />
+                        <input type='text' className="part_b_main_field" value={data.HouseholdMemberSixName || ' '} />
                         <label>Earnings from work before deductions: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberSixWorkEarnings} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberSixWorkEarnings || 0} />
                         <label>Welfare, child support, alimony: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberSixWelfare_Alimony_CS}/>
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberSixWelfare_Alimony_CS || 0}/>
                         <label>Social Security, pensions, retirement: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberSixSSPR} />
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberSixSSPR || 0} />
                          <label>All other income: </label>
-                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberSixOther}/>
+                        <input type='number' placeholder="$" className="part_b_field_1" value={data.HouseholdMemberSixOther || 0}/>
                         <label style={{ marginRight: '0.3rem'}}>Income Frequency:</label>
                         <input type='text' value={data.memberSixIncomeFreq} />
                       
