@@ -65,7 +65,7 @@ export default function Header() {
 
 
     return (
-        <div className="header">
+        <div className="header hidden_on_print">
              <Link to='/'><h1 className="logo">MBP</h1></Link>
            
              {
