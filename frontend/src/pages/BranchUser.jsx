@@ -129,7 +129,7 @@ export default function BranchUser() {
                                     <td>{ client.eligibility }</td>
                                     <td>{client.date }</td>
                                     <td><Link to={`/clients/${client._id}`}><button className='button radius'>View</button></Link></td>
-                                    <Link to={`/print/${id}`}><button className='button radius'>Print</button></Link>
+                                    <Link to={`/print/${client._id}`}><button className='button radius'>Print</button></Link>
                                 </tr>
                             )
                         })}
