@@ -7,7 +7,7 @@ export default function PdfComponent() {
   const [loading, setLoading] = useState(false);
   
   const download = () => {
-    const capture = document.querySelector('hello');
+    const capture = document.querySelector('.hello');
     setLoading(true);
     html2canvas(capture).then((canvas) => {
       const imgData = canvas.toDataURL('img/png');
