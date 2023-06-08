@@ -1,13 +1,11 @@
 import React from 'react';
-import { Document, Page, Text, View, PDFViewer } from 'react-pdf';
+import { Document, Page, Text, PDFViewer } from 'react-pdf';
 
 const PdfComponent = () => {
   const renderPDF = () => (
     <Document>
       <Page>
-        <View>
           <Text>Hello, World!</Text>
-        </View>
       </Page>
     </Document>
   );
