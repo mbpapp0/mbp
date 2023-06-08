@@ -19,7 +19,7 @@ export default function IEGForm() {
       const componentHeight = doc.internal.pageSize.getHeight();
       doc.addImage(imgData, 'PNG', 0, 0, componentWidth, componentHeight);
       setLoading(false);
-      doc.save('save.pdf')
+      doc.save('form.pdf')
      
     })
     
