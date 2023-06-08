@@ -1,16 +1,37 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas'
 
 export default function IEGForm() {
   const user = JSON.parse(localStorage.getItem('user'));
   const { id } = useParams();
   const [data, setData] = useState({});
+  const [loading, setLoading] = useState(false);
+  
+  const download = () => {
+    const capture = document.querySelector('.container');
+    setLoading(true);
+    html2canvas(capture).then((canvas) => {
+      const imgData = canvas.toDataURL('img/png');
+      const doc = new jsPDF('p', 'mm', 'a4');
+      const componentWidth = doc.internal.pageSize.getWidth();
+      const componentHeight = doc.internal.pageSize.getHeight();
+      doc.addImage(imgData, 'PNG', 0, 0, componentWidth, componentHeight);
+      setLoading(false);
+      doc.save('save.pdf')
+     
+    })
+    
+}
+  
   
    const getClient = async () => {
         const response = await fetch(`https://mbp-server.onrender.com/api/clients/client/${id}`);
         const json = await response.json();
         setData(json[0]);
-        window.print();
+        download();
+       // window.print();
     }
 
   
