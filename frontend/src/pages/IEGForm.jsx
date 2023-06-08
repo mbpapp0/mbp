@@ -15,8 +15,8 @@ export default function IEGForm() {
     html2canvas(capture).then((canvas) => {
       const imgData = canvas.toDataURL('img/png');
       const doc = new jsPDF('p', 'mm', 'a4');
-      const componentWidth = doc.internal.pageSize.getWidth();
-      const componentHeight = doc.internal.pageSize.getHeight();
+      const componentWidth = 2000;
+      const componentHeight = 5000;
       doc.addImage(imgData, 'PNG', 0, 0, componentWidth, componentHeight);
       setLoading(false);
       doc.save('form.pdf')
