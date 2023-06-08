@@ -34,6 +34,7 @@ import RosterMonth from './pages/RosterMonth';
 import Excel from './pages/Excel';
 import Account from './pages/Account';
 import IEGForm from './pages/IEGForm'
+import PdfComponent from './pages/PdfComponent.jsx'
 
 export default function App() { 
   let user = JSON.parse(localStorage.getItem('user'));
@@ -81,6 +82,7 @@ export default function App() {
           <Route path='/excel' element={<Excel />} />
           <Route path='/account/:id' element={<Account />} />
           <Route path='/print/:id' element={<IEGForm />} />
+          <Route path='/pdf' element={<PdfComponent />} />
         </Routes>
     </>
   )
