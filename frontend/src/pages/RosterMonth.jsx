@@ -14,6 +14,8 @@ export default function RosterMonth() {
     const [freeMeals, setFreeMeals] = useState(0);
     const [reducedMeals, setReducedMeals] = useState(0);
     const [paidMeals, setPaidMeals] = useState(0);
+    const [filtered, setFiltered] = useState(false);
+    const [keys, setKeys] = useState(['_id', 'branch', 'month', 'createdAt', 'updatedAt', '__v']);
     const [branchName, setBranchName] = useState('');
     const user = JSON.parse(localStorage.getItem('user'));
 
@@ -35,6 +37,14 @@ export default function RosterMonth() {
         setData(result);
         
         const date = new Date();
+        
+        json.forEach(obj => {
+          keys.forEach(key => {
+            delete obj[key];
+           });
+        });
+        
+        setFiltered(json)
 
     
     }
@@ -46,27 +56,13 @@ export default function RosterMonth() {
         setBranchName(json.name); 
     }
 
-    {/*    const keysToRemove = ['_id', 'branch', 'month', 'createdAt', 'updatedAt', '__v'];
-    
-    const removeDetails = () => {
-  const newArray = data.map(obj => {
-    const newObj = {};
-    for (const key in obj) {
-      if (!keysToRemove.includes(key)) {
-        newObj[key] = obj[key];
-      }
-    }
-    return newObj;
-  });
-  setArray(newArray);
-}
-  */}
+ 
     
     
 
     const submit = () => {
         var wb = XLSX.utils.book_new(),
-        ws = XLSX.utils.json_to_sheet(data);
+        ws = XLSX.utils.json_to_sheet(filtered);
     
         XLSX.utils.book_append_sheet(wb, ws, 'Roster');
     
