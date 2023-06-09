@@ -35,6 +35,21 @@ export default function RosterMonth() {
         setData(result);
         
         const date = new Date();
+        
+        const keysToRemove = ['_id', 'branch', 'month', 'createdAt', 'updatedAt', '__v'];
+    
+        const removeDetails = () => {
+        const newArray = data.map(obj => {
+        const newObj = {};
+         for (const key in obj) {
+            if (!keysToRemove.includes(key)) {
+            newObj[key] = obj[key];
+          }
+        }
+        return newObj;
+        });
+       setArray(newArray);
+       }
 
     
     }
@@ -46,21 +61,8 @@ export default function RosterMonth() {
         setBranchName(json.name); 
     }
 
-    {/*    const keysToRemove = ['_id', 'branch', 'month', 'createdAt', 'updatedAt', '__v'];
-    
-    const removeDetails = () => {
-  const newArray = data.map(obj => {
-    const newObj = {};
-    for (const key in obj) {
-      if (!keysToRemove.includes(key)) {
-        newObj[key] = obj[key];
-      }
-    }
-    return newObj;
-  });
-  setArray(newArray);
-}
-  */}
+      
+  
     
     
 
