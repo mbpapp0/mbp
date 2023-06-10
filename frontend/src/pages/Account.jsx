@@ -81,6 +81,7 @@ export default function Account() {
         //         'Content-Type': 'application/json'
         //     }
         // });
+        const json = response.json()
 
         if(response.ok){
             setEditing(false)
