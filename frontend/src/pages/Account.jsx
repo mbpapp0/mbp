@@ -67,7 +67,8 @@ export default function Account() {
         
         if(name == ''){return;}
         if(email == ''){return;}
-
+        
+        try{
         const response = await fetch(`https://mbp-server.onrender.com/api/users/edit/${id}`, {
             method: 'PUT',
             body: JSON.stringify(data),
@@ -89,9 +90,10 @@ export default function Account() {
             setEditing(false);
             setLoading(false)
         }
+        }
         
-        if(!response.ok){
-          setError(json.error);
+        catch(error){
+          setError(error);
            setLoading(false);
            
           setTimeout(() => {
