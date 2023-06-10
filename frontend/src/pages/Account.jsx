@@ -85,6 +85,17 @@ export default function Account() {
         if(response.ok){
             setEditing(false)
         }
+        
+        if(!response.ok){
+          setError(json.error);
+           
+          setTimeout(() => {
+            setError(false)
+           }
+          ,3600)
+             
+                     
+        }
 
     }
 
@@ -95,6 +106,10 @@ export default function Account() {
     
     return(
         <div className='container'>
+        {error && 
+          <div className='error_indicator'>
+             <p>{ error }</p>
+          </div>}
         {!editing &&
             <div style={{marginTop: '3rem'}}>
                <button className='button radius' onClick={() => setEditing(true)} style={{ marginBottom: '0.9rem'}}>Edit Info</button>
