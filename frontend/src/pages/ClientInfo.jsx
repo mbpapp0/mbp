@@ -58,7 +58,7 @@ export default function ClientInfo() {
 
                     <h2>Children</h2>
 
-                    <h4>Child Income: { data.childIncome }</h4>
+                    <h4>Child Income: { data.childIncome.toLocaleString() }</h4>
                     <h4>Child Income Frequency: { data.childIncomeFreq || 'N/A'}</h4>
                     <h3>First Child</h3>
                     <h4>First Child Name: { data.childOneName || 'N/A' }</h4>
@@ -85,7 +85,7 @@ export default function ClientInfo() {
                     <h4>Sixth Child ID or Case Number : { data.childSixID || 'N/A' }</h4>
 
                     <h3>Other Child Information</h3>
-                    <h4>Child Income: { data.childIncome }</h4>
+                    <h4>Child Income: { data.childIncome.toLocaleString() }</h4>
                     <h4>Facility Hours: {data.timeFrom }{data.timeFromHour } to { data.timeTo }{ data.timeToHour }</h4>
                     <h4>Only Before/After Care Provided: { data.beforeAfterCare ? "Yes" : "No" }</h4>
                     <h4>Child Days at the Center: { data.dayCenterSunday ? "Sunday" : "" } { data.dayCenterMonday ? "Monday " : "" }{ data.dayCenterTuesday ? "Tuesday " : "" }{ data.dayCenterWednesday ? "Wednesday " : "" }{ data.dayCenterThursday ? "Thursday " : "" }{ data.dayCenterFriday ? "Friday " : "" }{ data.dayCenteraturdday ? "Saturday" : "" }</h4>
@@ -94,10 +94,10 @@ export default function ClientInfo() {
                     <h2>Household Members Information</h2>
 
                     <h4>Household Size: { data.totalHouseHoldMembers}</h4>
-                    <h4>Household Annual Income: {data.totalHouseHoldIncome}</h4>
+                    <h4>Household Annual Income: {data.totalHouseHoldIncome.toLocaleString()}</h4>
                     <h3>Member One</h3>
                     <h4>Household Member One Name: { data.HouseholdMemberOneName }</h4>
-                    <h4>Household Member One Working Earnings: { data.HouseholdMemberOneWorkEarnings }</h4>
+                    <h4>Household Member One Working Earnings: { data.HouseholdMemberOneWorkEarnings.toLocaleString() }</h4>
                     <h4>Household Member One Welfare, Alimony & Child Support: { data.HouseholdMemberOneWelfare_Alimony_CS ? data.HouseholdMemberOneWelfare_Alimony_CS : 'N/A   ' }</h4>
                     <h4>Household Member One, Social Security, pensions, retirement: { data.HouseholdMemberOneSSPR ? data.HouseholdMemberOneSSPR : 'N/A'}</h4>
                     <h4>Household Member All other income: { data.HouseholdMemberOneOther ? data.HouseholdMemberOneOther : 'N/A'}</h4>
@@ -105,7 +105,7 @@ export default function ClientInfo() {
                     
                     <h3>Member Two</h3>
                     <h4>Household Member Two Name: { data.HouseholdMemberTwoName || 'N/A' }</h4>
-                    <h4>Household Member Two Working Earnings: { data.HouseholdMemberTwoWorkEarnings || 'N/A'}</h4>
+                    <h4>Household Member Two Working Earnings: { data.HouseholdMemberTwoWorkEarnings.toLocaleString() || 'N/A'}</h4>
                     <h4>Household Member Two Welfare, Alimony & Child Support: { data.HouseholdMemberTwoWelfare_Alimony_CS ? data.HouseholdMemberTwoWelfare_Alimony_CS : 'N/A   ' }</h4>
                     <h4>Household Member Two, Social Security, pensions, retirement: { data.HouseholdMemberTwoSSPR ? data.HouseholdMemberTwoSSPR : 'N/A'}</h4>
                     <h4>Household Member All other income: { data.HouseholdMemberTwoOther ? data.HouseholdMemberTwoOther : 'N/A'}</h4>
@@ -114,7 +114,7 @@ export default function ClientInfo() {
                     
                     <h3>Member Three</h3>
                     <h4>Household Member Three Name: { data.HouseholdMemberThreeName || 'N/A' }</h4>
-                    <h4>Household Member Three Working Earnings: { data.HouseholdMemberThreeWorkEarnings || 'N/A'}</h4>
+                    <h4>Household Member Three Working Earnings: { data.HouseholdMemberThreeWorkEarnings.toLocaleString() || 'N/A'}</h4>
                     <h4>Household Member Three Welfare, Alimony & Child Support: { data.HouseholdMemberThreeWelfare_Alimony_CS ? data.HouseholdMemberThreeWelfare_Alimony_CS : 'N/A   ' }</h4>
                     <h4>Household Member Three, Social Security, pensions, retirement: { data.HouseholdMemberThreeSSPR ? data.HouseholdMemberThreeSSPR : 'N/A'}</h4>
                     <h4>Household Member All other income: { data.HouseholdMemberThreeOther ? data.HouseholdMemberThreeOther : 'N/A'}</h4>
@@ -123,7 +123,7 @@ export default function ClientInfo() {
                     
                     <h3>Member Four</h3>
                     <h4>Household Member Four Name: { data.HouseholdMemberFourName || 'N/A' }</h4>
-                    <h4>Household Member Four Working Earnings: { data.HouseholdMemberFourWorkEarnings || 'N/A'}</h4>
+                    <h4>Household Member Four Working Earnings: { data.HouseholdMemberFourWorkEarnings.toLocaleString() || 'N/A'}</h4>
                     <h4>Household Member Four Welfare, Alimony & Child Support: { data.HouseholdMemberFourWelfare_Alimony_CS ? data.HouseholdMemberThreeWelfare_Alimony_CS : 'N/A   ' }</h4>
                     <h4>Household Member Three, Social Security, pensions, retirement: { data.HouseholdMemberFourSSPR ? data.HouseholdMemberFourSSPR : 'N/A'}</h4>
                     <h4>Household Member All other income: { data.HouseholdMemberFourOther ? data.HouseholdMemberFourOther : 'N/A'}</h4>
@@ -132,7 +132,7 @@ export default function ClientInfo() {
                     
                     <h3>Member Five</h3>
                     <h4>Household Member Five Name: { data.HouseholdMemberFiveName || 'N/A' }</h4>
-                    <h4>Household Member Five Working Earnings: { data.HouseholdMemberFiveWorkEarnings || 'N/A'}</h4>
+                    <h4>Household Member Five Working Earnings: { data.HouseholdMemberFiveWorkEarnings.toLocaleString() || 'N/A'}</h4>
                     <h4>Household Member Five Welfare, Alimony & Child Support: { data.HouseholdMemberFiveWelfare_Alimony_CS ? data.HouseholdMemberFiveWelfare_Alimony_CS : 'N/A   ' }</h4>
                     <h4>Household Member Five, Social Security, pensions, retirement: { data.HouseholdMemberFiveSSPR ? data.HouseholdMemberFiveSSPR : 'N/A'}</h4>
                     <h4>Household Member All other income: { data.HouseholdMemberFiveOther ? data.HouseholdMemberFiveOther : 'N/A'}</h4>
@@ -141,7 +141,7 @@ export default function ClientInfo() {
                     
                     <h3>Member Six</h3>
                     <h4>Household Member Six Name: { data.HouseholdMemberSixName || 'N/A' }</h4>
-                    <h4>Household Member Six Working Earnings: { data.HouseholdMemberSixWorkEarnings || 'N/A'}</h4>
+                    <h4>Household Member Six Working Earnings: { data.HouseholdMemberSixWorkEarnings.toLocaleString() || 'N/A'}</h4>
                     <h4>Household Member Six Welfare, Alimony & Child Support: { data.HouseholdMemberSixWelfare_Alimony_CS ? data.HouseholdMemberSixWelfare_Alimony_CS : 'N/A   ' }</h4>
                     <h4>Household Member Six, Social Security, pensions, retirement: { data.HouseholdMemberSixSSPR ? data.HouseholdMemberSixSSPR : 'N/A'}</h4>
                     <h4>Household Member All other income: { data.HouseholdMemberSixOther ? data.HouseholdMemberSixOther : 'N/A'}</h4>
