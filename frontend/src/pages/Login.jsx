@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLogin } from '../hooks/useLogin';
 
 export default function Login() {
@@ -7,11 +7,26 @@ export default function Login() {
     const [password, setPassword] = useState('');
     const {error, loading, login} = useLogin();
     
+    const activateServer = async () => {
+     const form = {message: 'Hi'};
+      
+  const response = await fetch('https://mbp-server.onrender.com/connect', {
+            method: 'POST',
+            body: JSON.stringify(form),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         await login(email, password);
     }
+    
+    useEffect(() => {
+     activateServer()
+    }, [])
     return(
         <div>
 
