@@ -31,8 +31,9 @@ export default function IEGForm() {
         const json = await response.json();
         setData(json[0]);
      
-       
+       if(response.ok){
        window.print();
+       }
     }
 
   
