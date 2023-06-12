@@ -98,26 +98,26 @@ export default function ClientInfo() {
                     <h3>Member One</h3>
                     <h4>Household Member One Name: { data.HouseholdMemberOneName }</h4>
                     <h4>Household Member One Working Earnings: { data.HouseholdMemberOneWorkEarnings.toLocaleString() }</h4>
-                    <h4>Household Member One Welfare, Alimony & Child Support: { data.HouseholdMemberOneWelfare_Alimony_CS ? data.HouseholdMemberOneWelfare_Alimony_CS : 'N/A   ' }</h4>
-                    <h4>Household Member One, Social Security, pensions, retirement: { data.HouseholdMemberOneSSPR ? data.HouseholdMemberOneSSPR : 'N/A'}</h4>
-                    <h4>Household Member All other income: { data.HouseholdMemberOneOther ? data.HouseholdMemberOneOther : 'N/A'}</h4>
+                    <h4>Household Member One Welfare, Alimony & Child Support: { data.HouseholdMemberOneWelfare_Alimony_CS ? data.HouseholdMemberOneWelfare_Alimony_CS.toLocaleString() : 'N/A   ' }</h4>
+                    <h4>Household Member One, Social Security, pensions, retirement: { data.HouseholdMemberOneSSPR ? data.HouseholdMemberOneSSPR.toLocaleString() : 'N/A'}</h4>
+                    <h4>Household Member All other income: { data.HouseholdMemberOneOther ? data.HouseholdMemberOneOther.toLocaleString() : 'N/A'}</h4>
                     <h4>Household Member Income Frequency: { data.memberOneIncomeFreq || 'N/A'}</h4>
                     
                     <h3>Member Two</h3>
                     <h4>Household Member Two Name: { data.HouseholdMemberTwoName || 'N/A' }</h4>
-                    <h4>Household Member Two Working Earnings: { data.HouseholdMemberTwoWorkEarnings.toLocaleString() || 'N/A'}</h4>
-                    <h4>Household Member Two Welfare, Alimony & Child Support: { data.HouseholdMemberTwoWelfare_Alimony_CS ? data.HouseholdMemberTwoWelfare_Alimony_CS : 'N/A   ' }</h4>
-                    <h4>Household Member Two, Social Security, pensions, retirement: { data.HouseholdMemberTwoSSPR ? data.HouseholdMemberTwoSSPR : 'N/A'}</h4>
-                    <h4>Household Member All other income: { data.HouseholdMemberTwoOther ? data.HouseholdMemberTwoOther : 'N/A'}</h4>
+                    <h4>Household Member Two Working Earnings: { data.HouseholdMemberTwoWorkEarnings ? data.HouseholdMemberTwoWorkEarnings.toLocaleString() : 'N/A'}</h4>
+                    <h4>Household Member Two Welfare, Alimony & Child Support: { data.HouseholdMemberTwoWelfare_Alimony_CS ? data.HouseholdMemberTwoWelfare_Alimony_CS.toLocaleString() : 'N/A   ' }</h4>
+                    <h4>Household Member Two, Social Security, pensions, retirement: { data.HouseholdMemberTwoSSPR ? data.HouseholdMemberTwoSSPR.toLocaleString() : 'N/A'}</h4>
+                    <h4>Household Member All other income: { data.HouseholdMemberTwoOther ? data.HouseholdMemberTwoOther.toLocaleString() : 'N/A'}</h4>
                     { data.HouseholdMemberTwoName != '' && <h4>Household Member Income Frequency: { data.memberTwoIncomeFreq  || 'N/A'}</h4>}
 
                     
                     <h3>Member Three</h3>
                     <h4>Household Member Three Name: { data.HouseholdMemberThreeName || 'N/A' }</h4>
-                    <h4>Household Member Three Working Earnings: { data.HouseholdMemberThreeWorkEarnings.toLocaleString() || 'N/A'}</h4>
-                    <h4>Household Member Three Welfare, Alimony & Child Support: { data.HouseholdMemberThreeWelfare_Alimony_CS ? data.HouseholdMemberThreeWelfare_Alimony_CS : 'N/A   ' }</h4>
-                    <h4>Household Member Three, Social Security, pensions, retirement: { data.HouseholdMemberThreeSSPR ? data.HouseholdMemberThreeSSPR : 'N/A'}</h4>
-                    <h4>Household Member All other income: { data.HouseholdMemberThreeOther ? data.HouseholdMemberThreeOther : 'N/A'}</h4>
+                    <h4>Household Member Three Working Earnings: {data.HouseholdMemberThreeWorkEarnings ? data.HouseholdMemberThreeWorkEarnings.toLocaleString() : 'N/A'}</h4>
+                    <h4>Household Member Three Welfare, Alimony & Child Support: { data.HouseholdMemberThreeWelfare_Alimony_CS ? data.HouseholdMemberThreeWelfare_Alimony_CS.toLocaleString() : 'N/A   ' }</h4>
+                    <h4>Household Member Three, Social Security, pensions, retirement: { data.HouseholdMemberThreeSSPR ? data.HouseholdMemberThreeSSPR.toLocaleString() : 'N/A'}</h4>
+                    <h4>Household Member All other income: { data.HouseholdMemberThreeOther ? data.HouseholdMemberThreeOther.toLocaleString() : 'N/A'}</h4>
                     { data.HouseholdMemberThreeName != '' && <h4>Household Member Income Frequency: { data.memberThreeIncomeFreq || 'N/A'}</h4>}
 
                     
