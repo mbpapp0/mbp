@@ -94,6 +94,8 @@ export default function ClientInfo() {
                     <h2>Household Members Information</h2>
 
                     <h4>Household Size: { data.totalHouseHoldMembers}</h4>
+                    <h4>Household Annual Income: {data.totalHouseHoldIncome}</h4>
+                    
                     <h3>Member One</h3>
                     <h4>Household Member One Name: { data.HouseholdMemberOneName }</h4>
                     <h4>Household Member One Working Earnings: { data.HouseholdMemberOneWorkEarnings }</h4>
