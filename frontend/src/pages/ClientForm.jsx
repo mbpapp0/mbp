@@ -1494,19 +1494,19 @@ export default function ClientForm() {
                 <input type='date' className="right bottom" value={date} onChange={(e) => setDate(e.target.value)} /> */}
 
                 <label>Address</label>
-                <input type='text' className="right bottom" value={address} onChange={(e) => setAddress(e.target.value)}/>
+                <input type='text' className="right bottom" value={address} onChange={(e) => setAddress(e.target.value)} required/>
                 
                 <label>City</label>
-                <input type='text' className="right bottom" value={city} onChange={(e) => setCity(e.target.value)}/>
+                <input type='text' className="right bottom" value={city} onChange={(e) => setCity(e.target.value)} required />
 
                 <label>State</label>
-                <input type='text' className="right bottom" value={state} onChange={(e) => setState(e.target.value)}/>
+                <input type='text' className="right bottom" value={state} onChange={(e) => setState(e.target.value)} required/>
                 
                 <label>Zip Code</label>
-                <input type='number' className="right bottom" value={zipCode} onChange={(e) => setZipCode(e.target.value)}/>
+                <input type='number' className="right bottom" value={zipCode} onChange={(e) => setZipCode(e.target.value)} required/>
 
                 <label>Phone Number</label>
-                <input type='number' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}/>
+                <input type='number' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} required/>
             </div>
                   <div style={{ padding: '10px', background: 'black', marginBlock: '0.75rem' }}>
                     <h5 style={{ color: 'white' }}>PART IV: Signature</h5>
