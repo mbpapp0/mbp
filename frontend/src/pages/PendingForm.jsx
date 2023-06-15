@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 
 export default function PendingForm() {
-    const user = {branch: ''}
+    const user =  JSON.parse(localStorage.getItem('user'));
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState(false);
   
