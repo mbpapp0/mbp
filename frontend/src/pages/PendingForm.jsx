@@ -28,7 +28,7 @@ export default function PendingForm() {
 
 return(
   <div className='container'>
-    <h2>IEG Forms Pending Approval</h2>
+    <h2 style={{marginBlock: '2rem'}}>IEG Forms Pending Approval</h2>
       <table className='submitted_forms table_block'>
                     <thead>
                         <tr>                        
