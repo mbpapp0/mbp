@@ -953,7 +953,7 @@ export default function ClientUserForm() {
     } 
     
     if(formExists){
-      return(<h2 style={{marginTop: '4rem', textAlign: 'center'}}>{ formExists == 'Approved' ? 'IEG Form Approved' : 'IEG Form Pending Approval'</h2>)
+      return(<h2 style={{marginTop: '4rem', textAlign: 'center'}}>{ formExists == 'Approved' ? 'IEG Form Approved' : 'IEG Form Pending Approval'}</h2>)
     }
 
     
