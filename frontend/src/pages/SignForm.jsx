@@ -72,7 +72,7 @@ export default function SignForm() {
         if(saved){
             setImage2(saved); 
             sign2.clear(); 
-
+ 
             setSignature2(saved);
         }
 
@@ -80,11 +80,14 @@ export default function SignForm() {
     
  const approveForm = async(e) => {
    e.preventDefault();
+   setLoading(true);
    
   if(signDate || signature || signDate1 || signature1 || signDate2 || signature2){
-   
-  return;
+   setLoading(false);
+   return;
   }
+   
+   
   const form = {
    status,
    detOfficialSignDate: signDate,
@@ -106,6 +109,8 @@ export default function SignForm() {
    if(response.ok){
      window.location.assign('/');
    }
+   
+   setLoading(false);
   
 }
   
@@ -200,7 +205,7 @@ export default function SignForm() {
 
         </div>
 
-        <button className='button radius' onClick={approveForm}>Approve Form</button>
+        <button className='button radius' onClick={approveForm} disabled={loading}>{ loading ? 'Loading...' : 'Approve Form'}</button>
       </form>
     </div>
   )
