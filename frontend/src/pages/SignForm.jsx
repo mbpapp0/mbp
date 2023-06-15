@@ -5,6 +5,7 @@ export default function SignForm() {
   const [sign, setSign] = useState();
   const [signDate, setSignDate] = useState('')
   const [image, setImage] = useState();
+  const [signature, setSignature] = useState('');
   
   const handleClear = () => {
         sign.clear();
