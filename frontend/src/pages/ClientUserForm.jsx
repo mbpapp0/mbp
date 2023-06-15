@@ -171,7 +171,7 @@ export default function ClientUserForm() {
     
     const [errorArr, setErrorArr] = useState([]);
     
-    const [formExists, setFormExists] = useState(false);
+    const [formExists, setFormExists] = useState(true);
     
     
       const handleSSNChange = (event) => {
@@ -930,7 +930,7 @@ export default function ClientUserForm() {
       const json = await response.json();
         
       
-        setFormExists(true)
+      setFormExists(true)
     
      
     }
@@ -944,7 +944,7 @@ export default function ClientUserForm() {
     }, []);
     
     if(formExists){
-      return <h2>Form already exists</h2>
+      return(<h2>Form already exists</h2>)
     }
 
     
