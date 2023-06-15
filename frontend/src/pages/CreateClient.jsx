@@ -23,6 +23,7 @@ export default function CreateClient() {
     const [set, setSet] = useState(false);
     const [loading, setLoading] = useState(false);
     const [inValidPass, setInValidPass] = useState(false);
+    const [userCreator, setUserCreator] = useState(user.id);
    
 
     const handleSubmit = async (e) => {
