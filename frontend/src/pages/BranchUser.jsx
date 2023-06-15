@@ -43,7 +43,7 @@ export default function BranchUser() {
         // const response = await fetch(`http://localhost:3001/api/clients/${user.branch}`);
         const json = await response.json();
         
-        const filteredData = json.filter(item => item.status === 'Pending Approval');
+        const filteredData = json.filter(item => item.status === 'Approved');
         setData(filteredData);
         setLoading(false);
     }
