@@ -82,7 +82,7 @@ export default function SignForm() {
   
   return(
     <div className='container>
-      <Back />
+
       <div className='signform'>
         <label>Signature</label>
         <div style={{border: '2px solid black', width: '12rem', height: '96px'}} className='sign_pad'>    
