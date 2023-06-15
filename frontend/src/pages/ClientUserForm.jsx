@@ -932,7 +932,7 @@ export default function ClientUserForm() {
       const json = await response.json();
          
       if(json.length > 0){
-      setFormExists(json.status);
+      setFormExists(json[0].status);
       
       }
         
