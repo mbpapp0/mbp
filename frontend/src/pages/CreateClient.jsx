@@ -16,9 +16,9 @@ export default function SysAdminCreateBranch() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPass, setConfirmPass] = useState('');
-    const [branchOptions, setBranchOptions] = useState([]);
-    const [roleOptions, setRoleOptions] = useState(['Branch User', 'Data Admin', 'System Admin']);
-    const [role, setRole] = useState(roleOptions[0]);
+   // const [branchOptions, setBranchOptions] = useState([]);
+//    const [roleOptions, setRoleOptions] = useState(['Branch User', 'Data Admin', 'System Admin']);
+    const [role, setRole] = useState('Client');
     const [branch, setBranch] = useState('');
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('New User Created');
@@ -217,7 +217,7 @@ if(user.role !== 'Branch User'){
 
                         <input className="block" type='text' placeholder="First Name" value={ firstName } onChange={(e) => setFirstName(e.target.value)}/>
                         <input className="block" type='text' placeholder="Last Name" value={ lastName } onChange={(e) => setLastName(e.target.value)}/>
-                      <select className='role' onChange={(e) => setRole(e.target.value)}>
+{/*   <select className='role' onChange={(e) => setRole(e.target.value)}>
                             {roleOptions.map((role, index) => {
                                 return <option key={index}>{ role }</option>
                             })}
@@ -229,7 +229,7 @@ if(user.role !== 'Branch User'){
                                 key={ branch._id } 
                                 value={ branch._id }>{ branch.name }</option>
                             })}
-                        </select>
+                        </select> */}
                         <input className="block" type='email' placeholder="Email" value={ email } onChange={(e) => setEmail(e.target.value)}/>
                         <input className="block" type='password' placeholder="Password" value={ password } onChange={(e) => setPassword(e.target.value)}/>
                         <input className="block" type='password' placeholder="Confirm Password" value={ confirmPass } onChange={(e) => setConfirmPass(e.target.value)}/>
