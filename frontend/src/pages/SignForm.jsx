@@ -80,7 +80,7 @@ export default function SignForm() {
         <label>Signature</label>
         <div style={{border: '2px solid black', width: '12rem', height: '96px'}} className='sign_pad'>    
             <SignatureCanvas 
-              ref={data => set iSign(data)}
+              ref={data => setSign(data)}
               canvasProps={{width: 287, height: 92, className: 'sigCanvas'}}
              />
 
