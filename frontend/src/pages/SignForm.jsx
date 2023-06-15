@@ -82,7 +82,7 @@ export default function SignForm() {
    e.preventDefault();
    setLoading(true);
    
-  if(signDate || signature || signDate1 || signature1 || signDate2 || signature2){
+  if(!signDate || !signature || !signDate1 || !signature1 || !signDate2 || !signature2){
    setLoading(false);
    return;
   }
