@@ -87,7 +87,8 @@ export default function App() {
           <Route path='/account/:id' element={<Account />} />
           <Route path='/print/:id' element={<IEGForm />} />
           <Route path='/pdf' element={<PdfComponent />} />
-          <Route path='/createcalient/:id' element={<CreateClient />} />
+          <Route path='/createc
+lient/:id' element={<CreateClient />} />
           <Route path='/pending' element={<PendingForm />} />
           <Route path='/signform/:id' element={<SignForm />} />
         </Routes>
