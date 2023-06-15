@@ -3,6 +3,7 @@ import SignatureCanvas from 'react-signature-canvas';
 import Back from '../components/Back';
 
 export default function SignForm() {
+  const [status, setStatus] = useState('Approved');
   const [sign, setSign] = useState();
   const [signDate, setSignDate] = useState('')
   const [image, setImage] = useState();
@@ -72,6 +73,12 @@ export default function SignForm() {
         }
 
     }   
+    
+ const updateForm = async() => {
+  const form = {
+   status,
+  }
+}
   
   return(
     <div className='container>
