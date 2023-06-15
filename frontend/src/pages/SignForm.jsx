@@ -79,6 +79,10 @@ export default function SignForm() {
  const approveForm = async(e) => {
    e.preventDefault();
    
+  if(signDate || signature || signDate1 || signature1 || signDate2 || signature2){
+   
+  return;
+  }
   const form = {
    status,
    detOfficialSignDate: signDate,
