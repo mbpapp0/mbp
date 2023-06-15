@@ -7,6 +7,16 @@ export default function SignForm() {
   const [image, setImage] = useState();
   const [signature, setSignature] = useState('');
   
+  const [sign1, setSign1] = useState();
+  const [signDate1, setSignDate1] = useState('')
+  const [image1, setImage1] = useState();
+  const [signature1, setSignature1] = useState('');
+  
+  const [sign2, setSign2] = useState();
+  const [signDate2, setSignDate2] = useState('')
+  const [image2, setImage2] = useState();
+  const [signature2, setSignature2] = useState('');
+  
   const handleClear = () => {
         sign.clear();
         setImage('');
@@ -21,6 +31,43 @@ export default function SignForm() {
             sign.clear();
 
             setSignature(saved);
+        }
+
+    }   
+    
+    
+    const handleClear1 = () => {
+        sign1.clear();
+        setImage1('');
+        setSignature1('');
+    }
+
+    const handleSave1 = () => {
+        const saved = sign1.getTrimmedCanvas().toDataURL('image/png');
+
+        if(saved){
+            setImage1(saved);
+            sign1.clear();
+
+            setSignature1(saved);
+        }
+
+    }   
+    
+    const handleClear2 = () => {
+        sign2.clear();
+        setImage2('');
+        setSignature2('');
+    }
+
+    const handleSave2 = () => {
+        const saved = sign2.getTrimmedCanvas().toDataURL('image/png');
+
+        if(saved){
+            setImage2(saved);
+            sign2.clear(); 
+
+            setSignature3(saved);
         }
 
     }   
