@@ -299,7 +299,7 @@ export default function ClientUserForm() {
         }
 
     }   
-    const handleOffClear = () => {
+    {/* const handleOffClear = () => {
         sign.clear();
         setOffImage('');
         setOffSignature('');
@@ -316,6 +316,8 @@ export default function ClientUserForm() {
         }
 
     }   
+
+*/}
 
 
      const getFreeMeal = async () => {
