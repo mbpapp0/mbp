@@ -4,6 +4,7 @@ import Back from '../components/Back';
 import { useParams } from 'react-router-dom';
 
 export default function SignForm() {
+  const { id } = useParams();
   const [status, setStatus] = useState('Approved');
   const [sign, setSign] = useState();
   const [signDate, setSignDate] = useState('')
@@ -87,6 +88,18 @@ export default function SignForm() {
    folOfficialSignDate: signDate2,
    folOfficialSignature: signature2
   }
+  
+  const response = await fetch(`https://mbp-server.onrender.com/api/clients/edit/${id}`, {
+            method: 'PUT',
+            body: JSON.stringify(form),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+    });
+   
+   if(response.ok){
+     window.location.assign('/');
+   }
   
 }
   
