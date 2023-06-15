@@ -926,6 +926,10 @@ export default function ClientUserForm() {
     const checkFormExists = async () => {
       const response = await fetch(`https://mbp-server.onrender.com/api/clients/user/${userID}`);
       const json = response.json();
+        
+      if(response.ok && json.length > 0){
+        setFormExists(true)
+      }
      
     }
 
@@ -935,7 +939,11 @@ export default function ClientUserForm() {
         getFreeMeal();
         getReducedMeal(); 
         checkFormExists();
-    }, [])
+    }, []);
+    
+    if(formExists){
+      return <h2>Form already exists</h2>
+    }
 
     
     return(
