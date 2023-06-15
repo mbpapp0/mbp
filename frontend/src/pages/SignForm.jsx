@@ -83,7 +83,7 @@ export default function SignForm() {
   return(
     <div className='container>
 
-      <div className='signform'>
+
         <label>Signature</label>
         <div style={{border: '2px solid black', width: '12rem', height: '96px'}} className='sign_pad'>    
             <SignatureCanvas 
@@ -101,7 +101,7 @@ export default function SignForm() {
             <button className='button' type='button' onClick={handleClear}>Clear</button>
           </div>
 
-        </div>
+
              
             
         
