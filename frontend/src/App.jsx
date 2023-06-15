@@ -89,7 +89,7 @@ export default function App() {
           <Route path='/pdf' element={<PdfComponent />} />
           <Route path='/createcalient/:id' element={<CreateClient />} />
           <Route path='/pending' element={<PendingForm />} />
-          <Route path='/signform' element={<SignForm />} />
+          <Route path='/signform/:id' element={<SignForm />} />
         </Routes>
     </>
   )
