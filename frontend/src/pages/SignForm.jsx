@@ -67,7 +67,7 @@ export default function SignForm() {
             setImage2(saved);
             sign2.clear(); 
 
-            setSignature3(saved);
+            setSignature2(saved);
         }
 
     }   
