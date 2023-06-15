@@ -171,6 +171,8 @@ export default function ClientUserForm() {
     
     const [errorArr, setErrorArr] = useState([]);
     
+    const [formExists, setFormExists] = useState(false);
+    
     
       const handleSSNChange = (event) => {
        setSSN(event.target.value);
