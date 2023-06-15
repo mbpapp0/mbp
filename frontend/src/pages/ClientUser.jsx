@@ -1,6 +1,6 @@
-import ClientForm from './ClientForm'
+import ClientForm from './ClientUserForm'
 
-export default function ClientScreen() {
+export default function ClientUser() {
     const user = JSON.parse(localStorage.getItem('user'));
 
     if(user.role != 'Branch User'){
