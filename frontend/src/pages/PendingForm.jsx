@@ -28,7 +28,7 @@ export default function PendingForm() {
 
 return(
   <div className='container'>
-    <h2 style={{marginBlock: '2rem'}}>IEG Forms Pending Approval</h2>
+    <h2 style={{marginTop: '2rem'}}>IEG Forms Pending Approval</h2>
       <table className='submitted_forms table_block'>
                     <thead>
                         <tr>                        
@@ -49,7 +49,7 @@ return(
                                     <td>{client.date }</td>
                                     
                                     <td><Link to={`/clients/${client._id}`}><button className='button radius' style={{paddingInline: '1rem'}}>View</button></Link></td>
-                                    <td><Link to={`/signform/${client._id}`}><button className='button radius' style={{paddingInline: '1rem'}}>Print Form</button></Link></td>
+                                    <td><Link to={`/signform/${client._id}`}><button className='button radius' style={{paddingInline: '1rem'}}>Sign Form</button></Link></td>
                                 </tr>
                             )
                         })}
