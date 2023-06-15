@@ -3,6 +3,7 @@ import SignatureCanvas from 'react-signature-canvas';
 
 export default function ClientUserForm() {
     const user = JSON.parse(localStorage.getItem('user'));
+    const [userID, setUserID] = useState(user.id);
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState("");
     const [childOneName, setChildOneName] = useState('');
@@ -632,6 +633,7 @@ export default function ClientUserForm() {
 
         const form = {
             branch,
+            userID,
             eligibility,
             childOneName,
             childOneID, 
