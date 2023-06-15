@@ -2,12 +2,13 @@ import { useState, useEffect } from 'react';
 
 
 export default function PendingForm() {
-    setLoading(true);
+
     const user =  JSON.parse(localStorage.getItem('user'));
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState(false);
   
     const getClients = async () => {
+        setLoading(true)
         const response = await fetch(`https://mbp-server.onrender.com/api/clients/${user.branch}`);
         // const response = await fetch(`http://localhost:3001/api/clients/${user.branch}`);
         const json = await response.json();
@@ -47,7 +48,7 @@ return(
                                     <td>{client.date }</td>
                                     
                                     <td><Link to={`/clients/${client._id}`}><button className='button radius' style={{paddingInline: '1rem'}}>View</button></Link></td>
-                                    <td><Link to={`/print/${client._id}`}><button className='button radius' style={{paddingInline: '1rem'}}>Print Form</button></Link></td>
+                                    <td><Link to={`/signform/${client._id}`}><button className='button radius' style={{paddingInline: '1rem'}}>Print Form</button></Link></td>
                                 </tr>
                             )
                         })}
