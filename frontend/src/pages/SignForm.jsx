@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import SignatureCanvas from 'react-signature-canvas';
+import Back from '../components/Back';
 
 export default function SignForm() {
   const [sign, setSign] = useState();
@@ -64,7 +65,7 @@ export default function SignForm() {
         const saved = sign2.getTrimmedCanvas().toDataURL('image/png');
 
         if(saved){
-            setImage2(saved);
+            setImage2(saved); 
             sign2.clear(); 
 
             setSignature2(saved);
@@ -73,13 +74,13 @@ export default function SignForm() {
     }   
   
   return(
-    <div>
-    
+    <div className='container>
+      <Back />
       <div className='signform'>
         <label>Signature</label>
         <div style={{border: '2px solid black', width: '12rem', height: '96px'}} className='sign_pad'>    
             <SignatureCanvas 
-              ref={data => setSign(data)}
+              ref={data => set iSign(data)}
               canvasProps={{width: 287, height: 92, className: 'sigCanvas'}}
              />
 
@@ -95,8 +96,7 @@ export default function SignForm() {
 
         </div>
              
-             
-        // Sign Two
+            
         
         <div className='signform'>
           <label>Signature</label>
@@ -119,7 +119,6 @@ export default function SignForm() {
         </div>
              
              
-       // Sign Three
         <div className='signform'>
           <label>Signature</label>
           <div style={{border: '2px solid black', width: '12rem', height: '96px'}} className='sign_pad'>    
