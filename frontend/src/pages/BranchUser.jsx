@@ -42,7 +42,9 @@ export default function BranchUser() {
         const response = await fetch(`https://mbp-server.onrender.com/api/clients/${user.branch}`);
         // const response = await fetch(`http://localhost:3001/api/clients/${user.branch}`);
         const json = await response.json();
-        setData(json);
+        
+        const filteredData = json.filter(item => item.status === 'Pending Approval');
+        setData(filteredData);
         setLoading(false);
     }
 
@@ -106,7 +108,7 @@ export default function BranchUser() {
 
                 <h3 className='block branch_subhead'>Submitted Client Forms</h3>
                 <div className='flex_button'>                    
-                    <Link to={`/client/${user.branch}`}><button className='button radius bottom' >Add Client</button></Link>
+                  //  <Link to={`/client/${user.branch}`}><button className='button radius bottom' >Add Client</button></Link>
                     <Link to={`/createclient/${user.branch}`}><button className='button radius bottom' >Create Client</button></Link>
                     <Link to={`/roster/${user.branch}`}><button className='button radius bottom'>View Roster</button></Link>
                 </div>
