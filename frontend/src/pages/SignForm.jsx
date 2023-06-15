@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import SignatureCanvas from 'react-signature-canvas';
 import Back from '../components/Back';
+import { useParams } from 'react-router-dom';
 
 export default function SignForm() {
   const [status, setStatus] = useState('Approved');
@@ -75,14 +76,22 @@ export default function SignForm() {
     }   
     
  const updateForm = async() => {
+   
   const form = {
    status,
+   detOfficialSignDate: signDate,
+   detOfficialSignature: signature,
+   conOfficialSignDate: signDate1,
+   conOfficialSignature: signature1,
+   folOfficialSignDate: signDate2,
+   folOfficialSignature: signature2
   }
+  
 }
   
   return(
     <div className='container'>
-
+      <Back />
       <div className='signform'>
         <label>Signature</label>
         <div style={{border: '2px solid black', width: '12rem', height: '96px'}} className='sign_pad'>    
