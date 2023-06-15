@@ -110,6 +110,13 @@ export default function SignForm() {
             <button className='button' type='button' onClick={handleClear}>Clear</button>
           </div>
              
+          <div className='flex align' style={{margin: '0'}}>
+            <label>
+                Date:
+              <input type="date" required value={signDate} onChange={(e) => setSignDate(e.target.value)} style={{ width: '10.5rem'}} />
+              </label>
+           </div>
+
         </div>
 
 
