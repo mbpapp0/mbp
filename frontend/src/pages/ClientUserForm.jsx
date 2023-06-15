@@ -171,7 +171,7 @@ export default function ClientUserForm() {
     
     const [errorArr, setErrorArr] = useState([]);
     
-    const [formExists, setFormExists] = useState(true);
+    const [formExists, setFormExists] = useState(false);
     
     
       const handleSSNChange = (event) => {
@@ -925,7 +925,7 @@ export default function ClientUserForm() {
        
     }
     
-    const checkFormExists = async () => {
+    const checkFormExists = async() => {
       const response = await fetch(`https://mbp-server.onrender.com/api/clients/user/${user.id}`);
       const json = await response.json();
         
@@ -944,7 +944,7 @@ export default function ClientUserForm() {
     }, []);
     
     if(formExists){
-      return(<h2>Form already exists</h2>)
+      return(<h2>Form already submitted</h2>)
     }
 
     
