@@ -5,6 +5,8 @@ import { useParams } from 'react-router-dom';
 
 export default function SignForm() {
   const { id } = useParams();
+  
+  const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState('Approved');
   const [sign, setSign] = useState();
   const [signDate, setSignDate] = useState('')
