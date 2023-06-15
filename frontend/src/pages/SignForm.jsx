@@ -118,6 +118,27 @@ export default function SignForm() {
 
         </div>
              
+             
+       // Sign Three
+        <div className='signform'>
+          <label>Signature</label>
+          <div style={{border: '2px solid black', width: '12rem', height: '96px'}} className='sign_pad'>    
+            <SignatureCanvas 
+              ref={data => setSign2(data)}
+              canvasProps={{width: 287, height: 92, className: 'sigCanvas'}}
+             />
+
+            { image2 && <div className='sign_preview'>
+                <img src={image2} alt='signature' />
+             </div> }
+          </div>
+           
+          <div className='sign_buttons'>
+            <button className='button' type='button' onClick={handleSave2}>Save</button>
+            <button className='button' type='button' onClick={handleClear2}>Clear</button>
+          </div>
+
+        </div>
 
     </div>
   )
