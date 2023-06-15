@@ -75,7 +75,8 @@ export default function SignForm() {
 
     }   
     
- const updateForm = async() => {
+ const approveForm = async(e) => {
+   e.preventDefault();
    
   const form = {
    status,
@@ -179,6 +180,8 @@ export default function SignForm() {
            </div>
 
         </div>
+
+        <button className='button radius' onClick={approveForm}>Approve Form</button>
       </form>
     </div>
   )
