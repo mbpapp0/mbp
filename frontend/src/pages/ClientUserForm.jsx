@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import SignatureCanvas from 'react-signature-canvas';
 
-export default function ClientForm() {
+export default function ClientUserForm() {
     const user = JSON.parse(localStorage.getItem('user'));
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState("");
