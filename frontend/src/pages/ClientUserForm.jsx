@@ -151,10 +151,15 @@ export default function ClientUserForm() {
     const [signDate, setSignDate] = useState('')
     const [image, setImage] = useState();
     
-    const [offSign, setOffSign] = useState();
-    const [offImage, setOffImage] = useState();
-    const [offSignature, setOffSignature] = useState();
-    const [offSignDate, setOffSignDate] = useState('')
+    const [detOfficialSignature, setDetOfficialSignature] = useState('');
+    const [detOfficialSignDate, setDetOfficialSignDate] = useState('');
+    
+    const [conOfficialSignature, setConOfficialSignature] = useState('');
+    const [conOfficialSignDate, setConOfficialSignDate] = useState('');
+
+    const [folOfficialSignature, setFolOfficialSignature] = useState('');
+    const [folOfficialSignDate, setFolOfficialSignDate] = useState('');
+
 
     const [memberOneIncomeFreq, setMemberOneIncomeFreq] = useState('Weekly');
     const [memberTwoIncomeFreq, setMemberTwoIncomeFreq] = useState('Weekly');
@@ -731,6 +736,12 @@ export default function ClientUserForm() {
             snack,
             signature,
             signDate,
+            detOfficialSignature,
+            detOfficialSignDate,
+            conOfficialSignature,
+            conOfficialSignDate,
+            folOfficialSignature,
+            folOfficialSignDate,
             //offSignDate,
             // offSignature,
             printName,
