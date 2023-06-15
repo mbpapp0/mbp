@@ -37,6 +37,8 @@ import Account from './pages/Account';
 import IEGForm from './pages/IEGForm'
 import PdfComponent from './pages/PdfComponent.jsx'
 import CreateClient from './pages/CreateClient.jsx'
+import SignForm from './pages/SignForm.jsx'
+import PendingForm from './pages/PendingForm.jsx'
 
 export default function App() { 
   let user = JSON.parse(localStorage.getItem('user'));
