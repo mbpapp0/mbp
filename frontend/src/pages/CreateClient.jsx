@@ -30,9 +30,7 @@ export default function SysAdminCreateBranch() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         
-        if(!branchOptions && role == 'Branch User'){
-          return;
-        }
+       
         
         createUser();
     }
@@ -183,8 +181,8 @@ export default function SysAdminCreateBranch() {
         getBranches();
     }, []);
 
-if(user.role !== 'System Admin'){
-        return <Error />
+if(user.role !== 'Branch User'){
+        window.location.assign('/');
     }
 
     
