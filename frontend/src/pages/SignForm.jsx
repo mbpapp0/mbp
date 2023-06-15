@@ -94,7 +94,7 @@ export default function SignForm() {
       <Back />
       <form>
       <div className='signform'>
-        <label>Signature</label>
+        <label>Determining Official’s Signature:</label>
         <div style={{border: '2px solid black', width: '12rem', height: '96px'}} className='sign_pad'>    
             <SignatureCanvas 
               ref={data => setSign(data)}
@@ -125,7 +125,7 @@ export default function SignForm() {
             
         
         <div className='signform'>
-          <label>Signature</label>
+          <label>Confirming Official’s Signature: </label>
           <div style={{border: '2px solid black', width: '12rem', height: '96px'}} className='sign_pad'>    
             <SignatureCanvas 
               ref={data => setSign1(data)}
@@ -154,7 +154,7 @@ export default function SignForm() {
              
              
         <div className='signform'>
-          <label>Signature</label>
+          <label>Follow Up Official’s Signature:</label>
           <div style={{border: '2px solid black', width: '12rem', height: '96px'}} className='sign_pad'>    
             <SignatureCanvas 
               ref={data => setSign2(data)}
