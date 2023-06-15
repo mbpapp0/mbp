@@ -83,7 +83,8 @@ export default function App() {
           <Route path='/excel' element={<Excel />} />
           <Route path='/account/:id' element={<Account />} />
           <Route path='/print/:id' element={<IEGForm />} />
-          <Route path='/pdf' element={<PdfComponent />} />
+          <Route path='/pdf'  eelement={<PdfComponent />} />
+          <Route path='/createclient/:id' element={<CreateClient />} />
         </Routes>
     </>
   )
