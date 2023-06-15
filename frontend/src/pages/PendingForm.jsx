@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 
 export default function PendingForm() {
+    setLoading(true);
     const user =  JSON.parse(localStorage.getItem('user'));
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState(false);
@@ -19,6 +20,10 @@ export default function PendingForm() {
     useEffect(() => {
       getClients();
     }, [])
+    
+    if(loading){
+      return <h2 style={{textAlign: 'center'}}>Loading...</h2>
+    }
 
 return(
   <div className='container'>
