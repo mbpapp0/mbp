@@ -5,6 +5,7 @@ export default function ClientUserForm() {
     const user = JSON.parse(localStorage.getItem('user'));
     const [userID, setUserID] = useState(user.id);
     const [status, setStatus] = useState('Pending Approval');
+    const [checking, setChecking] = useState(false)
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState("");
     const [childOneName, setChildOneName] = useState('');
@@ -926,12 +927,16 @@ export default function ClientUserForm() {
     }
     
     const checkFormExists = async() => {
+      setChecking(true)
       const response = await fetch(`https://mbp-server.onrender.com/api/clients/user/${user.id}`);
       const json = await response.json();
          
       if(json.length > 0){
       setFormExists(true)
+      
       }
+        
+        setChecking(false)
      
     }
 
@@ -942,6 +947,10 @@ export default function ClientUserForm() {
         getReducedMeal(); 
         checkFormExists();
     }, []);
+    
+    if(checking){
+      return(<h2>Loading...</h2>)
+    } 
     
     if(formExists){
       return(<h2>Form already submitted</h2>)
