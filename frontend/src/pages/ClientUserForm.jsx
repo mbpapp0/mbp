@@ -373,7 +373,7 @@ export default function ClientUserForm() {
     }
 
     const [signErr, setSignErr] = useState(false);
-    const [OffSignErr, setOffSignErr] = useState(false);
+  //  const [OffSignErr, setOffSignErr] = useState(false);
 
 
     const handleSubmit = async (e) => {
@@ -390,13 +390,13 @@ export default function ClientUserForm() {
           return;
         }
         
-        if(!signature && !offSignature){
+        if(!signature){
             setSignErr(true); 
-            setOffSignErr(true);
+            //setOffSignErr(true);
 
             setTimeout(() => {
                 setSignErr(false); 
-                setOffSignErr(false);
+                //setOffSignErr(false);
             }, 1400)
             return;
         }
@@ -406,10 +406,10 @@ export default function ClientUserForm() {
             return;
         }
     
-        if(!offSignature){
+        {/*  if(!offSignature){
             setSignErr(true);
             return;
-        }
+        } */}
        
         const oneEarnings = isNaN(parseInt(HouseholdMemberOneWorkEarnings)) ? 0 : parseInt(HouseholdMemberOneWorkEarnings);
         const oneWelfare = isNaN(parseInt(HouseholdMemberOneWelfare_Alimony_CS)) ? 0 : parseInt(HouseholdMemberOneWelfare_Alimony_CS);
@@ -729,8 +729,8 @@ export default function ClientUserForm() {
             snack,
             signature,
             signDate,
-            offSignDate,
-            offSignature,
+            //offSignDate,
+            // offSignature,
             printName,
             address,
             date,
@@ -1595,8 +1595,9 @@ export default function ClientUserForm() {
                 </div>
 
             </div>
+{/*
                 <div>
-                    { OffSignErr && <h6 style={{color: 'red'}}>Please Input Signature</h6> }
+                     { OffSignErr && <h6 style={{color: 'red'}}>Please Input Signature</h6> }
                     <label>Official Signature</label>
                     <div style={{border: '2px solid black', width: '12rem', height: '96px'}} className='sign_pad'>    
                         <SignatureCanvas 
@@ -1620,7 +1621,7 @@ export default function ClientUserForm() {
                 <input type="date" required value={offSignDate} onChange={(e) => setOffSignDate(e.target.value)} style={{ width: '10.5rem'}}/>
               </label>
            </div>
-
+*/}
             <button disabled={loading} className='button radius block padding'>{loading ? 'Loading...' : 'Submit'}</button>
 
            
