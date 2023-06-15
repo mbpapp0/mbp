@@ -146,7 +146,7 @@ export default function CreateClient() {
             setTimeout(() => {
                 setSet(false);
                 window.location.assign('/');
-            }, 3000);
+            }, 1800);
             
             
          
