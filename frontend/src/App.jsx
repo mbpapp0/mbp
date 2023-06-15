@@ -86,8 +86,10 @@ export default function App() {
           <Route path='/excel' element={<Excel />} />
           <Route path='/account/:id' element={<Account />} />
           <Route path='/print/:id' element={<IEGForm />} />
-          <Route path='/pdf'  eelement={<PdfComponent />} />
-          <Route path='/createclient/:id' element={<CreateClient />} />
+          <Route path='/pdf' element={<PdfComponent />} />
+          <Route path='/createcalient/:id' element={<CreateClient />} />
+          <Route path='/pending' element={<PendingForm />} />
+          <Route path='/signform' element={<SignForm />} />
         </Routes>
     </>
   )
