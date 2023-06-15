@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import ForgotPassword from './pages/ForgotPassword';
 import AdminUsers from './pages/AdminUsers'
 import ClientScreen from './pages/ClientScreen'
+import ClientUser from './pages/ClientUser'
 import CreateUser from './pages/CreateUser'
 import BranchUser from './pages/BranchUser'
 import BranchUserIEGFree from './pages/BranchUserIEGFree'
@@ -54,7 +55,7 @@ export default function App() {
         <Header />
         <Routes>
           
-          <Route path='/' element={user.role == "Branch User" ? <BranchUser /> : user.role == "Data Admin" ? <DataAdminMainScreen/> : user.role === "System Admin" ? <SysAdmin /> : <Login />}/>
+          <Route path='/' element={ user.role == "Client" ?user.role == "Branch User" ? <BranchUser /> : user.role == "Data Admin" ? <DataAdminMainScreen/> : user.role === "System Admin" ? <SysAdmin /> : <Login />}/>
           <Route path='/client/:id' element={<ClientScreen />} />
           <Route path='/login' element={<Login />} />
           <Route path='/forgot-password' element={<ForgotPassword />} />
