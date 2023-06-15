@@ -15,10 +15,39 @@ export default function PendingForm() {
         setData(filteredData);
         setLoading(false);
     }
+    
+    useEffect(() => {
+      getClients();
+    }, [])
 
 return(
-  <div>
-
+  <div className='container'>
+      <table className='submitted_forms table_block'>
+                    <thead>
+                        <tr>                        
+                            <th>Print Name</th>
+                            <th>Child Name</th>
+                            <th>Eligibility</th>
+                            <th>Date Submitted</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        {data && data.map((client) => {
+                            return(
+                                <tr key={client._id}>
+                                    <td>{ client.printName }</td>
+                                    <td>{ client.childOneName }</td>
+                                    <td>{ client.eligibility }</td>
+                                    <td>{client.date }</td>
+                                    
+                                    <td><Link to={`/clients/${client._id}`}><button className='button radius' style={{paddingInline: '1rem'}}>View</button></Link></td>
+                                    <td><Link to={`/print/${client._id}`}><button className='button radius' style={{paddingInline: '1rem'}}>Print Form</button></Link></td>
+                                </tr>
+                            )
+                        })}
+                    </tbody>
+                </table>
   </div>
 )
 }
