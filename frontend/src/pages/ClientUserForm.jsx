@@ -920,12 +920,19 @@ export default function ClientUserForm() {
       setLoading(false)
        
     }
+    
+    const checkFormExists = async () => {
+      const response = await fetch(`https://mbp-server.onrender.com/api/clients/user/${userID}`);
+      const json = response.json();
+     
+    }
 
     
 
     useEffect(() => {
         getFreeMeal();
         getReducedMeal(); 
+        checkFormExists();
     }, [])
 
     
