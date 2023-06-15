@@ -55,7 +55,7 @@ export default function App() {
         <Header />
         <Routes>
           
-          <Route path='/' element={ user.role == "Client" ? <ClientUser> : user.role == "Branch User" ? <BranchUser /> : user.role == "Data Admin" ? <DataAdminMainScreen/> : user.role === "System Admin" ? <SysAdmin /> : <Login />}/>
+          <Route path='/' element={ user.role == "Client" ? <ClientUser /> : user.role == "Branch User" ? <BranchUser /> : user.role == "Data Admin" ? <DataAdminMainScreen/> : user.role === "System Admin" ? <SysAdmin /> : <Login />}/>
           <Route path='/client/:id' element={<ClientScreen />} />
           <Route path='/login' element={<Login />} />
           <Route path='/forgot-password' element={<ForgotPassword />} />
