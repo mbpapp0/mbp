@@ -926,7 +926,7 @@ export default function ClientUserForm() {
     }
     
     const checkFormExists = async () => {
-      const response = await fetch(`https://mbp-server.onrender.com/api/clients/user/${userID}`);
+      const response = await fetch(`https://mbp-server.onrender.com/api/clients/user/${user.id}`);
       const json = response.json();
         
       if(json.status){
