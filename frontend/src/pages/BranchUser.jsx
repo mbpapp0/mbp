@@ -112,6 +112,8 @@ export default function BranchUser() {
                     <Link to={`/createclient/${user.branch}`}><button className='button radius bottom' >Create Client</button></Link>
                     <Link to={`/roster/${user.branch}`}><button className='button radius bottom'>View Roster</button></Link>
                 </div>
+                
+                <h6>There are 0 IEG Forms Pending. <Link to='/pending'>Click Here</Link></h6>
 
                 <table className='submitted_forms table_block'>
                     <thead>
