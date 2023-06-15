@@ -7,7 +7,7 @@ import Map from '../components/Map';
 import PasswordRules from '../components/PasswordRules';
 
 
-export default function SysAdminCreateBranch() {
+export default function CreateClient() {
     const { id } = useParams();
     const user = JSON.parse(localStorage.getItem('user'));
     
@@ -16,10 +16,8 @@ export default function SysAdminCreateBranch() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPass, setConfirmPass] = useState('');
-   // const [branchOptions, setBranchOptions] = useState([]);
-//    const [roleOptions, setRoleOptions] = useState(['Branch User', 'Data Admin', 'System Admin']);
     const [role, setRole] = useState('Client');
-    const [branch, setBranch] = useState('');
+    const [branch, setBranch] = useState(id);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('New User Created');
     const [set, setSet] = useState(false);
@@ -139,46 +137,24 @@ export default function SysAdminCreateBranch() {
             setLastName('');
             setEmail('');
             setPassword('');
-            setRole(roleOptions[1]);
+            setRole('Client');
             setSet(true);
 
             setTimeout(() => {
                 setSet(false);
             }, 3000);
             
-            if(role != 'Branch User'){
-              window.location.assign('/admins');
-            } 
             
-            if(role == 'Branch User'){
-            window.location.assign(`/branch/${id}`);
-            }
          
         }
 
     }
 
-    const getBranches = async() => {
-        const response = await fetch('https://mbp-server.onrender.com/api/branches');
-        const json = await response.json();
-   //     setBranchOptions(json);
-        setBranch(json[0]._id);
-
-
-    }
-
-    // const getBranches = async() => {
-    //     const response = await fetch('http://localhost:3001/api/branches');
-    //     const json = await response.json();
-    //     setBranchOptions(json);
-    //     setBranch(json[0]._id);
-
-
-    // }
+  
 
 
     useEffect(() => {
-        getBranches();
+        // getBranches();
     }, []);
 
 if(user.role !== 'Branch User'){
