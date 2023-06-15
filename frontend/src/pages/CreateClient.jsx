@@ -161,7 +161,7 @@ export default function SysAdminCreateBranch() {
     const getBranches = async() => {
         const response = await fetch('https://mbp-server.onrender.com/api/branches');
         const json = await response.json();
-        setBranchOptions(json);
+   //     setBranchOptions(json);
         setBranch(json[0]._id);
 
 
