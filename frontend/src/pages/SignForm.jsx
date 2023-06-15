@@ -92,6 +92,7 @@ export default function SignForm() {
   return(
     <div className='container'>
       <Back />
+      <form>
       <div className='signform'>
         <label>Signature</label>
         <div style={{border: '2px solid black', width: '12rem', height: '96px'}} className='sign_pad'>    
@@ -141,6 +142,14 @@ export default function SignForm() {
             <button className='button' type='button' onClick={handleClear1}>Clear</button>
           </div>
 
+          <div className='flex align' style={{margin: '0'}}>
+           <label>
+               Date:
+             <input type="date" required value={signDate1} onChange={(e) => setSignDate1(e.target.value)} style={{ width: '10.5rem'}} />
+              </label>
+            </div>
+
+
         </div>
              
              
@@ -161,9 +170,16 @@ export default function SignForm() {
             <button className='button' type='button' onClick={handleSave2}>Save</button>
             <button className='button' type='button' onClick={handleClear2}>Clear</button>
           </div>
+             
+          <div className='flex align' style={{margin: '0'}}>
+           <label>
+               Date:
+             <input type="date" required value={signDate2} onChange={(e) => setSignDate2(e.target.value)} style={{ width: '10.5rem'}} />
+              </label>
+           </div>
 
         </div>
-
+      </form>
     </div>
   )
 }
