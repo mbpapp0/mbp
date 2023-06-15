@@ -44,6 +44,7 @@ export default function BranchUser() {
         const json = await response.json();
         
         const filteredData = json.filter(item => item.status === 'Approved');
+        const pending = json.filter(item => item.status === 'Pending Approval');
         setData(filteredData);
         setLoading(false);
     }
@@ -113,7 +114,7 @@ export default function BranchUser() {
                     <Link to={`/roster/${user.branch}`}><button className='button radius bottom'>View Roster</button></Link>
                 </div>
                 
-                <h6>There are 0 IEG Forms Pending. <Link to='/pending'>Click Here</Link></h6>
+                <p style={{ marginTop: '1rem' }}>There are 0 IEG Forms Pending. <Link to='/pending'><strong>Click Here</strong></Link></p>
 
                 <table className='submitted_forms table_block'>
                     <thead>
