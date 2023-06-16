@@ -23,6 +23,11 @@ export default function SignForm() {
   const [image2, setImage2] = useState();
   const [signature2, setSignature2] = useState('');
   
+  const getChildrenIds = async() => {
+   const response = await fetch(`https://mbp-server.onrender.com/api/clients/${id}`);
+    const json = await response.json();
+  }
+  
   const handleClear = () => {
         sign.clear();
         setImage('');
@@ -113,6 +118,10 @@ export default function SignForm() {
    setLoading(false);
   
 }
+ 
+ useEffect(() => {
+   
+ },[])
   
   return(
     <div className='container'>
