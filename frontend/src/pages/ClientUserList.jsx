@@ -75,10 +75,10 @@ export default function UserList(){
                 <div className='info_buttons'>
                         <Back />
                         <div className='info_hover'> 
-                        <Map location='Branch User List Screen'/>
+                          <Map location='Branch User List Screen'/>
                         </div>
                 </div>
-            </div>
+            
                 <div className='no_users'>
                     <h3>No users have been created yet.</h3>
                 <Link to={`/createClient/${user.branch}`}>
@@ -87,6 +87,7 @@ export default function UserList(){
                         Create New User
                         </button>
                     </Link> 
+                 </div>
                 </div>
             </>
         )
