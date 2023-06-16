@@ -95,30 +95,30 @@ export default function UserList(){
 
     return(
         <div>
-            <div className='container'>
-              <div className='info_buttons'>
-                 <Back />
-                 <div className='info_hover'> 
-                    <Map location='Branch User List Screen'/>
-                  </div>
+           <div className='container'>
+             <div className='info_buttons'>
+               <Back />
+               <div className='info_hover'> 
+                  <Map location='Branch User List Screen'/>
                </div>
-               {!editing && <h3 className='user_list_header'>{branchName} Branch</h3>
-            <div className='user_list'>
-                {data.map((user) => {
-                    return(
+             </div>
+             <h3 className='user_list_header'>{branchName} Branch</h3>
+             <div className='user_list'>
+               {data.map((user) => {
+                 return(
                     <>
-                        <div key={user._id} className='flex align user_list_container'>
-                            <p className='user_list_name'>{ user.name }</p>
-                            <div className='user_list_buttons'>
-                                <Link to={`/users/${user._id}`}><button className='button radius user_list_button'>More Info</button></Link>
-                            </div>
-                        </div>
-                   </>
-                    )
+                      <div key={user._id} className='flex align user_list_container'>
+                        <p className='user_list_name'>{ user.name }</p>
+                         <div className='user_list_buttons'>
+                           <Link to={`/users/${user._id}`}><button className='button radius user_list_button'>More Info</button></Link>
+                         </div>
+                      </div>
+                     </>
+                   )
                 })}
 
             </div>
-            </div>
+           </div>
         </div>
     )
 } 
