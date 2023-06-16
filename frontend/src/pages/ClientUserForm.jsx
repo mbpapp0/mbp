@@ -607,6 +607,7 @@ export default function ClientUserForm() {
                 const isEligible = headStart ? 'Free' :  eligibility;
                 
                 const form = {
+                    user: user.id,
                     branch,
                     status,
                     month: months[date.getMonth()],
@@ -631,7 +632,7 @@ export default function ClientUserForm() {
                 });
 
                 const json = await response.json();
-                await listOfIds.push(json._id);
+              
 
              
               
@@ -654,7 +655,6 @@ export default function ClientUserForm() {
             userID,
             eligibility,
             status,
-            childrenIds: listOfIds,
             childOneName,
             childOneID, 
             childOneHeadStart,
