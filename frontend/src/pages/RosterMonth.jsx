@@ -25,17 +25,18 @@ export default function RosterMonth() {
         const json = await response.json();
 
         const result = json.filter((child) => child.month == months[month - 1]);
+              const filteredData = result.filter(item => item.status === 'Approved');
 
-        const freeMeal = result.filter((child) => child.eligibility == 'Free');
-        const reducedMeal = result.filter((child) => child.eligibility == 'Reduced');
-        const paidMeal = result.filter((child) => child.eligibility == 'Paid');
+        const freeMeal = filteredData.filter((child) => child.eligibility == 'Free');
+        const reducedMeal = filteredData.filter((child) => child.eligibility == 'Reduced');
+        const paidMeal = filteredData.filter((child) => child.eligibility == 'Paid');
 
         setFreeMeals(freeMeal.length);
         setPaidMeals(paidMeal.length);
         setReducedMeals(reducedMeal.length);
         
                
-      const filteredData = result.filter(item => item.status === 'Approved');
+
 
         setData(filteredData);
         
