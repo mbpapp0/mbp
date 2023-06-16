@@ -151,19 +151,19 @@ export default function ClientInfo() {
 
                     <h2>Official's information</h2>
                     <>
-                   { data.detOfficialSignature && <div style={{marginBlock: '0.75rem'>
+                   { data.detOfficialSignature && <div style={{marginBlock: '0.75rem'}}>
                         <h4>Determining Official’s Signature: </h4>
                         <img src={data.detOfficialSignature} />
                         <h4>Date: {data.detOfficialSignDate}</h4>
                     </div> }
                     
-                    { data.conOfficialSignature && <div style={{marginBlock: '0.75rem'>
+                    { data.conOfficialSignature && <div style={{marginBlock: '0.75rem'}}>
                         <h4>Confirming Official’s Signature: </h4>
                         <img src={data.conOfficialSignature} />
                         <h4>Date: {data.conOfficialSignDate}</h4>
                     </div> }
                     
-                    { data.folOfficialSignature && <div style={{marginBlock: '0.75rem'>
+                    { data.folOfficialSignature && <div style={{marginBlock: '0.75rem'}}>
                         <h4>Follow Up Official’s Signature: </h4>
                         <img src={data.folOfficialSignature} />
                         <h4>Date: {data.folOfficialSignature}</h4>
