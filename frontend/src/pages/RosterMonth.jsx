@@ -15,7 +15,7 @@ export default function RosterMonth() {
     const [reducedMeals, setReducedMeals] = useState(0);
     const [paidMeals, setPaidMeals] = useState(0);
     const [filtered, setFiltered] = useState(false);
-    const [keys, setKeys] = useState(['_id', 'branch', 'month', 'createdAt', 'updatedAt', '__v', 'status']);
+    const [keys, setKeys] = useState(['_id', 'branch', 'month', 'createdAt', 'updatedAt', '__v', 'status', 'user']);
     const [branchName, setBranchName] = useState('');
     const user = JSON.parse(localStorage.getItem('user'));
 
