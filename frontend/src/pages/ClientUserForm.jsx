@@ -631,8 +631,9 @@ export default function ClientUserForm() {
                 const json = await response.json();
 
                 const returnedId = json._id;
+                setChildrenIds(['tests', 'testing'])
           
-                setChildrenIds(prevIds => [...prevIds, returnedId]);
+                // setChildrenIds(prevIds => [...prevIds, returnedId]);
             }
         };
         createRoster(childOneName, childOneAge, childOneHeadStart);
