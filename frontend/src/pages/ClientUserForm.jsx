@@ -629,7 +629,7 @@ export default function ClientUserForm() {
                 });
 
                 const json = await response.json();
-                const returnedId = json;
+                const returnedId = json._id;
                 setChildrenIds(prevIds => [...prevIds, returnedId]);
              
               
