@@ -629,18 +629,18 @@ export default function ClientUserForm() {
                 });
 
                 const json = await response.json();
-               
+                return json._id;
              
-          
-                var listofIds = ['does', 'this', 'work'];
+              
             }
         };
-        createRoster(childOneName, childOneAge, childOneHeadStart);
-        createRoster(childTwoName, childTwoAge, childTwoHeadStart);
-        createRoster(childThreeName, childThreeAge, childThreeHeadStart);
-        createRoster(childFourName, childFourAge, childFourHeadStart);
-        createRoster(childFiveName, childFiveAge, childFiveHeadStart);
-        createRoster(childSixName, childSixAge, childSixHeadStart);
+        
+       const one = createRoster(childOneName, childOneAge, childOneHeadStart);
+        const two = createRoster(childTwoName, childTwoAge, childTwoHeadStart);
+        const three = createRoster(childThreeName, childThreeAge, childThreeHeadStart);
+        const four = createRoster(childFourName, childFourAge, childFourHeadStart);
+        const five = createRoster(childFiveName, childFiveAge, childFiveHeadStart);
+        const six = createRoster(childSixName, childSixAge, childSixHeadStart);
          
         
         
@@ -651,7 +651,7 @@ export default function ClientUserForm() {
             userID,
             eligibility,
             status,
-            childrenIds: listofIds,
+            childrenIds: [one, two, three, four, five, six],
             childOneName,
             childOneID, 
             childOneHeadStart,
