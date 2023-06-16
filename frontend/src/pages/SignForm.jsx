@@ -26,11 +26,7 @@ export default function SignForm() {
   const [image2, setImage2] = useState();
   const [signature2, setSignature2] = useState('');
   
-  const getChildrenIds = async() => {
-   const response = await fetch(`https://mbp-server.onrender.com/api/clients/${id}`);
-    const json = await response.json();
-    setChildrenIds(json[0].childrenIds);
-  }
+  
   
   const handleClear = () => {
         sign.clear();
@@ -116,8 +112,8 @@ export default function SignForm() {
    return;
   }
    
- childrenIds.forEach((element) => {
-  approveRoster(element);
+ forms.forEach((element) => {
+  approveRoster(element._id);
 });
    
    
@@ -156,7 +152,7 @@ export default function SignForm() {
   }
  
  useEffect(() => {
-   getChildrenIds();
+   
    getForms();
  },[])
   
