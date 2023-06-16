@@ -18,7 +18,8 @@ export default function UserList(){
     const getUsers = async () => {
         const response = await fetch(`https://mbp-server.onrender.com/api/users/${id}`);
         const json = await response.json();
-        setData(json);
+        const filteredData = json.filter(item => item.role === 'Client');
+        setData(filteredData);
     }
 
     // const getUsers = async () => {
