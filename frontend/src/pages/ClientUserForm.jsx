@@ -631,7 +631,7 @@ export default function ClientUserForm() {
                 });
 
                 const json = await response.json();
-                listOfIds.push(json._id);
+                await listOfIds.push(json._id);
 
              
               
