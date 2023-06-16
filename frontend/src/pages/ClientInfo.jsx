@@ -150,6 +150,7 @@ export default function ClientInfo() {
 
 
                     <h2>Official's information</h2>
+                    <>
                    { data.detOfficialSignature && <div style={{marginBlock: '0.75rem'>
                         <h4>Determining Official’s Signature: </h4>
                         <img src={data.detOfficialSignature} />
@@ -167,7 +168,7 @@ export default function ClientInfo() {
                         <img src={data.folOfficialSignature} />
                         <h4>Date: {data.folOfficialSignature}</h4>
                     </div> }
-                    
+                    </>
                     </>
                 }
             </div>
