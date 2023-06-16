@@ -651,6 +651,7 @@ export default function ClientUserForm() {
             userID,
             eligibility,
             status,
+            childrenIds,
             childOneName,
             childOneID, 
             childOneHeadStart,
