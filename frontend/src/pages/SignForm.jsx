@@ -8,6 +8,7 @@ export default function SignForm() {
   
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState('Approved');
+  const [childrenIds, setChildrenIds] = useState([]);
   const [sign, setSign] = useState();
   const [signDate, setSignDate] = useState('')
   const [image, setImage] = useState();
@@ -26,6 +27,7 @@ export default function SignForm() {
   const getChildrenIds = async() => {
    const response = await fetch(`https://mbp-server.onrender.com/api/clients/${id}`);
     const json = await response.json();
+    setChildrenIds(json[0].childrenIds);
   }
   
   const handleClear = () => {
@@ -91,6 +93,10 @@ export default function SignForm() {
    setLoading(false);
    return;
   }
+   
+ const roster = {
+  status
+}
    
    
   const form = {
