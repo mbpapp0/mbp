@@ -145,7 +145,7 @@ export default function CreateClient() {
 
             setTimeout(() => {
                 setSet(false);
-                window.location.assign('/');
+                window.location.assign(`/viewclients/${user.branch}`);
             }, 1800);
             
             
