@@ -595,6 +595,8 @@ export default function ClientUserForm() {
 
         const arg = parseInt(totalHouseHoldMembers);
         const eligibility = determineEligibility(arg, finalTotal);
+        
+        let listOfIds = [];
 
         const createRoster = async (childName, childAge, headStart) => {
             const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -629,8 +631,8 @@ export default function ClientUserForm() {
                 });
 
                 const json = await response.json();
-                const returnedId = json._id;
-                setChildrenIds(prevIds => [...prevIds, returnedId]);
+                listOfIds.push(json._id);
+
              
               
             }
@@ -652,7 +654,7 @@ export default function ClientUserForm() {
             userID,
             eligibility,
             status,
-            childrenIds,
+            childrenIds: listOfIds,
             childOneName,
             childOneID, 
             childOneHeadStart,
