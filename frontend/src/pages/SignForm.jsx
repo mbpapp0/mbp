@@ -85,6 +85,20 @@ export default function SignForm() {
 
     }   
     
+ const approveRoster = async (rosterId) => {
+   const roster = {
+    status
+   }
+   
+   const response = await fetch(`https://mbp-server.onrender.com/api/children/approve/${rosterId}`, {
+            method: 'PUT',
+            body: JSON.stringify(roster),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+    });
+ }
+    
  const approveForm = async(e) => {
    e.preventDefault();
    setLoading(true);
@@ -94,9 +108,9 @@ export default function SignForm() {
    return;
   }
    
- const roster = {
-  status
-}
+ childrenIds.forEach((element) => {
+  approveRoster(element);
+});
    
    
   const form = {
