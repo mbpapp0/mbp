@@ -148,11 +148,13 @@ export default function SignForm() {
 }
 
   const getForms = async() => {
-    
+    const response = await fetch(`https://mbp-server.onrender.com/api/children/${user.branch}`);
+    const json = await response.json();
   }
  
  useEffect(() => {
    getChildrenIds();
+   getForms();
  },[])
   
   return(
