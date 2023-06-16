@@ -629,11 +629,10 @@ export default function ClientUserForm() {
                 });
 
                 const json = await response.json();
-
-                const returnedId = json._id;
-                setChildrenIds(['tests', 'testing'])
+               
+             
           
-                // setChildrenIds(prevIds => [...prevIds, returnedId]);
+                var listofIds = ['does', 'this', 'work'];
             }
         };
         createRoster(childOneName, childOneAge, childOneHeadStart);
@@ -652,7 +651,7 @@ export default function ClientUserForm() {
             userID,
             eligibility,
             status,
-            childrenIds,
+            childrenIds: listofIds,
             childOneName,
             childOneID, 
             childOneHeadStart,
