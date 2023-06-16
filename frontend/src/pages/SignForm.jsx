@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 export default function SignForm() {
   const { id } = useParams();
   
+  const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState('Approved');
   const [childrenIds, setChildrenIds] = useState([]);
@@ -104,6 +105,7 @@ export default function SignForm() {
    setLoading(true);
    
   if(!signDate || !signature || !signDate1 || !signature1 || !signDate2 || !signature2){
+   setError('Please fill in all fields');
    setLoading(false);
    return;
   }
@@ -146,6 +148,9 @@ export default function SignForm() {
   return(
     <div className='container'>
       <Back />
+    { error && <div className='error_indicator'>
+      <p>{ error }</p>
+    </div> }
       <form>
       <div className='signform'>
         <label>Determining Official’s Signature:</label>
