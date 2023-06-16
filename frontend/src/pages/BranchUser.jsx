@@ -116,7 +116,7 @@ export default function BranchUser() {
                     <Link to={`/roster/${user.branch}`}><button className='button radius bottom'>View Roster</button></Link>
                 </div>
                 
-                    <Link to={`/viewclients/${user.branch}>View Clients</Link>
+                    <Link to={`/viewclients/${user.branch}`}>View Clients</Link>
                 
                 {pendingData.length > 0 && <p style={{ marginTop: '1rem' }}>There are { pendingData.length } IEG Forms Pending. <Link to='/pending'><strong>Click Here</strong></Link></p> }
 
