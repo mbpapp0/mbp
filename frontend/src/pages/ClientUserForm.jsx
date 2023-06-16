@@ -8,6 +8,8 @@ export default function ClientUserForm() {
     const [checking, setChecking] = useState(false)
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState("");
+    
+    const [childrenIds, setChildrenIds] = useState([]);
     const [childOneName, setChildOneName] = useState('');
     const [childOneID, setChildOneID] = useState('');
     const [childOneHeadStart, setChildOneHeadStart] = useState(false);
