@@ -71,24 +71,24 @@ export default function UserList(){
         return(
 
             <>
-            <div className="container">
+              <div className="container">
                 <div className='info_buttons'>
-                        <Back />
-                        <div className='info_hover'> 
-                          <Map location='Branch User List Screen'/>
-                        </div>
+                  <Back />
+                  <div className='info_hover'> 
+                    <Map location='Branch User List Screen'/>
+                  </div>
                 </div>
             
                 <div className='no_users'>
                     <h3>No users have been created yet.</h3>
-                <Link to={`/createClient/${user.branch}`}>
+                    <Link to={`/createClient/${user.branch}`}>
                         <button 
-                        className='button radius'>
-                        Create New User
+                          className='button radius'>
+                          Create New User
                         </button>
                     </Link> 
-                 </div>
                 </div>
+               </div>
             </>
         )
     }
