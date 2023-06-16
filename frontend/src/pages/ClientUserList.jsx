@@ -81,7 +81,7 @@ export default function UserList(){
             </div>
                 <div className='no_users'>
                     <h3>No users have been created yet.</h3>
-            <Link to={`/createClient/${user.branch}`}>
+                <Link to={`/createClient/${user.branch}`}>
                         <button 
                         className='button radius'>
                         Create New User
@@ -101,34 +101,18 @@ export default function UserList(){
                     <Map location='Branch User List Screen'/>
                   </div>
                </div>
-               {!editing && <h3 className='user_list_header'>{branchName} Branch</h3>}
-           { editing && 
-           <div className='flex'>
-               <input type='text' placeholder={branchName} style={{padding: '0.5rem'}} value={newBranchName} onChange={(e) => setNewBranchName(e.target.value) }/> 
-               <button style={{marginLeft: '0.5rem'}} className='button radius' onClick={() => changeBranchName()}>Change Name</button>
-            </div>
-           }
-            {user.role == 'Branch User' && 
-            <div className='flex'>
-                {/* { !editing &&
-             
-            <>
-               <Link to={`/createuser/${id}`}><button className='button radius'>
-                 Create New User
-                  </button></Link>
-                    <button style={{marginLeft: '1rem'}} onClick={() => setEditing(true)} className='button radius'>Edit Branch Name</button> 
-                      </>}
-                    </div>
-            } */}
+               {!editing && <h3 className='user_list_header'>{branchName} Branch</h3>
             <div className='user_list'>
                 {data.map((user) => {
                     return(
+                    <>
                         <div key={user._id} className='flex align user_list_container'>
                             <p className='user_list_name'>{ user.name }</p>
                             <div className='user_list_buttons'>
                                 <Link to={`/users/${user._id}`}><button className='button radius user_list_button'>More Info</button></Link>
                             </div>
                         </div>
+                   </>
                     )
                 })}
 
