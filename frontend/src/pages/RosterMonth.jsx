@@ -15,7 +15,7 @@ export default function RosterMonth() {
     const [reducedMeals, setReducedMeals] = useState(0);
     const [paidMeals, setPaidMeals] = useState(0);
     const [filtered, setFiltered] = useState(false);
-    const [keys, setKeys] = useState(['_id', 'branch', 'month', 'createdAt', 'updatedAt', '__v']);
+    const [keys, setKeys] = useState(['_id', 'branch', 'month', 'createdAt', 'updatedAt', '__v', 'status']);
     const [branchName, setBranchName] = useState('');
     const user = JSON.parse(localStorage.getItem('user'));
 
@@ -33,18 +33,21 @@ export default function RosterMonth() {
         setFreeMeals(freeMeal.length);
         setPaidMeals(paidMeal.length);
         setReducedMeals(reducedMeal.length);
+        
+               
+      const filteredData = result.filter(item => item.status === 'Approved');
 
-        setData(result);
+        setData(filteredData);
         
         const date = new Date();
         
-        json.forEach(obj => {
+        filteredData.forEach(obj => {
           keys.forEach(key => {
             delete obj[key];
            });
         });
         
-        setFiltered(json)
+        setFiltered(filteredData)
 
     
     }
