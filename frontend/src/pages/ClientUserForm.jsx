@@ -606,6 +606,7 @@ export default function ClientUserForm() {
                 
                 const form = {
                     branch,
+                    status,
                     month: months[date.getMonth()],
                     name: childName,
                     age: childAge,
@@ -629,10 +630,11 @@ export default function ClientUserForm() {
 
                 const json = await response.json();
 
-               
+                const returnedId = json[0]._id;
+          
+                setChildrenIds(prevIds => [...prevIds, returnedId]);
             }
         };
-
         createRoster(childOneName, childOneAge, childOneHeadStart);
         createRoster(childTwoName, childTwoAge, childTwoHeadStart);
         createRoster(childThreeName, childThreeAge, childThreeHeadStart);
