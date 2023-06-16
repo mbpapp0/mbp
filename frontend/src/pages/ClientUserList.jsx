@@ -107,7 +107,7 @@ export default function UserList(){
                <button style={{marginLeft: '0.5rem'}} className='button radius' onClick={() => changeBranchName()}>Change Name</button>
             </div>
            }
-            {user.role == 'System Admin' && 
+            {user.role == 'Branch User' && 
             <div className='flex'>
             { !editing &&
             <>
