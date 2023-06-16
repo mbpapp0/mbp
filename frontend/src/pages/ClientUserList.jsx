@@ -81,12 +81,12 @@ export default function UserList(){
             </div>
                 <div className='no_users'>
                     <h3>No users have been created yet.</h3>
-                    <Link to={`/createuser/${id}`}>
+            { /*<Link to={`/createClient/${user.branch}`}>
                         <button 
                         className='button radius'>
                         Create New User
                         </button>
-                    </Link>
+                    </Link> */}
                 </div>
             </>
         )
@@ -110,7 +110,8 @@ export default function UserList(){
            }
             {user.role == 'Branch User' && 
             <div className='flex'>
-            { !editing &&
+                {/* { !editing &&
+             
             <>
                <Link to={`/createuser/${id}`}><button className='button radius'>
                  Create New User
@@ -118,7 +119,7 @@ export default function UserList(){
                     <button style={{marginLeft: '1rem'}} onClick={() => setEditing(true)} className='button radius'>Edit Branch Name</button> 
                       </>}
                     </div>
-            }
+            } */}
             <div className='user_list'>
                 {data.map((user) => {
                     return(
