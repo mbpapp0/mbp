@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 
 export default function SignForm() {
   const { id } = useParams();
-  
+  const user = JSON.parse(localStorage.getItem('user'));
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [forms, setForms] = useState(false);
@@ -147,7 +147,7 @@ export default function SignForm() {
     const response = await fetch(`https://mbp-server.onrender.com/api/children/${user.branch}`);
     const json = await response.json();
 
-    const filteredData = data.filter(item => item.user === id);
+    const filteredData = json.filter(item => item.user === id);
     setForms(filteredData);
   }
  
