@@ -39,6 +39,7 @@ import PdfComponent from './pages/PdfComponent.jsx'
 import CreateClient from './pages/CreateClient.jsx'
 import SignForm from './pages/SignForm.jsx'
 import PendingForm from './pages/PendingForm.jsx'
+import ClientUserList from './pages/ClientUserList.jsx'
 
 export default function App() { 
   let user = JSON.parse(localStorage.getItem('user'));
@@ -90,6 +91,7 @@ export default function App() {
           <Route path='/createclient/:id' element={<CreateClient />} />
           <Route path='/pending' element={<PendingForm />} />
           <Route path='/signform/:id' element={<SignForm />} />
+          <Route path='/viewclients/:id' element={<ClientUserList />} />
         </Routes>
     </>
   )
