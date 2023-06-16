@@ -150,6 +150,9 @@ export default function SignForm() {
   const getForms = async() => {
     const response = await fetch(`https://mbp-server.onrender.com/api/children/${user.branch}`);
     const json = await response.json();
+
+    const filteredData = data.filter(item => item.user === id);
+    setForms(filteredData);
   }
  
  useEffect(() => {
