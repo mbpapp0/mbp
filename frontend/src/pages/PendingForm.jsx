@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import Back from '../components/Back';
 
 export default function PendingForm() {
 
@@ -28,6 +29,7 @@ export default function PendingForm() {
 
 return(
   <div className='container'>
+    <Back />
     <h2 style={{marginTop: '2rem'}}>IEG Forms Pending Approval</h2>
       <table className='submitted_forms table_block'>
                     <thead>
