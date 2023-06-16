@@ -39,7 +39,7 @@ export default function ClientInfo() {
                 <>
                 <div>
                     <h2>Applicant</h2>
-                        <Link to={`/print/${id}`}><button className='button radius block1x'>Print</button></Link>
+        {data.status === 'Approved' && <Link to={`/print/${id}`}><button className='button radius block1x'>Print</button></Link> }
                         <h4>Print Name: { data.printName }</h4>
                         <h4>Eligibility: { data.eligibility }</h4>
                         <div>
@@ -151,19 +151,19 @@ export default function ClientInfo() {
 
                     <h2>Official's information</h2>
                    { data.detOfficialSignature && <div style={{marginBlock: '0.75rem'>
-                        <h4>Official's Signature: </h4>
+                        <h4>Determining Official’s Signature: </h4>
                         <img src={data.detOfficialSignature} />
                         <h4>Date: {data.detOfficialSignDate}</h4>
                     </div> }
                     
                     { data.conOfficialSignature && <div style={{marginBlock: '0.75rem'>
-                        <h4>Official's Signature: </h4>
+                        <h4>Confirming Official’s Signature: </h4>
                         <img src={data.conOfficialSignature} />
                         <h4>Date: {data.conOfficialSignDate}</h4>
                     </div> }
                     
                     { data.folOfficialSignature && <div style={{marginBlock: '0.75rem'>
-                        <h4>Official's Signature: </h4>
+                        <h4>Follow Up Official’s Signature: </h4>
                         <img src={data.folOfficialSignature} />
                         <h4>Date: {data.folOfficialSignature}</h4>
                     </div> }
