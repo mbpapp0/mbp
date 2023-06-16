@@ -106,6 +106,11 @@ export default function SignForm() {
    
   if(!signDate || !signature || !signDate1 || !signature1 || !signDate2 || !signature2){
    setError('Please fill in all fields');
+    
+   setTimeout(() => {
+     setError(false)
+   }, 1800);
+    
    setLoading(false);
    return;
   }
