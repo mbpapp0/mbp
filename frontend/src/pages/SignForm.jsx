@@ -112,9 +112,13 @@ export default function SignForm() {
    return;
   }
    
- forms.forEach((element) => {
-  approveRoster(element._id);
-});
+ 
+  approveRoster(forms[0]._id);
+  approveRoster(forms[1]._id);
+  approveRoster(forms[2]._id);
+  approveRoster(forms[3]._id);
+  approveRoster(forms[4]._id);
+  approveRoster(forms[5]._id);
    
    
   const form = {
