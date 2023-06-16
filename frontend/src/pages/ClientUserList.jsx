@@ -81,12 +81,12 @@ export default function UserList(){
             </div>
                 <div className='no_users'>
                     <h3>No users have been created yet.</h3>
-            { /*<Link to={`/createClient/${user.branch}`}>
+            <Link to={`/createClient/${user.branch}`}>
                         <button 
                         className='button radius'>
                         Create New User
                         </button>
-                    </Link> */}
+                    </Link> 
                 </div>
             </>
         )
