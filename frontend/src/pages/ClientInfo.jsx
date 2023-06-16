@@ -166,7 +166,7 @@ export default function ClientInfo() {
                     { data.folOfficialSignature && <div style={{marginBlock: '0.75rem'}}>
                         <h4>Follow Up Official’s Signature: </h4>
                         <img src={data.folOfficialSignature} />
-                        <h4>Date: {data.folOfficialSignature}</h4>
+                        <h4>Date: {data.folOfficialSignDate}</h4>
                     </div> }
                     </>
                     </>
