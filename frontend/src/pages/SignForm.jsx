@@ -83,7 +83,7 @@ export default function SignForm() {
 
     }   
     
- const approveRoster = async (rosterId) => {
+  {/* const approveRoster = async (rosterId) => {
    const roster = {
     status
    }
@@ -95,7 +95,7 @@ export default function SignForm() {
                 'Content-Type': 'application/json'
             }
     });
- }
+ } */}
     
  const approveForm = async(e) => {
    e.preventDefault();
@@ -140,17 +140,17 @@ export default function SignForm() {
   
 }
 
-  const getForms = async() => {
+  {/*  const getForms = async() => {
     const response = await fetch(`https://mbp-server.onrender.com/api/children/${user.branch}`);
     const json = await response.json();
 
     const filteredData = json.filter(item => item.user === id);
     setForms(filteredData);
-  }
+  } */}
  
  useEffect(() => {
    
-   getForms();
+//   getForms();
  },[])
   
   return(
