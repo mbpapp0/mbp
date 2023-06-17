@@ -149,9 +149,10 @@ export default function ClientInfo() {
                     { data.HouseholdMemberSixName != '' && <h4>Household Member Income Frequency: { data.memberSixIncomeFreq || 'N/A'}</h4>}
 
 
-                    <h2>Official's information</h2>
+                   
                     <>
                    { data.detOfficialSignature && <div style={{marginBlock: '0.75rem'}}>
+                        <h2 style={{marginBottom: '0.75rem'}}>Official's information</h2>
                         <h4>Determining Official’s Signature: </h4>
                         <img src={data.detOfficialSignature} />
                         <h4>Date: {data.detOfficialSignDate}</h4>
