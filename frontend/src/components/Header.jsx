@@ -47,8 +47,14 @@ export default function Header() {
       resetInactivityTimer();
     };
 
+    const connect = async () => {
+        const response = await fetch('https://mbp-server.onrender.com/connect');
+    }
+
 
   useEffect(() => {
+
+    setInterval(connect, 3 * 60 * 1000);
     
     startInactivityTimer();
 
