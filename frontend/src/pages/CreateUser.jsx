@@ -17,7 +17,7 @@ export default function SysAdminCreateBranch() {
     const [password, setPassword] = useState('');
     const [confirmPass, setConfirmPass] = useState('');
     const [branchOptions, setBranchOptions] = useState([]);
-    const [roleOptions, setRoleOptions] = useState(['Branch User', 'Data Admin', 'System Admin']);
+    const [roleOptions, setRoleOptions] = useState(['Branch User', 'Data Admin', 'System Admin', 'Client']);
     const [role, setRole] = useState(roleOptions[0]);
     const [branch, setBranch] = useState('');
     const [error, setError] = useState('');
