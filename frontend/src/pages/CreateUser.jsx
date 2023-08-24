@@ -225,7 +225,7 @@ if(user.role !== 'System Admin'){
                             })}
                         </select>
                   
-                        <select className={role!= 'Branch User' || 'Client' ? `hide_input` : ''} onChange={(e) => setBranch(e.target.value)} value={branch}>
+                        <select className={role != 'Branch User' || 'Client' ? `hide_input` : ''} onChange={(e) => setBranch(e.target.value)} value={branch}>
                             {branchOptions.map((branch) => {
                                 return <option 
                                 key={ branch._id } 
