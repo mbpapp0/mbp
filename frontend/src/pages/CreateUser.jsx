@@ -148,11 +148,11 @@ export default function SysAdminCreateBranch() {
                 setSet(false);
             }, 3000);
             
-            if(role != 'Branch User'){
+            if(role != 'Branch User' || role !='Client'){
               window.location.assign('/admins');
             } 
             
-            if(role == 'Branch User'){
+            if(role == 'Branch User' || role == 'Client'){
             window.location.assign(`/branch/${id}`);
             }
          
