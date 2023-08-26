@@ -182,6 +182,7 @@ export default function ClientUserForm() {
         // const response = await fetch(`http://localhost:3001/api/branches/${user.branch}`);
         const json = await response.json();
         setBranchName(json.name); 
+        setLoading(false);
     }
       const handleSSNChange = (event) => {
        setSSN(event.target.value);
