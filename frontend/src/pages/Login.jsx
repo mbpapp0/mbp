@@ -1,6 +1,8 @@
 
 import { useEffect, useState } from 'react';
 import { useLogin } from '../hooks/useLogin';
+import View from '../icons/view.png';
+import Hide from '../icons/hide.png';
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -48,7 +50,7 @@ export default function Login() {
                         <label>Password</label>
                         <div className='password_block'>   
                          <input className='password_input' type={showPassword ? 'text': 'password'} placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
-                         <p onClick={togglePassword}>{showPassword ? 'Hide' : 'Show'}</p>
+                         <img onClick={togglePassword} src={showPassword ? 'Hide' : 'Show'} alt='password' />
                        </div>
                         <button disabled={loading}>{loading ? 'Loading...' : 'Login'}</button>
                     </form>
