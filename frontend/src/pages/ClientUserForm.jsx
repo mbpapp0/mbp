@@ -1788,7 +1788,7 @@ export default function ClientUserForm() {
            </div>
 */}
             <button disabled={loading} className='button radius block padding'>{loading ? 'Loading...' : 'Submit'}</button>
-            <button onClick={clearFields}disabled={loading} className='button radius block padding'>Clear</button>
+            <button type='button' onClick={clearFields}disabled={loading} className='button radius block padding'>Clear</button>
            
         </form>
         </>
