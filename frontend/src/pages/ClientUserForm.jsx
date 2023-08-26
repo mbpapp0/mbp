@@ -956,6 +956,7 @@ export default function ClientUserForm() {
     }
 
     const clearFields = () => {
+               handleClear();
                setSign('');
                 setSignature('');
                 setChildOneName('');
@@ -1057,6 +1058,7 @@ export default function ClientUserForm() {
                 setWhite(false);
                 setIndian(false);
                 setHawaiian(false);
+                scrollToTop();
         }
 
 
