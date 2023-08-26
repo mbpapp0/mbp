@@ -590,110 +590,7 @@ export default function ClientForm() {
 
         const arg = parseInt(totalHouseHoldMembers);
         const eligibility = determineEligibility(arg, finalTotal);
-        const clearFields = () => {
 
-               setSign('');
-                setSignature('');
-                setChildOneName('');
-                setChildOneID('');
-                setChildTwoName('');
-                setChildTwoID('');
-                setChildThreeName('');
-                setChildThreeID('');
-                setChildFourName('');
-                setChildFourID('');
-                setChildFiveName('');
-                setChildFiveID('');
-                setChildSixName('');
-                setChildSixID('');
-                setChildIncome('');
-                setChildIncomeFreq('');
-                setHouseholdMemberOneName('');
-                setHouseholdMemberOneEarnings('');
-                setHouseholdMemberOneSSPR('');
-                setHouseholdMemberOneOther('');
-                setHouseholdMemberTwoName('');
-                setHouseholdMemberTwoEarnings('');
-                setHouseholdMemberTwoWelfare_Alimony_CS('');
-                setHouseholdMemberTwoSSPR('');
-                setHouseholdMemberTwoOther('');
-                setHouseholdMemberThreeName('');
-                setHouseholdMemberThreeEarnings('');
-                setHouseholdMemberThreeWelfare_Alimony_CS('');
-                setHouseholdMemberThreeSSPR('');
-                setHouseholdMemberThreeOther('');
-                setHouseholdMemberFourName('');
-                setHouseholdMemberFourEarnings('');
-                setHouseholdMemberFourWelfare_Alimony_CS('');
-                setHouseholdMemberFourSSPR('');
-                setHouseholdMemberFourOther('');
-                setHouseholdMemberFiveName('');
-                setHouseholdMemberFiveEarnings('');
-                setHouseholdMemberFiveWelfare_Alimony_CS('');
-                setHouseholdMemberFiveSSPR('');
-                setHouseholdMemberFiveOther('');
-                setHouseholdMemberSixName('');
-                setHouseholdMemberSixWorkEarnings('');
-                setHouseholdMemberSixWelfare_Alimony_CS('');
-                setHouseholdMemberSixSSPR('');
-                setHouseholdMemberSixOther('');
-         //       setTotalHouseHoldMembers('')
-        //        setTotalHouseHoldIncome('');
-                setSSN('');
-                setSignature('');
-                setImage(false);
-                setAddress(' ')
-                setPrintName('');
-                setCity('');
-                setAddress('');
-                setZipCode('');
-                setPhoneNumber('');
-                setState('');
-                setChildOneHeadStart(false);
-                setChildOneFosterChild(false);
-                setChildOneRunaway(false);
-                setChildOneHomeless(false);
-                setChildTwoHeadStart(false);
-                setChildTwoFosterChild(false);
-                setChildTwoRunaway(false);
-                setChildTwoHomeless(false);
-                setChildThreeHeadStart(false);
-                setChildThreeFosterChild(false);
-                setChildThreeRunaway(false);
-                setChildThreeHomeless(false);
-                setChildFourHeadStart(false);
-                setChildFourFosterChild(false);
-                setChildFourRunaway(false);
-                setChildFourHomeless(false);
-                setChildFiveHeadStart(false);
-                setChildFiveFosterChild(false);
-                setChildFiveRunaway(false);
-                setChildFiveHomeless(false);
-                setChildSixHeadStart(false);
-                setChildSixFosterChild(false);
-                setChildSixRunaway(false);
-                setChildSixHomeless(false);
-                setBeforeAfterCare(false);
-                setDayCenterSunday(false);
-                setDayCenterMonday(false);
-                setDayCenterTuesday(false);
-                setDayCenterWednesday(false);
-                setDayCenterThursday(false);
-                setDayCenterFriday(false);
-                setDayCenterSaturday(false);
-                setBreakFast(false);
-                setSnackLunch(false);
-                setSnackPM(false);
-                setSupper(false);
-                setSnack(false);
-                setLatino(false);
-                setNonLatino(false);
-                setAsian(false);
-                setBlack(false);
-                setWhite(false);
-                setIndian(false);
-                setHawaiian(false);
-        }
 
         const createRoster = async (childName, childAge, headStart) => {
             const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -1018,6 +915,111 @@ export default function ClientForm() {
       setLoading(false)
        
     }
+
+ const clearFields = () => {
+
+               setSign('');
+                setSignature('');
+                setChildOneName('');
+                setChildOneID('');
+                setChildTwoName('');
+                setChildTwoID('');
+                setChildThreeName('');
+                setChildThreeID('');
+                setChildFourName('');
+                setChildFourID('');
+                setChildFiveName('');
+                setChildFiveID('');
+                setChildSixName('');
+                setChildSixID('');
+                setChildIncome('');
+                setChildIncomeFreq('');
+                setHouseholdMemberOneName('');
+                setHouseholdMemberOneEarnings('');
+                setHouseholdMemberOneSSPR('');
+                setHouseholdMemberOneOther('');
+                setHouseholdMemberTwoName('');
+                setHouseholdMemberTwoEarnings('');
+                setHouseholdMemberTwoWelfare_Alimony_CS('');
+                setHouseholdMemberTwoSSPR('');
+                setHouseholdMemberTwoOther('');
+                setHouseholdMemberThreeName('');
+                setHouseholdMemberThreeEarnings('');
+                setHouseholdMemberThreeWelfare_Alimony_CS('');
+                setHouseholdMemberThreeSSPR('');
+                setHouseholdMemberThreeOther('');
+                setHouseholdMemberFourName('');
+                setHouseholdMemberFourEarnings('');
+                setHouseholdMemberFourWelfare_Alimony_CS('');
+                setHouseholdMemberFourSSPR('');
+                setHouseholdMemberFourOther('');
+                setHouseholdMemberFiveName('');
+                setHouseholdMemberFiveEarnings('');
+                setHouseholdMemberFiveWelfare_Alimony_CS('');
+                setHouseholdMemberFiveSSPR('');
+                setHouseholdMemberFiveOther('');
+                setHouseholdMemberSixName('');
+                setHouseholdMemberSixWorkEarnings('');
+                setHouseholdMemberSixWelfare_Alimony_CS('');
+                setHouseholdMemberSixSSPR('');
+                setHouseholdMemberSixOther('');
+         //       setTotalHouseHoldMembers('')
+        //        setTotalHouseHoldIncome('');
+                setSSN('');
+                setSignature('');
+                setImage(false);
+                setAddress(' ')
+                setPrintName('');
+                setCity('');
+                setAddress('');
+                setZipCode('');
+                setPhoneNumber('');
+                setState('');
+                setChildOneHeadStart(false);
+                setChildOneFosterChild(false);
+                setChildOneRunaway(false);
+                setChildOneHomeless(false);
+                setChildTwoHeadStart(false);
+                setChildTwoFosterChild(false);
+                setChildTwoRunaway(false);
+                setChildTwoHomeless(false);
+                setChildThreeHeadStart(false);
+                setChildThreeFosterChild(false);
+                setChildThreeRunaway(false);
+                setChildThreeHomeless(false);
+                setChildFourHeadStart(false);
+                setChildFourFosterChild(false);
+                setChildFourRunaway(false);
+                setChildFourHomeless(false);
+                setChildFiveHeadStart(false);
+                setChildFiveFosterChild(false);
+                setChildFiveRunaway(false);
+                setChildFiveHomeless(false);
+                setChildSixHeadStart(false);
+                setChildSixFosterChild(false);
+                setChildSixRunaway(false);
+                setChildSixHomeless(false);
+                setBeforeAfterCare(false);
+                setDayCenterSunday(false);
+                setDayCenterMonday(false);
+                setDayCenterTuesday(false);
+                setDayCenterWednesday(false);
+                setDayCenterThursday(false);
+                setDayCenterFriday(false);
+                setDayCenterSaturday(false);
+                setBreakFast(false);
+                setSnackLunch(false);
+                setSnackPM(false);
+                setSupper(false);
+                setSnack(false);
+                setLatino(false);
+                setNonLatino(false);
+                setAsian(false);
+                setBlack(false);
+                setWhite(false);
+                setIndian(false);
+                setHawaiian(false);
+        }
 
     
 
