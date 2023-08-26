@@ -954,8 +954,8 @@ export default function ClientUserForm() {
      
     }
 
-    const clearFields = () => {
-
+    const clearFields = (e) => {
+         e.preventDefault();
                setSign('');
                 setSignature('');
                 setChildOneName('');
@@ -1066,6 +1066,7 @@ export default function ClientUserForm() {
         getFreeMeal();
         getReducedMeal(); 
         checkFormExists();
+        getBranchName();
     }, []);
     
     if(checking){
@@ -1787,7 +1788,7 @@ export default function ClientUserForm() {
            </div>
 */}
             <button disabled={loading} className='button radius block padding'>{loading ? 'Loading...' : 'Submit'}</button>
-            <button onClick={() => {}}disabled={loading} className='button radius block padding'>Clear</button>
+            <button onClick={clearFields}disabled={loading} className='button radius block padding'>Clear</button>
            
         </form>
         </>
