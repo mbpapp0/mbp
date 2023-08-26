@@ -175,6 +175,7 @@ export default function ClientUserForm() {
     const [errorArr, setErrorArr] = useState([]);
     const [branchName, setBranchName] = useState(null);
     const [formExists, setFormExists] = useState(false);
+    const [newForm, setForm] = useState('');
     
     const getBranchName = async () => {
         setLoading(true);
@@ -1075,9 +1076,9 @@ export default function ClientUserForm() {
       return(<h2>Loading...</h2>)
     } 
     
-    if(formExists){
+    {/* if(formExists){
       return(<h2 style={{marginTop: '7rem', textAlign: 'center'}}>{ formExists == 'Approved' ? 'IEG Form Approved' : 'IEG Form Pending Approval'}</h2>)
-    }
+    } */}
 
     
     return(
