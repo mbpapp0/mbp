@@ -955,8 +955,7 @@ export default function ClientUserForm() {
      
     }
 
-    const clearFields = (e) => {
-         e.preventDefault();
+    const clearFields = () => {
                setSign('');
                 setSignature('');
                 setChildOneName('');
