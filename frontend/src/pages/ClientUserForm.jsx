@@ -173,10 +173,16 @@ export default function ClientUserForm() {
     const [memberSixIncomeFreq, setMemberSixIncomeFreq] = useState('Weekly');
     
     const [errorArr, setErrorArr] = useState([]);
-    
+    const [branchName, setBranchName] = useState(null);
     const [formExists, setFormExists] = useState(false);
     
-    
+    const getBranchName = async () => {
+        setLoading(true);
+        const response = await fetch(`https://mbp-server.onrender.com/api/branches/${user.branch}`);
+        // const response = await fetch(`http://localhost:3001/api/branches/${user.branch}`);
+        const json = await response.json();
+        setBranchName(json.name); 
+    }
       const handleSSNChange = (event) => {
        setSSN(event.target.value);
       };
@@ -967,6 +973,7 @@ export default function ClientUserForm() {
     
     return(
         <>
+        <h2 className='heading'>{branchName} Branch.</h2>
         <h2 className='heading'>CACFP Meal Benefit Income Eligibility Statement</h2>
         {error && 
         <div className='error_indicator'>
@@ -1674,7 +1681,7 @@ export default function ClientUserForm() {
            </div>
 */}
             <button disabled={loading} className='button radius block padding'>{loading ? 'Loading...' : 'Submit'}</button>
-
+            <button onClick={() => {}}disabled={loading} className='button radius block padding'>Clear</button>
            
         </form>
         </>
