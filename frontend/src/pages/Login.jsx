@@ -46,8 +46,8 @@ export default function Login() {
                         <label>Login</label>
                         <input type='text' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
                         <label>Password</label>
-                        <div>   
-                         <input type={showPassword ? 'text': 'password'} placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                        <div className='password_block'>   
+                         <input className='password_input' type={showPassword ? 'text': 'password'} placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                          <p onClick={togglePassword}>{showPassword ? 'Hide' : 'Show'}</p>
                        </div>
                         <button disabled={loading}>{loading ? 'Loading...' : 'Login'}</button>
