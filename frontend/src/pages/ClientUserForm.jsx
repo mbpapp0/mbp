@@ -1,10 +1,15 @@
 import { useState, useEffect } from 'react';
 import SignatureCanvas from 'react-signature-canvas';
 
-export default function ClientForm() {
+export default function ClientUserForm() {
     const user = JSON.parse(localStorage.getItem('user'));
+    const [userID, setUserID] = useState(user.id);
+    const [status, setStatus] = useState('Pending Approval');
+    const [checking, setChecking] = useState(false)
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState("");
+    
+    const [childrenIds, setChildrenIds] = useState([]);
     const [childOneName, setChildOneName] = useState('');
     const [childOneID, setChildOneID] = useState('');
     const [childOneHeadStart, setChildOneHeadStart] = useState(false);
@@ -150,10 +155,15 @@ export default function ClientForm() {
     const [signDate, setSignDate] = useState('')
     const [image, setImage] = useState();
     
-    const [offSign, setOffSign] = useState();
-    const [offImage, setOffImage] = useState();
-    const [offSignature, setOffSignature] = useState();
-    const [offSignDate, setOffSignDate] = useState('')
+    const [detOfficialSignature, setDetOfficialSignature] = useState('');
+    const [detOfficialSignDate, setDetOfficialSignDate] = useState('');
+    
+    const [conOfficialSignature, setConOfficialSignature] = useState('');
+    const [conOfficialSignDate, setConOfficialSignDate] = useState('');
+
+    const [folOfficialSignature, setFolOfficialSignature] = useState('');
+    const [folOfficialSignDate, setFolOfficialSignDate] = useState('');
+
 
     const [memberOneIncomeFreq, setMemberOneIncomeFreq] = useState('Weekly');
     const [memberTwoIncomeFreq, setMemberTwoIncomeFreq] = useState('Weekly');
@@ -164,16 +174,17 @@ export default function ClientForm() {
     
     const [errorArr, setErrorArr] = useState([]);
     const [branchName, setBranchName] = useState(null);
-
+    const [formExists, setFormExists] = useState(false);
+    const [newForm, setForm] = useState('');
+    
     const getBranchName = async () => {
         setLoading(true);
         const response = await fetch(`https://mbp-server.onrender.com/api/branches/${user.branch}`);
         // const response = await fetch(`http://localhost:3001/api/branches/${user.branch}`);
         const json = await response.json();
         setBranchName(json.name); 
+        setLoading(false);
     }
-    
-    
       const handleSSNChange = (event) => {
        setSSN(event.target.value);
       };
@@ -299,7 +310,7 @@ export default function ClientForm() {
         }
 
     }   
-    const handleOffClear = () => {
+    {/* const handleOffClear = () => {
         sign.clear();
         setOffImage('');
         setOffSignature('');
@@ -316,6 +327,8 @@ export default function ClientForm() {
         }
 
     }   
+
+*/}
 
 
      const getFreeMeal = async () => {
@@ -382,7 +395,7 @@ export default function ClientForm() {
     }
 
     const [signErr, setSignErr] = useState(false);
-    const [OffSignErr, setOffSignErr] = useState(false);
+  //  const [OffSignErr, setOffSignErr] = useState(false);
 
 
     const handleSubmit = async (e) => {
@@ -399,13 +412,13 @@ export default function ClientForm() {
           return;
         }
         
-        if(!signature && !offSignature){
+        if(!signature){
             setSignErr(true); 
-            setOffSignErr(true);
+            //setOffSignErr(true);
 
             setTimeout(() => {
                 setSignErr(false); 
-                setOffSignErr(false);
+                //setOffSignErr(false);
             }, 1400)
             return;
         }
@@ -415,10 +428,10 @@ export default function ClientForm() {
             return;
         }
     
-        if(!offSignature){
+        {/*  if(!offSignature){
             setSignErr(true);
             return;
-        }
+        } */}
        
         const oneEarnings = isNaN(parseInt(HouseholdMemberOneWorkEarnings)) ? 0 : parseInt(HouseholdMemberOneWorkEarnings);
         const oneWelfare = isNaN(parseInt(HouseholdMemberOneWelfare_Alimony_CS)) ? 0 : parseInt(HouseholdMemberOneWelfare_Alimony_CS);
@@ -590,7 +603,8 @@ export default function ClientForm() {
 
         const arg = parseInt(totalHouseHoldMembers);
         const eligibility = determineEligibility(arg, finalTotal);
-
+        
+        let listOfIds = [];
 
         const createRoster = async (childName, childAge, headStart) => {
             const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -601,7 +615,9 @@ export default function ClientForm() {
                 const isEligible = headStart ? 'Free' :  eligibility;
                 
                 const form = {
+                    user: user.id,
                     branch,
+                    status,
                     month: months[date.getMonth()],
                     name: childName,
                     age: childAge,
@@ -624,11 +640,13 @@ export default function ClientForm() {
                 });
 
                 const json = await response.json();
+              
 
-               
+             
+              
             }
         };
-
+        
         createRoster(childOneName, childOneAge, childOneHeadStart);
         createRoster(childTwoName, childTwoAge, childTwoHeadStart);
         createRoster(childThreeName, childThreeAge, childThreeHeadStart);
@@ -642,14 +660,16 @@ export default function ClientForm() {
 
         const form = {
             branch,
+            userID,
             eligibility,
+            status,
             childOneName,
             childOneID, 
             childOneHeadStart,
             childOneForsterChild,
             childOneRunaway,
             childOneHomeless,
-            childOneAge,
+            childOneAge, 
             childTwoName,
             childTwoID,
             childTwoHeadStart,
@@ -739,8 +759,14 @@ export default function ClientForm() {
             snack,
             signature,
             signDate,
-            offSignDate,
-            offSignature,
+            detOfficialSignature,
+            detOfficialSignDate,
+            conOfficialSignature,
+            conOfficialSignDate,
+            folOfficialSignature,
+            folOfficialSignDate,
+            //offSignDate,
+            // offSignature,
             printName,
             address,
             date,
@@ -915,9 +941,23 @@ export default function ClientForm() {
       setLoading(false)
        
     }
+    
+    const checkFormExists = async() => {
+      setChecking(true)
+      const response = await fetch(`https://mbp-server.onrender.com/api/clients/user/${user.id}`);
+      const json = await response.json();
+         
+      if(json.length > 0){
+      setFormExists(json[0].status);
+      
+      }
+        
+        setChecking(false)
+     
+    }
 
- const clearFields = () => {
-
+    const clearFields = () => {
+               handleClear();
                setSign('');
                 setSignature('');
                 setChildOneName('');
@@ -1019,20 +1059,31 @@ export default function ClientForm() {
                 setWhite(false);
                 setIndian(false);
                 setHawaiian(false);
+                scrollToTop();
         }
+
 
     
 
     useEffect(() => {
         getFreeMeal();
         getReducedMeal(); 
+        checkFormExists();
         getBranchName();
-    }, [])
+    }, []);
+    
+    if(checking){
+      return(<h2>Loading...</h2>)
+    } 
+    
+    {/* if(formExists){
+      return(<h2 style={{marginTop: '7rem', textAlign: 'center'}}>{ formExists == 'Approved' ? 'IEG Form Approved' : 'IEG Form Pending Approval'}</h2>)
+    } */}
 
     
     return(
         <>
-        <h2>{branchName}</h2>
+        <h2 className='heading'>{branchName} Branch.</h2>
         <h2 className='heading'>CACFP Meal Benefit Income Eligibility Statement</h2>
         {error && 
         <div className='error_indicator'>
@@ -1712,8 +1763,9 @@ export default function ClientForm() {
                 </div>
 
             </div>
+{/*
                 <div>
-                    { OffSignErr && <h6 style={{color: 'red'}}>Please Input Signature</h6> }
+                     { OffSignErr && <h6 style={{color: 'red'}}>Please Input Signature</h6> }
                     <label>Official Signature</label>
                     <div style={{border: '2px solid black', width: '12rem', height: '96px'}} className='sign_pad'>    
                         <SignatureCanvas 
@@ -1737,10 +1789,9 @@ export default function ClientForm() {
                 <input type="date" required value={offSignDate} onChange={(e) => setOffSignDate(e.target.value)} style={{ width: '10.5rem'}}/>
               </label>
            </div>
-
+*/}
             <button disabled={loading} className='button radius block padding'>{loading ? 'Loading...' : 'Submit'}</button>
-            <button disabled={loading} className='button radius block padding' onClick={clearFields}>Clear</button>
-
+            <button type='button' onClick={clearFields}disabled={loading} className='button radius block padding'>Clear</button>
            
         </form>
         </>

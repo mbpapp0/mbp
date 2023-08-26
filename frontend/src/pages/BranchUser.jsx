@@ -11,6 +11,7 @@ export default function BranchUser() {
     const [free, setFree] = useState(null);
     const [reduced, setReduced] = useState(null);
     const [data, setData] = useState([]);
+    const [pendingData, setPendingData] = useState([]);
     const [loading, setLoading] = useState(false);
 
     const [branchName, setBranchName] = useState(null);
@@ -42,7 +43,11 @@ export default function BranchUser() {
         const response = await fetch(`https://mbp-server.onrender.com/api/clients/${user.branch}`);
         // const response = await fetch(`http://localhost:3001/api/clients/${user.branch}`);
         const json = await response.json();
-        setData(json);
+        
+        const filteredData = json.filter(item => item.status === 'Approved');
+        const pending = json.filter(item => item.status === 'Pending Approval');
+        setData(filteredData);
+        setPendingData(pending);
         setLoading(false);
     }
 
@@ -106,9 +111,14 @@ export default function BranchUser() {
 
                 <h3 className='block branch_subhead'>Submitted Client Forms</h3>
                 <div className='flex_button'>                    
-                    <Link to={`/client/${user.branch}`}><button className='button radius bottom' >Add Client</button></Link>
+                  {/*  <Link to={`/client/${user.branch}`}><button className='button radius bottom' >Add Client</button></Link> */}
+                    {/* <Link to={`/createclient/${user.branch}`}><button className='button radius bottom' >Create Client</button></Link> */}
                     <Link to={`/roster/${user.branch}`}><button className='button radius bottom'>View Roster</button></Link>
                 </div>
+                
+                    <Link to={`/viewclients/${user.branch}`}>View Clients</Link>
+                
+                {pendingData.length > 0 && <p style={{ marginTop: '1rem' }}>There are { pendingData.length } IEG Forms Pending. <Link to='/pending'><strong>Click Here</strong></Link></p> }
 
                 <table className='submitted_forms table_block'>
                     <thead>

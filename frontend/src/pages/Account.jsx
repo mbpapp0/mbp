@@ -5,6 +5,7 @@ export default function Account() {
     const user = JSON.parse(localStorage.getItem('user'));
     const [info, setInfo] = useState(false);
     const [editing, setEditing] = useState(false);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -35,6 +36,7 @@ export default function Account() {
     }
     
     const editData = async() => {
+        setLoading(true);
         
         const isEmail = isValidEmail(email);
         const isName = isValidName(name)
@@ -65,7 +67,8 @@ export default function Account() {
         
         if(name == ''){return;}
         if(email == ''){return;}
-
+        
+        try{
         const response = await fetch(`https://mbp-server.onrender.com/api/users/edit/${id}`, {
             method: 'PUT',
             body: JSON.stringify(data),
@@ -81,9 +84,25 @@ export default function Account() {
         //         'Content-Type': 'application/json'
         //     }
         // });
+        const json = response.json()
 
         if(response.ok){
-            setEditing(false)
+            setEditing(false);
+            setLoading(false)
+        }
+        }
+        
+        catch(error){
+          setError(error);
+           setLoading(false);
+           
+          setTimeout(() => {
+            setError(false);
+            
+           }
+          ,3600)
+             
+                     
         }
 
     }
@@ -95,6 +114,10 @@ export default function Account() {
     
     return(
         <div className='container'>
+        {error && 
+          <div className='error_indicator'>
+             <p>{ error }</p>
+          </div>}
         {!editing &&
             <div style={{marginTop: '3rem'}}>
                <button className='button radius' onClick={() => setEditing(true)} style={{ marginBottom: '0.9rem'}}>Edit Info</button>
@@ -109,7 +132,7 @@ export default function Account() {
            <input type='text' value={name} onChange={(e) => setName(e.target.value)}/>
             <label>Email: </label>
             <input type='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
-            <button className='button radius block' onClick={editData}>Apply Changes</button>
+            <button className='button radius block' onClick={editData} disabled={loading}>{ loading ? 'Loading...' : 'Apply Changes'}</button>
          </div>
           }
         </div>

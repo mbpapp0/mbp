@@ -7,7 +7,7 @@ import Map from '../components/Map';
 import PasswordRules from '../components/PasswordRules';
 
 
-export default function SysAdminCreateBranch() {
+export default function CreateClient() {
     const { id } = useParams();
     const user = JSON.parse(localStorage.getItem('user'));
     
@@ -16,23 +16,20 @@ export default function SysAdminCreateBranch() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPass, setConfirmPass] = useState('');
-    const [branchOptions, setBranchOptions] = useState([]);
-    const [roleOptions, setRoleOptions] = useState(['Branch User', 'Data Admin', 'System Admin', 'Client']);
-    const [role, setRole] = useState(roleOptions[0]);
-    const [branch, setBranch] = useState('');
+    const [role, setRole] = useState('Client');
+    const [branch, setBranch] = useState(id);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('New User Created');
     const [set, setSet] = useState(false);
     const [loading, setLoading] = useState(false);
     const [inValidPass, setInValidPass] = useState(false);
+    const [userCreator, setUserCreator] = useState(user.id);
    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         
-        if(!branchOptions && role == 'Branch User'){
-          return;
-        }
+       
         
         createUser();
     }
@@ -102,7 +99,9 @@ export default function SysAdminCreateBranch() {
                 email,
                 role,
                 password,
-                branch
+                branch,
+      
+            
             } 
             
 
@@ -141,50 +140,29 @@ export default function SysAdminCreateBranch() {
             setLastName('');
             setEmail('');
             setPassword('');
-            setRole(roleOptions[1]);
+            setRole('Client');
             setSet(true);
 
             setTimeout(() => {
                 setSet(false);
-            }, 3000);
+                window.location.assign(`/viewclients/${user.branch}`);
+            }, 1800);
             
-            if(role != 'Branch User' || role !='Client'){
-              window.location.assign('/admins');
-            } 
             
-            if(role == 'Branch User' || role == 'Client'){
-            window.location.assign(`/branch/${id}`);
-            }
          
         }
 
     }
 
-    const getBranches = async() => {
-        const response = await fetch('https://mbp-server.onrender.com/api/branches');
-        const json = await response.json();
-        setBranchOptions(json);
-        setBranch(json[0]._id);
-
-
-    }
-
-    // const getBranches = async() => {
-    //     const response = await fetch('http://localhost:3001/api/branches');
-    //     const json = await response.json();
-    //     setBranchOptions(json);
-    //     setBranch(json[0]._id);
-
-
-    // }
+  
 
 
     useEffect(() => {
-        getBranches();
+        // getBranches();
     }, []);
 
-if(user.role !== 'System Admin'){
-        return <Error />
+if(user.role !== 'Branch User'){
+        window.location.assign('/');
     }
 
     
@@ -219,19 +197,19 @@ if(user.role !== 'System Admin'){
 
                         <input className="block" type='text' placeholder="First Name" value={ firstName } onChange={(e) => setFirstName(e.target.value)}/>
                         <input className="block" type='text' placeholder="Last Name" value={ lastName } onChange={(e) => setLastName(e.target.value)}/>
-                      <select className='role' onChange={(e) => setRole(e.target.value)}>
+{/*   <select className='role' onChange={(e) => setRole(e.target.value)}>
                             {roleOptions.map((role, index) => {
                                 return <option key={index}>{ role }</option>
                             })}
                         </select>
                   
-                        <select className={(role != 'Branch User' && role != 'Client') ? `hide_input` : ''} onChange={(e) => setBranch(e.target.value)} value={branch}>
+                        <select className={role!= 'Branch User' ? `hide_input` : ''} onChange={(e) => setBranch(e.target.value)} value={branch}>
                             {branchOptions.map((branch) => {
                                 return <option 
                                 key={ branch._id } 
                                 value={ branch._id }>{ branch.name }</option>
                             })}
-                        </select>
+                        </select> */}
                         <input className="block" type='email' placeholder="Email" value={ email } onChange={(e) => setEmail(e.target.value)}/>
                         <input className="block" type='password' placeholder="Password" value={ password } onChange={(e) => setPassword(e.target.value)}/>
                         <input className="block" type='password' placeholder="Confirm Password" value={ confirmPass } onChange={(e) => setConfirmPass(e.target.value)}/>

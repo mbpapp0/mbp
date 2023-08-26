@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import ForgotPassword from './pages/ForgotPassword';
 import AdminUsers from './pages/AdminUsers'
 import ClientScreen from './pages/ClientScreen'
+import ClientUser from './pages/ClientUser'
 import CreateUser from './pages/CreateUser'
 import BranchUser from './pages/BranchUser'
 import BranchUserIEGFree from './pages/BranchUserIEGFree'
@@ -34,6 +35,11 @@ import RosterMonth from './pages/RosterMonth';
 import Excel from './pages/Excel';
 import Account from './pages/Account';
 import IEGForm from './pages/IEGForm'
+import PdfComponent from './pages/PdfComponent.jsx'
+import CreateClient from './pages/CreateClient.jsx'
+import SignForm from './pages/SignForm.jsx'
+import PendingForm from './pages/PendingForm.jsx'
+import ClientUserList from './pages/ClientUserList.jsx'
 
 export default function App() { 
   let user = JSON.parse(localStorage.getItem('user'));
@@ -52,7 +58,7 @@ export default function App() {
         <Header />
         <Routes>
           
-          <Route path='/' element={user.role == "Branch User" ? <BranchUser /> : user.role == "Data Admin" ? <DataAdminMainScreen/> : user.role === "System Admin" ? <SysAdmin /> : <Login />}/>
+          <Route path='/' element={ user.role == "Client" ? <ClientUser /> : user.role == "Branch User" ? <BranchUser /> : user.role == "Data Admin" ? <DataAdminMainScreen/> : user.role === "System Admin" ? <SysAdmin /> : <Login />}/>
           <Route path='/client/:id' element={<ClientScreen />} />
           <Route path='/login' element={<Login />} />
           <Route path='/forgot-password' element={<ForgotPassword />} />
@@ -81,6 +87,11 @@ export default function App() {
           <Route path='/excel' element={<Excel />} />
           <Route path='/account/:id' element={<Account />} />
           <Route path='/print/:id' element={<IEGForm />} />
+          <Route path='/pdf' element={<PdfComponent />} />
+          <Route path='/createclient/:id' element={<CreateClient />} />
+          <Route path='/pending' element={<PendingForm />} />
+          <Route path='/signform/:id' element={<SignForm />} />
+          <Route path='/viewclients/:id' element={<ClientUserList />} />
         </Routes>
     </>
   )

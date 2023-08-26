@@ -14,6 +14,8 @@ export default function RosterMonth() {
     const [freeMeals, setFreeMeals] = useState(0);
     const [reducedMeals, setReducedMeals] = useState(0);
     const [paidMeals, setPaidMeals] = useState(0);
+    const [filtered, setFiltered] = useState(false);
+    const [keys, setKeys] = useState(['_id', 'branch', 'month', 'createdAt', 'updatedAt', '__v', 'status', 'user']);
     const [branchName, setBranchName] = useState('');
     const [filtered, setFiltered] = useState(false);
     const [keys, setKeys] = useState(['_id', 'branch', 'month', 'createdAt', 'updatedAt', '__v']);
@@ -25,42 +27,31 @@ export default function RosterMonth() {
         const json = await response.json();
 
         const result = json.filter((child) => child.month == months[month - 1]);
+              const filteredData = result.filter(item => item.status === 'Approved');
 
-        const freeMeal = result.filter((child) => child.eligibility == 'Free');
-        const reducedMeal = result.filter((child) => child.eligibility == 'Reduced');
-        const paidMeal = result.filter((child) => child.eligibility == 'Paid');
+        const freeMeal = filteredData.filter((child) => child.eligibility == 'Free');
+        const reducedMeal = filteredData.filter((child) => child.eligibility == 'Reduced');
+        const paidMeal = filteredData.filter((child) => child.eligibility == 'Paid');
 
         setFreeMeals(freeMeal.length);
         setPaidMeals(paidMeal.length);
         setReducedMeals(reducedMeal.length);
+        
+               
 
-        setData(result);
+
+        setData(filteredData);
         
         const date = new Date();
         
-        json.forEach(obj => {
-  
-    keys.forEach(key => {
-      delete obj[key];
-    });
-  });
-  setFiltered(json)
-        
-        {/* const keysToRemove = ['_id', 'branch', 'month', 'createdAt', 'updatedAt', '__v'];
-    
-        const removeDetails = () => {
-        const newArray = data.map(obj => {
-        const newObj = {};
-         for (const key in obj) {
-            if (!keysToRemove.includes(key)) {
-            newObj[key] = obj[key];
-          }
-        }
-        return newObj;
+        filteredData.forEach(obj => {
+          keys.forEach(key => {
+            delete obj[key];
+           });
         });
-       setArray(newArray);
-       }
-*/}
+        
+        setFiltered(filteredData)
+   
     
     }
 
@@ -71,8 +62,8 @@ export default function RosterMonth() {
         setBranchName(json.name); 
     }
 
-      
-  
+
+ 
     
     
 

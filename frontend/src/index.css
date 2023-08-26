@@ -92,6 +92,10 @@ label {
     min-width: 850px;
 }
 
+.signform {
+    margin-block: 2rem;
+}
+
 .header { 
     background: #EAEAEA;
     border: 1px solid;
