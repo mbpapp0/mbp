@@ -50,7 +50,7 @@ export default function Login() {
                         <label>Password</label>
                         <div className='password_block'>   
                          <input className='password_input' type={showPassword ? 'text': 'password'} placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
-                         <img onClick={togglePassword} src={showPassword ? 'Hide' : 'Show'} alt='password' />
+                         <img onClick={togglePassword} src={showPassword ? Hide : View} alt='password' />
                        </div>
                         <button disabled={loading}>{loading ? 'Loading...' : 'Login'}</button>
                     </form>
