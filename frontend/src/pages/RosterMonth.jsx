@@ -17,6 +17,8 @@ export default function RosterMonth() {
     const [filtered, setFiltered] = useState(false);
     const [keys, setKeys] = useState(['_id', 'branch', 'month', 'createdAt', 'updatedAt', '__v', 'status', 'user']);
     const [branchName, setBranchName] = useState('');
+    const [filtered, setFiltered] = useState(false);
+    const [keys, setKeys] = useState(['_id', 'branch', 'month', 'createdAt', 'updatedAt', '__v']);
     const user = JSON.parse(localStorage.getItem('user'));
 
     const getClients = async () => {
@@ -49,7 +51,7 @@ export default function RosterMonth() {
         });
         
         setFiltered(filteredData)
-
+   
     
     }
 
@@ -59,6 +61,7 @@ export default function RosterMonth() {
         const json = await response.json();
         setBranchName(json.name); 
     }
+
 
  
     
