@@ -1,16 +1,19 @@
 
 import { useEffect, useState } from 'react';
 import { useLogin } from '../hooks/useLogin';
+import View from '../icons/view.png';
+import Hide from '../icons/hide.png';
 
 export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
     const {error, loading, login} = useLogin();
     
     const activateServer = async () => {
      const form = {message: 'Hi'};
       
-  const response = await fetch('https://mbp-server.onrender.com/connect', {
+   const response = await fetch('https://mbp-server.onrender.com/connect', {
             method: 'POST',
             body: JSON.stringify(form),
             headers: {
@@ -18,6 +21,10 @@ export default function Login() {
             }
         });
     }
+
+   const togglePassword = () => {
+       setShowPassword(!showPassword)
+   }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -41,7 +48,10 @@ export default function Login() {
                         <label>Login</label>
                         <input type='text' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
                         <label>Password</label>
-                        <input type='password' placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                        <div className='password_block'>   
+                         <input className='password_input' type={showPassword ? 'text': 'password'} placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                         <img onClick={togglePassword} src={showPassword ? Hide : View} alt='password' />
+                       </div>
                         <button disabled={loading}>{loading ? 'Loading...' : 'Login'}</button>
                     </form>
                 </div>
