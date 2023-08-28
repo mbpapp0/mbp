@@ -172,6 +172,8 @@ export default function ClientUserForm() {
     const [memberFourIncomeFreq, setMemberFourIncomeFreq] = useState('Weekly');
     const [memberFiveIncomeFreq, setMemberFiveIncomeFreq] = useState('Weekly');
     const [memberSixIncomeFreq, setMemberSixIncomeFreq] = useState('Weekly');
+
+    const [success, setSuccess] = useState(false);
     
     const [errorArr, setErrorArr] = useState([]);
     const [branchName, setBranchName] = useState(null);
@@ -1092,11 +1094,13 @@ export default function ClientUserForm() {
         <button className='button radius' onClick={() => setFormExists(true)}>Fake button</button>
         <h2 className='heading'>{branchName} Branch.</h2>
         <h2 className='heading'>CACFP Meal Benefit Income Eligibility Statement</h2>
+         { success && <div className='success' style={{width: '100%', backGround: 'green', color: 'white'}}>
+            <p>Income Eligibility Form Submitted </p>
+        </div> }
         {error && 
         <div className='error_indicator'>
             <p>{ error }</p>
         </div>}
-
         { errorArr.length > 0 && <div className='error_indicator' style={{width: '100%'}}>
             <p>Please enter a valid input</p>
         </div> }
