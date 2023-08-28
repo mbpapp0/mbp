@@ -1089,6 +1089,7 @@ export default function ClientUserForm() {
     
     return(
         <>
+        <button className='button radius' onClick={() => setFormExists(true)}>Fake button</button>
         <h2 className='heading'>{branchName} Branch.</h2>
         <h2 className='heading'>CACFP Meal Benefit Income Eligibility Statement</h2>
         {error && 
