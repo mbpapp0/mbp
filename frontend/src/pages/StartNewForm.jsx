@@ -8,6 +8,7 @@ export default function StartNewForm(props) {
   
   return(
     <div>
+      <h2>Income Eligibility Form Submitted</h2>
       <button onClick={restartForm} className="button radius">Start New Form</button>
     </div>
   )
