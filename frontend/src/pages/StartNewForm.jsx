@@ -8,7 +8,6 @@ export default function StartNewForm(props) {
   
   return(
     <div>
-      {props.FormExists && <h3>It worked</h3> }
       <button onClick={restartForm} className="button radius">Start New Form</button>
     </div>
   )
