@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import SignatureCanvas from 'react-signature-canvas';
 import StartNewForm from './StartNewForm';
+import Loading from '../components/Loading';
 
 export default function ClientUserForm() {
     const user = JSON.parse(localStorage.getItem('user'));
@@ -1083,7 +1084,7 @@ export default function ClientUserForm() {
     }, []);
     
     if(checking){
-      return(<h2>Loading...</h2>)
+      return(<Loading />)
     } 
     
     if(formExists){
