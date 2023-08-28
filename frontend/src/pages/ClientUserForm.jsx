@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import SignatureCanvas from 'react-signature-canvas';
+import StartNewForm from './StartNewForm';
 
 export default function ClientUserForm() {
     const user = JSON.parse(localStorage.getItem('user'));
@@ -1084,6 +1085,7 @@ export default function ClientUserForm() {
     
     return(
         <>
+        <StartNewForm />
         <h2 className='heading'>{branchName} Branch.</h2>
         <h2 className='heading'>CACFP Meal Benefit Income Eligibility Statement</h2>
         {error && 
