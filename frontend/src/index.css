@@ -85,7 +85,7 @@ label {
 }
 
 .radius {
-    border-radius: 8px;
+    border-radius: 0;
 }
 
 .create_form input, .create_form button {
