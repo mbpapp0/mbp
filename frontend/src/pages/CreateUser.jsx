@@ -5,6 +5,9 @@ import { useParams } from 'react-router-dom';
 import InfoCard from '../components/InfoCard';
 import Map from '../components/Map';
 import PasswordRules from '../components/PasswordRules';
+import View from '../icons/view.png';
+import Hide from '../icons/hide.png';
+
 
 
 export default function SysAdminCreateBranch() {
@@ -258,12 +261,14 @@ if(user.role !== 'System Admin'){
                              onBlur={handleInputBlur} 
                               type={showPassword ? 'text': 'password'} 
                               placeholder="Password" value={ password } onChange={(e) => setPassword(e.target.value)}/>
+                             <img onClick={togglePassword} src={showPassword ? Hide : View} alt='password' />
                         </div>
                         <div className={isInputFocused2 ? 'focused password_block' : 'password_block'}>
                           <input className="block password_input" 
                               onFocus={handleInputFocus2}
                              onBlur={handleInputBlur2} 
                               type={showPassword ? 'text': 'password'} placeholder="Confirm Password" value={ confirmPass } onChange={(e) => setConfirmPass(e.target.value)}/>
+                             <img onClick={togglePassword} src={showPassword ? Hide : View} alt='password' />
                         </div>
                         <button className="block button radius new_branch_button" disabled={loading}>{loading ? 'Loading...' : 'Sign Up'}</button>
                     </form>
