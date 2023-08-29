@@ -45,9 +45,9 @@ export default function Login() {
                         <div className='error_indicator'>
                             <p>{ error }</p>
                         </div>}
-                        <label>Login</label>
+                        <label>Email:</label>
                         <input type='text' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
-                        <label>Password</label>
+                        <label>Password:</label>
                         <div className='password_block'>   
                          <input className='password_input' type={showPassword ? 'text': 'password'} placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                          <img onClick={togglePassword} src={showPassword ? Hide : View} alt='password' />
