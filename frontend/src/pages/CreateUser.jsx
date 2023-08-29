@@ -252,8 +252,19 @@ if(user.role !== 'System Admin'){
                             })}
                         </select>
                         <input className="block" type='email' placeholder="Email" value={ email } onChange={(e) => setEmail(e.target.value)}/>
-                        <input className="block" type='password' placeholder="Password" value={ password } onChange={(e) => setPassword(e.target.value)}/>
-                        <input className="block" type='password' placeholder="Confirm Password" value={ confirmPass } onChange={(e) => setConfirmPass(e.target.value)}/>
+                        <div className={isInputFocused ? 'focused password_block' : 'password_block'}>
+                          <input className="block password_input" 
+                              onFocus={handleInputFocus}
+                             onBlur={handleInputBlur} 
+                              type=type={showPassword ? 'text': 'password'} 
+                              placeholder="Password" value={ password } onChange={(e) => setPassword(e.target.value)}/>
+                        </div>
+                        <div className={isInputFocused2 ? 'focused password_block' : 'password_block'}>
+                          <input className="block password_input" 
+                              onFocus={handleInputFocus2}
+                             onBlur={handleInputBlur2} 
+                              type=type={showPassword ? 'text': 'password'} placeholder="Confirm Password" value={ confirmPass } onChange={(e) => setConfirmPass(e.target.value)}/>
+                        </div>
                         <button className="block button radius new_branch_button" disabled={loading}>{loading ? 'Loading...' : 'Sign Up'}</button>
                     </form>
                 </div>
