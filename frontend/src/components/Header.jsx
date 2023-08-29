@@ -77,8 +77,8 @@ export default function Header() {
              {
                user && 
                <div>
-                   <Link to={`/account/${user.id}`}><button className='button radius' style={{marginRight: '0.75rem'}}>Profile</button></Link>
-                 <button className='button radius' onClick={logout}>Logout</button>
+                   <Link to={`/account/${user.id}`}><button className='button header_buttons' style={{marginRight: '0.75rem'}}>Profile</button></Link>
+                 <button className='button header_buttons' onClick={logout}>Logout</button>
               </div>
              }
              
