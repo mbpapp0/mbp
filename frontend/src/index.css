@@ -47,6 +47,10 @@ input:focus {
 .sysadmin button {
     background: #146CEB;
 }
+
+.sysadmin button:hover {
+  boxshadow: 3px 3px black;
+}
 .hide_input {
     display: none;
 }
