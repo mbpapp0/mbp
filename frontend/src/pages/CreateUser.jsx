@@ -25,7 +25,26 @@ export default function SysAdminCreateBranch() {
     const [set, setSet] = useState(false);
     const [loading, setLoading] = useState(false);
     const [inValidPass, setInValidPass] = useState(false);
-   
+
+    const [isInputFocused, setIsInputFocused] = useState(false);
+    const [isInputFocused2, setIsInputFocused2] = useState(false);
+ 
+    const handleInputFocus = () => {
+      setIsInputFocused(true);
+     };
+
+    const handleInputBlur = () => {
+      setIsInputFocused(false);
+     };
+
+  
+    const handleInputFocus2 = () => {
+      setIsInputFocused2(true);
+     };
+
+     const handleInputBlur2 = () => {
+      setIsInputFocused2(false);
+      };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
