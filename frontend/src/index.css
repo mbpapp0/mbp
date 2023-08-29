@@ -108,6 +108,18 @@ label {
     /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 255, 0.25)); */
 }
 
+.header_buttons {
+   background: none;
+   border: none;
+   color: white;
+   transition: all 800ms ease-in-out;
+}
+
+.header_buttons:hover {
+    color: #146CEB !important;
+
+}
+
 .logo {
     font-size: 1.5rem;
     font-weight: 600;
