@@ -28,9 +28,15 @@ export default function SysAdminCreateBranch() {
     const [set, setSet] = useState(false);
     const [loading, setLoading] = useState(false);
     const [inValidPass, setInValidPass] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
 
     const [isInputFocused, setIsInputFocused] = useState(false);
     const [isInputFocused2, setIsInputFocused2] = useState(false);
+
+    const togglePassword = () => {
+       setShowPassword(!showPassword)
+   }
+
  
     const handleInputFocus = () => {
       setIsInputFocused(true);
