@@ -70,7 +70,7 @@ export default function SysAdmin() {
                 <h4 className="block1x">Branches</h4>
                 <div className='flex'>
                 <Link to='/sysbranch'>
-                    <button className="button radius flex align new_branch_button">
+                    <button className="button radius flex align new_branch_button sysadmin_button">
                         <img className='view_img'src={newbranch}/>Create New Branch 
                     </button>
                 </Link>
@@ -82,12 +82,12 @@ export default function SysAdmin() {
                             <p>{ branch.name }</p>
                             <div className="view_branches_btn_container">
                             <Link to={`/branch/${branch._id}`}>
-                                <button className="button radius special_pad">
+                                <button className="button sysadmin_button radius special_pad">
                                     <img className='view_img' src={View} />
                                     View Users
                                 </button>
                             </Link>
-                        <button className="button radius" onClick={() => {
+                        <button className="button sysadmin_button radius" onClick={() => {
                             setId(branch._id)
                             setClicked(true)
                             setBranchName(branch.name)
