@@ -6,7 +6,8 @@ import Hide from '../icons/hide.png';
 
 export default function Login() {
 const [isInputFocused, setIsInputFocused] = useState(false);
-
+const [isInputFocused2, setIsInputFocused2] = useState(false);
+ 
   const handleInputFocus = () => {
     setIsInputFocused(true);
   };
@@ -15,6 +16,14 @@ const [isInputFocused, setIsInputFocused] = useState(false);
     setIsInputFocused(false);
   };
 
+  
+const handleInputFocus2 = () => {
+    setIsInputFocused2(true);
+  };
+
+  const handleInputBlur2 = () => {
+    setIsInputFocused2(false);
+  };
     
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -57,7 +66,12 @@ const [isInputFocused, setIsInputFocused] = useState(false);
                             <p>{ error }</p>
                         </div>}
                         <label>Email:</label>
-                        <input type='text' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                        <div className={isInputFocused2 ? 'focused password_block' : 'password_block'}>   
+                          <input 
+                            onFocus={handleInputFocus2}
+                             onBlur={handleInputBlur2}
+                            className='password_input' type='text' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                        </div>
                         <label>Password:</label>
                         <div className={isInputFocused ? 'focused password_block' : 'password_block'}>   
                          <input className='password_input' 
