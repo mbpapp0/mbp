@@ -256,7 +256,7 @@ if(user.role !== 'System Admin'){
                           <input className="block password_input" 
                               onFocus={handleInputFocus}
                              onBlur={handleInputBlur} 
-                              type=type={showPassword ? 'text': 'password'} 
+                              type={showPassword ? 'text': 'password'} 
                               placeholder="Password" value={ password } onChange={(e) => setPassword(e.target.value)}/>
                         </div>
                         <div className={isInputFocused2 ? 'focused password_block' : 'password_block'}>
