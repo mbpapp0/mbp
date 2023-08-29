@@ -71,7 +71,8 @@ export default function SysAdmin() {
                 <div className='flex'>
                 <Link to='/sysbranch'>
                     <button className="button radius flex align new_branch_button sysadmin_button">
-                        <img className='view_img'src={newbranch}/>Create New Branch 
+                        {/* <img className='view_img'src={newbranch}/> */}
+                        Create New Branch 
                     </button>
                 </Link>
                 <Link to='/admins' style={{marginLeft: '0.5rem'}}><button className='button radius'>View Admin Users</button></Link>
@@ -83,7 +84,7 @@ export default function SysAdmin() {
                             <div className="view_branches_btn_container">
                             <Link to={`/branch/${branch._id}`}>
                                 <button className="button sysadmin_button radius special_pad">
-                                    <img className='view_img' src={View} />
+                                    {/*  <img className='view_img' src={View} /> */}
                                     View Users
                                 </button>
                             </Link>
@@ -92,7 +93,7 @@ export default function SysAdmin() {
                             setClicked(true)
                             setBranchName(branch.name)
                         }} disabled={clicked}>
-                            <img className='view_img' src={Trash}/>
+                            {/*  <img className='view_img' src={Trash}/> */}
                             Delete Branch
                         </button> 
                     </div>
