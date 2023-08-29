@@ -263,7 +263,7 @@ if(user.role !== 'System Admin'){
                           <input className="block password_input" 
                               onFocus={handleInputFocus2}
                              onBlur={handleInputBlur2} 
-                              type=type={showPassword ? 'text': 'password'} placeholder="Confirm Password" value={ confirmPass } onChange={(e) => setConfirmPass(e.target.value)}/>
+                              type={showPassword ? 'text': 'password'} placeholder="Confirm Password" value={ confirmPass } onChange={(e) => setConfirmPass(e.target.value)}/>
                         </div>
                         <button className="block button radius new_branch_button" disabled={loading}>{loading ? 'Loading...' : 'Sign Up'}</button>
                     </form>
