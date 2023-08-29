@@ -5,6 +5,17 @@ import View from '../icons/view.png';
 import Hide from '../icons/hide.png';
 
 export default function Login() {
+const [isInputFocused, setIsInputFocused] = useState(false);
+
+  const handleInputFocus = () => {
+    setIsInputFocused(true);
+  };
+
+  const handleInputBlur = () => {
+    setIsInputFocused(false);
+  };
+
+    
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
@@ -48,8 +59,12 @@ export default function Login() {
                         <label>Email:</label>
                         <input type='text' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
                         <label>Password:</label>
-                        <div className='password_block'>   
-                         <input className='password_input' type={showPassword ? 'text': 'password'} placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                        <div className={isInputFocused ? 'focused password_block' : 'password_block'}>   
+                         <input className='password_input' 
+                             onFocus={handleInputFocus}
+                             onBlur={handleInputBlur}
+                             type={showPassword ? 'text': 'password'} 
+                             placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                          <img onClick={togglePassword} src={showPassword ? Hide : View} alt='password' />
                        </div>
                         <button disabled={loading}>{loading ? 'Loading...' : 'Login'}</button>
