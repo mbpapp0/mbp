@@ -1084,7 +1084,7 @@ export default function ClientUserForm() {
     }, []);
     
     if(checking){
-      return(<Loading />)
+      return(<h3 className="loading">Loading</h3>)
     } 
     
     if(formExists){
@@ -1807,7 +1807,7 @@ export default function ClientUserForm() {
               </label>
            </div>
 */}
-            <button disabled={loading} className='button radius block padding'>{loading ? 'Loading...' : 'Submit'}</button>
+            <button style={{marginRight: '1rem'}} disabled={loading} className='button radius block padding'>{loading ? 'Loading...' : 'Submit'}</button>
             <button type='button' onClick={clearFields}disabled={loading} className='button radius block padding'>Clear</button>
            
         </form>
