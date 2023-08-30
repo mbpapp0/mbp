@@ -109,6 +109,8 @@ label {
 .create_form_block {
  width: 100% !important;
  min-width: 850px;
+ border: 1px solid black !important;
+ font-size: 10px;
 }
 
 .signform {
