@@ -96,24 +96,6 @@ label {
     border-radius: 0;
 }
 
-.create_form input, .create_form button {
-    width: 100% !important;
-    min-width: 850px;
-}
-
-.create_form_input {
-   width: 80% !important;
-    min-width: 690px;
-}
-
-.create_form_block {
- width: 100% !important;
- min-width: 850px;
- border: 1px solid black !important;
- font-size: 7px !important;
- padding: 0.5rem 0.5rem !important;
-}
-
 .signform {
     margin-block: 2rem;
 }
@@ -210,6 +192,25 @@ label {
     outline: none;
 }
 
+
+
+.create_form input, .create_form button {
+    width: 100% !important;
+    min-width: 850px;
+}
+
+.create_form_input {
+   width: 80% !important;
+    min-width: 690px;
+}
+
+.create_form_block {
+ width: 100% !important;
+ min-width: 850px;
+ border: 1px solid black !important;
+ font-size: 7px !important;
+ padding: 0.5rem 0.5rem !important;
+}
 
 
 .no_form {
