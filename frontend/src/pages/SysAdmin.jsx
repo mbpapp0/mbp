@@ -70,7 +70,7 @@ export default function SysAdmin() {
                 <h4 className="block1x">Branches</h4>
                 <div className='flex'>
                 <Link to='/sysbranch'>
-                    <button className="button radius flex align new_branch_button sysadmin_button">
+                    <button style={{paddingInline: "5px"}}className="button radius flex align new_branch_button sysadmin_button">
                         {/* <img className='view_img'src={newbranch}/> */}
                         Create New Branch 
                     </button>
