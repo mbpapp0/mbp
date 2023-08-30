@@ -261,16 +261,16 @@ if(user.role !== 'System Admin'){
                             })}
                         </select>
                         <input className="block" type='email' placeholder="Email" value={ email } onChange={(e) => setEmail(e.target.value)}/>
-                        <div className={isInputFocused ? 'focused password_block' : 'password_block'}>
-                          <input className="block password_input" 
+                        <div className={isInputFocused ? 'focused create_form_block password_block' : 'create_form_block password_block'}>
+                          <input className="block create_form_input password_input" 
                               onFocus={handleInputFocus}
                              onBlur={handleInputBlur} 
                               type={showPassword ? 'text': 'password'} 
                               placeholder="Password" value={ password } onChange={(e) => setPassword(e.target.value)}/>
                              <img onClick={togglePassword} src={showPassword ? Hide : View} alt='password' />
                         </div>
-                        <div className={isInputFocused2 ? 'focused password_block' : 'password_block'}>
-                          <input className="block password_input" 
+                        <div className={isInputFocused2 ? 'focused create_form_block password_block' : 'create_form_block password_block'}>
+                          <input className="block create_form_input password_input" 
                               onFocus={handleInputFocus2}
                              onBlur={handleInputBlur2} 
                               type={showPassword ? 'text': 'password'} placeholder="Confirm Password" value={ confirmPass } onChange={(e) => setConfirmPass(e.target.value)}/>
