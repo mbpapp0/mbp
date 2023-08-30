@@ -101,6 +101,16 @@ label {
     min-width: 850px;
 }
 
+.create_form_input {
+   width: 80% !important;
+    min-width: 690px;
+}
+
+.create_form_block {
+ width: 100% !important;
+ min-width: 850px;
+}
+
 .signform {
     margin-block: 2rem;
 }
