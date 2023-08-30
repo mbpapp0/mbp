@@ -205,11 +205,13 @@ label {
 }
 
 .create_form_block {
+ height: 1.875rem;
  width: 100% !important;
  min-width: 850px;
  border: 1px solid black !important;
  font-size: 7px !important;
  padding: 0.5rem 0.5rem !important;
+ margin: 0;
 }
 
 
