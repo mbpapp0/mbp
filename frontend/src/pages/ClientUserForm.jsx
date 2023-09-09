@@ -1095,7 +1095,7 @@ export default function ClientUserForm() {
     if(formExists){
       return(
           <div style={{marginTop: '7rem', textAlign: 'center'}}>
-            <StartNewForm submitted={submitted} formExists={formExists} setFormExists={setFormExists} /> 
+            <StartNewForm branchName={branchName} submitted={submitted} formExists={formExists} setFormExists={setFormExists} /> 
           </div>
       )
     }
