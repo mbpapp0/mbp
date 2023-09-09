@@ -941,7 +941,7 @@ export default function ClientUserForm() {
                 setTimeout(() => {
                     setSuccess(false)
                 }, 2000)
-                setSubmitted(true)8
+                setSubmitted(true);
                 setTimeout(() => {
                     setSubmitted(false)
                 }, 2000)
