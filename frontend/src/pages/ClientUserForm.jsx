@@ -1103,7 +1103,7 @@ export default function ClientUserForm() {
     
     return(
         <>
-        <h2 className='heading'>{branchName} Branch.</h2>
+        <h2 className='heading'>{branchName} Branch</h2>
         <h2 className='heading'>CACFP Meal Benefit Income Eligibility Statement</h2>
          { success && <div className='success' style={{width: '100%', backGround: 'green', color: 'white'}}>
             <p>Income Eligibility Form Submitted </p>
