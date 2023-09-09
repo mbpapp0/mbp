@@ -181,7 +181,8 @@ export default function ClientUserForm() {
     const [formExists, setFormExists] = useState(false);
     const [newForm, setForm] = useState('');
     const [createNewForm, setCreateNewForm] = useState(false);
-    
+
+    const [submitted, setSubmitted] = useState(false);
     const getBranchName = async () => {
         setLoading(true);
         const response = await fetch(`https://mbp-server.onrender.com/api/branches/${user.branch}`);
@@ -940,6 +941,10 @@ export default function ClientUserForm() {
                 setTimeout(() => {
                     setSuccess(false)
                 }, 2000)
+                setSubmitted(true)8
+                setTimeout(() => {
+                    setSubmitted(false)
+                }, 2000)
 
                 if(!response.ok){
                     setError(json.error);
@@ -1090,7 +1095,7 @@ export default function ClientUserForm() {
     if(formExists){
       return(
           <div style={{marginTop: '7rem', textAlign: 'center'}}>
-            <StartNewForm formExists={formExists} setFormExists={setFormExists} /> 
+            <StartNewForm submitted={submitted} formExists={formExists} setFormExists={setFormExists} /> 
           </div>
       )
     }
