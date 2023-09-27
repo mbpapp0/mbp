@@ -6,7 +6,6 @@ export default function Header() {
     const user = JSON.parse(localStorage.getItem('user'));
     const lastLoginTime = JSON.parse(localStorage.getItem('lastLoginTime'));
     const [show, setShow] = useState(false);
-
     const { dispatch } = useAuthContext();
    
 
@@ -76,7 +75,6 @@ export default function Header() {
     window.addEventListener('keydown', handleUserActivity);
 
     return () => {
-     clearInterval(interval);
       clearTimeout(inactivityTimeoutRef.current);
       clearTimeout(logoutTimeoutRef.current);
       window.removeEventListener('mousemove', handleUserActivity);
