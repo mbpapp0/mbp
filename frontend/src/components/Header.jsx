@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from 'react'
 
 export default function Header() {
     const user = JSON.parse(localStorage.getItem('user'));
+    const lastLoginTime = JSON.parse(localStorage.getItem('lastLoginTime'));
     const [show, setShow] = useState(false);
 
     const { dispatch } = useAuthContext();
@@ -14,6 +15,7 @@ export default function Header() {
          return;
         }
         localStorage.removeItem('user');
+        localStorage.removeItem('lastLoginTime');
         dispatch({ type: 'LOGOUT'});
         window.location.assign('/')
     }
@@ -53,7 +55,19 @@ export default function Header() {
 
 
   useEffect(() => {
+      const checkElapsedTime = () => {
+      const currentTime = new Date().getTime();
+      const elapsedTime = (currentTime - parseInt(lastLoginTime, 10)) / (1000 * 60); // in minutes
 
+      if (elapsedTime > 10) {
+        logout();
+      }
+    };
+
+    if (lastLoginTime) {
+      checkElapsedTime();
+      const interval = setInterval(checkElapsedTime, 60000); 
+    }
     setInterval(connect, 3 * 60 * 1000);
     
     startInactivityTimer();
@@ -62,12 +76,13 @@ export default function Header() {
     window.addEventListener('keydown', handleUserActivity);
 
     return () => {
+     clearInterval(interval);
       clearTimeout(inactivityTimeoutRef.current);
       clearTimeout(logoutTimeoutRef.current);
       window.removeEventListener('mousemove', handleUserActivity);
       window.removeEventListener('keydown', handleUserActivity);
     };
-  }, []);
+  }, [lastLoginTime]);
 
 
     return (
