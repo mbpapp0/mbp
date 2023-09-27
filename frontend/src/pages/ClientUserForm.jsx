@@ -183,6 +183,7 @@ export default function ClientUserForm() {
     const [createNewForm, setCreateNewForm] = useState(false);
 
     const [submitted, setSubmitted] = useState(false);
+    const [subMessage, setSubMessage] = useState(false);
     const getBranchName = async () => {
         setLoading(true);
         const response = await fetch(`https://mbp-server.onrender.com/api/branches/${user.branch}`);
@@ -941,6 +942,10 @@ export default function ClientUserForm() {
                 setTimeout(() => {
                     setSuccess(false)
                 }, 2000)
+                setSubMessge(true);
+                setTimeout(() => {
+                    setSubMessage(false)
+                }, 2000)
                 setSubmitted(true);
                 setTimeout(() => {
                     setSubmitted(false)
@@ -1091,6 +1096,14 @@ export default function ClientUserForm() {
     if(checking){
       return(<h3 className="loading">Loading</h3>)
     } 
+
+    if(subMessage){
+        return(
+          <div style={{marginTop: '7rem', textAlign: 'center'}}>
+             <h3>Form Submitted Successfully</h3>
+          </div>
+      )
+    }
     
     if(formExists){
       return(
