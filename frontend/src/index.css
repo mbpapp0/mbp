@@ -22,8 +22,9 @@ body {
 button {
     border: none;
     cursor: pointer;
-    background:  #FFD9E6 !important;
+    background:  rgba(248, 93, 112, 1) !important;
     transition: all 800ms ease-in-out;
+    color: black;
 }
 
 button:hover {
