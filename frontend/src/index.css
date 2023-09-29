@@ -74,8 +74,8 @@ label {
 }
 
 .button {
-    color:  #F0F0F0;
-    background: #6B6B6B;
+    color:  black;
+    background: rgba(248, 93, 112, 1);
     padding: 1rem 1rem;
 }
 .right {
