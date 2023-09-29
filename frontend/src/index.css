@@ -22,12 +22,12 @@ body {
 button {
     border: none;
     cursor: pointer;
-    background: black !important;
+    background:  black !important;
     transition: all 800ms ease-in-out;
 }
 
 button:hover {
-    box-shadow: 3px 3px 2px 0px #146CEB;
+    box-shadow: 3px 3px 2px 0px #E8DAF5;
 }
 
 p {
