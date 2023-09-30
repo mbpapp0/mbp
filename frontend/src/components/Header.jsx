@@ -66,9 +66,9 @@ export default function Header() {
     if (lastLoginTime) {
       checkElapsedTime();
       const interval = setInterval(checkElapsedTime, 60000); 
-    }
+    } */
     setInterval(connect, 3 * 60 * 1000);
-    */
+
     startInactivityTimer();
 
     window.addEventListener('mousemove', handleUserActivity);
@@ -80,7 +80,7 @@ export default function Header() {
       window.removeEventListener('mousemove', handleUserActivity);
       window.removeEventListener('keydown', handleUserActivity);
     };
-  });
+  }, []);
 
 
     return (
