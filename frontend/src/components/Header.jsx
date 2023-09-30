@@ -13,8 +13,8 @@ export default function Header() {
         if(!user){
          return;
         }
-        localStorage.removeItem('user');
         localStorage.removeItem('lastLoginTime');
+        localStorage.removeItem('user');
         dispatch({ type: 'LOGOUT'});
         window.location.assign('/')
     }
@@ -54,7 +54,18 @@ export default function Header() {
 
 
   useEffect(() => {
+    const checkTimeDifference = () => {
+      const currentTime = new Date().getTime();
+      if (lastLoginTime) {
+        const lastLoginTimestamp = parseInt(lastLoginTime, 10);
+        const timeDifference = (currentTime - lastLoginTimestamp) / (1000 * 60);
+        if (timeDifference >= 1) {
+          logout();
+        }
+      }
+    };
 
+    checkTimeDifference();
 
     startInactivityTimer();
 
