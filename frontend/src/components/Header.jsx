@@ -54,20 +54,7 @@ export default function Header() {
 
 
   useEffect(() => {
- /*     const checkElapsedTime = () => {
-      const currentTime = new Date().getTime();
-      const elapsedTime = (currentTime - parseInt(lastLoginTime, 10)) / (1000 * 60); // in minutes
 
-      if (elapsedTime > 10) {
-        logout();
-      }
-    };
-
-    if (lastLoginTime) {
-      checkElapsedTime();
-      const interval = setInterval(checkElapsedTime, 60000); 
-    } */
-    // setInterval(connect, 3 * 60 * 1000);
 
     startInactivityTimer();
 
