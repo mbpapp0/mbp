@@ -28,8 +28,8 @@ export default function Header() {
         if(!user){return;}
       inactivityTimeoutRef.current = setTimeout(() => {
         setShow(true);
-        logoutTimeoutRef.current = setTimeout(logout, 120000); // 2 minutes
-      }, 600000); // 10 minutes
+        logoutTimeoutRef.current = setTimeout(logout, 0.5 * 60000); // 2 minutes
+      }, 1 * 60000); // 10 minutes
     };
 
     const resetInactivityTimer = () => {
@@ -67,7 +67,7 @@ export default function Header() {
       checkElapsedTime();
       const interval = setInterval(checkElapsedTime, 60000); 
     } */
-    setInterval(connect, 3 * 60 * 1000);
+    // setInterval(connect, 3 * 60 * 1000);
 
     startInactivityTimer();
 
