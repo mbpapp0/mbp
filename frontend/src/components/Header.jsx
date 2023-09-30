@@ -78,7 +78,7 @@ export default function Header() {
       window.removeEventListener('mousemove', handleUserActivity);
       window.removeEventListener('keydown', handleUserActivity);
     };
-  }, []);
+  }, [lastLoginTime]);
 
 
     return (
