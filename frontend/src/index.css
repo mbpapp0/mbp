@@ -20,6 +20,8 @@ body {
 }
 
 button {
+    font-weight: bold;
+    font-family: "Montserrat Alternates", Montserrat Alternates, "Playfair Display", Playfair Display, "Lato", Lato;
     border: none;
     cursor: pointer;
     background:  rgba(248, 93, 112, 1) !important;
@@ -411,11 +413,10 @@ label {
 .login_form button {
     height: 4rem;
     width: 24rem;
-    color: white;
-    background: #6B6B6B;
+    color: black;
     font-size: 1rem;
     border: none;
-    border-radius: 8px;
+    font-weight: bold;
 }
 
 .error_indicator {
