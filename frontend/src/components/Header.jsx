@@ -28,8 +28,8 @@ export default function Header() {
         if(!user){return;}
       inactivityTimeoutRef.current = setTimeout(() => {
         setShow(true);
-        logoutTimeoutRef.current = setTimeout(logout, 0.5 * 60000); // 2 minutes
-      }, 1 * 60000); // 10 minutes
+        logoutTimeoutRef.current = setTimeout(logout, 2 * 60000); // 2 minutes
+      }, 15 * 60000); // 10 minutes
     };
 
     const resetInactivityTimer = () => {
