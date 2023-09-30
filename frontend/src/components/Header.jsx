@@ -54,7 +54,7 @@ export default function Header() {
 
 
   useEffect(() => {
-      const checkElapsedTime = () => {
+ /*     const checkElapsedTime = () => {
       const currentTime = new Date().getTime();
       const elapsedTime = (currentTime - parseInt(lastLoginTime, 10)) / (1000 * 60); // in minutes
 
@@ -68,7 +68,7 @@ export default function Header() {
       const interval = setInterval(checkElapsedTime, 60000); 
     }
     setInterval(connect, 3 * 60 * 1000);
-    
+    */
     startInactivityTimer();
 
     window.addEventListener('mousemove', handleUserActivity);
@@ -80,7 +80,7 @@ export default function Header() {
       window.removeEventListener('mousemove', handleUserActivity);
       window.removeEventListener('keydown', handleUserActivity);
     };
-  }, [lastLoginTime]);
+  });
 
 
     return (
