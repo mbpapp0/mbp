@@ -1128,7 +1128,7 @@ export default function ClientUserForm() {
         { errorArr.length > 0 && <div className='error_indicator' style={{width: '100%'}}>
             <p>Please enter a valid input</p>
         </div> }
-         <div style={{ padding: '10px', background: 'black', marginBlock:' 0.5rem' }}>
+         <div className="parts_block" style={{ padding: '10px', marginBlock:' 0.5rem' }}>
            <h5 style={{ color: 'white' }}>PART I: Child(ren) or Adult enrolled to receive day care</h5>
          </div>  
         <div className="labels">
@@ -1386,7 +1386,7 @@ export default function ClientUserForm() {
 
 
 
-          <div style={{ padding: '10px', background: 'black', marginBlock: '0.5rem' }}>
+          <div className="parts_block" style={{ padding: '10px', marginBlock: '0.5rem' }}>
             <h5 style={{ color: 'white' }}>PART II: Report income for ALL Household Members (Skip this step if participant is categorically eligible as documented in Part I.)</h5>
           </div>
   
@@ -1599,7 +1599,7 @@ export default function ClientUserForm() {
     </div>
 
             </div>
-              <div style={{ padding: '10px', background: 'black' }}>
+              <div className="parts_block" style={{ padding: '10px', }}>
                 <h5 style={{ color: 'white' }}>PART III: Enrollment Information</h5>
               </div>
   
@@ -1760,7 +1760,7 @@ export default function ClientUserForm() {
                     other research.
                 </p>
             </div>
-              <div style={{ padding: '10px', background: 'black' }}>
+              <div className="parts_block" style={{ padding: '10px' }}>
                 <h5 style={{ color: 'white' }}>PART V: Participant’s Ethnic and Racial Identities (optional)</h5>
              </div>
             <div className="ethnicity block flex space_between">
