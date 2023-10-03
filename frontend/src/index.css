@@ -20,14 +20,14 @@ body {
 }
 
 button {
-    font-weight: bold;
+    font-weight: bold !important;
     font-family: "Montserrat Alternates", Montserrat Alternates, "Playfair Display", Playfair Display, "Lato", Lato;
     border: none;
     cursor: pointer;
     background:  rgba(248, 93, 112, 1) !important;
     transition: all 800ms ease-in-out;
-    color: black;
-    border: 1px solid black;
+    color: black !important;
+    border: 1px solid black !important;
 }
 
 .parts_block{
