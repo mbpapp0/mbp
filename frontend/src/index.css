@@ -796,7 +796,7 @@ a {
 
 .confirm_buttons button:first-child {
     background-color:#6B6B6B;
-    color: white;
+    color: black;
     margin-bottom: 1rem;
 }
 
