@@ -33,6 +33,7 @@ button {
 .parts_block{
         background:  rgba(248, 93, 112, 1);
         border: 1px solid black;
+        color: black !important;
 }
 
 button:hover {
