@@ -1711,7 +1711,7 @@ export default function ClientUserForm() {
                 <label>Phone Number</label>
                 <input type='number' value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} required/>
             </div>
-                  <div style={{ padding: '10px', background: 'black', marginBlock: '0.75rem' }}>
+                  <div className="parts_block" style={{ padding: '10px', marginBlock: '0.75rem' }}>
                     <h5 style={{ color: 'white' }}>PART IV: Signature</h5>
                   </div>
                 <div>
