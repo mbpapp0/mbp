@@ -27,6 +27,7 @@ button {
     background:  rgba(248, 93, 112, 1) !important;
     transition: all 800ms ease-in-out;
     color: black;
+    border: 1px solid black;
 }
 
 button:hover {
@@ -112,6 +113,7 @@ label {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid black;
     /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 255, 0.25)); */
 }
 
