@@ -50,7 +50,7 @@ export default function DataAdminMainScrreen() {
 
                     {branches.map((branch) => { 
                         return( <div className="view_branch space_between align" key={branch._id}>
-                        <p className="view_branch_name">{branch.name}</p>
+                        <p style={{fontWeight: 'bold'}} className="view_branch_name">{branch.name}</p>
                         <div className='branch_list_buttons'>
                             <button className="button radius block" onClick={() => {
                                 setClick(true)
