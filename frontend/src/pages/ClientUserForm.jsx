@@ -938,10 +938,10 @@ export default function ClientUserForm() {
                 setHawaiian(false);
                 scrollToTop();
                 setSuccess(true);
-                formExists(true);
                 setTimeout(() => {
                     setSuccess(false)
                 }, 2000)
+                formExists(true);
                 setSubMessage(true);
                 setTimeout(() => {
                     setSubMessage(false)
