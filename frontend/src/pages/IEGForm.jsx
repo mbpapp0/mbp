@@ -664,14 +664,14 @@ export default function IEGForm() {
             </div>
                 <div>
                     
-                    <label>Official Signature</label>
+                  {/*  <label>Official Signature</label>
                     <div style={{border: '2px solid black', width: '12rem', height: '96px'}} className='sign_pad'>    
                         
 
                         
                             <img src={data.offSignature} alt='signature' />
                         
-                    </div>
+                    </div> */}
                     
                 </div>  
                      <br />
