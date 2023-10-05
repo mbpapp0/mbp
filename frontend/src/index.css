@@ -213,7 +213,7 @@ label {
 
 .create_form_input {
    width: 80% !important;
-   max-width: 690px;
+   min-width: 690px;
    font-size: 10px !important;
    padding: 0 !important;
 }
@@ -221,7 +221,7 @@ label {
 .create_form_block {
  height: 3rem;
  width: 100% !important;
- max-width: 850px;
+ min-width: 850px;
  border: 1px solid black !important;
  font-size: 7px !important;
  padding: 0.5rem 0.5rem !important;
