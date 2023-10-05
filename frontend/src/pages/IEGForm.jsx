@@ -674,13 +674,13 @@ export default function IEGForm() {
                     </div> */}
                     
                 </div>  
-                     <br />
-           <div className='flex align block1x'>
+          
+          {/*  <div className='flex align block1x'>
               <label>
                 Date:
                 <input type="date" value={data.offSignDate} style={{ width: '10.5rem'}}/>
               </label>
-           </div>
+           </div> */}
 
      
            
