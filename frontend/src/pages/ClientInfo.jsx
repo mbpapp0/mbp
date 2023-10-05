@@ -126,7 +126,7 @@ export default function ClientInfo() {
                     <h4>Household Member Four Name: { data.HouseholdMemberFourName || 'N/A' }</h4>
                     <h4>Household Member Four Working Earnings: { data.HouseholdMemberFourWorkEarnings || 'N/A'}</h4>
                     <h4>Household Member Four Welfare, Alimony & Child Support: { data.HouseholdMemberFourWelfare_Alimony_CS ? data.HouseholdMemberThreeWelfare_Alimony_CS : 'N/A   ' }</h4>
-                    <h4>Household Member Three, Social Security, pensions, retirement: { data.HouseholdMemberFourSSPR ? data.HouseholdMemberFourSSPR : 'N/A'}</h4>
+                    <h4>Household Member Four, Social Security, pensions, retirement: { data.HouseholdMemberFourSSPR ? data.HouseholdMemberFourSSPR : 'N/A'}</h4>
                     <h4>Household Member All other income: { data.HouseholdMemberFourOther ? data.HouseholdMemberFourOther : 'N/A'}</h4>
                     { data.HouseholdMemberFourName != '' && <h4>Household Member Income Frequency: { data.memberFourIncomeFreq || 'N/A'}</h4>}
 
