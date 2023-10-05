@@ -834,7 +834,7 @@ export default function ClientUserForm() {
             
 
             if(response.ok){
-                window.location.assign('/');
+                setLoading(false)
                 setSign('');
                 setSignature('');
                 setChildOneName('');
@@ -940,8 +940,9 @@ export default function ClientUserForm() {
                 setSuccess(true);
                 setTimeout(() => {
                     setSuccess(false)
-                   formExists(true);
-                }, 2000)
+                    window.location.assign('/');
+                    formExists(true);
+                }, 3500)
                 // setSubMessage(true);
                 //setTimeout(() => {
                     //setSubMessage(false)
@@ -959,7 +960,6 @@ export default function ClientUserForm() {
         } catch(error) {
             console.log(error.message)
         }
-      setLoading(false)
        
     }
     
