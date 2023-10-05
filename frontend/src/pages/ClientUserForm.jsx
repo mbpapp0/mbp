@@ -940,16 +940,16 @@ export default function ClientUserForm() {
                 setSuccess(true);
                 setTimeout(() => {
                     setSuccess(false)
+                   formExists(true);
                 }, 2000)
-                formExists(true);
-                setSubMessage(true);
-                setTimeout(() => {
-                    setSubMessage(false)
-                }, 2000)
-                setSubmitted(true);
-                setTimeout(() => {
-                    setSubmitted(false)
-                }, 2000)
+                // setSubMessage(true);
+                //setTimeout(() => {
+                    //setSubMessage(false)
+              //  }, 2000)
+              ///  setSubmitted(true);
+                /// setTimeout(() => {                
+                   /// setSubmitted(false)
+               /// }, 2000)
 
                 if(!response.ok){
                     setError(json.error);
