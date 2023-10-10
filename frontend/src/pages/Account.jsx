@@ -27,9 +27,9 @@ export default function Account() {
         return pattern.test(email);
     }
     
-    function isValidName(name) {
+    function isValidName(nameInput) {
         const invalidCharacters = /[.,\\\/#!$%\^&\*;:{}=\-_`~()0-9]/;
-        if(name[0] === " " && name == ''){
+        if(nameInput[0] === " " && nameInput == ''){
             return false; 
         }
         return !invalidCharacters.test(name);
