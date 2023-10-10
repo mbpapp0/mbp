@@ -22,9 +22,9 @@ export default function Account() {
         
     } 
     
-    function isValidEmail(email) {
+    function isValidEmail(emailInput) {
         var pattern = /^[\w.-]+@[\w.-]+\.\w+$/;
-        return pattern.test(email);
+        return pattern.test(emailInput);
     }
     
     function isValidName(nameInput) {
