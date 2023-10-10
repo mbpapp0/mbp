@@ -65,8 +65,8 @@ export default function Account() {
             sameEmail
         }
         
-        if(name == ''){return;}
-        if(email == ''){return;}
+    //    if(name == ''){return;}
+     ///   if(email == ''){return;}
         
         try{
         const response = await fetch(`https://mbp-server.onrender.com/api/users/edit/${id}`, {
