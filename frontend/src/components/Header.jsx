@@ -59,7 +59,7 @@ export default function Header() {
       if (lastLoginTime) {
         const lastLoginTimestamp = parseInt(lastLoginTime, 10);
         const timeDifference = (currentTime - lastLoginTimestamp) / (1000 * 60);
-        if (timeDifference >= 60) {
+        if (timeDifference >= 30) {
           logout();
         }
       }
