@@ -59,7 +59,9 @@ export default function Account() {
          setSameEmail(false)
         }
 
-        if(name[0] =' '){
+        if(name[0] == ' ' || name == ''){
+            setError('Enter a valid name')
+            setLoading(false)
             return;
         }
 
