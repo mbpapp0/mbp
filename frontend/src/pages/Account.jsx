@@ -129,7 +129,7 @@ export default function Account() {
          { editing &&
          <div className='edit_info'>
            <label>Name:</label>
-           <input type='text' value={name} onChange={(e) => setName(e.target.value)}/>
+           <input type='text' value={name} onChange={(e) => setName(e.target.value)} required/>
             <label>Email: </label>
             <input type='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
             <button className='button radius block' onClick={editData} disabled={loading}>{ loading ? 'Loading...' : 'Apply Changes'}</button>
