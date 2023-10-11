@@ -59,6 +59,10 @@ export default function Account() {
          setSameEmail(false)
         }
 
+        if(name[0] =' '){
+            return;
+        }
+
         const data = {
             name,
             email,
