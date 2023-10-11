@@ -62,6 +62,11 @@ export default function Account() {
         if(name[0] == ' ' || name == ''){
             setError('Enter a valid name')
             setLoading(false)
+            setTimeout(() => {
+              setError(false);
+            
+              }
+          ,1200)
             return;
         }
 
