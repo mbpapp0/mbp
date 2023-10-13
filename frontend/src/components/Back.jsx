@@ -2,6 +2,7 @@ import backButton from '../icons/back.png';
 
 export default function Back() {
 
+    // This is the Back componnet used all ovet the app
     const back = () => {
       window.history.go(-1)
     }
