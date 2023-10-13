@@ -2,6 +2,7 @@ import info from '../icons/info.png';
 import { useState } from 'react';
 
 export default function InfoCard(props) {
+    // This component displays the app version and information about the page the user is on. 
     const [hover, setHover] = useState(false);
     return(
         <div className='info'>
