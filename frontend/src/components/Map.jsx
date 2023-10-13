@@ -2,6 +2,7 @@ import map from '../icons/map.png';
 import { useState } from 'react';
 
 export default function Map(props) {
+    // This displays the user location
     const [hover, setHover] = useState(false);
     return(
         <div className='info'>
