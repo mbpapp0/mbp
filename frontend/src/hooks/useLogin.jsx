@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useAuthContext } from './useAuthContext';
+import server from '../server';
 
 export const useLogin = () => {
     const [error, setError] = useState(null);
@@ -12,8 +13,8 @@ export const useLogin = () => {
         setError(null);
 
         
-        const response = await fetch('https://mbp-server.onrender.com/api/users/login', {
-            method: 'POST',
+        const response = await fetch(`${server}/api/users/login`, {
+            method: 'POST'
             body: JSON.stringify({ email, password }),
             headers: {
                 'Content-Type': 'application/json'
