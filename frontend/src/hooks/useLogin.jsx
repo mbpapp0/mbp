@@ -13,7 +13,7 @@ export const useLogin = () => {
         setError(null);
 
         
-        const response = await fetch(`${server}/api/users/login`, {
+        const response = await fetch('/api/users/login', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
             headers: {
