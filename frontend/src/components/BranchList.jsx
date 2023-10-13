@@ -3,6 +3,8 @@ import Trash from '../icons/trash.png'
 import { Link } from 'react-router-dom'
 
 export default function BranchList({ branch, deleteBranch }) {
+    // This component returns the branch list
+    
     return(
         <div className="view_branches">
                     <p>{ branch.name }</p>
