@@ -3,6 +3,7 @@ import { useAuthContext } from './useAuthContext';
 import server from '../server';
 
 export const useLogin = () => {
+    // This is the login functionality 
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(null);
     const [sent, setSent] = useState(null);
