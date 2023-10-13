@@ -1,7 +1,7 @@
 import { createContext, useEffect, useReducer } from 'react'
 
 export const AuthContext = createContext();
-
+// Context for user login and logout.
 export const AuthReducer = (state, action) => {
     switch(action.type){
         case 'LOGIN':
