@@ -28,7 +28,6 @@ import UserInfo from './pages/UserInfo';
 import Report from './pages/Report'
 import ClientInfo from './pages/ClientInfo';
 import EditUser from './pages/EditUser';
-import SysInfo from './Infopages/SysInfo';
 import MasterRoster from './pages/MasterRoster';
 import Roster from './pages/Roster';
 import RosterMonth from './pages/RosterMonth';
@@ -80,7 +79,6 @@ export default function App() {
           <Route path='/users/:id' element={<UserInfo />} />
           <Route path='/clients/:id' element={<ClientInfo />} />
           <Route path='/edituser/:id' element={<EditUser />} />
-          <Route path='/info' element={<SysInfo />} />
           <Route path='/roster/:id' element={<Roster />} />
           <Route path='/masterroster' element={<MasterRoster />} />
           <Route path='/rosterbymonth/:str' element={<RosterMonth />} />
