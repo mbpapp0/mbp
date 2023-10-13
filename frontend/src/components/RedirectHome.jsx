@@ -1,7 +1,7 @@
 import backButton from '../icons/back.png';
 
 export default function RedirectHome() {
-
+    // This redirects the user to the homepage 
     const back = () => {
         window.location.assign('/');
     }
