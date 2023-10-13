@@ -3,6 +3,7 @@ import SignatureCanvas from 'react-signature-canvas';
 import { useState } from 'react'
 
 export default function Signature(){
+    // This components enables users to sign across the app.
     const [sign, setSign] = useState();
 
     const [image, setImage] = useState();
