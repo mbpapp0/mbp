@@ -8,7 +8,7 @@ export default function Header() {
     const [show, setShow] = useState(false);
     const { dispatch } = useAuthContext();
    
-
+    // Logout function
     const logout = () => {
         if(!user){
          return;
@@ -20,8 +20,8 @@ export default function Header() {
     }
  
     
-   
-    const inactivityTimeoutRef = useRef(null);
+// Timer that logs out inactive uses  
+const inactivityTimeoutRef = useRef(null);
   const logoutTimeoutRef = useRef(null);
     
     const startInactivityTimer = () => {
@@ -92,7 +92,8 @@ export default function Header() {
                  <button className='button header_buttons' onClick={logout}>Logout</button>
               </div>
              }
-             
+
+            {/* This displays a warning before it logs out a user */}
              { show && user && (
                 <div className='guide_confirm'>
                     <h4 className='guide_confirm_title' style={{marginBlock: '2rem'}}>Your session will end in 2 minutes due to activity</h4>
