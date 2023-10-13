@@ -14,7 +14,7 @@ export const useLogin = () => {
         setError(null);
 
         
-        const response = await fetch('https://mbpserver.onrender.com/api/users/login', {
+        const response = await fetch('https://mbp-server.onrender.com/api/users/login', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
             headers: {
