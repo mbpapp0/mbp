@@ -1,6 +1,7 @@
 import React from 'react';
 
 const PasswordRules = () => {
+  // This contains password rules for user creation.
   const styles = {
     container: {
       background: 'black',
