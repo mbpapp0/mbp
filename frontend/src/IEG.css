@@ -67,9 +67,9 @@
 
 
 .name_input {
-     border: none;
-     outline: none;
-     border-radius: 0;
+     border: none !important;
+     outline: none !important;
+     border-radius: 0 !important;
   }
     
     .case_number {
