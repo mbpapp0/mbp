@@ -1,0 +1,112 @@
+.center {
+      text-align: center;
+    }
+    
+    body {
+      font-family: Arial;
+      font-size: 8pt;      
+    }
+    
+    .part_i_header {
+      background: black;
+      color: white;
+      padding: 1px 10px;
+    }
+    
+    .flex {
+      display: flex;
+    }
+    
+    td {
+      border: 1px solid;
+      padding: 2px;
+    }
+    
+    sup {
+      font-size: 9px;
+    }
+    
+    table {
+      border-collapse:  collapse;;
+      width: 21cm;
+      height: 29.7cm;
+      padding: 2cm;      
+      margin: 0 auto;
+    }
+    
+    
+    #red {
+      color: red;
+    }
+    
+    #highlighted {
+      background: yellow;
+    }
+    
+    #highlighted_header {
+      background: black;
+      color: white;
+    }
+    
+    .block {
+      display: block;
+    }
+    
+    .part_header {
+      background: black;
+      color: white;
+      padding: 0.5rem 0.75rem;
+    }
+    
+    .name {
+      height: 1rem;
+      width: 45%;
+      vertical-align: bottom; 
+      text-align: left;
+    }
+    
+    .case_number {
+      width: 20%;
+    }
+    
+    .check_td td{
+      text-align: center;
+    }
+    
+    .no_right {
+      border-right: none;
+    }
+    
+    .no_left {
+      border-left: none;
+    }
+    
+    .underline_input {
+     border: none;
+     border-bottom: 1px solid black;
+     outline: none;
+     border-radius: 0;
+   }
+   
+   .no_border td{
+     border-bottom: none;
+     border-top: none;
+   }
+
+  .size td:first-child {
+    width: 33%;
+  }
+  
+    .size td:not(:first-child) {
+    width: 16.5%;
+  }
+  
+  .sign div{
+     margin-bottom: 1rem;
+  }
+  
+  .sign_input {
+    width: 20rem;
+    margin-right: 3rem;
+  }
+
