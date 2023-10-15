@@ -181,35 +181,36 @@ export default function IEG() {
 
 <tr className="no_border">
   <td colSpan={3}>2. <input type="text" className="underline_input" value={data.HouseholdMemberTwoName || '  '}/></td>
-  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberTwoWorkEarnings || 0} />/<input type="text" className="underline_input" value={data.memberTwoIncomeFreq} /></td>
-  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberTwoWelfare_Alimony_CS  || 0}/>/<input type="text" className="underline_input" value={data.memberTwoIncomeFreq} /></td>
-  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberTwoSSPR || 0} />/<input type="text" className="underline_input" value={data.memberTwoIncomeFreq} /></td>
-  <td>$<input type="number" className="underline_input"  value={data.HouseholdMemberTwoOther || 0} />/<input type="text" className="underline_input" value={data.memberTwoIncomeFreq} /></td>
+  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberTwoWorkEarnings || 0} />/<input type="text" className="underline_input" value={data.HouseholdMemberTwoName ? data.memberTwoIncomeFreq : ""} /></td>
+  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberTwoWelfare_Alimony_CS  || 0}/>/<input type="text" className="underline_input" value={data.HouseholdMemberTwoName ? data.memberTwoIncomeFreq: ""} /></td>
+  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberTwoSSPR || 0} />/<input type="text" className="underline_input" value={data.HouseholdMemberTwoName ? data.memberTwoIncomeFreq : ""} /></td>
+  <td>$<input type="number" className="underline_input"  value={data.HouseholdMemberTwoOther || 0} />/<input type="text" className="underline_input" value={data.HouseholdMemberTwoName ? data.memberTwoIncomeFreq : ""} /></td>
 </tr>
 
 <tr className="no_border">
   <td colSpan={3}>3. <input type="text" className="underline_input" value={data.HouseholdMemberThreeName || '  '}/></td>
-  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberThreeWorkEarnings || 0} />/<input type="text" className="underline_input" value={data.memberThreeIncomeFreq} /></td>
-  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberThreeWelfare_Alimony_CS  || 0}/>/<input type="text" className="underline_input" value={data.memberThreeIncomeFreq} /></td>
-  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberThreeSSPR || 0} />/<input type="text" className="underline_input" value={data.memberThreeIncomeFreq} /></td>
-  <td>$<input type="number" className="underline_input"  value={data.HouseholdMemberThreeOther || 0} />/<input type="text" className="underline_input" value={data.memberThreeIncomeFreq} /></td>
+  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberThreeWorkEarnings || 0} />/<input type="text" className="underline_input" value={data.HouseholdMemberThreeName ? data.memberThreeIncomeFreq : ""} /></td>
+  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberThreeWelfare_Alimony_CS  || 0}/>/<input type="text" className="underline_input" value={data.HouseholdMemberThreeName ? data.memberThreeIncomeFreq: ""} /></td>
+  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberThreeSSPR || 0} />/<input type="text" className="underline_input" value={data.HouseholdMemberThreeName ? data.memberThreeIncomeFreq : ""} /></td>
+  <td>$<input type="number" className="underline_input"  value={data.HouseholdMemberThreeOther || 0} />/<input type="text" className="underline_input" value={data.HouseholdMemberThreeName ? data.memberThreeIncomeFreq : ""} /></td>
 </tr>
 
 <tr className="no_border">
   <td colSpan={3}>4. <input type="text" className="underline_input" value={data.HouseholdMemberFourName || '  '}/></td>
-  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberFourWorkEarnings || 0} />/<input type="text" className="underline_input" value={data.memberFourIncomeFreq} /></td>
-  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberFourWelfare_Alimony_CS  || 0}/>/<input type="text" className="underline_input" value={data.memberFourIncomeFreq} /></td>
-  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberFourSSPR || 0} />/<input type="text" className="underline_input" value={data.memberFourIncomeFreq} /></td>
-  <td>$<input type="number" className="underline_input"  value={data.HouseholdMemberFourOther || 0} />/<input type="text" className="underline_input" value={data.memberFourIncomeFreq} /></td>
+  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberFourWorkEarnings || 0} />/<input type="text" className="underline_input" value={data.HouseholdMemberFourName ? data.memberFourIncomeFreq : ""} /></td>
+  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberFourWelfare_Alimony_CS  || 0}/>/<input type="text" className="underline_input" value={data.HouseholdMemberFourName ? data.memberFourIncomeFreq: ""} /></td>
+  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberFourSSPR || 0} />/<input type="text" className="underline_input" value={data.HouseholdMemberFourName ? data.memberFourIncomeFreq : ""} /></td>
+  <td>$<input type="number" className="underline_input"  value={data.HouseholdMemberFourOther || 0} />/<input type="text" className="underline_input" value={data.HouseholdMemberFourName ? data.memberFourIncomeFreq : ""} /></td>
 </tr>
 
 <tr className="no_border">
   <td colSpan={3}>5. <input type="text" className="underline_input" value={data.HouseholdMemberFiveName || '  '}/></td>
-  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberFiveWorkEarnings || 0} />/<input type="text" className="underline_input" value={data.memberFiveIncomeFreq} /></td>
-  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberFiveWelfare_Alimony_CS  || 0}/>/<input type="text" className="underline_input" value={data.memberFiveIncomeFreq} /></td>
-  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberFiveSSPR || 0} />/<input type="text" className="underline_input" value={data.memberFiveIncomeFreq} /></td>
-  <td>$<input type="number" className="underline_input"  value={data.HouseholdMemberFiveOther || 0} />/<input type="text" className="underline_input" value={data.memberFiveIncomeFreq} /></td>
+  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberFiveWorkEarnings || 0} />/<input type="text" className="underline_input" value={data.HouseholdMemberFiveName ? data.memberFiveIncomeFreq : ""} /></td>
+  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberFiveWelfare_Alimony_CS  || 0}/>/<input type="text" className="underline_input" value={data.HouseholdMemberFiveName ? data.memberFiveIncomeFreq: ""} /></td>
+  <td>$<input type="number" className="underline_input" value={data.HouseholdMemberFiveSSPR || 0} />/<input type="text" className="underline_input" value={data.HouseholdMemberFiveName ? data.memberFiveIncomeFreq : ""} /></td>
+  <td>$<input type="number" className="underline_input"  value={data.HouseholdMemberFiveOther || 0} />/<input type="text" className="underline_input" value={data.HouseholdMemberFiveName ? data.memberFiveIncomeFreq : ""} /></td>
 </tr>
+
 
       </tbody>
     </table>
