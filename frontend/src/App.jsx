@@ -33,7 +33,8 @@ import Roster from './pages/Roster';
 import RosterMonth from './pages/RosterMonth';
 import Excel from './pages/Excel';
 import Account from './pages/Account';
-import IEGForm from './pages/IEGForm'
+import IEGForm from './pages/IEGForm';
+import IEG from './IEG';
 import PdfComponent from './pages/PdfComponent.jsx'
 import CreateClient from './pages/CreateClient.jsx'
 import SignForm from './pages/SignForm.jsx'
@@ -85,6 +86,7 @@ export default function App() {
           <Route path='/excel' element={<Excel />} />
           <Route path='/account/:id' element={<Account />} />
           <Route path='/print/:id' element={<IEGForm />} />
+          <Route path='/prints/:id' element={<IEG />} />
           <Route path='/pdf' element={<PdfComponent />} />
           <Route path='/createclient/:id' element={<CreateClient />} />
           <Route path='/pending' element={<PendingForm />} />
