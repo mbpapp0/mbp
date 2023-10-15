@@ -64,6 +64,13 @@
       vertical-align: bottom; 
       text-align: left;
     }
+
+
+.name_input {
+     border: none;
+     outline: none;
+     border-radius: 0;
+  }
     
     .case_number {
       width: 20%;
