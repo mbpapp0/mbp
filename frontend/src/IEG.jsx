@@ -88,8 +88,8 @@ export default function IEG() {
 </tr>
 
 <tr className="check_td">
-        <td><input type="text" value={data.childOneName} /></td>
-        <td><input type="text" value={data.childOneID} /></td>
+        <td><input type="text" className="name_input" value={data.childOneName} /></td>
+        <td><input type="text" className="name_input"  value={data.childOneID} /></td>
         <td><input type="checkbox" checked={data.childOneHeadStart}/></td>
         <td><input type="checkbox" checked={data.childOneForsterChild}/></td>
          <td><input type="checkbox" checked={data.childOneMigrant}/></td>
@@ -98,8 +98,8 @@ export default function IEG() {
        
       </tr>
       <tr className="check_td">
-        <td><input type="text" value={data.childTwoName} /></td>
-<td><input type="text" value={data.childTwoID} /></td>
+        <td><input type="text" className="name_input"  value={data.childTwoName} /></td>
+<td><input type="text" className="name_input" value={data.childTwoID} /></td>
 <td><input type="checkbox" checked={data.childTwoHeadStart}/></td>
 <td><input type="checkbox" checked={data.childTwoForsterChild}/></td>
 <td><input type="checkbox" checked={data.childTwoMigrant}/></td>
@@ -107,8 +107,8 @@ export default function IEG() {
 <td><input type="checkbox" checked={data.childTwoHomeless}/></td>
       </tr>
       <tr className="check_td">
-         <td><input type="text" value={data.childThreeName} /></td>
-<td><input type="text" value={data.childThreeID} /></td>
+         <td><input type="text" className="name_input" value={data.childThreeName} /></td>
+<td><input type="text" className="name_input" value={data.childThreeID} /></td>
 <td><input type="checkbox" checked={data.childThreeHeadStart}/></td>
 <td><input type="checkbox" checked={data.childThreeForsterChild}/></td>
 <td><input type="checkbox" checked={data.childThreeMigrant}/></td>
@@ -116,8 +116,8 @@ export default function IEG() {
 <td><input type="checkbox" checked={data.childThreeHomeless}/></td>
       </tr>
       <tr className="check_td">
-        <td><input type="text" value={data.childFourName} /></td>
-<td><input type="text" value={data.childFourID} /></td>
+        <td><input type="text" className="name_input"  value={data.childFourName} /></td>
+<td><input type="text" className="name_input"  value={data.childFourID} /></td>
 <td><input type="checkbox" checked={data.childFourHeadStart}/></td>
 <td><input type="checkbox" checked={data.childFourForsterChild}/></td>
 <td><input type="checkbox" checked={data.childFourMigrant}/></td>
@@ -125,8 +125,8 @@ export default function IEG() {
 <td><input type="checkbox" checked={data.childFourHomeless}/></td>
       </tr>
       <tr className="check_td">
-       <td><input type="text" value={data.childFiveName} /></td>
-<td><input type="text" value={data.childFiveID} /></td>
+       <td><input type="text" className="name_input" value={data.childFiveName} /></td>
+<td><input type="text" className="name_input" value={data.childFiveID} /></td>
 <td><input type="checkbox" checked={data.childFiveHeadStart}/></td>
 <td><input type="checkbox" checked={data.childFiveForsterChild}/></td>
 <td><input type="checkbox" checked={data.childFiveMigrant}/></td>
