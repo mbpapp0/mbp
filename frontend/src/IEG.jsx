@@ -224,7 +224,7 @@ export default function IEG() {
     </div>
 
     <div>
-      Last four Digits of Social Security Number XXX-X <span><input type="number" className="underline_input" value={data.ssn}/></span> <span><input type="checkbox" />I do not have a Social Security Number</span>
+      Last four Digits of Social Security Number XXX-X <span><input type="number" className="underline_input" value={data.ssn}/></span> <span><input type="checkbox" check={data.noSSN ? true : false} />I do not have a Social Security Number</span>
     </div>
   </td>
 </tr>
