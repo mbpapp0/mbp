@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas'
+import html2canvas from 'html2canvas';
+import './IEG.css';
 
 export default function IEG() {
   const user = JSON.parse(localStorage.getItem('user'));
