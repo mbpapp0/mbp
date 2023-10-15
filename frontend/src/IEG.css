@@ -17,9 +17,9 @@
       display: flex;
     }
     
-    td {
-      border: 1px solid;
-      padding: 2px;
+   .print_tablr td {
+      border: 1px solid !important;
+      padding: 2px !important;
     }
     
     sup {
