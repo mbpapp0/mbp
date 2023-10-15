@@ -82,10 +82,10 @@
     }
     
     .underline_input {
-     border: none;
-     border-bottom: 1px solid black;
-     outline: none;
-     border-radius: 0;
+     border: none !important;
+     border-bottom: 1px solid black !important;
+     outline: none !important;
+     border-radius: 0 !important;
    }
    
    .no_border td{
