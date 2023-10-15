@@ -211,6 +211,23 @@ export default function IEG() {
   <td>$<input type="number" className="underline_input"  value={data.HouseholdMemberFiveOther || 0} />/<input type="text" className="underline_input" value={data.HouseholdMemberFiveName ? data.memberFiveIncomeFreq : ""} /></td>
 </tr>
 
+        <tr>
+  <td colSpan={7}>
+    <strong><span id="highlighted">C. Total Household Members (Adults and Children) listed in Part I and Part I</span><input type="number" className="underline_input" value={data.totalHouseHoldMembers}/></strong>
+  </td>
+</tr>
+
+<tr>
+  <td colSpan={7}>
+    <div>
+      <strong><span id="highlighted">Social Security Number.</span></strong> If income is listed or completed in Part II, the adult completing the form must also list the last four digits of his or her Social Security Number or check the “I don’t have a Social Security Number” box below. (See Privacy Act Statement on next page). <span id="red">Failure to complete this section, if income is listed, will result in the denial of free or reduced eligibility.</span>
+    </div>
+
+    <div>
+      Last four Digits of Social Security Number XXX-X <span><input type="number" className="underline_input" value={data.ssn}/></span> <span><input type="checkbox" />I do not have a Social Security Number</span>
+    </div>
+  </td>
+</tr>
 
       </tbody>
     </table>
