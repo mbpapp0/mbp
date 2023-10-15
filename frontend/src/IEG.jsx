@@ -52,7 +52,7 @@ export default function IEG() {
 
     return(
     <div>
-      <h3 clasName="center">{branchName}.</h3>
+      <h3 clasName="center">{branchName} Branch.</h3>
       <h3 className="center">CACFP Meal Benefit Income Eligibility Statement</h3>
   <form>
     <table>
