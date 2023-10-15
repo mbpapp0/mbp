@@ -8,6 +8,7 @@ export default function IEG() {
   const { id } = useParams();
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(false);
+  const [branchName, setBrancName] = useState("")
   
   const download = () => {
     const capture = document.querySelector('.container');
