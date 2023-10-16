@@ -115,12 +115,13 @@
   }
   .sign img {
       height: 33px;
-      display: block;
   }
 
 
   .sign div{
      margin-bottom: 1rem;
+     display: flex;
+     flex-direction: column;
   }
   
   .sign_input {
@@ -131,4 +132,5 @@
 .personal_data {
       height: 33px;
 }
+
 
