@@ -114,7 +114,8 @@
     width: 16.5%;
   }
   .sign img {
-        height: 33px;
+      height: 33px;
+      display: block;
   }
 
 
