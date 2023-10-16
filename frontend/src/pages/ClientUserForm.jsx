@@ -128,7 +128,7 @@ export default function ClientUserForm() {
     const [dayCenterSaturday, setDayCenterSaturday] = useState(false);
 
     const [breakFast, setBreakFast] = useState(false);
-    const [snack, setSnack] = useState(false);
+    const [snackAM, setSnackAM] = useState(false);
     const [lunch, setLunch] = useState(false);
     const [snackPM, setSnackPM] = useState(false);
     const [supper, setSupper] = useState(false);
@@ -1072,7 +1072,8 @@ export default function ClientUserForm() {
                 setDayCenterFriday(false);
                 setDayCenterSaturday(false);
                 setBreakFast(false);
-                setSnackLunch(false);
+                setSnackAM(false);
+                setLunch(false)
                 setSnackPM(false);
                 setSupper(false);
                 setSnack(false);
@@ -1671,7 +1672,7 @@ export default function ClientUserForm() {
                 <p>Check ( ) the meals your child will normally receive while in care:</p>
                 <div className="flex align">
                     <p>Breakfast<input type='checkbox' checked={breakFast} onChange={() => setBreakFast(!breakFast)}/></p>
-                    <p>Snack AM <input type='checkbox' checked={snack} onChange={() => setSnack(!snack)}/></p>
+                    <p>Snack AM <input type='checkbox' checked={snackAM} onChange={() => setSnack(!snackAM)}/></p>
                     <p>Lunch <input type='checkbox' checked={lunch} onChange={() => setLunch(!lunch)}/></p>
                     <p>PM Snack <input type='checkbox' checked={snackPM} onChange={() => setSnackPM(!snackPM)}/></p>
                     <p>Supper <input type='checkbox' checked={supper} onChange={() => setSupper(!supper)}/></p>
