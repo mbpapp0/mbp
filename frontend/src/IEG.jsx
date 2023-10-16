@@ -50,6 +50,7 @@ export default function IEG() {
   }
   
       useEffect(() => {
+        getBranchName();
         getClient();
     }, [])
     
@@ -252,7 +253,7 @@ export default function IEG() {
         <span>
           <input type="text" value={data.timeTo}className="underline_input" />
         </span>
-        [data.timeToHour].
+        [{data.timeToHour}].
         <span>
           <input type="checkbox" checked={data.beforeAfterCare}/>
         </span>
@@ -331,7 +332,7 @@ export default function IEG() {
       </p>
       
       <p>
-        Total income: <span><input type="number" className="underline_input" value={data.totalHouseHoldIncome}/></span><strong>Per:</strong> 
+        Total income: <span><input type="number" className="underline_input" value={data.totalHouseHoldIncome / 12}/></span><strong>Per:</strong> 
         <span><input type="checkbox" /></span> Week 
         <span><input type="checkbox" /></span> Every 2 weeks 
         <span><input type="checkbox" /></span> Twice a month 
