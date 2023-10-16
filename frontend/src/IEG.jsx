@@ -14,7 +14,7 @@ export default function IEG() {
   const getBranchName = async() => {
     const response = await fetch(`https://mbp-server.onrender.com/api/branches/${user.branch}`);
     const json = await response.json();
-        setBranchName(json.name);
+     setBranchName(json.name);
   }
   
   const download = () => {
@@ -332,7 +332,7 @@ export default function IEG() {
       </p>
       
       <p>
-        Total income: <span><input type="number" className="underline_input" value={data.totalHouseHoldIncome / 12}/></span><strong>Per:</strong> 
+        Total income: <span><input type="number" className="underline_input" value={(data.totalHouseHoldIncome / 12).toFixed(2)}/></span><strong>Per:</strong> 
         <span><input type="checkbox" /></span> Week 
         <span><input type="checkbox" /></span> Every 2 weeks 
         <span><input type="checkbox" /></span> Twice a month 
