@@ -96,8 +96,8 @@
    }
    
    .no_border td{
-     border-bottom: none;
-     border-top: none;
+     border-bottom: none !important;
+     border-top: none !important;
    }
 
   .size td:first-child {
