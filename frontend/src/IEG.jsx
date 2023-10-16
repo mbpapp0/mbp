@@ -247,7 +247,7 @@ export default function IEG() {
     <div>
       <h4>
         <span id="highlighted_header">PART III: Enrollment Information:</span>
-        <span id="red">Children Only</span>
+        <span id="red italic"><strong>Children Only</strong></span>
       </h4>
       <p>
         My child is normally in attendance at the facility between the hours of
@@ -260,9 +260,9 @@ export default function IEG() {
         </span>
         [{data.timeToHour}].
         <span>
-          <input type="checkbox" checked={data.beforeAfterCare}/>
+          (<input type="checkbox" checked={data.beforeAfterCare}/>)
         </span>
-        ( )Check here if only before/after school care is provided.
+        Check here if only before/after school care is provided.
       </p>
 
       <p>
@@ -390,7 +390,7 @@ export default function IEG() {
           <input type="text" className="underline_input sign_input"/>
           </div>
           <label>Date:</label>
-          <input type="text" className="underline_input" value={data.folOfficialSignDate}/>t
+          <input type="text" className="underline_input" value={data.folOfficialSignDate}/>
           
         </div>
       </div>
