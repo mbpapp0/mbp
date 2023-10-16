@@ -264,6 +264,38 @@ export default function IEG() {
   </td>
 </tr>
 
+        <tr>
+  <td colSpan={7}>
+    <div>
+      <h4><span id="highlighted_header">PART IV: Signature</span></h4>
+      <p>
+        I certify that all information on this form is true and that all income is reported. I understand that the center or day care home will get Federal funds based on the information I give. I understand that CACFP officials may verify the information. I understand that if I purposefully give false information, the participant receiving meals may lose the meal benefits, and I may be prosecuted. This signature also acknowledges that the child(ren) or adult listed on the form in Part I are enrolled for care. <span id="red"> If not completed fully and signed, the participant will be placed in the Paid category.</span>
+      </p>
+      
+      <label>Signature:</label>
+      <img src ={data.signature} alt="sign" />
+      <input type="text" className="underline_input"/>
+      <label>Print Name:</label>
+      <input type="text" className="underline_input" value={data.printName}/>
+      <label>Date:</label>
+      <input type="text" className="underline_input" value={data.signDate}/>
+      <label>Address</label>
+      <input type="text" className="underline_input" value={data.address}/>
+      <label>City:</label>
+      <input type="text" className="underline_input" value={data.city}/>
+      <label>State:</label>
+      <input type="text" className="underline_input" value={data.state}/>
+      <label>Zip</label>
+      <input type="number" className="underline_input" value={data.zipCode}/>
+      <label>Phone</label>
+      <input type="number" className="underline_input" value={data.phoneNumber}/>
+      <p id="red">
+        *This application is a revision of USDA’s newly released meal benefit prototype and meets all legal requirements and reflects design best practices identified by USDA through focus testing and other research.
+      </p>
+    </div>
+  </td>
+</tr>
+
       </tbody>
     </table>
   </form>
