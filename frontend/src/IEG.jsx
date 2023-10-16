@@ -40,7 +40,7 @@ export default function IEG() {
         await setData(json[0]);
      
        if(response.ok){
-       window.print();
+       // window.print();
        }
     }
 
