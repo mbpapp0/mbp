@@ -352,7 +352,7 @@ export default function IEG() {
           </div>
  
           <div>
-            Eligibility: check () one Free <span><input type="checkbox" checked={ data.eligibility == "Free" ? true : false }/></span> Reduced <span><input type="checkbox" checked={ data.eligibility == "Reduced" ? true : false }/></span> Paid-<span id="highlighted">Denied</span><span><input type="checkbox" checked={ data.eligibility == "Paid" ? true : false }/></span>
+            Eligibility: Check ( ) one Free <span><input type="checkbox" checked={ data.eligibility == "Free" ? true : false }/></span> Reduced <span><input type="checkbox" checked={ data.eligibility == "Reduced" ? true : false }/></span> Paid-<span id="highlighted">Denied</span><span><input type="checkbox" checked={ data.eligibility == "Paid" ? true : false }/></span>
           </div>
         </div>
       </p>
@@ -360,35 +360,24 @@ export default function IEG() {
       <p>
         <span id="highlighted">When more than one person is performing CACFP duties, there must be at least two signatures on this form: one signature from the Determining Official (the official who determined initial income classification) and one signature from the Confirming Official (the official who verified the form’s accuracy).</span>
       </p>
-      
-      <div className="sign">
-        <div>
+
+      <div>
           <label>Determining Official’s Signature:</label>
-          <div>
            <img src={data.detOfficialSignature} />
             {/*  <input type="text" className="underline_input sign_input" /> */}
-            </div>
           <label>Date:</label>
           <input type="text" className="underline_input" value={data.detOfficialSignDate}/>
-        </div>
         
-        <div className="sign">
         
           <label>Confirming Official’s Signature: </label>
-          <div>
            <img src={data.conOfficialSignature} />
             {/* <input type="text" className="underline_input sign_input"/> */}
-           </div>
           <label>Date:</label>
-             <input type="text" className="underline_input" value={data.conOfficialSignDate}/>
-        </div>
+             <input type="text" className="underline_input" value={data.conOfficialSignDate}/
         
-        <div className="sign">
           <label>Follow Up Official’s Signature:</label>
-          <div>
           <img src={data.folOfficialSignature} />
             {/* <input type="text" className="underline_input sign_input"/> */}
-          </div>
           <label>Date:</label>
           <input type="text" className="underline_input" value={data.folOfficialSignDate}/>
           
