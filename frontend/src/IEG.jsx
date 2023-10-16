@@ -278,7 +278,7 @@ export default function IEG() {
 
         <tr>
   <td colSpan={7}>
-    <div>
+    <div className="personal_data">
       <h4><span id="highlighted_header">PART IV: Signature</span></h4>
       <p>
         I certify that all information on this form is true and that all income is reported. I understand that the center or day care home will get Federal funds based on the information I give. I understand that CACFP officials may verify the information. I understand that if I purposefully give false information, the participant receiving meals may lose the meal benefits, and I may be prosecuted. This signature also acknowledges that the child(ren) or adult listed on the form in Part I are enrolled for care. <span id="red"> If not completed fully and signed, the participant will be placed in the Paid category.</span>
