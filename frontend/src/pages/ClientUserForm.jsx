@@ -927,10 +927,11 @@ export default function ClientUserForm() {
                 setDayCenterFriday(false);
                 setDayCenterSaturday(false);
                 setBreakFast(false);
-                setSnackLunch(false);
+                setSnackAM(false);
+                setLunch(false);
                 setSnackPM(false);
                 setSupper(false);
-                setSnack(false);
+                setEveningSnack(false);
                 setLatino(false);
                 setNonLatino(false);
                 setAsian(false);
