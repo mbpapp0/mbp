@@ -128,10 +128,11 @@ export default function ClientUserForm() {
     const [dayCenterSaturday, setDayCenterSaturday] = useState(false);
 
     const [breakFast, setBreakFast] = useState(false);
-    const [snackLunch, setSnackLunch] = useState(false);
+    const [snack, setSnack] = useState(false);
+    const [lunch, setLunch] = useState(false);
     const [snackPM, setSnackPM] = useState(false);
     const [supper, setSupper] = useState(false);
-    const [snack, setSnack] = useState(false);
+    const [eveningSnack, setEveningSnack] = useState(false);
 
     const [signature, setSignature] = useState('');
     const [printName, setPrintName] = useState('');
@@ -1667,11 +1668,12 @@ export default function ClientUserForm() {
             <div className="flex days">
                 <p>Check ( ) the meals your child will normally receive while in care:</p>
                 <div className="flex align">
-                    <p>Breakfast AM <input type='checkbox' checked={breakFast} onChange={() => setBreakFast(!breakFast)}/></p>
-                    <p>Snack Lunch <input type='checkbox' checked={snackLunch} onChange={() => setSnackLunch(!snackLunch)}/></p>
+                    <p>Breakfast<input type='checkbox' checked={breakFast} onChange={() => setBreakFast(!breakFast)}/></p>
+                    <p>Snack AM <input type='checkbox' checked={snack} onChange={() => setSnack(!snack)}/></p>
+                    <p>Lunch <input type='checkbox' checked={lunch} onChange={() => setLunch(!lunch)}/></p>
                     <p>PM Snack <input type='checkbox' checked={snackPM} onChange={() => setSnackPM(!snackPM)}/></p>
-                    <p>Supper Evening <input type='checkbox' checked={supper} onChange={() => setSupper(!supper)}/></p>
-                    <p>Snack<input type='checkbox' checked={snack} onChange={() => setSnack(!snack)}/></p>
+                    <p>Supper <input type='checkbox' checked={supper} onChange={() => setSupper(!supper)}/></p>
+                    <p>Evening Snack<input type='checkbox' checked={eveningSnack} onChange={() => setEveningSnack(!eveningSnack)}/></p>
                 </div>
             </div>
 
