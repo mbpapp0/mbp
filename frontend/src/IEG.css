@@ -99,6 +99,9 @@
      border-bottom: none !important;
      border-top: none !important;
    }
+.no_border input {
+  width: 25px;
+}
 
   .size td:first-child {
     width: 33%;
