@@ -9,7 +9,13 @@ export default function IEG() {
   const { id } = useParams();
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(false);
-  const [branchName, setBranchName] = useState("")
+  const [branchName, setBranchName] = useState("");
+
+  const getBranchName = async() => {
+    const response = await fetch(`https://mbp-server.onrender.com/api/branches/${user.branch}`);
+    const json = await response.json();
+        setBranchName(json.name);
+  }
   
   const download = () => {
     const capture = document.querySelector('.container');
