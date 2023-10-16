@@ -2,9 +2,9 @@
       text-align: center;
     }
     
-    .prinout p, td, span{
-      font-family: Arial;
-      font-size: 8pt;      
+    .prinout{
+  width: 8.5in;
+  height: 11in;
     }
     
     .part_i_header {
