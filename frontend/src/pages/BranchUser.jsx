@@ -140,7 +140,7 @@ export default function BranchUser() {
                                     <td>{client.date }</td>
                                     
                                     <td><Link to={`/clients/${client._id}`}><button className='button radius' style={{paddingInline: '1rem'}}>View</button></Link></td>
-                                    <td><Link to={`/print/${client._id}`}><button className='button radius' style={{paddingInline: '1rem'}}>Print Form</button></Link></td>
+                                    <td><Link to={`/prints/${client._id}`}><button className='button radius' style={{paddingInline: '1rem'}}>Print Form</button></Link></td>
                                 </tr>
                             )
                         })}
