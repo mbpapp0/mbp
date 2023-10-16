@@ -3,8 +3,7 @@
     }
     
     .prinout{
-  width: 8.5in;
-  height: 11in;
+  
     }
     
     .part_i_header {
@@ -127,7 +126,7 @@
     margin-right: 3rem;
   }
 
-.personal_data {
+.personal_data img {
       height: 33px;
 }
 
