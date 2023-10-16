@@ -296,6 +296,28 @@ export default function IEG() {
   </td>
 </tr>
 
+        <tr>
+  <td colSpan={7} className="part_header">PART V: Participant’s Ethnic and Racial Identities (optional)</td>
+</tr>
+
+<tr>
+  <td colSpan={2}>
+    <p>Check () one ethnic identity:</p>
+    <p>
+      Hispanic/ Latino <span><input type="checkbox" checked={data.latino}/></span> Not Hispanic/ Latino <span><input type="checkbox"  checked={data.nonLatino}/></span>
+    </p>
+  </td>
+
+  <td colSpan={5}>
+    <p>Check () one or more racial identities:</p>
+    <p>
+      Asian <span><input type="checkbox" checked={data.asian} /></span> White <span><input type="checkbox" checked={data.white}/></span> Black or African American <span><input type="checkbox" checked={data.black} /></span>
+      Indian or Alaska Native <span><input type="checkbox" checked={data.indian}/></span> Hawaiian or other Pacific Islander <span><input type="checkbox" checked={data.hawaiian}/></span>
+    </p>
+  </td>
+</tr>
+
+
       </tbody>
     </table>
   </form>
