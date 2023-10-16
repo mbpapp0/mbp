@@ -332,7 +332,7 @@ export default function IEG() {
         <span><input type="checkbox" /></span> Month 
         <span><input type="checkbox" checked={true}/></span> Year 
         <strong>Household Size:</strong> 
-        <span><input type="number" className="underline_input" value=data.{totalHouseHoldMembers}/></span> 
+        <span><input type="number" className="underline_input" value={data.totalHouseHoldMembers}/></span> 
 
         <div className="flex">
           <div>
