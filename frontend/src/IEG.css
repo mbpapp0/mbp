@@ -27,9 +27,7 @@
     }
     
     .print_table  {
-      border-collapse:  collapse;;
-      width: 21cm;
-      height: 29.7cm;
+      border-collapse:  collapse;
       padding: 2cm;      
       margin: 0 auto;
     }
