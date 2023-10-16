@@ -317,6 +317,67 @@ export default function IEG() {
   </td>
 </tr>
 
+        <tr>
+  <td colSpan={7}>
+    <div>
+      <p>
+        Official Use Only Section for Provider: Annual Income Conversion: Weekly x 52, Every 2 weeks x 26, Twice a month x 24, Monthly x 12
+      </p>
+      
+      <p>
+        Total income: <span><input type="number" className="underline_input" value={data.totalHouseHoldIncome}/></span><strong>Per:</strong> 
+        <span><input type="checkbox" /></span> Week 
+        <span><input type="checkbox" /></span> Every 2 weeks 
+        <span><input type="checkbox" /></span> Twice a month 
+        <span><input type="checkbox" /></span> Month 
+        <span><input type="checkbox" checked={true}/></span> Year 
+        <strong>Household Size:</strong> 
+        <span><input type="number" className="underline_input" value=data.{totalHouseHoldMembers}/></span> 
+
+        <div className="flex">
+          <div>
+            Categorical Eligibility: check () if applicable  <span><input type="checkbox" /></span>
+          </div>
+ 
+          <div>
+            Eligibility: check () one Free <span><input type="checkbox" checked={ data.eligibility == "Free" ? true : false }/></span> Reduced <span><input type="checkbox" checked={ data.eligibility == "Reduced" ? true : false }/></span> Paid-<span id="highlighted">Denied</span><span><input type="checkbox" checked={ data.eligibility == "Paid" ? true : false }/></span>
+          </div>
+        </div>
+      </p>
+      
+      <p>
+        <span id="highlighted">When more than one person is performing CACFP duties, there must be at least two signatures on this form: one signature from the Determining Official (the official who determined initial income classification) and one signature from the Confirming Official (the official who verified the form’s accuracy).</span>
+      </p>
+      
+      <div className="sign">
+        <div>
+          <label>Determining Official’s Signature:</label>
+           <img src={data.detOfficialSignature} />
+          <input type="text" className="underline_input sign_input" />
+          <label>Date:</label>
+          <input type="text" className="underline_input" value={data.detOfficialSignDate}/>
+        </div>
+        
+        <div>
+          <label>Confirming Official’s Signature: </label>
+           <img src={data.conOfficialSignature} />
+          <input type="number" className="underline_input sign_input"/>
+          <label>Date:</label>
+          <input type="number" className="underline_input" value={data.conOfficialSignDate}/>
+        </div>
+        
+        <div>
+          <label>Follow Up Official’s Signature:</label>
+          <img src={data.folOfficialSignature} />
+          <input type="number" className="underline_input sign_input"/>
+          <label>Date:</label>
+          <input type="number" className="underline_input" value={data.folOfficialSignDate}/>
+        </div>
+      </div>
+    </div>
+  </td>
+</tr>
+
 
       </tbody>
     </table>
