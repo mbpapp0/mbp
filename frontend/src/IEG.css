@@ -117,6 +117,7 @@
     .size td:not(:first-child) {
     width: 16.5%;
   }
+
   .sign img {
       height: 33px;
   }
