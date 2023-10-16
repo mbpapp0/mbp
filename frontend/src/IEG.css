@@ -112,7 +112,11 @@
     .size td:not(:first-child) {
     width: 16.5%;
   }
-  
+  .sign img {
+        height: 100px;
+  }
+
+
   .sign div{
      margin-bottom: 1rem;
   }
