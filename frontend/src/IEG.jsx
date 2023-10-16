@@ -229,6 +229,41 @@ export default function IEG() {
   </td>
 </tr>
 
+
+        <tr>
+  <td colSpan={7}>
+    <div>
+      <h4>
+        <span id="highlighted_header">PART III: Enrollment Information:</span>
+        <span id="red">Children Only</span>
+      </h4>
+      <p>
+        My child is normally in attendance at the facility between the hours of
+        <span>
+          <input type="text" value={data.timeFrom} className="underline_input" />
+        </span>
+        [{data.timeFromHour}] to
+        <span>
+          <input type="text" value={data.timeTo}className="underline_input" />
+        </span>
+        [data.timeToHour].
+        <span>
+          <input type="checkbox" checked={data.beforeAfterCare}/>
+        </span>
+        ( )Check here if only before/after school care is provided.
+      </p>
+
+      <p>
+        Circle the days your child will normally attend the center: <span class={data.dayCenterSunday ? "day" : ""}>Sunday</span>
+        <span class={data.dayCenterMonday ? "day" : ""}>Monday</span> <span class={data.dayCenterTuesday ? "day" : ""}>Tuesday</span> <span class={data.dayCenterWednesday ? "day" : ""}>Wednesday</span> <span class={data.dayCenterThursday ? "day" : ""}>Thursday</span> <span class={data.dayCenterFriday ? "day" : ""}>Friday</span> <span class={data.dayCenterSaturday ? "day" : ""}>Saturday</span>
+      </p>
+      Circle the meals your child will normally receive while in care:
+      <span class={data.breakFast ? "day" : ""}>Breakfast</span> <span class={data.snackAM ? "day" : ""}>AM Snack</span><span class={data.lunch ? "day" : ""}>Lunch</span><span class={data.snackPM ? "day" : ""}>PM Snack</span> <span class={data.supper ? "day" : ""}>Supper</span> <span class={data.eveningSnack ? "day" : ""}>Evening Snack</span>
+      <p></p>
+    </div>
+  </td>
+</tr>
+
       </tbody>
     </table>
   </form>
