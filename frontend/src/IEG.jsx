@@ -31,7 +31,11 @@ export default function IEG() {
    const getClient = async () => {
         const response = await fetch(`https://mbp-server.onrender.com/api/clients/client/${id}`);
         const json = await response.json();
-        setData(json[0]);
+        await setData(json[0]);
+
+        const res = await fetch(`https://mbp-server.onrender.com/api/branches/${data.branch}`);
+        const branches = await response.json();
+        setBranchName(branches.name);
      
        if(response.ok){
        window.print();
