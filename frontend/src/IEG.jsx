@@ -382,7 +382,6 @@ export default function IEG() {
           <input type="text" className="underline_input" value={data.folOfficialSignDate}/>
           
         </div>
-      </div>
     </div>
   </td>
 </tr>
