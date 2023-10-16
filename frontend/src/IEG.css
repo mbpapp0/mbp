@@ -120,8 +120,6 @@
 
   .sign div{
      margin-bottom: 1rem;
-     display: flex;
-     flex-direction: column;
   }
   
   .sign_input {
