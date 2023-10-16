@@ -2,8 +2,9 @@
       text-align: center;
     }
     
-    .prinout{
-  
+    .prinout p, td, span{
+      font-family: Arial;
+      font-size: 8pt;      
     }
     
     .part_i_header {
