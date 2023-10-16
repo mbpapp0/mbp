@@ -361,17 +361,18 @@ export default function IEG() {
         <div>
           <label>Confirming Official’s Signature: </label>
            <img src={data.conOfficialSignature} />
-          <input type="number" className="underline_input sign_input"/>
+          <input type="text" className="underline_input sign_input"/>
           <label>Date:</label>
-          <input type="number" className="underline_input" value={data.conOfficialSignDate}/>
+          <input type="text" className="underline_input" value={data.conOfficialSignDate}/>
         </div>
         
         <div>
           <label>Follow Up Official’s Signature:</label>
           <img src={data.folOfficialSignature} />
-          <input type="number" className="underline_input sign_input"/>
+          <input type="text" className="underline_input sign_input"/>
           <label>Date:</label>
-          <input type="number" className="underline_input" value={data.folOfficialSignDate}/>
+          <input type="text" className="underline_input" value={data.folOfficialSignDate}/>t
+          
         </div>
       </div>
     </div>
