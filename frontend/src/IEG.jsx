@@ -169,6 +169,11 @@ export default function IEG() {
     </strong>
   </td>
 </tr>
+</tbody>
+</table>
+
+<table className="print_table">
+ <tbody>
 
 <tr className="size">
   <td colSpan={3}>Name of Other Household Members (First and Last)</td>
