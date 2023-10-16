@@ -380,7 +380,7 @@ export default function IEG() {
             {/* <input type="text" className="underline_input sign_input"/> */}
           <label>Date:</label>
           <input type="text" className="underline_input" value={data.folOfficialSignDate}/>
-          
+        </div>  
         </div>
     </div>
   </td>
