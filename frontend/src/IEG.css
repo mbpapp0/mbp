@@ -1,3 +1,58 @@
+   *, body{
+     margin:0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+
+ .printout h6{
+       margin-block: 0;
+     }
+
+  .child_income {
+    display: flex;
+    padding: 0;
+  }
+  
+  .child_td {
+    padding: 0;
+  }
+  
+  .child_income input {
+    width: 3rem;
+  }
+
+  .children_only {
+    font-style: italic;
+    color: red;
+  }
+
+  .no_border input[type="text"] {
+    width: 15rem;
+  }
+
+.sign {
+  display: block;
+}
+
+.sign div {
+ display: flex;
+ align-items: center;
+}
+
+  .ssn_input {
+    width: 3rem;
+    margin-right: 2rem;
+  }
+
+  .ssn_checkbox{
+    margin-right: 0.5rem;
+  }
+
+.inline_div {
+  display: inline;
+}
+
+
 .center {
       text-align: center;
     }
