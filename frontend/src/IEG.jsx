@@ -252,11 +252,11 @@ export default function IEG() {
       <p>
         My child is normally in attendance at the facility between the hours of
         <span>
-          <input type="text" value={data.timeFrom} className="underline_input" />
+          <input type="text" value={data.timeFrom} className="underline_input hour_input" />
         </span>
         [{data.timeFromHour}] to
         <span>
-          <input type="text" value={data.timeTo}className="underline_input" />
+          <input type="text" value={data.timeTo}className="underline_input hour_input" />
         </span>
         [{data.timeToHour}].
         <span>
