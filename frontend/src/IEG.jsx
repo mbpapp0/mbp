@@ -149,10 +149,10 @@ export default function IEG() {
 </tr>
 
 <tr>
-  <td colSpan={3} className="no_right">
+  <td colSpan={7} className="child_td">
+    <div>
     <strong><span id="highlighted">A. Child Income</span><sup>1</sup></strong> Sometimes children in the household earn or receive income. Please indicate the TOTAL income received by child household members listed in PART I here.
-  </td>
-  <td colSpan={4} className="no_left">
+      </div>
     <div>
       <label className="block"><span id="highlighted">Child Income/How often?</span></label>
       <input type="number" className="underline_input" value={data.childIncome}/>/<input type="text" className="underline_input" value={data.childIncomeFreq}/>
